@@ -32027,5 +32027,66 @@
       "hostBusAdapter": "SP686C-M-16i 4G",
       "hardDiskDrive": "HGSTHUC101212CSS600"
     }
+  },
+  {
+    "hardwareFactory": "中国长城科技集团股份有限公司",
+    "hardwareModel": "擎天RF5260 V5",
+    "osVersion": "openEuler 24.03 LTS SP2",
+    "architecture": "aarch64",
+    "date": "2025/09/10",
+    "friendlyLink": "https://www.greatwall.com.cn/product/11183.html",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1572",
+        "svID": "8086",
+        "ssID": "0007",
+        "architecture": "aarch64",
+        "os": "openEuler 24.03 LTS SP2",
+        "driverName": "i40e",
+        "version": "6.6.0-98.0.0.103.oe2403sp2.aarc",
+        "type": "ETHERNET",
+        "date": "2025/09/10",
+        "sha256": "5d886eb7adec7ee4cf5b0b56a6febec95c9b525bb11eab446f0fb5f082370fd1",
+        "driverSize": "172064",
+        "chipVendor": "Intel",
+        "boardModel": "X710-2",
+        "chipModel": "X710",
+        "item": "NA",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "005d",
+        "svID": "1000",
+        "ssID": "9361",
+        "architecture": "aarch64",
+        "os": "openEuler 24.03 LTS SP2",
+        "driverName": "megaraid_sas",
+        "version": "07.725.01.00-rc1",
+        "type": "raid",
+        "date": "2025/09/10",
+        "sha256": "c11e34086ab91c726e9ba62839fa501c5bc85319b46fb59a0f688171a2377c0a",
+        "driverSize": "69784",
+        "chipVendor": "Broadcom",
+        "boardModel": " 9361-8i",
+        "chipModel": "SAS3108",
+        "item": "NA",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.greatwall.com.cn/product/11183.html",
+      "certificationTime": "2025/09/10",
+      "commitID": "1",
+      "mainboardModel": "RFMS5D2EA",
+      "biosUefi": "T658FBE_V3.0.17",
+      "cpu": "Phytium S5000C",
+      "ram": "8*32GB RDIMM",
+      "portsBusTypes": "x8 PCI Express x8",
+      "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family",
+      "hostBusAdapter": "NA",
+      "hardDiskDrive": "sda、sdb"
+    }
   }
 ]
