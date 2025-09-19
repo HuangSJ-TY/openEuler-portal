@@ -3,6 +3,34 @@ import IconLowCode from '~icons/intelligence/icon-low-code.svg';
 export const projectData = {
   zh: [
     {
+      title: 'A-Tune',
+      desc: 'A-Tune是一款基于openEuler开发的，自动化、智能化性能调优引擎。它利用人工智能技术，对运行在操作系统上的业务建立精准模型，动态感知业务特征并推理出具体应用，根据业务负载情况动态调节并给出最佳的参数配置组合，从而使业务处于最佳运行状态',
+      icon: '',
+      url: '/other/projects/atune/',
+      giteeUrl: '',
+    },
+    {
+      title: 'iSula',
+      desc: 'iSulad 是一个新的通用容器引擎，提供统一的架构设计来满足CT和IT领域的不同需求',
+      icon: '',
+      url: '/other/projects/isula/',
+      giteeUrl: '',
+    },
+    {
+      title: 'secGear',
+      desc: 'secGear是面向计算产业的机密计算安全应用开发套件，旨在方便开发者在不同的硬件设备上提供统一开发框架，让用户不感知底层各种机密计算架构和接口的差异，目前secGear支持Intel SGX硬件和ARM Trustzone(安全os支持iTrustee)',
+      icon: '',
+      url: '/other/projects/secgear/',
+      giteeUrl: '',
+    },
+    {
+      title: 'NestOS',
+      desc: 'NestOS正式推出双模式版本， 该版本整合了NestOS For Container 和 NestOS For Virt这两个模式到一个ISO镜像中， 旨在满足云场景中容器化和虚拟化两种主要场景下用户的多样需求，专注于提供最佳的容器主机和虚拟化解决方案',
+      icon: '',
+      url: '/nestos',
+      giteeUrl: '',
+    },
+    {
       title: 'StratoVirt',
       desc: 'StratoVirt是面向云数据中心的企业级虚拟化VMM (Virtual Machine Monitor)，实现一套架构对虚拟机、容器、Serverless三种场景的统一支持。在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。',
       icon: '',
@@ -32,6 +60,27 @@ export const projectData = {
     },
   ],
   en: [
+    {
+      title: 'A-Tune',
+      desc: 'A-Tune is an automatic and intelligent performance tuning engine developed based on openEuler. It adopts AI technologies to ensure the optimal service running. A-Tune builds precise models for services running on the operating system, understands service features dynamically to infer specific applications. And it adjusts the parameters based on service loads to provide the optimal parameter configurations.',
+      icon: '',
+      url: '/other/projects/atune/',
+      giteeUrl: '',
+    },
+    {
+      title: 'iSula',
+      desc: 'iSulad provides a unified architecture for different CT and IT requirements.',
+      icon: '',
+      url: '/other/projects/isula/',
+      giteeUrl: '',
+    },
+    {
+      title: 'secGear',
+      desc: 'secGear is a confidential computing development suite used to develop secure applications in the computing industry. It aims to provide a unified development framework for different hardware devices, shielding the differences between underlying confidential computing architectures and APIs. Currently, secGear supports Intel® SGX hardware and Arm TrustZone (iTrustee supported).',
+      icon: '',
+      url: '/other/projects/secgear/',
+      giteeUrl: '',
+    },
     {
       title: 'StratoVirt',
       desc:

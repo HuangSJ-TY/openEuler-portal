@@ -238,7 +238,7 @@ export default {
               URL: '/nestos',
             },
             {
-              NAME: '更多项目',
+              NAME: '全部项目',
               DESCRIPTION: '',
               URL: '/other/projects',
               ICON: IconChevronRight,
@@ -259,6 +259,10 @@ export default {
         {
           NAME: '开发者日历',
           URL: '/meeting/#calendar',
+        },
+        {
+          NAME: 'openYuanRong',
+          URL: '/projects/yuanrong',
         },
       ],
     },
