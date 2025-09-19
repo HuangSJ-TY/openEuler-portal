@@ -1,0 +1,16 @@
+export default {
+  title: 'openYuanRong',
+  subtitle: '一个开源Serverless分布式计算引擎，让分布式应用开发向“单机程序”一样简单',
+  introTitle: '简介',
+  introDesc: 'openYuanRong是一个Serverless分布式计算引擎，致力于以一套统一Serverless结构支持AI、大数据、微服务等各类分布式应用。它提供多语言函数编程接口，以单机编程体验简化分布式应用开发；提供分布式动态调度和数据共享能力，实现分布式应用的高性能运行和集群的高校资源利用',
+  frameworkTitle: '架构',
+  frameworkDesc: 'openYuanRong由多语言函数运行时、函数系统和数据系统组成，支持按需灵活单独或组合使用',
+  multilingual: '多语言函数运行时',
+  multilingualDesc: '提供函数分布式编程，支持Python/Java/C++语言，实现类单机编程高性能分布式运行',
+  functionSystem: '函数系统',
+  functionSystemDesc: '提供大规模分布式动态调度，支持函数实例急速弹性扩缩和跨界点迁移，实现集群资源高校利用',
+  dataSystem: '数据系统',
+  dataSystemDesc: '提供异构分布式多级缓存，支持Object/Stream语义，实现函数实例间高性能数据共享及传递',
+  functionDesc: '函数是openYuanRong的核心概念抽象，它对传统Serverless函数概念进行了通用化扩展，起到了类似单机OS中进行的作用，可以表达任意分布式应用的运行实例，同时天然支持相互调用',
+  entranceTitle: '快速入口',
+}

@@ -24,6 +24,8 @@ import mailing from './mailing';
 import onlineMeeting from './online-meeting';
 import defectCenter from './defect-center';
 import brand from './brand'
+import yuanrong from './yuanrong'
+import project from './project'
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -85,6 +87,8 @@ const messages = {
     onlineMeeting: onlineMeeting.zh,
     defectCenter: defectCenter.zh,
     brand: brand.zh,
+    yuanrong: yuanrong.zh,
+    project: project.zh,
   },
   en: {
     // 公共模块
@@ -108,6 +112,8 @@ const messages = {
     mailing: mailing.en,
     defectCenter: defectCenter.en,
     brand: brand.en,
+    yuanrong: yuanrong.en,
+    project: project.en,
   },
 };
 

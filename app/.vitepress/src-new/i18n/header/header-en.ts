@@ -202,20 +202,9 @@ export default {
               URL: '/other/projects/secgear/',
             },
             {
-              NAME: 'StratoVirt',
-              DESCRIPTION:
-                'An enterprise-grade virtual machine monitor for cloud data centers.',
-              URL: '/other/projects/stratovirt/',
-            },
-            {
-              NAME: 'BiSheng JDK',
-              DESCRIPTION: 'A high-performance Java Virtual Machine.',
-              URL: '/other/projects/bishengjdk/',
-            },
-            {
-              NAME: 'openEuler Intelligence',
-              DESCRIPTION: 'Large language model platform powered by openEuler',
-              URL: '/projects/intelligence/',
+              NAME: '更多项目',
+              DESCRIPTION: '',
+              URL: '/other/projects',
             },
           ],
         },
