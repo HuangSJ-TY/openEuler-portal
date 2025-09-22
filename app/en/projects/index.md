@@ -1,5 +1,5 @@
 ---
-title: 项目
+title: Projects
 ---
 <script setup lang="ts">
   import TheProjects from "~@/views/projects/TheProjects.vue"

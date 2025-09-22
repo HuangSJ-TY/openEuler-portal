@@ -4,9 +4,7 @@ import Summit from '~@/assets/category/header/summit.jpg';
 import SummitDark from '~@/assets/category/header/summit-dark.jpg';
 
 import IconOutLink from '~icons/app/icon-out-link.svg';
-import IconArrowRight from '~icons/app-new/icon-header-next.svg';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
-import annualReport2024 from '~@/assets/category/header/annual-report-2024.jpg';
 
 const TAG_TYPE = {
   HOT: 'HOT',
@@ -14,7 +12,6 @@ const TAG_TYPE = {
 };
 
 const OutLink = markRaw(IconOutLink);
-const ArrowRight = markRaw(IconArrowRight);
 
 export default {
   NAV_ROUTER: [
@@ -206,7 +203,7 @@ export default {
             {
               NAME: 'All projects',
               DESCRIPTION: '',
-              URL: '/other/projects',
+              URL: '/projects',
               ICON: IconChevronRight,
             },
           ],

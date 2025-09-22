@@ -6,14 +6,15 @@ import AppSection from '~@/components/AppSection.vue';
 
 import { entranceList } from '~@/data/project';
 
-import banner from '~@/assets/category/mailing/mailing-banner.jpg';
+import banner from '~@/assets/category/yuanrong/banner.jpg';
 
-import IconLowCode from '~icons/intelligence/icon-low-code.svg';
-import IconAvailability from '~icons/intelligence/icon-availability.svg';
-import IconLightweight from '~icons/intelligence/icon-lightweight.svg';
-import IconOutLink from '~icons/app-new/icon-outlink.svg';
+import IconMultilingual from '~icons/yuanrong/icon-multilingual.svg';
+import IconFunction from '~icons/yuanrong/icon-function.svg';
+import IconData from '~icons/yuanrong/icon-data.svg';
+import IconOutLink from '~icons/yuanrong/icon-outlink.svg';
 
-import frameworkImgZh from '~@/assets/category/intelligence/framework-img-zh-mb.png';
+import frameworkImgZh from '~@/assets/category/yuanrong/framework.png';
+import frameworkImgEn from '~@/assets/category/yuanrong/framework-en.png';
 
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
@@ -23,17 +24,17 @@ const { lePadV } = useScreen();
 
 const frameworkList = [
   {
-    icon: IconLowCode,
+    icon: IconMultilingual,
     title: t('yuanrong.multilingual'),
     desc: t('yuanrong.multilingualDesc'),
   },
   {
-    icon: IconAvailability,
+    icon: IconFunction,
     title: t('yuanrong.functionSystem'),
     desc: t('yuanrong.functionSystemDesc'),
   },
   {
-    icon: IconLightweight,
+    icon: IconData,
     title: t('yuanrong.dataSystem'),
     desc: t('yuanrong.dataSystemDesc'),
   }
@@ -51,6 +52,7 @@ const frameworkList = [
   </AppSection>
   <AppSection :title="t('yuanrong.frameworkTitle')" :subtitle="t('yuanrong.frameworkDesc')" class="framework">
     <div class="framework-content">
+      <OFigure v-if="lePadV" :src="locale ==='en' ? frameworkImgEn : frameworkImgZh" class="framework-img"></OFigure>
       <div class="framework-left">
         <div v-for="(item, i) in frameworkList" :key="i" class="item">
           <OIcon><component :is="item.icon"></component></OIcon>
@@ -61,16 +63,25 @@ const frameworkList = [
         </div>
         <p class="function-desc">*{{ t('yuanrong.functionDesc') }}</p>
       </div>
-      <OFigure :src="frameworkImgZh" class="framework-img"></OFigure>
+      <OFigure v-if="!lePadV" :src="locale ==='en' ? frameworkImgEn : frameworkImgZh" class="framework-img"></OFigure>
     </div>
   </AppSection>
   <AppSection :title="t('yuanrong.entranceTitle')" class="entrance">
     <ORow :gap="lePadV ? '0 12px' : '32px 0'" wrap="wrap">
-      <OCol v-for="(item, i) in entranceList" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 50%'">
-        <OLink :icon="item.icon" class="item-info">
-          <p class="info-title">{{ item.title }}</p>
-          <OIcon class="outlink-icon"><IconOutLink /></OIcon>
-        </OLink>
+      <OCol v-for="(item, i) in entranceList[locale]" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 50%'">
+        <div class="item-info">
+          <div class="info-title">
+            <OIcon class="gitee-icon"><component :is="item.icon" /></OIcon>
+            <p class="content-title">{{ item.title }}</p>
+          </div>
+          <div class="info-content">
+            <p class="content-desc">{{ item.desc }}</p>
+            <OLink color="primary" :href="item.href" target="_blank" hover-underline>
+              <p>{{ t('yuanrong.viewMore') }}</p>
+              <OIcon v-if="item?.isOutlink" class="outlink-icon"><IconOutLink /></OIcon>
+            </OLink>
+          </div>
+        </div>
       </OCol>
     </ORow>
   </AppSection>
@@ -127,7 +138,7 @@ const frameworkList = [
 
 .mo-banner {
   @include respond-to('<=pad_v') {
-    padding: 24px 24px 20px;
+    padding: 24px 24px 0;
     .mo-title {
       font-weight: 500;
       @include display3;
@@ -149,6 +160,9 @@ const frameworkList = [
 }
 
 .introduction {
+  :deep(.section-wrapper) {
+    margin-top: 40px;
+  }
   :deep(.section-body) {
     margin-top: 40px;
   }
@@ -175,6 +189,7 @@ const frameworkList = [
   border-radius: var(--o-radius-xs);
   padding: 32px;
   display: flex;
+  align-items: center;
   color: var(--o-color-info3);
 }
 .item {
@@ -183,6 +198,7 @@ const frameworkList = [
   .o-icon {
     flex-shrink: 0;
     --icon-size: 24px;
+    margin-top: 3px;
   }
 }
 .item + .item {
@@ -202,45 +218,135 @@ const frameworkList = [
 }
 .function-desc {
   margin-top: 24px;
-  @include text1;
+  @include tip1;
 }
 .framework-img {
   margin-left: 48px;
-  width: 770px;
+  width: 710px;
+  flex-shrink: 0;
+  :deep(.o-figure-img) {
+    height: auto;
+  }
 }
 
 .item-info {
-  width: 100%;
-  align-items: center;
+  height: 100%;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
   padding: 32px 24px;
-  --link-gap: 12px;
-}
-.o-link {
-  :deep(.o-link-label) {
-    display: flex;
-    align-items: center;
-  }
-  .o-icon {
-    --icon-size: 24px;
+  .o-link {
+    margin-top: 24px;
+    :deep(.o-link-label) {
+      display: flex;
+      align-items: center;
+    }
+    .outlink-icon {
+      --icon-size: 24px;
+      margin-left: 8px;
+    }
   }
 }
 .info-title {
+  display: flex;
+  align-items: center;
+}
+.gitee-icon {
+  --icon-size: 32px;
+  margin-right: 12px;
+}
+.info-content {
+  margin-left: 44px;
+}
+.content-title {
   font-weight: 500;
   color: var(--o-color-info1);
-  margin-right: 8px;
   @include h3;
+}
+.content-desc {
+  margin-top: 8px;
+  color: var(--o-color-info3);
+  @include text1;
+}
+
+@include respond-to('laptop') {
+  .framework-content {
+    padding: 24px;
+  }
+  .item {
+    .o-icon {
+      margin-top: 1px;
+    }
+  }
+  .framework-img {
+    margin-left: 32px;
+    width: 588px;
+  }
+  .item-info {
+    padding: 24px 16px;
+  }
+}
+
+@include respond-to('pad_h') {
+  .framework-content {
+    padding: 16px;
+  }
+  .item {
+    .o-icon {
+      margin-top: 0;
+    }
+  }
+  .framework-img {
+    margin-left: 16px;
+    width: 468px;
+  }
+  .item-info {
+    padding: 16px;
+  }
+  .gitee-icon {
+    --icon-size: 24px;
+  }
+  .info-content {
+    margin-left: 36px;
+  }
 }
 
 @include respond-to('<=pad_v') {
+  .introduction {
+    :deep(.section-wrapper) {
+      margin-top: 32px;
+    }
+    :deep(.section-body) {
+      margin-top: 12px;
+    }
+  }
+  .intro-desc {
+    padding: 16px;
+  }
+  .framework-content {
+    padding: 16px;
+  }
   .framework-content {
     flex-direction: column;
   }
   .framework-img {
     width: 100%;
     margin-left: 0;
-    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .item-info {
+    padding: 16px;
+    .o-link {
+      margin-top: 12px;
+      .outlink-icon {
+        --icon-size: 16px;
+      }
+    }
+  }
+  .gitee-icon {
+    --icon-size: 24px;
+  }
+  .info-content {
+    margin-left: 36px;
   }
 }
 </style>
