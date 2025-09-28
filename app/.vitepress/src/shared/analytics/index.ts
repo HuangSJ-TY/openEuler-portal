@@ -51,23 +51,25 @@ export const installer = (
       }
     };
   }
-  if (isCookieAgreed()) {
-    enableOA();
-  }
-  startListenCookieSet(() => {
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     if (isCookieAgreed()) {
-      if (!oa?.enabled) enableOA();
-    } else {
-      if (oa?.enabled) disableOA();
+      enableOA();
     }
-  });
-  startListenHistoryChange();
-  if (options.onPageView) {
-    reportPV(options.onPageView('/', location.pathname));
-  } else {
-    reportPV();
+    startListenCookieSet(() => {
+      if (isCookieAgreed()) {
+        if (!oa?.enabled) enableOA();
+      } else {
+        if (oa?.enabled) disableOA();
+      }
+    });
+    startListenHistoryChange();
+    if (options.onPageView) {
+      reportPV(options.onPageView('/', location.pathname));
+    } else {
+      reportPV();
+    }
+    reportPerformance();
   }
-  reportPerformance();
   app.directive('analytics', vAnalytics);
 };
 
