@@ -269,6 +269,8 @@ $color: #fff;
         padding-bottom: 16px;
         .friendship-link-box {
           margin-top: 12px;
+          display: flex;
+          flex-wrap: wrap;
         }
       }
       .friendship-link-title {
