@@ -190,6 +190,11 @@ onMounted(() => {
             target="_blank"
             rel="noopener noreferrer"
             :href="`https://gitee.com/${row.repo}`"
+            v-analytics.bubble="{
+              level2: $t('sig.repoList').replace(/（.*）/, ''),
+              level3: t('sig.repositoryName'),
+              target: row.repo
+            }"
           >
             {{ row.repo }}
           </a>
@@ -201,6 +206,11 @@ onMounted(() => {
             target="_blank"
             rel="noopener noreferrer"
             :href="`https://gitee.com/${item}`"
+            v-analytics.bubble="{
+              level2: $t('sig.repoList').replace(/（.*）/, ''),
+              level3: t('sig.maintainerEn'),
+              target: item
+            }"
           >
             {{ item
             }}<span v-show="index !== row.maintainers.length - 1">{{
@@ -216,6 +226,11 @@ onMounted(() => {
               target="_blank"
               rel="noopener noreferrer"
               :href="`https://gitee.com/${item}`"
+              v-analytics.bubble="{
+                level2: $t('sig.repoList').replace(/（.*）/, ''),
+                level3: t('sig.committer'),
+                target: item
+              }"
             >
               {{ item
               }}<span v-show="index !== row.gitee_id.length - 1">{{

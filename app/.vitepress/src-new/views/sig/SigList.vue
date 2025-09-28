@@ -43,6 +43,8 @@ import IconUser from '~icons/sig/icon-user.svg';
 import IconSigSpace from '~icons/sig/sig-space.svg';
 import IconNotice from '~icons/sig/icon-notice.svg';
 import IconFilter from '~icons/sig/icon-filter.svg';
+import { oaReport } from '@/shared/analytics';
+import { useI18n } from '~@/i18n';
 
 const { locale, t } = useLocale();
 const { isLaptop, isPadH, lePadV } = useScreen();
@@ -507,6 +509,45 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', throttleEvent);
 });
+
+// ============埋点============
+const i18n = useI18n();
+const onSearchInput = useDebounceFn(() => {
+  oaReport('input', {
+    module: 'sig',
+    level1: i18n.value.sig.sigCenter,
+    level2: i18n.value.sig.sigList,
+    type: 'search-input',
+    content: sigInput.value
+  });
+}, 300);
+
+const onSearchPressEnter = (e: KeyboardEvent) => {
+  if (e.key !== 'Enter') return;
+  return {
+    event: 'input',
+    properties: {
+      module: 'sig',
+      level1: i18n.value.sig.sigCenter,
+      level2: 'openEuler SIGs',
+      type: 'search',
+      content: sigInput.value
+    }
+  };
+};
+
+const onClickSearchRes = (type: string, ev: Event) => {
+  return {
+    properties: {
+      module: 'sig',
+      level1: i18n.value.sig.sigCenter,
+      level2: 'openEuler SIGs',
+      target: (ev.currentTarget as HTMLElement).textContent.trim(),
+      category: type,
+      type: 'search-result'
+    }
+  };
+};
 </script>
 <template>
   <AppSection :title="$t('sig.sigList')" class="sig-list">
@@ -532,6 +573,15 @@ onUnmounted(() => {
                 }"
                 :checked="checked"
                 @click="clearChecked(checked)"
+                v-analytics="{
+                  properties: {
+                    module: 'sig',
+                    level1: $t('sig.sigCenter'),
+                    level2: 'openEuler SIGs',
+                    target: option.label[locale],
+                    type: 'category'
+                  }
+                }"
               >
                 {{ option.label[locale] }}
               </OToggle>
@@ -558,6 +608,15 @@ onUnmounted(() => {
               :key="item.value"
               :label="item.label"
               :value="item.value"
+              v-analytics="{
+                properties: {
+                  module: 'sig',
+                  level1: $t('sig.sigCenter'),
+                  level2: 'openEuler SIGs',
+                  target: item.label,
+                  type: 'search-category'
+                }
+              }"
             />
           </OSelect>
           <OInput
@@ -568,6 +627,16 @@ onUnmounted(() => {
             :placeholder="placeholderType"
             @press-enter="(v) => changeSearchInput(v)"
             @clear="clearInput"
+            @input="onSearchInput"
+            v-analytics="{
+              properties: {
+                module: 'sig',
+                level1: $t('sig.sigCenter'),
+                level2: 'openEuler SIGs',
+                type: 'search-input'
+              }
+            }"
+            v-analytics:keydown="onSearchPressEnter"
           >
             <template #prefix>
               <OIcon><IconSearch /></OIcon>
@@ -579,7 +648,7 @@ onUnmounted(() => {
                 <p v-if="searchType === 'all'" class="label">{{ item.label }}</p>
                 <template v-if="item.list.length">
                   <template v-for="it in item.list" :key="it || it.gitee_id">
-                    <div @click.stop="clickItem(it?.name)" class="panel-item">
+                    <div @click.stop="clickItem(it?.name)" class="panel-item" v-analytics="(ev: Event) => onClickSearchRes(item.label, ev)">
                       <span
                         v-dompurify-html="it?.name"
                         :title="nameRegex(it?.name)"
@@ -634,9 +703,21 @@ onUnmounted(() => {
       >
         <div v-if="!lePadV" class="sig-card">
           <div class="title-top">
-            <span class="sig-name" @click="toSigDetail(sig.sig_name)">{{
-              sig.sig_name
-            }}</span>
+            <span
+              class="sig-name" 
+              @click="toSigDetail(sig.sig_name)"
+              v-analytics="{
+                properties: {
+                  module: 'sig',
+                  level1: $t('sig.sigCenter'),
+                  level2: 'openEuler SIGs',
+                  target: sig.sig_name,
+                  type: 'sig'
+                }
+              }"
+            >
+              {{ sig.sig_name }}
+            </span>
             <OTag variant="outline" class="type-tag">
               {{ (locale === 'zh' ? sig.feature : sig.en_feature) || t('sig.other') }}
             </OTag>
@@ -645,6 +726,15 @@ onUnmounted(() => {
             <OLink
               :href="`https://gitee.com/openeuler/community/tree/master/sig/${sig.sig_name}`"
               target="_blank"
+              v-analytics="{
+                properties: {
+                  module: 'sig',
+                  level1: $t('sig.sigCenter'),
+                  level2: 'openEuler SIGs',
+                  target: sig.sig_name,
+                  type: 'sig-gitee'
+                }
+              }"
             >
               <OIcon class="gitee-icon">
                 <IconGitee />
@@ -658,6 +748,15 @@ onUnmounted(() => {
               color="primary"
               :href="`mailto:${sig.mailing_list}`"
               target="_blank"
+              v-analytics="{
+                properties: {
+                  module: 'sig',
+                  level1: $t('sig.sigCenter'),
+                  level2: 'openEuler SIGs',
+                  target: sig.sig_name,
+                  type: 'sig-mail'
+                }
+              }"
             >
               {{ sig.mailing_list }}
             </OLink>
@@ -670,6 +769,15 @@ onUnmounted(() => {
               color="primary"
               :href="`https://mailweb.openeuler.org/postorius/lists/${sig.mailing_list}/`"
               target="_blank"
+              v-analytics="{
+                properties: {
+                  module: 'sig',
+                  level1: $t('sig.sigCenter'),
+                  level2: 'openEuler SIGs',
+                  target: sig.sig_name,
+                  type: 'sig-subcribe-mail'
+                }
+              }"
             >
               {{ $t('sig.subscribe') }}
             </OButton>
@@ -693,7 +801,19 @@ onUnmounted(() => {
             </div>
           </div>
           <div class="sig-bottom">
-            <div class="item-bottom">
+            <div
+              class="item-bottom" 
+              v-analytics:mouseenter="{
+                event: 'hover',
+                properties: {
+                  module: 'sig',
+                  level1: $t('sig.sigCenter'),
+                  level2: 'openEuler SIGs',
+                  level3: sig.sig_name,
+                  type: 'sig-repo'
+                }
+              }"
+            >
               <OIcon><IconSigSpace /></OIcon>
               <OPopover
                 position="top"
@@ -723,7 +843,19 @@ onUnmounted(() => {
               direction="v"
               :style="{ '--o-divider-label-gap': '0 8px', 'height': '12px' }"
             />
-            <div class="item-bottom">
+            <div
+              class="item-bottom" 
+              v-analytics:mouseenter="{
+                event: 'hover',
+                properties: {
+                  module: 'sig',
+                  level1: $t('sig.sigCenter'),
+                  level2: 'openEuler SIGs',
+                  level3: sig.sig_name,
+                  type: 'sig-maintainer'
+                }
+              }"
+            >
               <OIcon><IconUser /></OIcon>
               <OPopover
                 position="top"

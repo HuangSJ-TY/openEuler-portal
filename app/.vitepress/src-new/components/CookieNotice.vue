@@ -14,13 +14,6 @@ import {
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
 // TODO:分析代码整改
-import {
-  enableOA,
-  disableOA,
-  removeHM,
-  reportPV,
-  reportPerformance,
-} from '@/shared/analytics';
 
 import { setCookie, removeCookie } from '~@/utils/common';
 
@@ -42,7 +35,6 @@ const { t, isZh } = useLocale();
 const { leLaptop, lePadV } = useScreen();
 
 const cookieStore = useCookieStore();
-const loginStore = useLogin();
 
 const COOKIE_DOMAIN = import.meta.env.VITE_COOKIE_DOMAIN;
 
@@ -57,37 +49,6 @@ const isNotSigned = () => {
 // 是否全部同意
 const isAllAgreed = () => {
   return cookieStore.getUserCookieStatus() === COOKIE_AGREED_STATUS.ALL_AGREED;
-};
-
-// -------------------- 埋点 --------------------
-const initSensor = () => {
-  // 百度统计
-  (function () {
-    const hm = document.createElement('script');
-    hm.src = 'https://hm.baidu.com/hm.js?ab8d86daab9a8e98cf8faa239aefcd3c';
-    hm.classList.add('analytics-script');
-    const s = document.getElementsByTagName('HEAD')[0];
-    s.appendChild(hm);
-  })();
-
-  // 分析埋点
-  if (loginStore.loginStateChecked) {
-    enableOA();
-    reportPV();
-    reportPerformance();
-    return;
-  }
-  const unwatch = watch(
-    () => loginStore.loginStateChecked,
-    (val) => {
-      if (val) {
-        unwatch();
-        enableOA();
-        reportPV();
-        reportPerformance();
-      }
-    }
-  );
 };
 
 // -------------------- 展示底部提示 --------------------
@@ -112,7 +73,6 @@ const acceptAll = () => {
     COOKIE_DOMAIN
   );
   toggleNoticeVisible(false);
-  initSensor();
 };
 
 // 用户拒绝所有cookie，即仅同意必要cookie
@@ -126,8 +86,6 @@ const rejectAll = () => {
     COOKIE_DOMAIN
   );
   toggleNoticeVisible(false);
-  disableOA();
-  removeHM();
 };
 
 // -------------------- 展示弹出框 --------------------
@@ -196,10 +154,6 @@ if (inBrowser) {
   if (cookieStore.isAllAgreed) {
     cookieStore.status = COOKIE_AGREED_STATUS.ALL_AGREED;
     analysisAllowed.value = true;
-    initSensor();
-  } else {
-    disableOA();
-    removeHM();
   }
 }
 
@@ -211,7 +165,6 @@ watch(
       toggleNoticeVisible(true);
     }
 
-    reportPV();
   }
 );
 </script>

@@ -21,6 +21,9 @@ import clampTextDirective from '~@/directive/clamp-text';
 
 import Layout from '@/App.vue';
 import NotFound from '@/NotFound.vue';
+import { installer } from '@/shared/analytics';
+import { reporAnalytics } from '@/api/api-analytics';
+import { removeCustomCookie } from '@/shared/utils';
 
 export default {
   Layout,
@@ -30,6 +33,59 @@ export default {
       // @ts-ignore
       global.window = {};
       global.__VUE_PROD_DEVTOOLS__ = false;
+    }
+    if (!import.meta.env.SSR) {
+      const REGEXP = /^\/(?:zh|en)\/(security\/cve|download|sig)\/?/;
+      const pathServiceMap = {
+        'security/cve': 'cvemanager',
+        download: 'download',
+        sig: 'sig',
+      } as Record<string, string>;
+
+      app.use(installer, {
+        appKey: 'openEuler',
+        request(data) {
+          reporAnalytics(data)
+        },
+        onPageView(_, to) {
+          const path = REGEXP.exec(to)?.[1];
+          const $service = path && pathServiceMap[path];
+          if ($service) return { $service };
+        },
+        onEnable() {
+          const hm = document.createElement('script');
+          hm.src = 'https://hm.baidu.com/hm.js?ab8d86daab9a8e98cf8faa239aefcd3c';
+          hm.classList.add('analytics-script');
+          const s = document.getElementsByTagName('HEAD')[0];
+          s.appendChild(hm);
+        },
+        onDisable() {
+          const scripts = document.querySelectorAll('script.analytics-script');
+          scripts.forEach((script) => {
+            script.remove();
+          });
+          const hm = /^hm/i;
+          document.cookie
+            .split(';')
+            .map((c) => c.trim())
+            .forEach((c) => {
+              const key = decodeURIComponent(c.split('=')[0]);
+              if (hm.test(key)) {
+                removeCustomCookie(key, { domain: location.hostname });
+              }
+            });
+          [sessionStorage, localStorage].forEach((storage) => {
+            const keys = [];
+            for (let i = 0; i < storage.length; i++) {
+              const key = storage.key(i)!;
+              if (hm.test(key)) {
+                keys.push(key);
+              }
+            }
+            keys.forEach(key => storage.removeItem(key));
+          })
+        },
+      });
     }
     app.directive('clamp-text', clampTextDirective);
     app.directive('scroll-bottom', scrollBottomDirective);

@@ -45,6 +45,22 @@ const processDetail = computed(() => {
           :detail-max-row="2"
           :detail-row="lePadV ? 1 : 2"
           :href="card.path[locale]"
+          v-analytics="{
+            properties: {
+              module: 'sig',
+              level1: $t('sig.sigCenter'),
+              level2: $t('sig.aboutSig'),
+              target: card.title[locale]
+            }
+          }"
+          v-analytics:mouseenter="{
+            properties: {
+              module: 'sig',
+              level1: $t('sig.sigCenter'),
+              level2: $t('sig.aboutSig'),
+              target: card.title[locale]
+            }
+          }"
         >
           <template #title>
             <OIcon class="icon">
@@ -87,6 +103,15 @@ const processDetail = computed(() => {
                 active: index === activeStep,
                 [`step-${index}`]: true,
               }"
+              v-analytics="{
+                properties: {
+                  module: 'sig',
+                  level1: $t('sig.sigCenter'),
+                  level2: $t('sig.aboutSig'),
+                  level3: $t('sig.applicationProcess'),
+                  target: step.process.zh,
+                }
+              }"
             >
               <OIcon class="icon">
                 <component :is="step.icon"></component>
@@ -121,7 +146,16 @@ const processDetail = computed(() => {
             :value="index"
           >
             <template #title>
-              <div class="process-title">
+              <div class="process-title" 
+              v-analytics="{
+                properties: {
+                  module: 'sig',
+                  level1: $t('sig.sigCenter'),
+                  level2: $t('sig.aboutSig'),
+                  level3: $t('sig.applicationProcess'),
+                  target: step.process[locale],
+                }
+              }">
                 <div class="num">
                   {{ (index + 1).toString().padStart(2, '0') }}
                 </div>
