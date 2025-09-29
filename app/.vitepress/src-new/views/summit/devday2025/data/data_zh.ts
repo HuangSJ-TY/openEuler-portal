@@ -42,8 +42,9 @@ export default {
       'https://openatomcon.openatom.cn/registration/?activityNo=HD20250305105858',
     signUpHrefMo:
       'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250305105858',
-    signUpTitle: '精彩回顾',
+    signUpTitle: '观看回放',
     ongoing: false,
+    replayLink: 'https://www.bilibili.com/video/BV12PnezgEey/?vd_source=544d9ea25c0bc32570734b5b21104be',
   },
   introduce: {
     titleImg: introduce_light,
