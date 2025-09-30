@@ -3,8 +3,23 @@ import download_pad from '~@/assets/category/home/banner/download/pad.jpg';
 import download_mb_zh from '~@/assets/category/home/banner/download/banner-mb-zh.jpg';
 import download_mb_en from '~@/assets/category/home/banner/download/banner-mb-en.jpg';
 
+import release_pc from '~@/assets/category/home/banner/release/pc.jpg';
+import release_pad from '~@/assets/category/home/banner/release/pad.jpg';
+import release_mb_zh from '~@/assets/category/home/banner/release/mb.jpg';
+
 export default {
   zh: [
+    {
+      bg_pc: release_pc,
+      bg_pad: release_pad,
+      bg_mb: release_mb_zh,
+      bg_text: '',
+      bg_theme: 'light',
+      title: 'openEuler 25.09 创新版正式发布',
+      btn: '下载',
+      href: '/zh/download/#openEuler%2025.09',
+      isBlank: true,
+    },
     {
       bg_pc: download_pc,
       bg_pad: download_pad,

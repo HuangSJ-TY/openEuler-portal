@@ -6,6 +6,24 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 25.09',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/25.09/',
+        DESC: 'openEuler 25.09 是基于6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+        RELEASE_DESC_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/25.09/server/quickstart/releasenotes/introduction.html`,
+        INSTALL_GUIDENCE_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/25.09/server/installation_upgrade/installation/installation_preparations.html`,
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/openEuler 25.09 技术白皮书.pdf',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        WEBSITE_SELECT: '/zh/mirror/select/?version=25.09',
+        PUBLISH_DATE: '2025/09',
+        LTS: false,
+        VERSION: '25.09',
+        PLANNED_EOL: '2026/03',
+      },
+      {
         NAME: 'openEuler 24.03 LTS SP2',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP2/',
         DESC: 'openEuler 24.03 LTS SP2 是基于6.6内核的LTS版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
@@ -419,6 +437,24 @@ export default {
   },
   en: {
     COMMUNITY_LIST: [
+      {
+        NAME: 'openEuler 25.09',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/25.09/',
+        DESC: 'openEuler 25.09, built on Linux kernel 6.6, is an innovation release with new features spanning server, cloud, edge, and embedded scenarios to enhance the developer and user experience.',
+        RELEASE_DESC_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/25.09/server/quickstart/releasenotes/introduction.html`,
+        INSTALL_GUIDENCE_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/25.09/server/installation_upgrade/installation/installation_preparations.html`,
+        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        LIFE_CYCLE_URL: '/en/other/lifecycle/',
+        WEBSITE_SELECT: '/en/mirror/select/?version=25.09',
+        WHITE_PAPER: '',
+        PUBLISH_DATE: '2025/09',
+        LTS: false,
+        VERSION: '25.09',
+        PLANNED_EOL: '2026/03',
+      },
       {
         NAME: 'openEuler 24.03 LTS SP2',
         DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP2/',
