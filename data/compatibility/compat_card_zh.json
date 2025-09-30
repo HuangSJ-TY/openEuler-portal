@@ -30483,5 +30483,24 @@
     "chipModel": "ds1307",
     "item": "rtc-ds1307 4-0068",
     "downloadLink": "https://gitee.com/phytium_embedded/phytium-openeuler-embedded-bsp"
+  },
+  {
+    "vendorID": "NA",
+    "deviceID": "NA",
+    "svID": "NA",
+    "ssID": "NA",
+    "architecture": "aarch64",
+    "os": "openEuler 24.03 LTS SP2",
+    "driverName": "NA",
+    "version": "NA",
+    "type": "RDIMM",
+    "date": "2025/9/26",
+    "sha256": "NA",
+    "driverSize": "NA",
+    "chipVendor": "杭州力积存储科技有限公司",
+    "boardModel": "Z6ACGH2DARA-QE",
+    "chipModel": "H5CG44AGBDX018N",
+    "item": "NA",
+    "downloadLink": "NA"
   }
 ]

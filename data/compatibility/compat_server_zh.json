@@ -32088,5 +32088,65 @@
       "hostBusAdapter": "NA",
       "hardDiskDrive": "sda、sdb"
     }
+  },
+  {
+    "hardwareFactory": "四川华鲲振宇智能科技有限责任公司",
+    "hardwareModel": "HuaKun AT958 B3",
+    "osVersion": "openEuler 22.03 LTS SP4",
+    "architecture": "aarch64",
+    "date": "2025/09/26",
+    "friendlyLink": "https://www.schkzy.com/product_solution/product/product_detail?id\u003d1730478427623944194",
+    "boardCards": [
+      {
+        "vendorID": "15b3",
+        "deviceID": "101f",
+        "svID": "15b3",
+        "ssID": "0001",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "mlx5_core",
+        "version": "26.43.2026",
+        "type": "PCIE",
+        "date": "2025/09/26",
+        "sha256": "271d0cf9c7cdb2de5ceced9a0612627fbe52fa0f277b3ce6f09dea2bdec3bea5",
+        "driverSize": "69500",
+        "chipVendor": "Broadcom",
+        "boardModel": "MCX631102AN-ADAT ",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "aarch64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "megaraid_sas",
+        "version": "5.250.02-3847",
+        "type": "raid",
+        "date": "2025/09/26",
+        "sha256": "7da581820a51baf1b91c7de1274c6ad4cdd273c7b39f9804f20cd16b6220f10c",
+        "driverSize": "58536",
+        "chipVendor": "",
+        "boardModel": "SP686C-M-16i",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "https://www.schkzy.com/product_solution/product/product_detail?id\u003d1730478427623944194",
+      "certificationTime": "2025/09/26",
+      "commitID": "IC9ARR",
+      "mainboardModel": "",
+      "biosUefi": "6.60",
+      "cpu": "Kunpeng-920",
+      "ram": "16*32G DIMMs",
+      "portsBusTypes": "x8 PCI Express x8,x4 PCI Express x4",
+      "videoAdapter": "Hi171x",
+      "hostBusAdapter": "Huawei",
+      "hardDiskDrive": "BROADCOM MR9560-8i"
+    }
   }
+
 ]
