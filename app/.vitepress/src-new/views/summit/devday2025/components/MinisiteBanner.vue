@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 import { onMounted, computed } from 'vue';
-import { OButton } from '@opensig/opendesign';
+import { OButton, OIcon } from '@opensig/opendesign';
 import AOS from 'aos';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
+
+import IconOutLink from '~icons/app-new/icon-outlink.svg';
 
 const { isPhone } = useScreen();
 
@@ -30,18 +32,11 @@ const bannerImage = computed(() => {
     ? props.bannerData.bgPcDark
     : props.bannerData.bgPc;
 });
-const enrollUrl = computed(() => {
-  return props.bannerData.ongoing
-    ? isPhone.value
-      ? props.bannerData.signUpHrefMo
-      : props.bannerData.signUpHrefPc
-    : '#minisite-agenda';
-});
 </script>
 
 <template>
   <div class="banner">
-    <a v-if="isPhone" :href="enrollUrl">
+    <a v-if="isPhone" :href="bannerData.replayLink" target="_blank">
       <div
         class="banner-image"
         :class="{ 'banner-dark': isDark }"
@@ -66,17 +61,20 @@ const enrollUrl = computed(() => {
           class="banner-text"
         ></div>
         <div v-if="bannerData.signUpTitle" data-aos="fade-up">
-          <a :href="enrollUrl">
-            <OButton
-              class="banner-btn"
-              animation
-              variant="solid"
-              color="primary"
-              size="large"
-            >
-              {{ bannerData.signUpTitle }}
-            </OButton>
-          </a>
+          <OButton
+            class="banner-btn"
+            animation
+            variant="solid"
+            color="primary"
+            size="large"
+            :href="bannerData.replayLink"
+            target="_blank"
+          >
+            {{ bannerData.signUpTitle }}
+            <template #suffix>
+              <OIcon><IconOutLink /></OIcon>
+            </template>
+          </OButton>
         </div>
       </div>
     </div>
