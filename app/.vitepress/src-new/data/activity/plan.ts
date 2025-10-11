@@ -99,16 +99,7 @@ export const yearPlanData = {
             },
           ],
         },
-        {
-          month: '9',
-          actives: [
-            {
-              location: '意大利 米兰',
-              activeName: 'KVM Forum 2025',
-              href: 'https://kvm-forum.qemu.org/2025/',
-            },
-          ],
-        },
+        { month: '9' },
         { month: '10' },
         {
           month: '11',
@@ -165,8 +156,12 @@ export const yearPlanData = {
           month: '9',
           actives: [
             {
-              location: '中国 TBD',
-              activeName: 'CID 2025',
+              location: '中国 杭州',
+              activeName: 'GOSIM 2025',
+            },
+            {
+              location: '中国 上海',
+              activeName: 'HUAWEI Connect 2025',
             },
           ],
         },
@@ -176,14 +171,18 @@ export const yearPlanData = {
             {
               location: '中国 长沙',
               activeName: '1024程序员节',
-            },
+            }
+          ],
+        },
+        { 
+          month: '11',
+          actives: [
             {
-              location: '中国 TBD',
+              location: '中国 深圳',
               activeName: 'CLK 2025',
             },
           ],
         },
-        { month: '11' },
         { month: '12' },
       ],
     },
@@ -261,7 +260,19 @@ export const yearPlanData = {
             },
           ]
         },
-        { month: '10' },
+        { 
+          month: '10',
+          actives: [
+            {
+              location: '中国 北京',
+              activeName: 'openEuler Compiler SIG Meetup 北京站',
+            },
+            {
+              location: '中国 西安',
+              activeName: 'openEuler Embedded & AGIROS具身智能技术 Meetup西安站',
+            },
+          ]
+        },
         { month: '11' },
         { month: '12' },
       ],

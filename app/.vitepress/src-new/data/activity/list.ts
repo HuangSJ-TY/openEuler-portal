@@ -29,6 +29,9 @@ import xian from '~@/assets/category/user-group/city/xian.jpg';
 import xianMb from '~@/assets/category/event/city/xian-mb.jpg';
 import detail_250926 from '~@/assets/category/event/list/250926.jpg';
 
+import detail_251016 from '~@/assets/category/event/list/251016.jpg';
+import detail_251023 from '~@/assets/category/event/list/251023.jpg';
+
 export const EventSeries = new Map([
   [
     'all',
@@ -138,10 +141,44 @@ export const EventState = new Map([
 export const MEETUP_DATA = {
   zh: [
     {
+      id: 10,
+      title: 'openEuler Embedded & AGIROS具身智能技术 Meetup西安站',
+      date: '2025-10-23 14:00-17:30',
+      activity_type: 2,
+      synopsis:
+        '本活动围绕具身智能相关技术，包括但不限于ROS、AI框架、OS底座、具身Agent等进行分享及探讨，同时包含已有的行业优秀案例，以及对未来技术或行业发展趋势的思考。',
+      address: '西安电子科技大学北校区会议中心一层104报告厅',
+      city: '西安市',
+      isAdditional: true,
+      posterImg: xian,
+      posterImgMb: xianMb,
+      series: '3',
+      detail_img: detail_251023,
+      signup_url: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20251010094557',
+      signup_url_mb: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20251010094557',
+    },
+    {
+      id: 9,
+      title: 'openEuler Compiler SIG Meetup 北京站',
+      date: '2025-10-16 14:00-17:30',
+      activity_type: 2,
+      synopsis:
+        '本次Meetup特邀来自北京航空航天大学、湖南大学、字节跳动、京东、快手、麒麟软件及华为等高校与企业的多位专家学者齐聚一堂。会议涵盖前沿编译器技术、AI图编译优化、灵衢超节点编程、编译技术业务场景实践及编译器开源社区共建等核心议题，深度链接产学研用领域技术力量，共探编译器技术创新发展之路。',
+      address: '北京中关村北理工亚朵S酒店3层精工厅',
+      city: '北京市',
+      isAdditional: true,
+      posterImg: beijing,
+      posterImgMb: beijingMb,
+      series: '3',
+      detail_img: detail_251016,
+      signup_url: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20251009154130',
+      signup_url_mb: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20251009154130',
+    },
+    {
       id: 8,
       title: 'openEuler Meetup X openGauss Meetup \n西安站',
       date: '2025-09-26 14:00-17:30',
-      activity_type: 2,
+      activity_type: 1,
       synopsis:
         'openEuler开源社区与openGauss开源社区携手陕西鲲鹏创新中心、西北工业大学，将于西安举办Meetup。本次活动聚焦操作系统与数据库两大核心领域，围绕openEuler与openGauss的最新技术进展、内核优化实践、AI融合创新以及鲲鹏生态赋能等热点话题，邀请资深技术专家与开发者进行深度分享与交流。',
       address: '西安软件新城二期C2座3F陕西华为联合学院多功能厅',
@@ -151,14 +188,13 @@ export const MEETUP_DATA = {
       posterImgMb: xianMb,
       series: '3',
       detail_img: detail_250926,
-      signup_url: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20250915103542',
-      signup_url_mb: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250915103542',
+      new_url: 'https://www.openeuler.org/zh/news/20250928-euler-gauss-meetup-xian-review/20250917-euler-gauss-meetup-xian-review.html',
     },
     {
       id: 7,
       title: 'openEuler云原生开源中间件Meetup 武汉站',
       date: '2025-09-25 13:45-17:00',
-      activity_type: 2,
+      activity_type: 1,
       synopsis:
         '9月25日，openEuler社区联合东方通、武汉职业技术大学联合将在武汉职业技术大学举办以“轻舟泛海，云翼冲天”为主题的Meetup。此次交流活动特邀多位业内专家，分享实战案例与前沿技术解析，为技术爱好者、行业从业者、高校学生等加油充电，深化技术交流与学习，同时还将进行实习宣讲互动，为高校学生解读东方通开源实习项目，提供更多宝贵的实践机会。',
       address: '武汉职业技术大学关山校区-凌峰楼C11',
@@ -168,8 +204,7 @@ export const MEETUP_DATA = {
       posterImgMb: wuhanMb,
       series: '3',
       detail_img: detail_250925,
-      signup_url: 'https://openatomcon.openatom.cn/registration/?activityNo=HD20250909090628',
-      signup_url_mb: 'https://openatomcon.openatom.cn/registration_mobile/?activityNo=HD20250909090628',
+      new_url: 'https://www.openeuler.org/zh/news/20250929-openuler-dongfangtong/20250929-openuler-dongfangtong.html',
     },
     {
       id: 6,
