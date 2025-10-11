@@ -4,7 +4,7 @@ date: '2025-09-30'
 category: news
 tags:
   - openEuler
-banner: 'img/banners/20250930-openeuler-deepseekv32-01.png
+banner: 'img/banners/20250930-openeuler-deepseekv32-01.png'
 author: 'openEuler'
 summary: '基于 openEuler和 vLLM Ascend 快速上手 DeepSeek-V3.2-Exp'
 ---
