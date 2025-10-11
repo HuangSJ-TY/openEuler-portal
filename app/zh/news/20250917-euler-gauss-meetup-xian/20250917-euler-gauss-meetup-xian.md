@@ -4,7 +4,7 @@ date: '2025-09-16'
 category: news
 tags:
   - openEuler
-banner: 'img/banners/20250916-openeuler-cloudnative-middleware-meetup-01.png'
+banner: 'img/banners/20250917-euler-gauss-meetup-xian-01.png'
 author: 'openEuler'
 summary: '活动报名 | openEuler & openGauss Meetup 西安站'
 ---
