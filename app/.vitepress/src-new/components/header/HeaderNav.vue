@@ -22,6 +22,9 @@ const { t } = useLocale();
 const i18n = useI18n();
 
 const commonStore = useCommon();
+const isDark = computed(() => {
+  return commonStore.theme === 'dark' ? true : false;
+});
 
 const props = defineProps({
   langOptions: {
@@ -195,7 +198,7 @@ const onClickShortCutLink = (item: any) => {
                               "
                             >
                               <img
-                                :src="shortcut.PICTURE"
+                                :src="(isDark && shortcut?.PICTURE_PARK) ? shortcut.PICTURE_PARK : shortcut.PICTURE"
                                 class="review-picture"
                               />
                               <div class="review-content">
@@ -564,6 +567,7 @@ const onClickShortCutLink = (item: any) => {
           height: auto;
           display: block;
           object-fit: contain;
+          border-radius: 6px;
 
           @include respond-to('<=laptop') {
             display: none;

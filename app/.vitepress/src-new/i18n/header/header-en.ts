@@ -1,10 +1,10 @@
 import { markRaw } from 'vue';
 
-import Summit from '~@/assets/category/header/summit.png';
+import Summit from '~@/assets/category/header/summit.jpg';
+import SummitDark from '~@/assets/category/header/summit-dark.jpg';
+
 import IconOutLink from '~icons/app/icon-out-link.svg';
 import IconArrowRight from '~icons/app-new/icon-header-next.svg';
-
-import annualReport2024 from '~@/assets/category/header/annual-report-2024.jpg';
 
 const TAG_TYPE = {
   HOT: 'HOT',
@@ -434,7 +434,7 @@ export default {
               NAME: 'Events',
               DESCRIPTION:
                 'Meet openEuler and connect with the community at every key event.',
-              URL: '/interaction/summit-list/summit2024/',
+              URL: '/interaction/summit-list/summit2025/',
             },
             {
               NAME: 'Call for X Program',
@@ -469,13 +469,14 @@ export default {
       ],
       SHORTCUT: [
         {
-          NAME: 'Operating System Confenrence & openEuler Summit 2024',
+          NAME: 'Operating System Confenrence & openEuler Summit 2025',
           PICTURE: Summit,
+          PICTURE_PARK: SummitDark,
           DESCRIPTION:
-            'Operating systems form the backbone of digital and intelligent industry transformation. openEuler, an open source operating system born in China for digital infrastructure, has emerged as a key player in the global open source landscape. Over the past five years, its market presence was steadily increasing. And openEuler has been continuously driving innovations in OS for AI and AI for OS, accelerating digital transformation, and fostering a thriving ecosystem though industry-wide collaboration.',
-          REMARK: 'November 15-16, 2024 | Beijing',
+            'As AI transitions from exploration to real-world implementation, operating systems are crucial for unleashing massive AI computing power. Celebrating six years of open source excellence, openEuler has achieved holistic growth in business, technology, and its ecosystem. It now powers a diverse range of scenarios—from servers and cloud-native to edge computing and embedded systems—serving users across the globe and driving foundational software innovation.',
+          REMARK: 'November 14-15, 2025 | Beijing',
           TYPE: 'PICTURE',
-          URL: '/interaction/summit-list/summit2024/',
+          URL: '/interaction/summit-list/summit2025/',
         },
       ],
     },

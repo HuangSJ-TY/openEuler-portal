@@ -31,4 +31,14 @@ export default [
     name: 'openEuler Summit 2022',
     url: '/zh/interaction/summit-list/summit2022/',
   },
+  {
+    name: 'openEuler Summit 2025',
+    url: '/zh/interaction/summit-list/summit2025/',
+    dates: ['2025-11-14', '2025-11-15'],
+    address: '北京中关村国际创新中心',
+    start_date: '2025-11-14',
+    end_date: '2025-11-15',
+    activity_type: '线上 + 线下',
+    type: 'summit',
+  },
 ];
