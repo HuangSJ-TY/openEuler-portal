@@ -48,10 +48,10 @@ export default {
       name: 'CALL FOR SPEAKER',
       link: 'https://shimo.im/forms/LWPCwstZl9i92etG/fill',
     },
-    {
-      name: 'CALL FOR SPONSOR',
-      link: 'https://shimo.im/forms/pFFynLiTbvvbqhtD/fill',
-    },
+    // {
+    //   name: 'CALL FOR SPONSOR',
+    //   link: 'https://shimo.im/forms/pFFynLiTbvvbqhtD/fill',
+    // },
     {
       name: 'CALL FOR SIG',
       link: 'https://shimo.im/forms/AWBrX4Sb6L4HieCE/fill',
