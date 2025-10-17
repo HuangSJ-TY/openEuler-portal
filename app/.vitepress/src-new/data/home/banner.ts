@@ -7,8 +7,41 @@ import release_pc from '~@/assets/category/home/banner/release/pc.jpg';
 import release_pad from '~@/assets/category/home/banner/release/pad.jpg';
 import release_mb_zh from '~@/assets/category/home/banner/release/mb.jpg';
 
+import minisite_pc from '~@/assets/category/home/banner/summit2025/pc.jpg';
+import minisite_pad from '~@/assets/category/home/banner/summit2025/pad.jpg';
+import minisite_mb from '~@/assets/category/home/banner/summit2025/mb.jpg';
+import minisite_pc_dark from '~@/assets/category/home/banner/summit2025/pc_dark.jpg';
+import minisite_pad_dark from '~@/assets/category/home/banner/summit2025/pad_dark.jpg';
+import minisite_mb_dark from '~@/assets/category/home/banner/summit2025/mb_dark.jpg';
+import minisite_text from '~@/assets/category/home/banner/summit2025/textImg-pc-light.png';
+import minisite_text_dark from '~@/assets/category/home/banner/summit2025/textImg-pc-dark.png';
+
 export default {
   zh: [
+    {
+      light: {
+        bg_pc: minisite_pc,
+        bg_pad: minisite_pad,
+        bg_mb: minisite_mb,
+        bg_text: minisite_text,
+        bg_theme: 'light',
+      },
+      dark: {
+        bg_pc: minisite_pc_dark,
+        bg_pad: minisite_pad_dark,
+        bg_mb: minisite_mb_dark,
+        bg_text: minisite_text_dark,
+        bg_theme: 'dark',
+      },
+      href: '/zh/interaction/summit-list/summit2025/',
+      isBlank: true,
+      btn: '查看详情',
+      pc_text_width: '658px',
+      pc_text_height: '158px',
+      pad_text_width: '395px',
+      pad_text_height: '95px',
+      pad_offset: '80%',
+    },
     {
       bg_pc: release_pc,
       bg_pad: release_pad,
@@ -38,6 +71,30 @@ export default {
     },
   ],
   en: [
+    {
+      light: {
+        bg_pc: minisite_pc,
+        bg_pad: minisite_pad,
+        bg_mb: minisite_mb,
+        bg_text: minisite_text,
+        bg_theme: 'light',
+      },
+      dark: {
+        bg_pc: minisite_pc_dark,
+        bg_pad: minisite_pad_dark,
+        bg_mb: minisite_mb_dark,
+        bg_text: minisite_text_dark,
+        bg_theme: 'dark',
+      },
+      href: '/en/interaction/summit-list/summit2025/',
+      isBlank: true,
+      btn: 'View More',
+      pc_text_width: '658px',
+      pc_text_height: '158px',
+      pad_text_width: '395px',
+      pad_text_height: '95px',
+      pad_offset: '80%',
+    },
     {
       bg_pc: download_pc,
       bg_pad: download_pad,

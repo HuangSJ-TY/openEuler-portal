@@ -27,37 +27,36 @@ const { isPhone, isPad, gtPad } = useScreen();
 
 const bannerInfo = computed(() => {
   const info = banner[locale.value as 'zh' | 'en'];
-  for (let i = 0, len = info.length; i < len; i++) {
-    const item = info[i];
-
+  
+  return info.map(item => {
+    // 处理主题
     let themeInfo;
-
     if (item.light && isLight.value) {
       themeInfo = item.light;
-    }
-
-    if (item.dark && !isLight.value) {
+    } else if (item.dark && !isLight.value) {
       themeInfo = item.dark;
     }
 
+    // 创建新对象，避免污染原始数据
+    const newItem = { ...item };
+    
     if (themeInfo) {
-      Object.keys(themeInfo).forEach((key) => {
-        item[key] = themeInfo[key];
-      });
+      Object.assign(newItem, themeInfo);
     } else {
-      item.withStickyBg = true;
+      newItem.withStickyBg = true;
     }
 
+    // 处理响应式图片
     if (gtPad.value) {
-      item.bg = item.bg_pc;
+      newItem.bg = newItem.bg_pc || item.bg_pc;
     } else if (isPad.value) {
-      item.bg = item.bg_pad;
+      newItem.bg = newItem.bg_pad || item.bg_pad;
     } else {
-      item.bg = item.bg_mb;
+      newItem.bg = newItem.bg_mb || item.bg_mb;
     }
-  }
 
-  return info;
+    return newItem;
+  });
 });
 
 // 主题切换
@@ -101,6 +100,9 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
             'with-sticky-bg': info.withStickyBg,
             'in-dark': !isLight,
             'cursor-pointer': info.href && !info.btn,
+          }"
+          :style="{
+            '--pad-offset': info.pad_offset,
           }"
           @click="onClick(info.href, info.btn)"
         >
@@ -219,6 +221,13 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
   :deep(.o-figure-img) {
     width: 100%;
     height: 100%;
+  }
+
+  @include respond-to('pad') {
+    :deep(.o-figure-img) {
+      transition: object-position 0.3s ease;
+      object-position: var(--pad-offset);
+    }
   }
 
   @include respond-to('phone') {
