@@ -39,7 +39,7 @@ export default {
       '<span class="blod">Shape the ecosystem:</span> Help create a platform for the convergence of open-source minds and witness the power of global synergy.'
     ],
     slogan: [
-      'Six years of openEuler have paved the way for new horizons. Let us reunite in Beijing to share expertise and fuel the next era of open source innovation.',
+      'Let us reunite in Beijing to share expertise and fuel the next era of open source innovation.',
       'We look forward to seeing you there.',
     ]
   },
