@@ -44,37 +44,43 @@ const cardBg = computed(() => {
 </script>
 
 <template>
-  <div class="call-content">
-    <a
-      v-for="item in callData"
-      :key="item.link"
-      class="content-item"
-      :class="{ 'content-item-en': lang === 'en' }"
-      :href="item.link"
-      target="_blank"
-    >
-      <div class="card-bg" :style="{ backgroundImage: `url(${cardBg})` }"></div>
-      <div v-if="lang === 'zh'" class="cn-title call-title">
-        {{ item.name }}
-      </div>
-      <div
-        class="en-title call-title"
-        :class="{ 'in-en-lang': lang === 'en' }"
+  <div class="call-for">
+    <p class="section-title">CALL FOR</p>
+    <div class="call-content">
+      <a
+        v-for="item in callData"
+        :key="item.link"
+        class="content-item"
+        :class="{ 'content-item-en': lang === 'en' }"
+        :href="item.link"
+        target="_blank"
       >
-        {{ item.name_en || item.name }}
-      </div>
-    </a>
+        <div class="card-bg" :style="{ backgroundImage: `url(${cardBg})` }"></div>
+        <div v-if="lang === 'zh'" class="cn-title call-title">
+          {{ item.name }}
+        </div>
+        <div
+          class="en-title call-title"
+          :class="{ 'in-en-lang': lang === 'en' }"
+        >
+          {{ item.name_en || item.name }}
+        </div>
+      </a>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.call-for {
+  margin-top: 72px;
+  @media screen and (max-width: 768px) {
+    margin-top: var(--e-spacing-h4);
+  }
+}
 .call-content {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 32px;
-  @media screen and (max-width: 600px) {
-    margin-top: 24px;
-  }
+  margin-top: 8px;
   .content-item {
     position: relative;
     width: calc((100% - 64px) / 3);
