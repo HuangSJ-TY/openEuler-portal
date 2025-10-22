@@ -4,7 +4,7 @@ date: '2025-10-17'
 category: news
 tags:
   - openEuler
-banner: 'img/banners/20251016eurpoemeetup_01.png'
+banner: 'img/banners/20251020openeulersummit_01.png'
 author: 'openEuler'
 summary: 'openEuler Summit 2025 | 诚挚的邀请您提交议题、申报SIG会议……'
 ---
