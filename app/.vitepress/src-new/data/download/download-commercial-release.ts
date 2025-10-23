@@ -2,6 +2,21 @@ export default {
   zh: {
     COMMERCIAL_RELEASE_LIST: [
       {
+        NAME: '青云 PrimusOs 操作系统 24.03 LTS SP1',
+        DOWNLOAD_URL: 'https://www.qingcloud.com',
+        DESC: '青云 PrimusOS 操作系统 24.03 LTS SP1 是青云科技依托 Linux 内核，深度融合 openEuler 等主流开源技术，自主打造的新一代安全可靠、高性能的操作系统。该系统全面支持 x86、ARM 等主流处理器架构，可有效支撑数据中心核心业务的稳定运行。面向云计算、数据库、大数据、人工智能及网络安全等关键应用场景，PrimusOS 提供了坚实可靠的底层支撑，致力于满足金融、政府、企业、运营商等行业的数字化转型需求，是国产化环境下领先的数字基础设施操作系统解决方案。',
+        MANUFACTURER: '北京青云科技集团股份有限公司',
+        PUBLISH_DATE: '2025/10',
+        DETAILED_LINK: [
+          {
+            ARCH: 'x86_64',
+          },
+          {
+            ARCH: 'AArch64',
+          },
+        ],
+      },
+      {
         NAME: '汇智TeligenOS服务器操作系统 V3',
         DOWNLOAD_URL: 'http://www.teligen.net',
         DESC: '汇智TeligenOS服务器操作系统 V3由广州汇智通信技术有限公司研发，具有高效、稳定、安全等核心特性，可为数据库、大数据、云计算及人工智能等企业级应用提供可靠的运行支撑。该系统全面支持X86、ARM、龙芯和申威等主流CPU架构，并完成与国内主要芯片及整机厂商的适配。同时，其技术架构覆盖从底层芯片、系统内核、虚拟化平台到上层应用的全栈体系，确保高效性、可靠性和安全性。',
