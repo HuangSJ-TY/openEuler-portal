@@ -21,8 +21,8 @@ const commonStore = useCommon();
 
 <template>
   <div v-if="lang === 'zh'" class="previous">
-    <div class="section-title">
-      <p>{{ previousData.title }}</p>
+    <div class="previous-title">
+      <h3>{{ previousData.title }}</h3>
       <OIcon><IconReview /></OIcon>
     </div>
     <div class="link-box">
@@ -39,10 +39,30 @@ const commonStore = useCommon();
 
 <style scoped lang="scss">
 .previous {
-  margin-top: 72px;
-  text-align: center;
+  margin-top: var(--e-spacing-h1);
   @media screen and (max-width: 768px) {
     margin-top: var(--e-spacing-h4);
+  }
+  .previous-title {
+    display: flex;
+    h3 {
+      font-size: 26px;
+      line-height: 30px;
+      color: var(--e-color-text1);
+      margin-right: var(--e-spacing-h5);
+      @media screen and (max-width: 768px) {
+        font-size: var(--e-font-size-text);
+        line-height: var(--e-line-height-text);
+        margin-right: var(--e-spacing-h7);
+      }
+    }
+  }
+
+  .o-icon {
+    --icon-size: 32px;
+    @media screen and (max-width: 768px) {
+      --icon-size: 16px;
+    }
   }
 
   .link-box {
