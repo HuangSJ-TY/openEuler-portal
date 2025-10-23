@@ -61,18 +61,14 @@ const processDetail = computed(() => {
         v-if="!lePadV"
         :title="$t('sig.applicationProcess')"
         class="application-process"
+        :detail="$t('sig.applicationProcessSubTitle')"
       >
         <template #title>
           <OIcon class="icon">
             <component :is="isDark ? sigProcessDark : sigProcess"></component>
           </OIcon>
-          <div class="title-box">
-            <div class="title">
-              {{ $t('sig.applicationProcess') }}
-            </div>
-            <div class="subtitle">
-              {{ $t('sig.applicationProcessSubTitle') }}
-            </div>
+          <div class="title">
+            {{ $t('sig.applicationProcess') }}
           </div>
         </template>
         <div class="process-box">
@@ -106,7 +102,7 @@ const processDetail = computed(() => {
             />
           </template>
         </div>
-        <p class="process-detail">{{ processDetail }}</p>
+        <p class="process-detail" v-dompurify-html="processDetail"></p>
       </OCard>
       <div v-else class="application-process-mo">
         <div class="title">{{ $t('sig.applicationProcess') }}</div>
@@ -224,13 +220,12 @@ const processDetail = computed(() => {
       }
 
       :deep(.o-card-content) {
-        margin-top: 24px;
-
         .process-box {
           display: flex;
           align-items: center;
           padding: 0 100px;
           justify-content: space-evenly;
+          margin-top: 16px;
 
           .process-icon {
             height: 4px;
@@ -349,6 +344,22 @@ const processDetail = computed(() => {
     height: auto;
   }
 }
+
+:deep(.underline-link) {
+  --link-color-hover: var(--o-color-primary1);
+  --link-underline-x: 100%;
+
+  color: var(--o-color-primary1);
+  background: linear-gradient(0deg, var(--link-color-hover), var(--link-color-hover)) no-repeat var(--link-underline-x) bottom;
+  background-size: 0 1px;
+  transition: background-size var(--o-easing-standard) var(--o-duration-m2);
+
+  @include hover {
+    background-size: var(--link-underline-x) 1px;
+    background-position-x: left;
+  }
+}
+
 [lang='en'] {
   .sig-about {
     .sig-about-card-box {
