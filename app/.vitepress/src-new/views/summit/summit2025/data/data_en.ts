@@ -25,7 +25,12 @@ export default {
     textImgMb: {
       light: textMbLight,
       dark: textMbDark,
-    }
+    },
+    signUpTitle: 'Register',
+    link: {
+      pc: 'https://openatomcon.openatom.cn/registration/?code=Nhvt&activityNo=HD20251013162127',
+      mo: 'https://openatomcon.openatom.cn/registration_mobile/?code=Nhvt&activityNo=HD20251013162127',
+    },
   },
   introduce: {
     desc: [

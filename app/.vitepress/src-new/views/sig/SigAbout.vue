@@ -225,7 +225,7 @@ const processDetail = computed(() => {
           align-items: center;
           padding: 0 100px;
           justify-content: space-evenly;
-          margin-top: 16px;
+          margin-top: 24px;
 
           .process-icon {
             height: 4px;
@@ -307,6 +307,10 @@ const processDetail = computed(() => {
           );
           border-radius: var(--o-radius_control-xs);
         }
+      }
+
+      :deep(.o-card-detail) {
+        @include tip1;
       }
     }
 
