@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref, computed, onMounted } from 'vue';
+import { OButton } from '@opensig/opendesign';
 import AOS from 'aos';
 
 import { useCommon } from '@/stores/common';
@@ -36,6 +37,17 @@ onMounted(() => {
       <div data-aos="fade-up" class="banner-main">
         <img :src="bannerData.textImg[commonStore.theme]" class="text-img" />
         <img :src="bannerData.textImgMb[commonStore.theme]" class="text-img-mb" />
+        <OButton
+          class="banner-btn"
+          animation
+          variant="solid"
+          color="primary"
+          size="large"
+          :href="isMobile ? bannerData.link.mo : bannerData.link.pc"
+          target="_blank"
+        >
+          {{ bannerData.signUpTitle }}
+        </OButton>
       </div>
     </div>
   </div>
@@ -73,11 +85,15 @@ onMounted(() => {
   }
   .text-img {
     height: 153px;
-    margin-top: 110px;
+    margin-top: 75px;
     display: block;
   }
   .text-img-mb {
     display: none;
+  }
+
+  .banner-btn {
+    margin-top: 16px;
   }
 
   .banner-panel-cover-dark {
@@ -92,7 +108,12 @@ onMounted(() => {
     }
     .text-img {
       height: 120px;
-      margin-top: 130px;
+      margin-top: 75px;
+    }
+    .banner-btn {
+      --btn-height: 36px;
+      width: 96px;
+      @include text1;
     }
   }
 }
@@ -116,9 +137,13 @@ onMounted(() => {
       display: none;
     }
     .text-img-mb {
-      display: inline-block;
-      width: 80%;
+      display: block;
+      width: 70%;
       height: auto;
+      margin: 0 auto;
+    }
+
+    .banner-btn {
       margin-bottom: 12px;
     }
 
