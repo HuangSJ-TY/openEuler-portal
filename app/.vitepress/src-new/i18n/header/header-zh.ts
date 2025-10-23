@@ -7,6 +7,7 @@ import Odd from '~@/assets/category/header/odd.png';
 
 import IconOutLink from '~icons/app/icon-out-link.svg';
 import IconArrowRight from '~icons/app-new/icon-header-next.svg';
+import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 
 const TAG_TYPE = {
   HOT: 'HOT',
@@ -237,19 +238,10 @@ export default {
               URL: '/nestos',
             },
             {
-              NAME: 'StratoVirt',
-              DESCRIPTION: '面向云数据中心的企业级虚拟化VMM',
-              URL: '/other/projects/stratovirt/',
-            },
-            {
-              NAME: 'BiSheng JDK',
-              DESCRIPTION: '一款高性能Java虚拟机',
-              URL: '/other/projects/bishengjdk/',
-            },
-            {
-              NAME: 'openEuler智能化解决方案',
-              DESCRIPTION: '搭载在openEuler上的大模型平台',
-              URL: '/projects/intelligence/',
+              NAME: '全部项目',
+              DESCRIPTION: '',
+              URL: '/projects',
+              ICON: IconChevronRight,
             },
           ],
         },
@@ -267,7 +259,7 @@ export default {
         {
           NAME: '开发者日历',
           URL: '/meeting/#calendar',
-        },
+        }
       ],
     },
     {

@@ -105,6 +105,9 @@ export default defineConfig({
         brand: FileSystemIconLoader(
           path.resolve(__dirname, './.vitepress/src-new/assets/category/brand/svg-icons')
         ),
+        yuanrong: FileSystemIconLoader(
+          path.resolve(__dirname, './.vitepress/src-new/assets/category/yuanrong/svg-icons')
+        ),
       },
     }),
     viteStaticCopy({
