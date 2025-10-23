@@ -478,6 +478,12 @@ const selectTab = () => {
                           "
                       :href="item[keys.key]"
                       target="_blank"
+                      v-analytics.bubble="{
+                        level3: $t('sig.latestMeeting').replace(/：.*$/, ''),
+                        target: item.type === 'activity' ? '查看详情' : item[keys.key],
+                        meetingName: item.name || item.title,
+                        date: latestDate,
+                      }"
                       >{{ item.type === 'activity' ? '查看详情' : item[keys.key] }}</a
                     >
                     <p v-else>

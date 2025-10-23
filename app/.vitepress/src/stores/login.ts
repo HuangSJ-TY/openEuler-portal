@@ -14,7 +14,9 @@ export const useLogin = defineStore('login', () => {
   const loginStateChecked = ref(false);
   const setGuardAuthClient = (data: any) => {
     if (Object.prototype.toString.call(data) === '[object Object]') {
-      oa.setHeader({ uId: data.username });
+      if (data.username) {
+        oa?.setHeader({ uId: data.username });
+      }
       Object.keys(guardAuthClient.value).forEach((key) => {
         guardAuthClient.value[key] = data[key] || '';
       });

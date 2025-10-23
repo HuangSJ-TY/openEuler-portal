@@ -5,6 +5,79 @@ import SigAbout from './SigAbout.vue';
 import SigList from './SigList.vue';
 
 import banner from '~@/assets/category/sig/sig-center-banner.jpg';
+import { oaReport } from '@/shared/analytics';
+import { onBeforeUnmount, onMounted, shallowRef } from 'vue';
+
+const obs = shallowRef<IntersectionObserver>();
+const inViewSectionInfos = new Map<HTMLElement | Element, { start: number }>();
+
+const observeSections = () => {
+  document.querySelectorAll('.app-section').forEach((el) => {
+    obs.value!.observe(el);
+  });
+}
+
+const visibilityChangeHandler = () => {
+  if (document.visibilityState === 'hidden') {
+    obs.value?.disconnect();
+    inViewSectionInfos.forEach((val, element) => {
+      oaReport('sectionDuration', {
+        module: 'sig',
+        level1: element.querySelector('.section-title')!.textContent,
+        duration: Date.now() - val.start,
+      });
+    });
+    inViewSectionInfos.clear();
+  } else {
+    observeSections();
+  }
+}
+
+onMounted(() => {
+  const halfViewportHeight = window.innerHeight / 2;
+  obs.value = new IntersectionObserver(
+    (records) => {
+      for (const item of records) {
+        if (item.isIntersecting) {
+          // 楼层可见，记录时间
+          if (
+            item.intersectionRatio >= 0.5 ||
+            item.intersectionRect.height >= halfViewportHeight
+          ) {
+            if (inViewSectionInfos.has(item.target)) continue;
+            inViewSectionInfos.set(item.target, { start: Date.now() });
+            continue;
+          }
+        } else {
+          if (item.intersectionRatio <= 0) {
+            // 楼层不可见上报
+            const cached = inViewSectionInfos.get(item.target);
+            inViewSectionInfos.delete(item.target);
+            if (!cached) continue;
+            oaReport('sectionDuration', {
+              module: 'sig',
+              level1: item.target.querySelector('.section-title')!.textContent,
+              duration: Date.now() - cached.start,
+            });
+          }
+        }
+      }
+    },
+    {
+      threshold: Array.from({ length: 101 }, (_, i) => i / 100),
+      rootMargin: '-80px 0px 0px 0px',
+    }
+  );
+
+  observeSections();
+  document.addEventListener('visibilitychange', visibilityChangeHandler);
+});
+
+onBeforeUnmount(() => {
+  obs.value?.disconnect();
+  inViewSectionInfos.clear();
+  document.removeEventListener('visibilitychange', visibilityChangeHandler);
+});
 </script>
 <template>
   <BannerLevel2

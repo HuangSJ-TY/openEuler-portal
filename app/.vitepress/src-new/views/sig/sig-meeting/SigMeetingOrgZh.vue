@@ -2,10 +2,18 @@
 import { OIcon } from '@opensig/opendesign';
 
 import iconOrgSig from '~icons/sig/org-sig.svg';
-
 </script>
 <template>
-  <div class="sig-meeting-org">
+  <div
+    class="sig-meeting-org"
+    v-analytics.catchBubble="{
+      properties: {
+        module: 'sig',
+        level1: '会议指南',
+        level2: '组织会议',
+      },
+    }"
+  >
     <div class="sig-meeting-content">
       <div class="content-title">
         <OIcon>
@@ -21,6 +29,10 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
           target="_blank"
           rel="noopener noreferrer"
           class="underline-link"
+          v-analytics.bubble="{
+            level3: '需求收集',
+            target: 'https://etherpad.openeuler.org/',
+          }"
           >https://etherpad.openeuler.org/</a
         >
         创建相应的会议收集目录(建议命名方式为: sig 名-版本名(例如
@@ -31,6 +43,10 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
           target="_blank"
           rel="noopener noreferrer"
           class="underline-link"
+          v-analytics.bubble="{
+            level3: '需求收集',
+            target: 'https://etherpad.openeuler.org/p/planning-template',
+          }"
           >https://etherpad.openeuler.org/p/planning-template</a
         >
         )
@@ -70,13 +86,19 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
           <li>
             各议题讨论可以分为下面几个阶段：
             <p>
-              <span>1.需求陈述：由需求发起人对需求进行陈述，包括需求目标、需求来源、提议的技术方案及既往的讨论及结果等，需求陈述阶段其余听众不允许打断。</span>
+              <span
+                >1.需求陈述：由需求发起人对需求进行陈述，包括需求目标、需求来源、提议的技术方案及既往的讨论及结果等，需求陈述阶段其余听众不允许打断。</span
+              >
             </p>
             <p>
-              <span>2.讨论：由各参会者针对该需求进行相应的讨论，所有与会者均可参与讨论，主持人负责记录各方观点及重点意见。</span>
+              <span
+                >2.讨论：由各参会者针对该需求进行相应的讨论，所有与会者均可参与讨论，主持人负责记录各方观点及重点意见。</span
+              >
             </p>
             <p>
-              <span>3.总结：在达成共识后，由主持人根据共识输出该议题的结论。若现场没有达成共识，则应商议再次讨论的具体时间。</span>
+              <span
+                >3.总结：在达成共识后，由主持人根据共识输出该议题的结论。若现场没有达成共识，则应商议再次讨论的具体时间。</span
+              >
             </p>
           </li>
           <li>
@@ -113,6 +135,11 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
                 target="_blank"
                 rel="noopener noreferrer"
                 class="underline-link"
+                v-analytics.bubble="{
+                  level3: '需求收集',
+                  target:
+                    'https://mailweb.openeuler.org/hyperkitty/list/openstack@openeuler.org/thread/NR3O2ZUUNE46XFBTV4CND4HEYDCBPW33/',
+                }"
               >
                 https://mailweb.openeuler.org/hyperkitty/list/openstack@openeuler.org/thread/NR3O2ZUUNE46XFBTV4CND4HEYDCBPW33/
               </a>
@@ -272,7 +299,12 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
   --link-underline-x: 100%;
 
   color: var(--o-color-primary1);
-  background: linear-gradient(0deg, var(--link-color-hover), var(--link-color-hover)) no-repeat var(--link-underline-x) bottom;
+  background: linear-gradient(
+      0deg,
+      var(--link-color-hover),
+      var(--link-color-hover)
+    )
+    no-repeat var(--link-underline-x) bottom;
   background-size: 0 1px;
   transition: background-size var(--o-easing-standard) var(--o-duration-m2);
 

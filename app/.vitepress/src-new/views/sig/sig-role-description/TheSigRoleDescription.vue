@@ -26,6 +26,8 @@ import {
   committer,
   maintainer,
 } from '~@/data/sig/role-description';
+import { oaReport } from '@/shared/analytics';
+import { inBrowser } from 'vitepress';
 
 const { locale, t } = useLocale();
 const { lePadV } = useScreen();
@@ -51,12 +53,84 @@ const getSectionBg = (item: any) => {
   }
 };
 
+let visitTime: number | null = null;
+
 onMounted(() => {
+  if (!visitTime) {
+    visitTime = Date.now();
+  }
   useHeaderTitle().$patch({ headerTitle: t('sig.roleDescription') });
 });
+
+const visibilityChangeHandler = () => {
+  if (document.visibilityState === 'visible') {
+    if (!visitTime) {
+      visitTime = Date.now();
+    }
+  } else {
+    oaReport('pageLeave', {
+      duration: Date.now() - visitTime!,
+      $url: location.href,
+      module: 'sig',
+      level1: t('sig.roleDescription'),
+    });
+    visitTime = null;
+  }
+};
+
+if (inBrowser) {
+  document.addEventListener('visibilitychange', visibilityChangeHandler);
+}
+
 onUnmounted(() => {
   useHeaderTitle().$patch({ headerTitle: '' });
+  document.removeEventListener('visibilitychange', visibilityChangeHandler);
 });
+
+// ============埋点============
+const getClickedLink = (ev: Event) => {
+  let target = ev.target as HTMLElement;
+  if (!target || target === ev.currentTarget) return;
+  while (!(target instanceof HTMLAnchorElement)) {
+    target = target.parentElement!;
+    if (!target || target === ev.currentTarget) return;
+  }
+  return target;
+};
+
+const reportMemberCardLinkClick = (e: Event, name: string) => {
+  const target = getClickedLink(e);
+  if (!target) return;
+
+  return {
+    properties: {
+      module: 'sig',
+      level1: t('sig.roleDescription'),
+      level2: communityMember.title[locale.value],
+      level3: name,
+      target: target.textContent.trim(),
+    },
+  };
+};
+
+const reportSectionLinkClick = (
+  e: Event,
+  section: typeof sections[number],
+  name: string
+) => {
+  const target = getClickedLink(e);
+  if (!target) return;
+
+  return {
+    properties: {
+      module: 'sig',
+      level1: t('sig.roleDescription'),
+      level2: section.title[locale.value],
+      level3: name,
+      target: target.textContent.trim(),
+    },
+  };
+};
 </script>
 
 <template>
@@ -68,18 +142,24 @@ onUnmounted(() => {
 
     <ContentWrapper :vertical-padding="verticalPadding">
       <OBreadcrumb class="breadcrumb">
-        <OBreadcrumbItem :href="`/${locale}/sig/sig-list/`">{{
-          t('sig.sigCenter')
-        }}</OBreadcrumbItem>
+        <OBreadcrumbItem
+          :href="`/${locale}/sig/sig-list/`"
+          v-analytics="{
+            properties: {
+              module: 'sig',
+              level1: t('sig.roleDescription'),
+              target: t('sig.sigCenter'),
+              type: 'breadcrumb',
+            },
+          }"
+          >{{ t('sig.sigCenter') }}</OBreadcrumbItem
+        >
         <OBreadcrumbItem>{{ t('sig.roleDescription') }}</OBreadcrumbItem>
       </OBreadcrumb>
     </ContentWrapper>
 
     <!-- 社区成员 -->
-    <AppSection
-      class="community-member"
-      :title="communityMember.title[locale]"
-    >
+    <AppSection class="community-member" :title="communityMember.title[locale]">
       <template #subtitle>
         <div v-dompurify-html="communityMember.subtitle[locale]"></div>
       </template>
@@ -101,6 +181,15 @@ onUnmounted(() => {
             class="detail-link"
             :href="`#${item.href}`"
             :icon="OIconFile"
+            v-analytics="{
+              properties: {
+                module: 'sig',
+                level1: t('sig.roleDescription'),
+                level2: communityMember.title[locale],
+                level3: item.name.zh,
+                target: communityMember.viewDetail.zh,
+              },
+            }"
             >{{ communityMember.viewDetail[locale] }}</OLink
           >
         </div>
@@ -111,7 +200,7 @@ onUnmounted(() => {
           <OIcon class="item-icon"> <component :is="item.icon" /></OIcon>
           <div class="item-right">
             <div class="item-title">{{ item.name[locale] }}</div>
-            <div class="item-desc" v-dompurify-html="item.desc[locale]"></div>
+            <div class="item-desc" v-dompurify-html="item.desc[locale]" v-analytics="(ev: Event) => reportMemberCardLinkClick(ev, item.name[locale])"></div>
           </div>
         </div>
       </div>
@@ -133,6 +222,7 @@ onUnmounted(() => {
           :key="i"
           class="common-section-list-item"
           :style="{ backgroundImage: `url(${getSectionBg(item)})` }"
+          v-analytics="(e: Event) => reportSectionLinkClick(e, section, item.title.zh)"
         >
           <div class="title-wrap">
             <img class="icon-requrement" :src="section.cardPointBg" />
@@ -593,7 +683,12 @@ onUnmounted(() => {
   --link-underline-x: 100%;
 
   color: var(--o-color-primary1);
-  background: linear-gradient(0deg, var(--link-color-hover), var(--link-color-hover)) no-repeat var(--link-underline-x) bottom;
+  background: linear-gradient(
+      0deg,
+      var(--link-color-hover),
+      var(--link-color-hover)
+    )
+    no-repeat var(--link-underline-x) bottom;
   background-size: 0 1px;
   transition: background-size var(--o-easing-standard) var(--o-duration-m2);
 

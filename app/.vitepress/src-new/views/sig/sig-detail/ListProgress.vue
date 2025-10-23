@@ -105,6 +105,9 @@ watch(
         :title="giteeName"
         :href="goToUser(giteeName)"
         target="_blank"
+        v-analytics.bubble="{
+          target: giteeName
+        }"
         >{{ giteeName }}</a
       >
     </template>

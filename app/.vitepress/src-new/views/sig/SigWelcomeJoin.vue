@@ -7,15 +7,38 @@ import { OIcon } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
 
 import AppSection from '~@/components/AppSection.vue';
+import { useI18n } from '~@/i18n';
 
 const { locale } = useLocale();
 const { lePadV } = useScreen();
+
+const i18n = useI18n();
+
+const reportLinkClick = (ev: Event) => {
+  let target = ev.target as HTMLElement;
+  if (target === ev.currentTarget) return;
+  while (!(target instanceof HTMLAnchorElement)) {
+    target = target.parentElement!;
+    if (target === ev.currentTarget || !target) return;
+  }
+
+  return {
+    properties: {
+      module: 'sig',
+      level1: i18n.value.sig.sigCenter,
+      level2: i18n.value.sig.welcomeJoin,
+      level3: (ev.currentTarget as HTMLElement).querySelector('.title')!.textContent.trim(),
+      target: target.textContent,
+      detail: target.href
+    }
+  };
+};
 </script>
 <template>
   <AppSection :title="$t('sig.welcomeJoin')" class="sig-welcome">
     <div class="sig-welcome-card">
       <template v-for="(card, index) in welcomeJoin" :key="card.title[locale]">
-        <div class="card-item">
+        <div class="card-item" v-analytics="reportLinkClick">
           <OIcon class="icon">
             <component :is="card.icon"></component>
           </OIcon>

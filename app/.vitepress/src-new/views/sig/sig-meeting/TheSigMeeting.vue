@@ -27,6 +27,8 @@ import { useCommon } from '@/stores/common';
 
 import cubeTow from '~@/assets/category/home/calendar/cube-2.png';
 import cubeTowDark from '~@/assets/category/home/calendar/cube-2_dark.png';
+import { inBrowser } from 'vitepress';
+import { oaReport } from '@/shared/analytics';
 
 const { locale, t } = useLocale();
 const { isPhone, lePad, lePadV } = useScreen();
@@ -44,12 +46,64 @@ const verticalPadding = computed(() => {
   }
 });
 
+let visitTime: number | null = null;
+
 onMounted(() => {
+  if (!visitTime) {
+    visitTime = Date.now();
+  }
   useHeaderTitle().$patch({ headerTitle: t('sig.meetingBannerTitle') });
 });
+
+const visibilityChangeHandler = () => {
+  if (document.visibilityState === 'visible') {
+    if (!visitTime) {
+      visitTime = Date.now();
+    }
+  } else {
+    oaReport('pageLeave', {
+      duration: Date.now() - visitTime!,
+      $url: location.href,
+      module: 'sig',
+      level1: t('sig.meetingBannerTitle'),
+    });
+    visitTime = null;
+  }
+};
+
+if (inBrowser) {
+  document.addEventListener('visibilitychange', visibilityChangeHandler);
+}
+
 onUnmounted(() => {
   useHeaderTitle().$patch({ headerTitle: '' });
+  document.removeEventListener('visibilitychange', visibilityChangeHandler);
 });
+
+// ============埋点============
+const getClickedLink = (ev: Event) => {
+  let target = ev.target as HTMLElement;
+  if (!target || target === ev.currentTarget) return;
+  while (!(target instanceof HTMLAnchorElement)) {
+    target = target.parentElement!;
+    if (!target || target === ev.currentTarget) return;
+  }
+  return target;
+};
+
+const reportIntroLinkClick = (ev: Event) => {
+  const target = getClickedLink(ev);
+  if (!target) return;
+
+  return {
+    properties: {
+      module: 'sig',
+      level1: t('sig.meetingBannerTitle'),
+      level2: t('sig.meetingIntroTitle'),
+      target: target.textContent.trim()
+    }
+  };
+};
 </script>
 <template>
   <div class="sig-meeting">
@@ -59,10 +113,19 @@ onUnmounted(() => {
       :subtitle="$t('sig.meetingBannerSubtitle')"
     />
     <ContentWrapper :vertical-padding="verticalPadding">
-      <OBreadcrumb class="breadcrumb">
-        <OBreadcrumbItem :href="`/${locale}/sig/sig-list/`">{{
-          t('sig.sigCenter')
-        }}</OBreadcrumbItem>
+      <OBreadcrumb class="breadcrumb" >
+        <OBreadcrumbItem 
+          :href="`/${locale}/sig/sig-list/`" 
+          v-analytics="{
+            properties: {
+              module: 'sig',
+              level1: $t('sig.meetingBannerTitle'),
+              target: $t('sig.sigCenter'),
+              type: 'breadcrumb',
+            },
+          }"
+          >{{ t('sig.sigCenter') }}</OBreadcrumbItem
+        >
         <OBreadcrumbItem>{{ t('sig.meetingBannerTitle') }}</OBreadcrumbItem>
       </OBreadcrumb>
     </ContentWrapper>
@@ -70,7 +133,7 @@ onUnmounted(() => {
     <AppSection class="meeting-intro" :title="$t('sig.meetingIntroTitle')">
       <div class="sig-meeting-content">
         <div class="conference-introduction">
-          <p v-dompurify-html="t('sig.meetingIntro1')"></p>
+          <p v-dompurify-html="t('sig.meetingIntro1')" v-analytics="reportIntroLinkClick"></p>
           <p>
             {{ $t('sig.meetingIntro2') }}
           </p>
@@ -185,7 +248,12 @@ onUnmounted(() => {
   --link-underline-x: 100%;
 
   color: var(--o-color-primary1);
-  background: linear-gradient(0deg, var(--link-color-hover), var(--link-color-hover)) no-repeat var(--link-underline-x) bottom;
+  background: linear-gradient(
+      0deg,
+      var(--link-color-hover),
+      var(--link-color-hover)
+    )
+    no-repeat var(--link-underline-x) bottom;
   background-size: 0 1px;
   transition: background-size var(--o-easing-standard) var(--o-duration-m2);
 

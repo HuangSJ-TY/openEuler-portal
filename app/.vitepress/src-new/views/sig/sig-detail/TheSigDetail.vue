@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref, computed, reactive, onMounted, onUnmounted } from 'vue';
 
-import { useData, useRouter } from 'vitepress';
+import { inBrowser, useData, useRouter } from 'vitepress';
 
 import { SIG_ADDRESS } from '~@/shared/config/sig';
 
@@ -32,6 +32,7 @@ import { getSigMeeting, getSigDetail } from '~@/api/api-sig';
 import type { SigCompleteItemT } from '~@/@types/type-sig';
 
 import { useHeaderTitle } from '~@/stores/common';
+import { oaReport } from '@/shared/analytics';
 
 const { leLaptop, isPadVToLaptop, lePadV } = useScreen();
 const { locale, t } = useLocale();
@@ -109,11 +110,53 @@ onMounted(() => {
 onUnmounted(() => {
   useHeaderTitle().$patch({ headerTitle: '' });
 });
+
+let visitTime: number | null = null;
+
+onMounted(() => {
+  if (!visitTime) {
+    visitTime = Date.now();
+  }
+});
+
+const visibilityChangeHandler = () => {
+  if (document.visibilityState === 'visible') {
+    if (!visitTime) {
+      visitTime = Date.now();
+    }
+  } else {
+    oaReport('pageLeave', {
+      duration: Date.now() - visitTime!,
+      $url: location.href,
+      module: 'sig-detail',
+      level1: sigName.value,
+    });
+    visitTime = null;
+  }
+};
+
+if (inBrowser) {
+  document.addEventListener('visibilitychange', visibilityChangeHandler);
+}
+
+onUnmounted(() => {
+  document.removeEventListener('visibilitychange', visibilityChangeHandler);
+});
 </script>
 <template>
   <ContentWrapper :vertical-padding="verticalPadding">
     <OBreadcrumb class="breadcrumb">
-      <OBreadcrumbItem :href="`/${locale}/sig/sig-list/`">{{ t('sig.sigCenter') }}</OBreadcrumbItem>
+      <OBreadcrumbItem 
+        :href="`/${locale}/sig/sig-list/`" 
+        v-analytics="{
+          properties: {
+            module: 'sig-detail',
+            level1: sigName,
+            target: t('sig.sigCenter'),
+            type: 'breadcrumb',
+          },
+        }">{{ t('sig.sigCenter') }}</OBreadcrumbItem
+      >
       <OBreadcrumbItem>{{ sigName }}</OBreadcrumbItem>
     </OBreadcrumb>
     <SigDetailInfoCard
@@ -128,6 +171,12 @@ onUnmounted(() => {
         class="sig-member-pc"
         :maintainer-list="maintainerInfo"
         :committer-list="committerInfo"
+        v-analytics.catchBubble="{
+          properties: {
+            module: 'sig-detail',
+            level1: sigName,
+          }
+        }"
       />
       <div class="sig-floor">
         <div v-if="locale !== 'en'" class="meeting-floot sig-floor-item">
@@ -144,6 +193,15 @@ onUnmounted(() => {
                     :href="meetingSummaryLink"
                     target="_blank"
                     color="primary"
+                    v-analytics="{
+                      properties: {
+                        module: 'sig-detail',
+                        level1: sigName,
+                        level2: t('sig.sigMettingActive'),
+                        level3: t('sig.workMeeting'),
+                        target: t('sig.meetingSummary'),
+                      },
+                    }"
                   >
                     {{ t('sig.meetingSummary') }}
                   </OLink>
@@ -169,6 +227,15 @@ onUnmounted(() => {
                   :href="`mailto:${sigDetailInfo?.mailing_list}`"
                   target="_blank"
                   class="icon-link"
+                  v-analytics="{
+                    properties: {
+                      module: 'sig-detail',
+                      level1: sigName,
+                      level2: t('sig.sigMettingActive'),
+                      level3: t('sig.mailList'),
+                      target: sigDetailInfo?.mailing_list,
+                    },
+                  }"
                 >
                   {{ sigDetailInfo?.mailing_list }}
                 </OLink>
@@ -182,6 +249,15 @@ onUnmounted(() => {
                   :href="`https://mailweb.openeuler.org/postorius/lists/${sigDetailInfo?.mailing_list}/`"
                   target="_blank"
                   size="medium"
+                  v-analytics="{
+                    properties: {
+                      module: 'sig-detail',
+                      level1: sigName,
+                      level2: t('sig.sigMettingActive'),
+                      level3: t('sig.mailList'),
+                      target: t('sig.subscribe'),
+                    },
+                  }"
                 >
                   {{ $t('sig.subscribe') }}
                 </OButton>
@@ -194,6 +270,13 @@ onUnmounted(() => {
               v-if="sigMeetingData.length"
               :meeting-data="sigMeetingData"
               :mail="mail"
+              v-analytics.catchBubble="{
+                properties: {
+                  module: 'sig-detail',
+                  level1: sigName,
+                  level2: t('sig.sigMettingActive'),
+                },
+              }"
             />
             <div v-else-if="!isLoading" class="result-empty-box sig-floor-item">
               <ResultEmpty
@@ -217,9 +300,26 @@ onUnmounted(() => {
           :committer-list="committerInfo"
         />
         <!-- SIG仓库 -->
-        <SigRepo class="sig-floor-item" />
+        <SigRepo
+          class="sig-floor-item"
+          v-analytics.catchBubble="{
+            properties: {
+              module: 'sig-detail',
+              level1: sigName,
+            },
+          }"
+        />
         <!-- SIG贡献展示 -->
-        <SigContribute :sig="sigDetailInfo?.sig_name" class="sig-floor-item" />
+        <SigContribute
+          :sig="sigDetailInfo?.sig_name"
+          class="sig-floor-item"
+          v-analytics.catchBubble="{
+            properties: {
+              module: 'sig-detail',
+              level1: sigName,
+            },
+          }"
+        />
       </div>
     </div>
   </ContentWrapper>

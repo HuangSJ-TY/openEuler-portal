@@ -129,6 +129,11 @@ watch(
               :href="`${GITEE_ADDRESS}/${member?.gitee_id}`"
               target="_blank"
               rel="noopener noreferrer"
+              v-analytics.bubble="{
+                level2: t('sig.sigCore').replace(/（.*）/, ''),
+                level3: t('sig.sigMaintainer').replace(/（.*）/, ''),
+                target: 'gitee'
+              }"
             >
               <OIcon>
                 <IconGitee />
@@ -138,6 +143,11 @@ watch(
               :href="`mailto:${member.email}`"
               target="_blank"
               rel="noopener noreferrer"
+              v-analytics.bubble="{
+                level2: t('sig.sigCore').replace(/（.*）/, ''),
+                level3: t('sig.sigMaintainer').replace(/（.*）/, ''),
+                target: 'email'
+              }"
             >
               <OIcon>
                 <IconMail />
@@ -177,6 +187,11 @@ watch(
               :href="`${GITEE_ADDRESS}/${member?.gitee_id}`"
               target="_blank"
               rel="noopener noreferrer"
+              v-analytics.bubble="{
+                level2: t('sig.sigCore').replace(/（.*）/, ''),
+                level3: t('sig.sigCommitter').replace(/（.*）/, ''),
+                target: 'gitee'
+              }"
             >
               <OIcon>
                 <IconGitee />
@@ -186,6 +201,11 @@ watch(
               :href="`mailto:${member.email}`"
               target="_blank"
               rel="noopener noreferrer"
+              v-analytics.bubble="{
+                level2: t('sig.sigCore').replace(/（.*）/, ''),
+                level3: t('sig.sigCommitter').replace(/（.*）/, ''),
+                target: 'email'
+              }"
             >
               <OIcon>
                 <IconMail />

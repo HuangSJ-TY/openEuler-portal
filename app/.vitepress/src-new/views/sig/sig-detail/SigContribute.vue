@@ -227,6 +227,11 @@ const renderData = computed(() => {
             @change="getContributeInfo"
             :label="list.value"
             :value="list.value"
+            v-analytics.bubble="{
+              level2: $t('sig.contributeTitle'),
+              level3: item.label,
+              target: list.label
+            }"
           >
             <template #radio="{ checked }">
               <OToggle :checked="checked">{{ list.label }} </OToggle>
@@ -263,7 +268,7 @@ const renderData = computed(() => {
         }}</span>
       </div>
     </div>
-    <div class="contribute-rank">
+    <div class="contribute-rank" v-analytics.bubble="{ level2: $t('sig.contributeTitle'), level3: typeLable }">
       <div class="contribute-color-box">
         {{ typeLable }}
         <div v-if="!lePadV" class="contribute-list">
