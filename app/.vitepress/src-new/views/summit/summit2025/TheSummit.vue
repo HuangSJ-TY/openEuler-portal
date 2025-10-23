@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useData } from 'vitepress';
 
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
 import SummitIntroduce from './components/SummitIntroduce.vue';
 import SummitCall from './components/SummitCall.vue';
-import SummitAgent from './components/SummitAgent.vue';
-import SummitPartner from './components/SummitPartner.vue';
 import SummitPrevious from './components/SummitPrevious.vue';
 
 import data_zh from './data/data_zh';
@@ -25,40 +23,8 @@ const summitData = computed(() => {
   <AppContext>
     <SummitIntroduce :introduce-data="summitData.introduce" />
     <SummitCall :call-data="summitData.callList" />
-    <SummitAgent :agent-data="summitData.agent" />
-    <SummitPartner :partner-data="summitData.partner" />
     <SummitPrevious :previous-data="summitData.previous" />
   </AppContext>
 </template>
 
-<style scoped lang="scss">
-:deep(.section-title) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-  line-height: 56px;
-  color: var(--e-color-text1);
-  font-weight: 500;
-  .o-icon {
-    --icon-size: 32px;
-    margin-left: var(--e-spacing-h5);
-    @media screen and (max-width: 768px) {
-      --icon-size: 16px;
-      margin-left: var(--e-spacing-h7);
-    }
-  }
-  @media screen and (max-width: 1440px) {
-    font-size: var(--e-font-size-h3);
-    line-height: var(--e-line-height-h3);
-  }
-  @media screen and (max-width: 1200px) {
-    font-size: var(--e-font-size-h5);
-    line-height: var(--e-line-height-h5);
-  }
-  @media screen and (max-width: 768px) {
-    font-size: var(--e-font-size-h7);
-    line-height: var(--e-line-height-h7);
-  }
-}
-</style>
+<style scoped lang="scss"></style>

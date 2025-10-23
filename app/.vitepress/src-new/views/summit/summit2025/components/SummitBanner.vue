@@ -93,7 +93,7 @@ onMounted(() => {
   }
 
   .banner-btn {
-    margin-top: 16px;
+    margin-top: 32px;
   }
 
   .banner-panel-cover-dark {
@@ -149,6 +149,10 @@ onMounted(() => {
 
     .banner-panel-cover-dark {
       background-image: url('../img/banner-mb-dark.jpg');
+    }
+
+    .banner-btn {
+      margin-top: 16px;
     }
   }
 }
