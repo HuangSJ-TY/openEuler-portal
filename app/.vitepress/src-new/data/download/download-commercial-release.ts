@@ -2,7 +2,7 @@ export default {
   zh: {
     COMMERCIAL_RELEASE_LIST: [
       {
-        NAME: '青云 PrimusOs 操作系统 24.03 LTS SP1',
+        NAME: '青云 PrimusOS 操作系统 24.03 LTS SP1',
         DOWNLOAD_URL: 'https://www.qingcloud.com',
         DESC: '青云 PrimusOS 操作系统 24.03 LTS SP1 是青云科技依托 Linux 内核，深度融合 openEuler 等主流开源技术，自主打造的新一代安全可靠、高性能的操作系统。该系统全面支持 x86、ARM 等主流处理器架构，可有效支撑数据中心核心业务的稳定运行。面向云计算、数据库、大数据、人工智能及网络安全等关键应用场景，PrimusOS 提供了坚实可靠的底层支撑，致力于满足金融、政府、企业、运营商等行业的数字化转型需求，是国产化环境下领先的数字基础设施操作系统解决方案。',
         MANUFACTURER: '北京青云科技集团股份有限公司',
