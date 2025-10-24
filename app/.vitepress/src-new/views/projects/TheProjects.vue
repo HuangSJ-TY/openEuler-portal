@@ -9,7 +9,6 @@ import { projectData } from '~@/data/project';
 
 import banner from '~@/assets/category/projects/banner.jpg';
 
-import IconGitee from '~icons/yuanrong/icon-gitee.svg';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 import IconOutLink from '~icons/app-new/icon-outlink.svg';
 
@@ -62,7 +61,6 @@ const gap = computed(() => {
           <template v-if="!lePadV" #footer>
             <OButton color="primary" variant="outline" size="large" class="view-btn" :href="`/${locale}${item.url}`" target="_blank">{{ t('project.viewMore') }}</OButton>
             <OLink v-if="item.giteeUrl" color="normal" variant="text" :href="item.giteeUrl" target="_blank">
-              <OIcon class="gitee-icon"><IconGitee /></OIcon>
               <span class="gitee">{{ t('project.gitee') }}</span>
               <OIcon class="right-icon"><IconChevronRight /></OIcon>
             </OLink>
@@ -209,7 +207,7 @@ const gap = computed(() => {
     --icon-size: 24px;
   }
   .gitee {
-    margin: 0 4px 0 8px;
+    margin-right: 4px;
   }
 }
 .o-btn + .o-link {
@@ -317,7 +315,7 @@ const gap = computed(() => {
       justify-content: space-between;
     }
     .gitee {
-      margin: 0 4px 0 0;
+      margin-right: 4px;
     }
   }
 
