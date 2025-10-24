@@ -124,7 +124,7 @@ export const applicationProcess = [
     },
     detail: {
       zh: '按照成立 SIG 组的<a href="https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">成立流程</a>，在 Gitee 上创建申请文件，发起 Pull Request ；预约技术委员会会议的时间',
-      en: 'Create an application file on <a href="https://gitee.com/openeuler/community/blob/master/en/technical-committee/governance/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">Gitee</a> and initiate a pull request (PR) according to the procedure for setting up a SIG. Make an appointment for attending the Technical Committee (TC) meeting.',
+      en: 'Create an application file on Gitee and initiate a pull request (PR) according to the <a href="https://gitee.com/openeuler/community/blob/master/en/technical-committee/governance/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">procedure</a> for setting up a SIG. Make an appointment for attending the Technical Committee (TC) meeting.',
     },
   },
   {
