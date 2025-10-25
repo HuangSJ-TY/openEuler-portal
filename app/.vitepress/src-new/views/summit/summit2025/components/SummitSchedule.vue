@@ -98,6 +98,7 @@ const isDark = computed(() => {
     align-items: center;
   }
   .time {
+    width: 120px;
     margin-left: 12px;
   }
   .content {

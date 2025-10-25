@@ -81,6 +81,7 @@ const cardBg = computed(() => {
   display: flex;
   flex-wrap: wrap;
   margin-top: 8px;
+  justify-content: center;
   .content-item {
     position: relative;
     width: calc((100% - 64px) / 3);

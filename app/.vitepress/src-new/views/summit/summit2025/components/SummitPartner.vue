@@ -40,12 +40,9 @@ const commonStore = useCommon();
 }
 .item {
   margin-top: var(--e-spacing-h2);
-  &:last-child {
-    .item-logo {
-      &:nth-last-child(-n+2) {
-        margin-top: var(--e-spacing-h3);
-      }
-    }
+
+  .item-logo:nth-child(n+4) {
+    margin-top: var(--e-spacing-h3);
   }
 }
 .item-title {
@@ -73,12 +70,9 @@ img {
 @media screen and (max-width: 1440px) {
   .item {
     margin-top: var(--e-spacing-h3);
-    &:last-child {
-      .item-logo {
-        &:nth-last-child(-n+2) {
-          margin-top: var(--e-spacing-h4);
-        }
-      }
+
+    .item-logo:nth-child(n+4) {
+      margin-top: var(--e-spacing-h4);
     }
   }
   .item-title {
@@ -113,12 +107,9 @@ img {
 @media screen and (max-width: 840px) {
   .item {
     margin-top: var(--e-spacing-h5);
-    &:last-child {
-      .item-logo {
-        &:nth-last-child(-n+2) {
-          margin-top: var(--e-spacing-h5);
-        }
-      }
+
+    .item-logo:nth-child(n+4) {
+      margin-top: var(--e-spacing-h5);
     }
   }
   .item-title {
@@ -145,17 +136,12 @@ img {
 @media screen and (max-width: 600px) {
   .item {
     margin-top: var(--e-spacing-h6);
-    &:first-of-type {
-      .logo-list {
-        justify-content: center;
-      }
+    .logo-list {
+      justify-content: center;
     }
-    &:last-child {
-      .item-logo {
-        &:nth-last-child(-n+2) {
-          margin-top: var(--e-spacing-h6);
-        }
-      }
+
+    .item-logo:nth-child(n+3) {
+      margin-top: var(--e-spacing-h6);
     }
   }
   .logo-list {
@@ -163,7 +149,7 @@ img {
   }
   .item-logo {
     margin-top: var(--e-spacing-h6);
-    &:nth-child(3) {
+    &:nth-child(odd):not(:last-child):not(:only-child) {
       margin-right: var(--e-spacing-h6);
     }
   }

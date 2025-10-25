@@ -26,6 +26,8 @@ import ruantong from '../img/logo/ruantong_light.png';
 import ruantong_dark from '../img/logo/ruantong_dark.png';
 import runhe from '../img/logo/runhe_light.png';
 import runhe_dark from '../img/logo/runhe_dark.png';
+import baolande from '../img/logo/baolande_light.png';
+import baolande_dark from '../img/logo/baolande_dark.png';
 
 export default {
   banner: {
@@ -70,20 +72,8 @@ export default {
   },
   callList: [
     {
-      name: 'CALL FOR SPEAKER',
-      link: 'https://shimo.im/forms/LWPCwstZl9i92etG/fill',
-    },
-    // {
-    //   name: 'CALL FOR SPONSOR',
-    //   link: 'https://shimo.im/forms/pFFynLiTbvvbqhtD/fill',
-    // },
-    {
       name: 'CALL FOR SIG',
       link: 'https://shimo.im/forms/AWBrX4Sb6L4HieCE/fill',
-    },
-    {
-      name: 'CALL FOR DEMO',
-      link: 'https://shimo.im/forms/PBiQb8IbFS0jXoqb/fill',
     },
     {
       name: 'CALL FOR POSTER',
@@ -427,6 +417,15 @@ export default {
           {
             light: runhe,
             dark: runhe_dark
+          }
+        ]
+      },
+      {
+        title: 'Supporter',
+        logos: [
+          {
+            light: baolande,
+            dark: baolande_dark
           }
         ]
       }
