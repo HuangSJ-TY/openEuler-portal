@@ -14110,5 +14110,149 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "华郅（北京）技术有限公司",
+    "os_version": "CleverOS-3.0-standard-aarch64-dvd.iso",
+    "arch": "aarch64",
+    "checksum": "d8a0ad885d247adcd005f89089487462",
+    "base_openeuler_version": "openEuler 24.03 LTS SP2",
+    "os_download_link": "http://www.extretech.cn/",
+    "friendly_link": "http://www.extretech.cn/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/10/24",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "华郅（北京）技术有限公司",
+    "os_version": "CleverOS-3.0-standard-x86_64-dvd.iso",
+    "arch": "x86_64",
+    "checksum": "51b419327c73a9ec14b39649226bdc08",
+    "base_openeuler_version": "openEuler 24.03 LTS SP2",
+    "os_download_link": "http://www.extretech.cn/",
+    "friendly_link": "http://www.extretech.cn/",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/10/24",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
