@@ -55,8 +55,8 @@ export default {
   },
   introduce: {
     desc: [
-      'openEuler 开源六载，已全面支持多样性算力，覆盖互联网、金融、运营商等多领域核心应用场景，市场份额一骑绝尘。面向下一个五年，openEuler 将全面聚焦AI，践行AI For OS、OS For AI的理念，开启操作系统变革的全新篇章。',
-      '2025年11月14日-15日，我们将在北京中关村国际创新中心举办 操作系统大会&openEuler Summit 2025，发布openEuler 在AI领域的重要技术版本，并邀请全球伙伴发布重磅产品，以技术创新与全球化实践，展现openEuler 的决心和信心，开启openEuler 下一个五年的全新篇章。'
+      'openEuler 开源六载，已全面支持多样性算力，覆盖互联网、金融、运营商等多领域核心应用场景，市场份额稳居首位。面向下一个五年，openEuler 将全面聚焦AI，践行AI For OS、OS For AI的理念，开启操作系统变革的全新篇章。',
+      '2025年11月14日-15日，我们将在北京中关村国际创新中心举办 操作系统大会&openEuler Summit 2025，发布openEuler 在AI领域的重要技术版本，并邀请全球伙伴发布重磅产品，以技术创新与全球化实践共同开启 openEuler 下一个五年的全新篇章。'
     ],
     tips: '我们诚挚地邀请您莅临大会现场，在这里您将可以：',
     list: [
@@ -120,7 +120,7 @@ export default {
                     post: '',
                   },
                   {
-                    title: '仪式：操作系统优秀实践单位致谢暨2025年度openEuler领先商业实践',
+                    titles: ['仪式：操作系统实践单位致谢', '暨2025年度openEuler领先商业实践'],
                     name: '特邀嘉宾',
                     post: '',
                   }
@@ -224,7 +224,7 @@ export default {
                     ]
                   },
                   {
-                    title: '仪式：openEuler 社区学术委员会成立',
+                    title: '仪式：openEuler 社区学术与教育委员会成立',
                     guest: [
                       {
                         name: '特邀嘉宾',
@@ -238,14 +238,17 @@ export default {
                 time: '09:55 - 10:35',
                 content: [
                   {
-                    title: 'openEuler技术前沿与展望',
-                    name: '胡欣蔚',
-                    post: 'openEuler技术委员会主席',
-                  },
-                  {
-                    title: 'openEuler & friends 6.0',
-                    name: '郑振宇',
-                    post: 'openEuler社区运营组组长',
+                    titles: ['openEuler技术前沿与展望', 'openEuler & friends 6.0'],
+                    guest: [
+                      {
+                        name: '胡欣蔚',
+                        post: 'openEuler技术委员会主席',
+                      },
+                      {
+                        name: '郑振宇',
+                        post: 'openEuler社区运营组组长',
+                      },
+                    ]
                   },
                   {
                     title: '构建统一的Scale-Up新架构软件生态',
@@ -273,7 +276,8 @@ export default {
                 time: '10:55 - 11:10',
                 content: [
                   {
-                    title: '仪式：openEuler 2025年度突出贡献单位\n          openEuler 2025年度项目之星\n          openEuler 2025年度贡献之星',
+                    titles: ['仪式：openEuler 2025年度突出贡献单位', 'openEuler 2025年度项目之星', 'openEuler 2025年度贡献之星'],
+                    class: 'desc-indent',
                     name: '特邀嘉宾',
                     post: '',
                   },

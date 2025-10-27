@@ -42,7 +42,10 @@ const isDark = computed(() => {
       </div>
       <div class="content">
         <div v-for="(text, t) in item.content" :key="t" class="item-content">
-          <span class="item-title">{{ text.title }}</span>
+          <span v-if="text?.title" class="item-title">{{ text.title }}</span>
+          <div v-if="text?.titles" class="item-title item-titles">
+            <p v-for="txt in text?.titles" :key="txt" :class="text?.class">{{ txt }}</p>
+          </div>
           <div class="guest-list">
             <template v-if="text?.guest">
               <div v-for="(guest, g) in text.guest" :key="g" class="item-guest">
@@ -93,7 +96,7 @@ const isDark = computed(() => {
     border-bottom: none;
   }
   .time-box {
-    width: 136px;
+    width: 156px;
     display: flex;
     align-items: center;
   }
@@ -112,6 +115,12 @@ const isDark = computed(() => {
     width: 50%;
     padding-right: 32px;
     font-weight: 500;
+    flex-shrink: 0;
+  }
+  .item-titles {
+    .desc-indent + .desc-indent {
+      text-indent: 3em;
+    }
   }
   .post {
     color: var(--o-color-info3);
@@ -307,9 +316,5 @@ const isDark = computed(() => {
       }
     }
   }
-}
-
-.item-title {
-  white-space: pre;
 }
 </style>
