@@ -308,4 +308,8 @@ const isDark = computed(() => {
     }
   }
 }
+
+.item-title {
+  white-space: pre;
+}
 </style>

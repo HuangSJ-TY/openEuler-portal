@@ -95,73 +95,53 @@ export default {
                 time: '09:30 - 09:45',
                 content: [
                   {
-                    title: '院士致辞',
-                    name: '特邀嘉宾',
-                    post: '',
-                  },
-                  {
-                    title: '社区成员单位代表致辞',
-                    name: '特邀嘉宾',
-                    post: '',
-                  },
-                  {
-                    title: '开放原子开源基金会致辞',
+                    title: '大会致辞',
                     name: '特邀嘉宾',
                     post: '',
                   },
                 ]
               },
               {
-                time: '09:45 - 10:30',
+                time: '09:45 - 10:55',
                 content: [
                   {
-                    title: '大会主题演讲',
+                    title: '智跃无界，openEuler引领AI时代操作系统',
                     name: '熊伟',
                     post: 'openEuler委员会主席',
                   },
                   {
-                    title: '互联网代表企业智能化案例分享',
+                    title: '中国电信 x openEuler，共筑数智基础设施新标杆',
                     name: '特邀嘉宾',
                     post: '',
                   },
                   {
-                    title: '运营商代表智能化案例分享',
+                    title: '互联网 x openEuler，促进行业AI应用新实践',
+                    name: '特邀嘉宾',
+                    post: '',
+                  },
+                  {
+                    title: '仪式：操作系统优秀实践单位致谢暨2025年度openEuler领先商业实践',
                     name: '特邀嘉宾',
                     post: '',
                   }
                 ]
               },
               {
-                time: '10:30 - 11:15',
+                time: '10:55 - 11:30',
                 content: [
                   {
-                    title: '海外大企业自用版案例分享',
+                    title: '海外运营商 x openEuler，构建本土数字新生态',
                     name: '特邀嘉宾',
                     post: '',
                   },
                   {
-                    title: '基于openEuler+鲲鹏的智能制造产线案例分享',
+                    title: '菲尼克斯 x openEuler，加速OT产业IT化转型新进程',
                     name: '特邀嘉宾',
                     post: '',
                   },
                   {
-                    title: '海外服务经验分享',
+                    title: '仪式：openEuler全球化先锋伙伴致谢',
                     name: '特邀嘉宾',
-                    post: '',
-                  },
-                ]
-              },
-              {
-                time: '11:15 - 11:30',
-                content: [
-                  {
-                    title: '2025年度openEuler全球伙伴杨帆启航计划暨海外服务体系建立仪式',
-                    name: '伙伴代表',
-                    post: '',
-                  },
-                  {
-                    title: '2025年度中国操作系统实践单位、全球开源贡献单位致谢',
-                    name: '致谢单位代表',
                     post: '',
                   },
                 ]
@@ -230,36 +210,42 @@ export default {
                         post: 'openEuler委员会主席',
                       },
                       {
-                        name: '国际开源基金会代表',
-                        post: '',
+                        name: '唐晓蕾',
+                        post: 'AMD中国区副总裁',
                       },
                       {
-                        name: '海外合作企业代表',
+                        name: 'Andrew Wafaa',
+                        post: 'PyTorch Board 成员',
+                      },
+                      {
+                        name: 'Grant Likely',
+                        post: 'CTO at Linaro Ltd. ',
+                      },
+                    ]
+                  },
+                  {
+                    title: '仪式：openEuler 社区学术委员会成立',
+                    guest: [
+                      {
+                        name: '特邀嘉宾',
                         post: '',
-                      }
+                      },
                     ]
                   }
                 ]
               },
               {
-                time: '09:55 - 10:30',
+                time: '09:55 - 10:35',
                 content: [
                   {
-                    title: 'openEuler 技术前沿展望',
-                    guest: [
-                      {
-                        name: '胡欣蔚',
-                        post: 'openEuler技术委员会主席',
-                      },
-                      {
-                        name: '郑振宇',
-                        post: 'openEuler社区运营组组长',
-                      },
-                      {
-                        name: '社区开发者',
-                        post: '',
-                      }
-                    ]
+                    title: 'openEuler技术前沿与展望',
+                    name: '胡欣蔚',
+                    post: 'openEuler技术委员会主席',
+                  },
+                  {
+                    title: 'openEuler & friends 6.0',
+                    name: '郑振宇',
+                    post: 'openEuler社区运营组组长',
                   },
                   {
                     title: '构建统一的Scale-Up新架构软件生态',
@@ -269,21 +255,26 @@ export default {
                 ]
               },
               {
-                time: '10:30 - 11:00',
+                time: '10:35 - 10:55',
                 content: [
                   {
-                    title: '用户/伙伴演讲 - 麒麟软件',
+                    title: '麒麟软件联合创新与实践分享',
                     name: '特邀嘉宾',
                     post: '',
                   },
                   {
-                    title: '用户/伙伴演讲 - 麒麟信安',
+                    title: '麒麟信安联合创新与实践分享',
                     name: '特邀嘉宾',
                     post: '',
                   },
+                ]
+              },
+              {
+                time: '10:55 - 11:10',
+                content: [
                   {
-                    title: '2025年度社区项目之星&贡献之星',
-                    name: '获奖代表',
+                    title: '仪式：openEuler 2025年度突出贡献单位\n          openEuler 2025年度项目之星\n          openEuler 2025年度贡献之星',
+                    name: '特邀嘉宾',
                     post: '',
                   },
                 ]
@@ -357,7 +348,7 @@ export default {
               },
               {
                 label: '开发者之夜',
-                time: '15:00 - 17:00',
+                time: '18:00 - 20:00',
                 address: '',
                 children: [],
               }
