@@ -127,9 +127,9 @@ export const entranceList = {
   zh: [
     {
       icon: IconMeeting,
-      title: 'openYuanrong SIG组',
+      title: '代码仓列表',
       desc: '查看 openYuanrong 代码仓、联系方式等信息',
-      href: '/zh/sig/sig-YuanRong/',
+      href: '/zh/sig/sig-YuanRong/#repositories',
     },
     {
       icon: IconDocument,
@@ -142,9 +142,9 @@ export const entranceList = {
   en: [
     {
       icon: IconMeeting,
-      title: 'openYuanrong SIG',
+      title: 'Repositories',
       desc: 'Get immediate access to the openYuanrong repository, contact details, and more.',
-      href: '/en/sig/sig-YuanRong/',
+      href: '/en/sig/sig-YuanRong/#repositories',
     },
     {
       icon: IconDocument,
