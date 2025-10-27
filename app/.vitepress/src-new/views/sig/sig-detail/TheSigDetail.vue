@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed, reactive, onMounted, onUnmounted } from 'vue';
+import { ref, computed, reactive, onMounted, onUnmounted, nextTick } from 'vue';
 
 import { inBrowser, useData, useRouter } from 'vitepress';
 
@@ -106,6 +106,15 @@ onMounted(() => {
   useHeaderTitle().$patch({ headerTitle: sigName.value });
   queryGetSigDetail();
   queryGetSigMeeting();
+  nextTick(() => {
+    setTimeout(() => {
+      const height = (document.querySelector(window.location.hash) as HTMLElement).offsetTop;
+      window.scrollTo({
+        top: height,
+        behavior: 'smooth',
+      })
+    }, 300);
+  })
 });
 onUnmounted(() => {
   useHeaderTitle().$patch({ headerTitle: '' });

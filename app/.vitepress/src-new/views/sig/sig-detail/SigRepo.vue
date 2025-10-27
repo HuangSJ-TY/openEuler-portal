@@ -137,7 +137,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="sig-repo">
+  <div id="repositories" class="sig-repo">
     <h2 class="repo-title">
       {{ $t('sig.repoList', { count: totalRepositoryList.length }) }}
     </h2>
