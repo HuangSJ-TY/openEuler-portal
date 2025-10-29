@@ -44,6 +44,10 @@ const commonStore = useCommon();
   .item-logo:nth-child(n+4) {
     margin-top: var(--e-spacing-h3);
   }
+
+  .item-logo:nth-child(4n) {
+    margin-left: 0;
+  }
 }
 .item-title {
   font-size: var(--e-font-size-h5);
@@ -74,6 +78,9 @@ img {
     .item-logo:nth-child(n+4) {
       margin-top: var(--e-spacing-h4);
     }
+  }
+  .logo-list {
+    max-width: 1100px;
   }
   .item-title {
     font-size: var(--e-font-size-h6);
