@@ -20,11 +20,11 @@ export const deployList = [
     list: [
       {
         text: '玩转AI - 一键部署openEuler智能化解决方案',
-        href: 'https://docs.openeuler.org/zh/docs/25.09/tools/ai/euler-copilot-framework/openEuler_intelligence/intelligent_assistant/quick_start/smart_web/deploy_guide/online.html',
+        href: 'https://docs.openeuler.openatom.cn/zh/docs/25.09/tools/ai/euler-copilot-framework/openeuler_intelligence/intelligent_assistant/quick_start/smart_web/deploy_guide/online.html',
       },
       {
         text: '构建知识库 - 构建本地问答助手',
-        href: 'https://docs.openeuler.org/zh/docs/25.09/tools/ai/euler-copilot-framework/openEuler_intelligence/intelligent_assistant/advance/knowledge_base/deploy_guide/witChainD_deployment.html',
+        href: 'https://docs.openeuler.openatom.cn/zh/docs/25.09/tools/ai/euler-copilot-framework/openeuler_intelligence/intelligent_assistant/advance/knowledge_base/user_guide/knowledge_base_guidance.html',
       },
       {
         text: '智能调优 - ​自主调优助力主力场景性能提升',
@@ -47,11 +47,11 @@ export const deployList = [
     list: [
       {
         text: '工作流编排 - 个人/企业接入本地服务并构建工作流应用',
-        href: 'https://docs.openeuler.org/zh/docs/25.09/tools/ai/euler-copilot-framework/openEuler_intelligence/intelligent_assistant/advance/work_flow/deploy_guide/workflow_deployment.html',
+        href: 'https://docs.openeuler.openatom.cn/zh/docs/25.09/tools/ai/euler-copilot-framework/openeuler_intelligence/intelligent_assistant/advance/work_flow/user_guide/workflow_guidance.html',
       },
       {
         text: 'MCP精通 - openEuler智能化解决方案注册MCP服务，编排agent应用',
-        href: 'https://docs.openeuler.org/zh/docs/25.09/tools/ai/euler-copilot-framework/openEuler_intelligence/mcp_agent/mcp_guide.html',
+        href: 'https://docs.openeuler.openatom.cn/zh/docs/25.09/tools/ai/euler-copilot-framework/openeuler_intelligence/mcp_agent/mcp_guide.html',
       },
     ],
   },
@@ -66,7 +66,7 @@ export const deployList = [
     list: [
       {
         text: 'openEuler智能化解决方案+syshax+openEuler本地轻量化部署openEuler智能化解决方案',
-        href: 'https://docs.openeuler.org/zh/docs/25.03/tools/ai/euler-copilot-framework/intelligent_foundation/sysHAX/deploy_guide/sysHax-deployment-guide.html',
+        href: 'https://docs.openeuler.openatom.cn/zh/docs/25.09/tools/ai/euler-copilot-framework/intelligent_foundation/syshax/deploy_guide/syshax_deployment_guide.html',
       },
     ],
   },

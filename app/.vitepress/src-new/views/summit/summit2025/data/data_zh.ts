@@ -28,6 +28,8 @@ import runhe from '../img/logo/runhe_light.png';
 import runhe_dark from '../img/logo/runhe_dark.png';
 import baolande from '../img/logo/baolande_light.png';
 import baolande_dark from '../img/logo/baolande_dark.png';
+import tongxin from '../img/logo/tongxin_light.png';
+import tongxin_dark from '../img/logo/tongxin_dark.png';
 
 export default {
   banner: {
@@ -211,7 +213,7 @@ export default {
                       },
                       {
                         name: '唐晓蕾',
-                        post: 'AMD中国区副总裁',
+                        post: 'AMD公司全球副总裁',
                       },
                       {
                         name: 'Andrew Wafaa',
@@ -422,6 +424,10 @@ export default {
           {
             light: baolande,
             dark: baolande_dark
+          },
+          {
+            light: tongxin,
+            dark: tongxin_dark
           },
         ]
       }
