@@ -193,12 +193,6 @@ export default {
                 children: [],
               },
               {
-                label: 'Internet Roundtable (Invitation-only)',
-                time: '13:30 - 16:30',
-                address: '',
-                children: [],
-              },
-              {
                 label: 'Kylinsoft Session',
                 time: '13:30 - 16:30',
                 address: '',

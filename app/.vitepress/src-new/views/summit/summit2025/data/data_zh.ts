@@ -174,12 +174,6 @@ export default {
                 children: [],
               },
               {
-                label: '互联网行业圆桌会议（定邀）',
-                time: '13:30 - 16:30',
-                address: '',
-                children: [],
-              },
-              {
                 label: '麒麟软件分论坛',
                 time: '13:30 - 16:30',
                 address: '',
