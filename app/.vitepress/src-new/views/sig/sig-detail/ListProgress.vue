@@ -48,12 +48,12 @@ const progressColor = () => {
     return 'color-contributor';
   } else if (
     componentName.value === 'member' &&
-    usertype.value === 'maintainers'
+    usertype.value === 'maintainer'
   ) {
     return 'color-maintainer';
   } else if (
     componentName.value === 'member' &&
-    usertype.value === 'committers'
+    usertype.value === 'committer'
   ) {
     return 'color-committer';
   } else {

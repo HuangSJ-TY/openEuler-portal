@@ -1,10 +1,10 @@
 export interface GroupInfoT {
-  sig_names: string;
-  en_feature: string;
-  feature: string;
+  sig_name: string;
+  feature_en: string;
+  feature_zh: string;
   created_at?: string;
-  en_group: string;
-  group: string;
+  group_en: string;
+  group_zh: string;
   rank: number;
   score: number;
 }
