@@ -148,6 +148,7 @@ import heshoucheng from '@/assets/category/organization/ai/heshoucheng.png';
 import jiangyiwen from '@/assets/category/organization/ai/jiangyiwen.png';
 import qinbinjuan from '@/assets/category/organization/ai/qinbinjuan.png';
 import wubin from '@/assets/category/organization/ai/wubin.png';
+import huangjun from '@/assets/category/organization/ai/huangjun.png';
 
 export default {
   zh: {
@@ -731,6 +732,7 @@ export default {
           { img: heshoucheng, name: '何守成', position: ['组员'] },
           { img: houjian, name: '侯健', position: ['组员'] },
           { img: FredHuang, name: 'Fred Huang', position: ['组员'] },
+          { img: huangjun, name: '黄俊', position: ['组员'] },
           { img: jiangyiwen, name: '江毅文', position: ['组员'] },
           { img: jiangyuwei, name: '蒋雨薇', position: ['组员'] },
           { img: jiangzhengxiong, name: '江政雄', position: ['组员'] },
