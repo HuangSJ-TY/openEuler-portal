@@ -391,6 +391,10 @@ export default {
         title: '协办方',
         logos: [
           {
+            light: tongxin,
+            dark: tongxin_dark
+          },
+          {
             light: ningsi,
             dark: ningsi_dark
           },
@@ -399,17 +403,17 @@ export default {
             dark: xfusion_dark
           },
           {
-            light: dongfang,
-            dark: dongfang_dark
+            light: runhe,
+            dark: runhe_dark
           },
           {
             light: ruantong,
             dark: ruantong_dark
           },
           {
-            light: runhe,
-            dark: runhe_dark
-          }
+            light: dongfang,
+            dark: dongfang_dark
+          },
         ]
       },
       {
@@ -418,10 +422,6 @@ export default {
           {
             light: baolande,
             dark: baolande_dark
-          },
-          {
-            light: tongxin,
-            dark: tongxin_dark
           },
         ]
       }
