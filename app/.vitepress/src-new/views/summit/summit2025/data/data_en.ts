@@ -72,19 +72,10 @@ export default {
       'Let\'s meet in Beijing — to inspire, collaborate, and co-create the next chapter of the global open source ecosystem.'
     ]
   },
-  callList: [
-    {
-      name: 'CALL FOR SIG',
-      link: 'https://shimo.im/forms/AWBrX4Sb6L4HieCE/fill',
-    },
-    {
-      name: 'CALL FOR POSTER',
-      link: 'https://shimo.im/forms/913JMVMwb0sDKRAE/fill',
-    },
-  ],
   agent: {
     title: 'Agenda',
     tips: 'The agenda will be updated soon. Stay tuned!',
+    text: 'Click here for details',
     list: [
       {
         date: "14",
@@ -93,78 +84,58 @@ export default {
             title: 'Keynote',
             children: [
               {
-                time: '09:30 - 09:45',
+                time: '09:30 - 09:55',
                 content: [
                   {
-                    title: 'Remarks by an Academician',
-                    name: 'Guest speaker',
-                    post: '',
-                  },
-                  {
-                    title: 'Remarks by a Community Organization Member Representative',
-                    name: 'Guest speaker',
-                    post: '',
-                  },
-                  {
-                    title: 'Remarks by an OpenAtom Foundation Representative',
+                    title: 'Welcome & Opening Remarks',
                     name: 'Guest speaker',
                     post: '',
                   },
                 ]
               },
               {
-                time: '09:45 - 10:30',
+                time: '09:55 - 10:55',
                 content: [
                   {
-                    title: 'Keynote Speech',
+                    title: 'openEuler: An OS Built for AI',
                     name: 'Dr. Xiong Wei',
                     post: 'Chairperson, OpenAtom openEuler Committee',
                   },
                   {
-                    title: 'Intelligent Transformation Practice in Internet',
+                    title: 'Internet × openEuler: Supercharging AI Innovations for Industries',
                     name: 'Guest speaker',
                     post: '',
                   },
                   {
-                    title: 'Intelligent Transformation Practice in Carrier',
+                    title: 'China Telecom × openEuler: Championing AI-Powered Digital Infrastructure',
+                    name: 'Guest speaker',
+                    post: '',
+                  },
+                  {
+                    title: '2025 openEuler Pioneer Partner Award Ceremony (In China)',
                     name: 'Guest speaker',
                     post: '',
                   }
                 ]
               },
               {
-                time: '10:30 - 11:15',
+                time: '10:55 - 11:25',
                 content: [
                   {
-                    title: 'Global Enterprise Best Practices: Internal Deployments Based on openEuler',
+                    title: 'Carrier × openEuler: Building a Locally Rooted Digital Ecosystem',
                     name: 'Guest speaker',
                     post: '',
                   },
                   {
-                    title: 'Intelligent Manufacturing Practice Based on openEuler and Kunpeng',
+                    title: 'Phoenix Contact × openEuler: Accelerating the OT-IT Convergence',
                     name: 'Guest speaker',
                     post: '',
                   },
                   {
-                    title: 'Global Service Platform Best Practices',
-                    name: 'Guest speaker',
-                    post: '',
-                  },
-                ]
-              },
-              {
-                time: '11:15 - 11:30',
-                content: [
-                  {
-                    title: '2025 openEuler Global Partner Program & International Service System Kickoff Ceremony',
+                    title: '2025 openEuler Pioneer Partner Award Ceremony (Outside China)',
                     name: 'Partner representatives',
                     post: '',
-                  },
-                  {
-                    title: '2025 China OS Practitioners & Global Open Source Contributors Recognition Ceremony',
-                    name: 'Organization representatives',
-                    post: '',
-                  },
+                  }
                 ]
               },
             ],
@@ -182,25 +153,25 @@ export default {
               },
               {
                 label: 'Intelligent Manufacturing Industry Session',
-                time: '13:30 - 16:30',
+                time: '13:40 - 16:00',
                 address: '',
                 children: [],
               },
               {
                 label: 'openEuler Global Ecosystem Session',
-                time: '13:30 - 16:30',
+                time: '13:30 - 15:30',
                 address: '',
                 children: [],
               },
               {
                 label: 'Kylinsoft Session',
-                time: '13:30 - 16:30',
+                time: '13:30 - 16:00',
                 address: '',
                 children: [],
               },
               {
                 label: 'Kylinsec Session',
-                time: '13:30 - 16:30',
+                time: '14:30 - 17:00',
                 address: '',
                 children: [],
               },
@@ -225,22 +196,26 @@ export default {
                         post: 'Chairperson, OpenAtom openEuler Committee',
                       },
                       {
-                        name: 'Global open source foundation representatives',
-                        post: '',
+                        name: 'Tang Xiaolei',
+                        post: 'Vice President, AMD China',
                       },
                       {
-                        name: 'Global partner enterprise representatives',
-                        post: '',
+                        name: 'Andrew Wafaa',
+                        post: 'Member, PyTorch Governing Board',
+                      },
+                      {
+                        name: 'Grant Likely',
+                        post: 'CTO, Linaro',
                       }
                     ]
                   }
                 ]
               },
               {
-                time: '09:55 - 10:30',
+                time: '09:55 - 10:35',
                 content: [
                   {
-                    title: 'openEuler Technical Outlook',
+                    titles: ['openEuler Technology Trends and Prospects', 'openEuler & Friends 6.0'],
                     guest: [
                       {
                         name: 'Hu Xinwei',
@@ -250,35 +225,46 @@ export default {
                         name: 'Zheng Zhenyu',
                         post: 'Community Operations Team Lead, OpenAtom openEuler',
                       },
-                      {
-                        name: 'Community developers',
-                        post: '',
-                      }
                     ]
                   },
                   {
-                    title: 'Crafting a Unified Software Ecosystem on the Scale-up Architecture',
+                    title: 'Building a New Ecosystem for Scalable, Heterogeneous OSs',
                     name: 'Hu Chunming',
                     post: 'Dean, School of Software, Beihang University',
                   },
                 ]
               },
               {
-                time: '10:30 - 11:00',
+                time: '10:35 - 10:55',
                 content: [
                   {
-                    title: 'User/Partner Speeches - Kylinsoft',
-                    name: 'Guest speakers',
+                    title: 'Kylinsoft × China Post: Joint Innovation and Practice',
+                    name: 'Guest speaker',
                     post: '',
                   },
                   {
-                    title: 'User/Partner Speeches - Kylinsec',
-                    name: 'Guest speakers',
+                    title: 'Kylinsec × GAC Group: Joint Innovation and Practice Sharing',
+                    name: 'Guest speaker',
+                    post: '',
+                  },
+                ]
+              },
+              {
+                time: '10:55 - 11:10',
+                content: [
+                  {
+                    title: '2025 openEuler Top Contribution Award Ceremony',
+                    name: 'Partner representatives',
                     post: '',
                   },
                   {
-                    title: '2025 openEuler Annual Outstanding Project & openEuler Annual Outstanding Contributor',
-                    name: 'Honored contributors',
+                    title: '2025 openEuler Project Star Award Ceremony',
+                    name: 'Project representatives',
+                    post: '',
+                  },
+                  {
+                    title: '2025 openEuler Contribution Star Award Ceremony',
+                    name: 'Developer representatives',
                     post: '',
                   },
                 ]
@@ -292,25 +278,25 @@ export default {
             tab: [
               {
                 label: 'Kernel & All-Scenario',
-                time: '11:30 - 14:30',
+                time: '11:30 - 15:00',
                 address: '',
                 children: [],
               },
               {
                 label: 'AI',
-                time: '11:30 - 14:30',
+                time: '11:30 - 15:20',
                 address: '',
                 children: [],
               },
               {
                 label: 'UnifiedBus',
-                time: '11:30 - 14:30',
+                time: '11:30 - 15:00',
                 address: '',
                 children: [],
               },
               {
                 label: 'Developer Enablement & Tools',
-                time: '11:30 - 14:30',
+                time: '11:30 - 15:20',
                 address: '',
                 children: [],
               },
@@ -322,19 +308,19 @@ export default {
               },
               {
                 label: 'Cloud Native',
-                time: '11:30 - 14:30',
+                time: '13:00 - 15:00',
                 address: '',
                 children: [],
               },
               {
                 label: 'Embedded & Embodied AI',
-                time: '11:30 - 14:30',
+                time: '11:15 - 15:20',
                 address: '',
                 children: [],
               },
               {
                 label: 'RISC-V',
-                time: '11:30 - 14:30',
+                time: '11:30 - 15:10',
                 address: '',
                 children: [],
               }
@@ -343,18 +329,72 @@ export default {
           {
             title: 'SIG Gathering',
             children: [],
-            tab: [
+            tab: [],
+            list: [
               {
-                label: 'SIG Gathering',
-                time: '15:00 - 17:00',
-                address: '',
-                children: [],
+                title: 'SIG Gathering',
+                children: [
+                  {
+                    label: 'Track ：Kernel & Basic Services',
+                    time: '15:00 - 17:00',
+                    address: '1F-105',
+                    url: 'https://etherpad.openeuler.org/p/summit2025-sig-Kernel',
+                    children: [],
+                  },
+                  {
+                    label: 'Track ：Developer Enablement & Tools',
+                    time: '15:00 - 17:00',
+                    address: '1F-106',
+                    url: 'https://etherpad.openeuler.org/p/summit2025-sig-community%26developer',
+                    children: [],
+                  },
+                  {
+                    label: 'Track ：AI Enablement & Application',
+                    time: '15:00 - 17:00',
+                    address: '1F-103',
+                    url: 'https://etherpad.openeuler.org/p/summit2025-sig-ai',
+                    children: [],
+                  },
+                  {
+                    label: 'Track ：UnifiedBus',
+                    time: '15:00 - 17:00',
+                    address: 'G-G02',
+                    url: 'https://etherpad.openeuler.org/p/summit2025-sig-UnifiedBus',
+                    children: [],
+                  },
+                  {
+                    label: 'Track ：Embedded & ROS',
+                    time: '15:00 - 17:00',
+                    address: 'G-G10A',
+                    url: 'https://etherpad.openeuler.org/p/summit2025-sig-Embedded-ROS',
+                    children: [],
+                  },
+                  {
+                    label: 'Track ：RISC-V ',
+                    time: '15:00 - 17:00',
+                    address: 'G-G10B',
+                    url: 'https://etherpad.openeuler.org/p/summit2025-sig-RISC-V',
+                    children: [],
+                  },
+                  {
+                    label: 'Track ：Security & Confidential Computing',
+                    time: '15:00 - 17:00',
+                    address: 'G-G01A',
+                    url: 'https://etherpad.openeuler.org/p/summit2025-sig-gathering-ICC-NSG',
+                    children: [],
+                  },
+                ]
               },
               {
-                label: 'Evening Reception',
-                time: '15:00 - 17:00',
-                address: '',
-                children: [],
+                title: 'Evening Reception',
+                children: [
+                  {
+                    label: 'Evening Reception',
+                    time: '18:00 - 20:00',
+                    address: '',
+                    children: [],
+                  }
+                ]
               }
             ]
           }
@@ -362,6 +402,7 @@ export default {
       }
     ]
   },
+  guest: {},
   partner: {
     title: 'Sponsors',
     list: [

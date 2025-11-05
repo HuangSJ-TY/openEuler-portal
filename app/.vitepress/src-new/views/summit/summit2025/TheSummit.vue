@@ -5,8 +5,8 @@ import { useData } from 'vitepress';
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
 import SummitIntroduce from './components/SummitIntroduce.vue';
-import SummitCall from './components/SummitCall.vue';
 import SummitAgent from './components/SummitAgent.vue';
+import SummitGuest from './components/SummitGuest.vue';
 import SummitPartner from './components/SummitPartner.vue';
 import SummitPrevious from './components/SummitPrevious.vue';
 
@@ -24,8 +24,8 @@ const summitData = computed(() => {
   <SummitBanner :banner-data="summitData.banner" />
   <AppContext>
     <SummitIntroduce :introduce-data="summitData.introduce" />
-    <SummitCall :call-data="summitData.callList" />
     <SummitAgent :agent-data="summitData.agent" />
+    <SummitGuest v-if="summitData.guest.title" :guest-data="summitData.guest" />
     <SummitPartner :partner-data="summitData.partner" />
     <SummitPrevious :previous-data="summitData.previous" />
   </AppContext>
