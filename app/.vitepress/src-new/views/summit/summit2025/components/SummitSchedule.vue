@@ -215,6 +215,12 @@ const isDark = computed(() => {
 @include respond-to('pad_h') {
   .item-row {
     padding: 12px;
+    .content {
+      margin-left: 24px;
+    }
+    .item-title {
+      padding-right: 24px;
+    }
     .item-content + .item-content {
       margin-top: 16px;
     }
