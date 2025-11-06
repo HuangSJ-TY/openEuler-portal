@@ -385,7 +385,7 @@ watch(
     }
     if (val[1] === 'repos' && val[2]) {
       filterSearchData.value = filterFeatureType.filter((item) => {
-        const index = item.repos.findIndex(text => text.includes(val[2]))
+        const index = item.repos.findIndex(text => text?.toLowerCase().includes(val[2].toLowerCase()))
         return index > -1
       });
     }
@@ -393,8 +393,8 @@ watch(
       // maintainer name 和 maintainer giteeId
       filterSearchData.value = filterFeatureType.filter(
         (item) => {
-          const nameIndex = item.maintainer_info.findIndex(text => text?.name?.includes(val[2]))
-          const giteeIdIndex = item.maintainer_info.findIndex(text => text?.gitee_id?.includes(val[2]))
+          const nameIndex = item.maintainer_info.findIndex(text => text?.name?.toLowerCase().includes(val[2].toLowerCase()))
+          const giteeIdIndex = item.maintainer_info.findIndex(text => text?.gitee_id?.toLowerCase().includes(val[2].toLowerCase()))
           return nameIndex > -1 || giteeIdIndex > -1
         });
     }
@@ -403,15 +403,24 @@ watch(
         (item) => {
           const name = item.sig_name.toLowerCase().includes(val[2].toLowerCase())
           const desc = item?.description?.toLowerCase().includes(val[2].toLowerCase())
-          const repoIndex = item.repos.findIndex(text => text.includes(val[2]))
-          const maintainerNameIndex = item.maintainer_info.findIndex(text => text?.name?.includes(val[2]))
-          const maintainerGiteeIdIndex = item.maintainer_info.findIndex(text => text?.gitee_id?.includes(val[2]))
+          const repoIndex = item.repos.findIndex(text => text.toLowerCase().includes(val[2].toLowerCase()))
+          const maintainerNameIndex = item.maintainer_info.findIndex(text => text?.name?.toLowerCase().includes(val[2].toLowerCase()))
+          const maintainerGiteeIdIndex = item.maintainer_info.findIndex(text => text?.gitee_id?.toLowerCase().includes(val[2].toLowerCase()))
           return name || desc || repoIndex > -1 || maintainerNameIndex > -1 || maintainerGiteeIdIndex > -1
         });
     }
     if (!val[2]) {
       filterSearchData.value = filterFeatureType;
     }
+
+    filterSearchData.value.sort((a, b) => {
+      let aHasSearchTerm = a.sig_name.toLowerCase().includes(val[2]?.toLowerCase());
+      let bHasSearchTerm = b.sig_name.toLowerCase().includes(val[2]?.toLowerCase());
+
+      if (aHasSearchTerm && !bHasSearchTerm) return -1;
+      if (!aHasSearchTerm && bHasSearchTerm) return 1;
+      return 0;
+    });
 
     if (!lePadV.value) {
       filterSigData.value = filterSearchData.value.slice(
@@ -421,14 +430,6 @@ watch(
     } else {
       filterSigData.value = filterSearchData.value.slice(0, val[3] * val[4]);
     }
-    filterSigData.value.sort((a, b) => {
-      let aHasSearchTerm = a.sig_name.toLowerCase().includes(val[2]?.toLowerCase());
-      let bHasSearchTerm = b.sig_name.toLowerCase().includes(val[2]?.toLowerCase());
-      
-      if (aHasSearchTerm && !bHasSearchTerm) return -1;
-      if (!aHasSearchTerm && bHasSearchTerm) return 1;
-      return 0;
-    });
   },
   { immediate: true }
 );

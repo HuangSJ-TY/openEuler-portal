@@ -5,7 +5,7 @@ import stratoVirt from '~@/assets/category/projects/stratoVirt.png';
 import intelligence from '~@/assets/category/projects/intelligence.png';
 import yuanrong from '~@/assets/category/projects/yuanrong.png';
 
-import IconMeeting from '~icons/yuanrong/icon-meeting.svg';
+import IconCodeRepo from '~icons/yuanrong/icon-code-repo.svg';
 import IconDocument from '~icons/yuanrong/icon-document.svg';
 
 export const projectData = {
@@ -126,7 +126,7 @@ export const projectData = {
 export const entranceList = {
   zh: [
     {
-      icon: IconMeeting,
+      icon: IconCodeRepo,
       title: '代码仓列表',
       desc: '查看 openYuanrong 代码仓、联系方式等信息',
       href: '/zh/sig/sig-YuanRong/#repositories',
@@ -141,7 +141,7 @@ export const entranceList = {
   ],
   en: [
     {
-      icon: IconMeeting,
+      icon: IconCodeRepo,
       title: 'Repositories',
       desc: 'Get immediate access to the openYuanrong repository, contact details, and more.',
       href: '/en/sig/sig-YuanRong/#repositories',
