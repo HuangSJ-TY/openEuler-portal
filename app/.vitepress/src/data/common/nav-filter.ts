@@ -265,4 +265,8 @@ export default [
     name: 'meeting',
     lang: ['zh'],
   },
+  {
+    name: 'ub-service-core',
+    lang: ['zh'],
+  },
 ];

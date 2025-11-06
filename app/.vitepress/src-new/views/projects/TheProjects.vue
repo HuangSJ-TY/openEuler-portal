@@ -182,7 +182,6 @@ const gap = computed(() => {
   .o-tag {
     --tag-radius: var(--o-radius-xs);
     --tag-padding: 3px 12px;
-    --tag-bg-color: rgb(199, 0, 11);
     margin-left: 16px;
   }
   .o-figure {
@@ -317,6 +316,10 @@ const gap = computed(() => {
     .gitee {
       margin-right: 4px;
     }
+
+    &:last-child {
+      padding: 9px 0 0;
+    }
   }
 
   .partake {
@@ -329,6 +332,9 @@ const gap = computed(() => {
   }
 }
 @include respond-to('phone') {
+  .o-card {
+    --card-main-padding: 12px;
+  }
   .title {
     height: 32px;
     .item-title {
