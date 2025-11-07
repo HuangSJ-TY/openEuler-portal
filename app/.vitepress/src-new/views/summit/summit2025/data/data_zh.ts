@@ -154,6 +154,93 @@ export default {
       '让我们相约北京，在思维碰撞与技术交流中，为全球开源新生态的建设注入核心力量。'
     ],
   },
+  live: {
+    title: '活动直播',
+    list: [
+      {
+        time: '11月14日',
+        lives: [
+          {
+            liveId: 15926,
+            liveTestId: 15912,
+            id: 0,
+            name: '操作系统大会 主题演讲',
+          },
+          {
+            liveId: 15928,
+            liveTestId: 15914,
+            name: '科教创新',
+          },
+          {
+            liveId: 15929,
+            liveTestId: 15915,
+            name: '智能制造产业',
+          },
+          {
+            liveId: 15930,
+            liveTestId: 15916,
+            name: '麒麟软件',
+          },
+          {
+            liveId: 15931,
+            liveTestId: 15917,
+            name: '麒麟信安',
+          },
+        ]
+      },
+      {
+        time: '11月15日',
+        lives: [
+          {
+            liveId: 15927,
+            liveTestId: 15913,
+            id: 0,
+            name: 'openEuler Summit 主题演讲',
+          },
+          {
+            liveId: 15932,
+            liveTestId: 15918,
+            name: '内核&全场景',
+          },
+          {
+            liveId: 15933,
+            liveTestId: 15919,
+            name: '安全与机密计算',
+          },
+          {
+            liveId: 15934,
+            liveTestId: 15920,
+            name: 'AI',
+          },
+          {
+            liveId: 15935,
+            liveTestId: 15921,
+            name: '云原生',
+          },
+          {
+            liveId: 15936,
+            liveTestId: 15922,
+            name: '灵衢',
+          },
+          {
+            liveId: 15937,
+            liveTestId: 15923,
+            name: '嵌入式&具身智能',
+          },
+          {
+            liveId: 15938,
+            liveTestId: 15924,
+            name: '开发者使能与工具',
+          },
+          {
+            liveId: 15939,
+            liveTestId: 15925,
+            name: 'RISC-V',
+          },
+        ],
+      }
+    ]
+  },
   agent: {
     title: '活动日程',
     tips: '具体内容，敬请期待',
@@ -170,13 +257,29 @@ export default {
                 content: [
                   {
                     title: '大会致辞',
-                    name: '特邀嘉宾',
-                    post: '',
+                    guest: [
+                      {
+                        name: '倪光南',
+                        post: '中国工程院院士',
+                      },
+                      {
+                        name: '程晓明',
+                        post: '开放原子开源基金会理事长',
+                      },
+                      {
+                        name: '杨超斌',
+                        post: '华为公司董事、ICT BG CEO',
+                      },
+                      {
+                        name: '邵广禄',
+                        post: '中国电信集团科技委主任',
+                      },
+                    ]
                   },
                 ]
               },
               {
-                time: '09:55 - 10:55',
+                time: '09:55 - 11:05',
                 content: [
                   {
                     title: '智跃无界，openEuler引领AI时代操作系统',
@@ -184,38 +287,38 @@ export default {
                     post: '开放原子开源基金会 openEuler委员会主席',
                   },
                   {
-                    title: '互联网 x openEuler：促进行业AI应用新实践',
-                    name: '特邀嘉宾',
-                    post: '',
+                    title: '智启新程 生态共荣：CTyunOS 4.0 开启智能云网操作系统新时代',
+                    name: '	蒋彪',
+                    post: '中国电信集团首席专家',
                   },
                   {
-                    title: '中国电信 x openEuler：共筑数智基础设施新标杆',
-                    name: '特邀嘉宾',
-                    post: '',
+                    title: 'AI算力的极限挑战：BaiduLinux支持超大规模集群基础设施建设实践',
+                    name: '杜海',
+                    post: '百度智能云混合云部总经理',
                   },
                   {
-                    titles: ['仪式：操作系统实践单位致谢', '暨2025年度openEuler领先商业实践'],
-                    name: '特邀嘉宾',
-                    post: '',
-                  }
+                    title: 'MTOS & openEuler 联创共赢、生态共振 ，探索超节点优势场景',
+                    name: '曾文斌',
+                    post: '美团操作系统总监',
+                  },
+                  {
+                    title: '菲尼克斯携手openEuler，加速OT产业IT化转型',
+                    name: '杨明明',
+                    post: '菲尼克斯中国公司副总裁',
+                  },
                 ]
               },
               {
-                time: '10:55 - 11:25',
+                time: '11:05 - 11:15',
                 content: [
                   {
-                    title: '海外运营商 x openEuler：构建本土数字新生态',
-                    name: '特邀嘉宾',
-                    post: '',
-                  },
-                  {
-                    title: '菲尼克斯 x openEuler：加速OT产业IT化转型新进程',
-                    name: '特邀嘉宾',
+                    title: '仪式：操作系统实践单位致谢暨2025年度openEuler领先商业实践',
+                    name: '领先商业实践用户代表',
                     post: '',
                   },
                   {
                     title: '仪式：openEuler全球化先锋伙伴致谢',
-                    name: '特邀嘉宾',
+                    name: '伙伴代表',
                     post: '',
                   },
                 ]
@@ -345,7 +448,7 @@ export default {
                       {
                         title: '开场致辞',
                         name: '熊伟',
-                        post: '开放原子开源基金会 openEuler委员会主席',
+                        post: 'openEuler社区主席',
                       }
                     ]
                   },
@@ -355,7 +458,7 @@ export default {
                       {
                         title: '开场致辞',
                         name: '杨涛',
-                        post: '麒麟信安董事长 ',
+                        post: '麒麟信安董事长',
                       }
                     ]
                   },
@@ -442,6 +545,73 @@ export default {
                 ],
               },
               {
+                label: '互联网',
+                time: '14:00 - 17:00',
+                address: '',
+                children: [
+                  {
+                    time: '14:00-14:05',
+                    content: [
+                      {
+                        title: '欢迎致辞',
+                        name: '特邀嘉宾',
+                        post: '',
+                      },
+                    ]
+                  },
+                  {
+                    time: '14:05-14:10',
+                    content: [
+                      {
+                        title: '开源欧拉在互联网行业的进展与展望',
+                        name: '特邀嘉宾',
+                        post: '',
+                      },
+                    ]
+                  },
+                  {
+                    time: '14:10-15:10',
+                    content: [
+                      {
+                        title: '互联网灵衢超节点实践分享和价值场景研讨',
+                        name: '特邀嘉宾',
+                        post: '',
+                      },
+                    ]
+                  },
+                  {
+                    time: '15:10-15:50',
+                    content: [
+                      {
+                        title: '互联网智算集群实践分享和研讨',
+                        name: '特邀嘉宾',
+                        post: '',
+                      },
+                    ]
+                  },
+                  {
+                    time: '15:50-16:30',
+                    content: [
+                      {
+                        title: '互联网众核高密场景实践分享和研讨',
+                        name: '特邀嘉宾',
+                        post: '',
+                      },
+                    ]
+                  },
+                  {
+                    time: '16:30-17:00',
+                    content: [
+                      {
+                        title: '互联网开源欧拉+鲲鹏实践分享和研讨',
+                        name: '特邀嘉宾',
+                        post: '',
+                      },
+                    ]
+                  },
+                ]
+              },
+              {
                 label: '全球生态',
                 time: '13:30 - 15:30',
                 address: '',
@@ -463,7 +633,7 @@ export default {
                         title: '芯片厂商致辞',
                         guest: [
                           {
-                            name: 'Andrew Wafaa',
+                            name: 'Andrew Wafaa',
                             post: 'ARM公司Fellow与软件社区高级总监',
                           },
                           {
@@ -484,7 +654,7 @@ export default {
                       {
                         title: '开源基础软件与A技术创新路线',
                         name: '熊伟',
-                        post: '开放原子开源基金会 openEuler委员会主席',
+                        post: 'openEuler委员会主席',
                       }
                     ]
                   },
@@ -604,7 +774,7 @@ export default {
                       {
                         title: '《异构融合的AI Infra系统软件资源管理与可靠性保障》',
                         name: '杨任宇',
-                        post: '北京航空大学',
+                        post: '北京航空航天大学',
                       }
                     ]
                   },
@@ -657,9 +827,19 @@ export default {
               },
               {
                 label: '智能制造',
-                time: '13:40 - 16:00',
+                time: '13:30 - 16:20',
                 address: '',
                 children: [
+                  {
+                    time: '13:30-13:40',
+                    content: [
+                      {
+                        title: '欢迎致辞',
+                        name: '刘程',
+                        post: 'openEuler产品规划专家',
+                      }
+                    ]
+                  },
                   {
                     time: '13:40-14:00',
                     content: [
@@ -674,9 +854,9 @@ export default {
                     time: '14:00-14:20',
                     content: [
                       {
-                        title: '基于开源欧拉面向大科学装置黑灯实验室（工厂）场景的统一操作系统研发与实践',
-                        name: '卢俊',
-                        post: '中国科学院广州生物医药与健康研究院 谱系工程技术中心副主任',
+                        title: '面向智能自动化的工业控制底座技术',
+                        name: '王志强',
+                        post: 'CODESYS软件集团(中国)市场负责人',
                       }
                     ]
                   },
@@ -684,14 +864,24 @@ export default {
                     time: '14:20-14:40',
                     content: [
                       {
-                        title: '嵌入式系统在数控领域的应用',
+                        title: '基于开源欧拉面向大科学装置黑灯实验室（工厂）场景的统一操作系统研发与实践',
+                        name: '卢俊',
+                        post: '中国科学院广州生物医药与健康研究院 谱系工程技术中心副主任',
+                      }
+                    ]
+                  },
+                  {
+                    time: '14:40-15:00',
+                    content: [
+                      {
+                        title: '支撑高端数控系统应用场景的工业实时操作系统需求演化趋势',
                         name: '宋师',
                         post: '广州数控设备有限公司总工程师',
                       }
                     ]
                   },
                   {
-                    time: '14:40-15:00',
+                    time: '15:00-15:20',
                     content: [
                       {
                         title: '拓斯达在具身智能机器人领域的场景探索与实践',
@@ -701,7 +891,7 @@ export default {
                     ]
                   },
                   {
-                    time: '15:00-15:20',
+                    time: '15:20-15:40',
                     content: [
                       {
                         title: 'openEuler Embedded在智慧交通工控场景的应用',
@@ -711,20 +901,20 @@ export default {
                     ]
                   },
                   {
-                    time: '15:20-15:40',
+                    time: '15:40-16:00',
                     content: [
                       {
-                        title: '软件赋能工业智能化',
+                        title: '算力革新，智控未来——昆仑技术专用计算业务赋能智能制造升级',
                         name: '姚广忠',
                         post: '超聚变 OS主任工程师',
                       }
                     ]
                   },
                   {
-                    time: '15:40-16:00',
+                    time: '16:00-16:20',
                     content: [
                       {
-                        title: '基于昇腾310B开发板的嵌入式OS的适配',
+                        title: 'openEuler 嵌入式适配昇腾310B解锁边缘 AI 高效部署新范式',
                         name: '张涛',
                         post: '江苏润和软件股份有限公司嵌入式部门经理',
                       }
@@ -743,10 +933,20 @@ export default {
             title: '主论坛',
             children: [
               {
-                time: '09:30 - 09:55',
+                time: '09:30-09:35',
                 content: [
                   {
-                    title: 'openEuler社区发展主题演讲',
+                    title: '大会致辞',
+                    name: '彭红华',
+                    post: '华为ICT战略与业务发展部总裁',
+                  }
+                ]
+              },
+              {
+                time: '09:35 - 10:05',
+                content: [
+                  {
+                    titles: ['openEuler社区发展主题演讲：', '长风破浪会有时，直挂云帆济沧海'],
                     guest: [
                       {
                         name: '熊伟',
@@ -759,10 +959,6 @@ export default {
                       {
                         name: 'Andrew Wafaa',
                         post: 'PyTorch Board 成员',
-                      },
-                      {
-                        name: 'Grant Likely',
-                        post: 'CTO at Linaro Ltd. ',
                       },
                     ]
                   },
@@ -778,45 +974,52 @@ export default {
                 ]
               },
               {
-                time: '09:55 - 10:35',
+                time: '10:05 - 10:40',
                 content: [
                   {
-                    titles: ['openEuler技术前沿与展望', 'openEuler & friends 6.0'],
+                    title: 'openEuler技术前沿与展望',
                     guest: [
                       {
                         name: '胡欣蔚',
                         post: 'openEuler技术委员会主席',
                       },
                       {
-                        name: '郑振宇',
-                        post: 'openEuler社区运营组组长',
+                        name: '胡春明',
+                        post: '北京航空航天大学软件学院院长',
+                      },
+                      {
+                        name: 'Grant Likely',
+                        post: 'CTO at Linaro Ltd. ',
                       },
                     ]
                   },
-                  {
-                    title: '构建统一的Scale-Up新架构软件生态',
-                    name: '胡春明',
-                    post: '北京航空航天大学软件学院院长',
-                  },
                 ]
               },
               {
-                time: '10:35 - 10:55',
+                time: '10:10 - 11:00',
                 content: [
                   {
-                    title: '拥抱国产操作系统，构建中国邮政安全可信的云原生镜像体系',
-                    name: '特邀嘉宾',
-                    post: '',
+                    title: '构建中国邮政安全可信的云原生镜像体系实践分享',
+                    name: '高立江',
+                    post: '中邮信息科技云原生平台负责人',
                   },
                   {
-                    title: '基于麒麟信安服务器操作系统的广汽国产高性能计算研发平台建设成果',
-                    name: '特邀嘉宾',
-                    post: '',
+                    title: '基于麒麟信安的广汽自主创新高性能计算建设成果',
+                    guest: [
+                      {
+                        name: '叶青龙',
+                        post: '麒麟信安(广东)科技有限公司研发总监',
+                      },
+                      {
+                        name: '陈友宣',
+                        post: '广州汽车集团股份有限公司高性能计算负责人'
+                      }
+                    ]
                   },
                 ]
               },
               {
-                time: '10:55 - 11:10',
+                time: '11:00 - 11:15',
                 content: [
                   {
                     titles: ['仪式：openEuler 2025年度突出贡献单位', 'openEuler 2025年度项目之星', 'openEuler 2025年度贡献之星'],
@@ -835,16 +1038,16 @@ export default {
             tab: [
               {
                 label: '嵌入式&具身智能',
-                time: '11:15 - 15:15',
+                time: '11:15 - 16:00',
                 address: '',
                 children: [
                   {
                     time: '11:15-11:30',
                     content: [
                       {
-                        title: '面向现代机器人的编程看框架AimRT',
-                        name: '胡旷',
-                        post: '智元机器人',
+                        title: '国创嵌入式基础软件QSemOS+IntarkDB创新实践',
+                        name: '刘保玉',
+                        post: '粤港澳大湾区国家技术创新中心',
                       }
                     ]
                   },
@@ -854,7 +1057,7 @@ export default {
                       {
                         title: '开放·融合·智能：vPLCnext基于openEuler的探索与产业实践',
                         name: '徐佩文',
-                        post: '菲尼克斯',
+                        post: '南京菲尼克斯电气有限公司',
                       }
                     ]
                   },
@@ -862,9 +1065,9 @@ export default {
                     time: '11:45-12:00',
                     content: [
                       {
-                        title: '基于欧拉嵌入式的行业具身智能解决方案及应用实践',
-                        name: '廖承斌',
-                        post: '鼎桥技术有限公司',
+                        title: '基于声明式编排技术的跨节点多系统混合部署设计与实现',
+                        name: '魏建刚',
+                        post: '江苏润和软件股份有限公司',
                       }
                     ]
                   },
@@ -882,36 +1085,6 @@ export default {
                     time: '13:00-13:15',
                     content: [
                       {
-                        title: 'AGIROS机器人共性算法框架',
-                        name: '李鹏',
-                        post: 'AGIROS社区',
-                      }
-                    ]
-                  },
-                  {
-                    time: '13:15-13:30',
-                    content: [
-                      {
-                        title: '新一代具身智能电子架构',
-                        name: '肖丹',
-                        post: '北京光亚鸿道操作系统有限公司',
-                      }
-                    ]
-                  },
-                  {
-                    time: '13:30-13:45',
-                    content: [
-                      {
-                        title: '基于全国产化技术的自主移动机器人设计方案',
-                        name: '杜辉',
-                        post: '启诺',
-                      }
-                    ]
-                  },
-                  {
-                    time: '13:45-14:00',
-                    content: [
-                      {
                         title: '基于openEuler的人工智能+星载领域天基底座构建',
                         name: '王大维',
                         post: '成都菁蓉联创科技有限公司',
@@ -919,59 +1092,100 @@ export default {
                     ]
                   },
                   {
-                    time: '14:00-14:15',
+                    time: '13:15-13:30',
                     content: [
                       {
                         title: '航天欧拉OS：openEuler在航天领域的应用实践与探索',
                         name: '蔡鑫奇',
-                        post: '中国航天科技集团第九研究院研发中心',
+                        post: '北京航天微系统与信息技术研究所',
                       }
                     ]
                   },
                   {
-                    time: '14:15-14:30',
+                    time: '13:30-13:35',
                     content: [
                       {
-                        title: '基于声明式编排技术的跨节点多系统混合部署设计与实现',
-                        guest: [
-                          {
-                            name: '魏建刚',
-                            post: '润和软件',
-                          },
-                          {
-                            
-                            name: '彭朗源',
-                            post: '润和软件',
-                          },
-                        ]
+                        title: '航天欧拉OS发布仪式',
+                        name: '',
+                        post: '',
                       }
                     ]
                   },
                   {
-                    time: '14:30-14:45',
+                    time: '13:35-13:50',
                     content: [
                       {
-                        title: '国创嵌入式基础软件QSemOS+IntarkDB创新实践',
-                        name: '刘保玉',
-                        post: '粤港澳大湾区国家技术创新中心',
+                        title: '面向现代机器人的编程看框架AimRT',
+                        name: '胡旷',
+                        post: '智元机器人',
                       }
                     ]
                   },
                   {
-                    time: '14:45-15:00',
+                    time: '13:50-14:05',
                     content: [
                       {
-                        title: '超聚变具身智能操作系统',
+                        title: 'AGIROS机器人共性算法框架',
+                        name: '李鹏',
+                        post: '中国科学院软件研究所',
+                      }
+                    ]
+                  },
+                  {
+                    time: '14:05-14:20',
+                    content: [
+                      {
+                        title: '基于欧拉嵌入式的行业具身智能解决方案及应用实践',
+                        name: '廖承斌',
+                        post: '鼎桥技术有限公司',
+                      }
+                    ]
+                  },
+                  {
+                    time: '14:20-14:35',
+                    content: [
+                      {
+                        title: '新一代具身智能电子架构',
+                        name: '谭睿',
+                        post: '北京光亚鸿道操作系统有限公司',
+                      }
+                    ]
+                  },
+                  {
+                    time: '14:35-14:50',
+                    content: [
+                      {
+                        title: '机器人操作系统思考与进展',
                         name: '徐磊',
                         post: '超聚变技术有限公司',
                       }
                     ]
                   },
                   {
-                    time: '15:00-15:15',
+                    time: '14:50-15:05',
                     content: [
                       {
-                        title: 'ROS SIG发展规划与机器人应用实践',
+                        title: '基于全国产化技术的自主移动机器人设计方案',
+                        name: '江东平',
+                        post: '南京启诺信息技术有限公司',
+                      }
+                    ]
+                  },
+                  {
+                    time: '15:05-15:20',
+                    content: [
+                      {
+                        title: '中场休息',
+                        name: '',
+                        post: '',
+                      }
+                    ]
+                  },
+                  {
+                    time: '15:20-16:00',
+                    content: [
+                      {
+                        title: 'ROS SIG发展规划与机器人应用实践',
                         name: '王晓云',
                         post: '中国科学院软件研究所',
                       }
@@ -1000,7 +1214,7 @@ export default {
                       {
                         title: 'OPEA、openHPC在openEuler上原生生态进展',
                         name: '鲁卫军',
-                        post: '华为技术有限公司',
+                        post: '华为技术有限公司 高级工程师',
                       }
                     ]
                   },
@@ -1010,7 +1224,7 @@ export default {
                       {
                         title: 'DevStation-面向开发者的AI智能化开发者工作站',
                         name: '袁礼鹏',
-                        post: 'openEuler 开发部',
+                        post: '华为技术有限公司 高级工程师',
                       }
                     ]
                   },
@@ -1059,7 +1273,7 @@ export default {
                     content: [
                       {
                         title: 'AI赋能的软件工程平台',
-                        name: '李伟',
+                        name: '郭纪岩',
                         post: '北京凝思产品研发总监',
                       }
                     ]
@@ -1078,9 +1292,9 @@ export default {
                     time: '14:15-14:30',
                     content: [
                       {
-                        title: 'oeDeploy部署工具的所见与所得：从文档到脚本的智能转换',
+                        title: 'AI工具的所见即所得：基于文档的开发模式',
                         name: '丁嘉辉',
-                        post: 'openEuler 开发部',
+                        post: '华为技术有限公司 高级工程师',
                       }
                     ]
                   },
@@ -1088,9 +1302,9 @@ export default {
                     time: '14:30-14:45',
                     content: [
                       {
-                        title: 'AI大模型加持下的社区软件包自动升级和维护实践',
-                        name: '曹志',
-                        post: '华为技术有限公司',
+                        title: 'AI大模型在基础设施的实践与应用',
+                        name: '翟文杰',
+                        post: '华为技术有限公司 高级工程师',
                       }
                     ]
                   },
@@ -1098,7 +1312,7 @@ export default {
                     time: '14:45-15:00',
                     content: [
                       {
-                        title: 'PortGPT: 基于大模型的自动化补丁后向迁移研究',
+                        title: 'PortGPT: 基于大模型的自动化补丁后向迁移研究',
                         name: '李朝阳',
                         post: '华中科技大学',
                       }
@@ -1118,7 +1332,7 @@ export default {
               },
               {
                 label: '云原生',
-                time: '13:00 - 15:00',
+                time: '13:00 - 15:15',
                 address: '',
                 children: [
                   {
@@ -1135,9 +1349,9 @@ export default {
                     time: '13:10-13:30',
                     content: [
                       {
-                        title: '元戎Serverless分布式计算引擎技术和实践',
+                        title: 'openYuanrong Serverless分布式计算引擎技术和实践',
                         name: '梁义',
-                        post: '华为技术有限公司',
+                        post: '华为技术有限公司 通用Serverless首席专家',
                       }
                     ]
                   },
@@ -1147,57 +1361,67 @@ export default {
                       {
                         title: 'Apache Doris基于Kunpeng的性能优化实践',
                         name: '吴治国',
-                        post: 'Linaro Limited',
+                        post: 'Linaro 工程师',
                       }
                     ]
                   },
                   {
-                    time: '13:45-14:00',
+                    time: '13:45-13:55',
                     content: [
                       {
-                        title: 'AI Agent沙箱对传统云原生架构的挑战',
+                        title: 'Agent沙箱对传统云原生架构的挑战',
                         name: '费建强',
-                        post: '华为技术有限公司',
+                        post: '华为技术有限公司 云原生专家',
                       }
                     ]
                   },
                   {
-                    time: '14:00-14:15',
+                    time: '13:55-14:05',
+                    content: [
+                      {
+                        title: 'Agentic AI超容器Conch技术介绍',
+                        name: '钟涛',
+                        post: '华为技术有限公司 工程师',
+                      }
+                    ]
+                  },
+                  {
+                    time: '14:05-14:20',
                     content: [
                       {
                         title: '云原生网络拓扑实时可视化和网络运维实践',
                         name: '万峰',
-                        post: '麒麟软件高级软件工程师',
+                        post: '麒麟软件 高级软件工程师',
                       }
                     ]
                   },
                   {
-                    time: '14:15-14:30',
+                    time: '14:20-14:40',
                     content: [
                       {
-                        title: 'Agentic AI超容器技术介绍',
-                        name: '钟涛',
-                        post: '杭州华为企业通信技术有限公司',
-                      }
-                    ]
-                  },
-                  {
-                    time: '14:30-14:45',
-                    content: [
-                      {
-                        title: '通过GPU虚拟化解决方案提升AI服务器资源利用效率',
+                        title: '通过NPU虚拟化解决方案提升AI服务器资源利用效率',
                         name: '杨彬',
-                        post: '软通动力开源欧拉研究中心',
+                        post: '软通动力信息技术（集团）股份有限公司 开源欧拉研究中心主任',
                       }
                     ]
                   },
                   {
-                    time: '14:45-15:00',
+                    time: '14:40-15:00',
                     content: [
                       {
-                        title: '大数据OmniRuntime开源与实践',
+                        title: 'AI Agent赋能云原生基础设施',
+                        name: '张盈辉',
+                        post: '中国移动信息技术中心 云原生架构师',
+                      }
+                    ]
+                  },
+                  {
+                    time: '15:00-15:15',
+                    content: [
+                      {
+                        title: '大数据统一加速底座OmniRuntime开源及实践',
                         name: '尹伟杰',
-                        post: '华为技术有限公司',
+                        post: '华为技术有限公司 大数据专家',
                       }
                     ]
                   }
@@ -1205,11 +1429,21 @@ export default {
               },
               {
                 label: '灵衢',
-                time: '11:30 - 14:40',
+                time: '11:30 - 15:00',
                 address: '',
                 children: [
                   {
-                    time: '11:30-11:45',
+                    time: '11:30-11:35',
+                    content: [
+                      {
+                        title: '开场致辞',
+                        name: '朱照生',
+                        post: '华为集群计算总经理',
+                      }
+                    ]
+                  },
+                  {
+                    time: '11:35-11:55',
                     content: [
                       {
                         title: '超节点和关键应用场景',
@@ -1219,17 +1453,7 @@ export default {
                     ]
                   },
                   {
-                    time: '11:45-12:00',
-                    content: [
-                      {
-                        title: 'CXL在计算机体系重构中的位置、作用和价值',
-                        name: '宋家雨',
-                        post: 'CXL技术应用俱乐部秘书长',
-                      }
-                    ]
-                  },
-                  {
-                    time: '12:00-13:00',
+                    time: '11:55-13:00',
                     content: [
                       {
                         title: '午间休息',
@@ -1239,7 +1463,17 @@ export default {
                     ]
                   },
                   {
-                    time: '13:00-13:10',
+                    time: '13:00-13:15',
+                    content: [
+                      {
+                        title: 'CXL在计算机体系重构中的位置、作用和价值',
+                        name: '宋家雨',
+                        post: 'CXL技术应用俱乐部秘书长',
+                      }
+                    ]
+                  },
+                  {
+                    time: '13:15-13:25',
                     content: [
                       {
                         title: '灵衢总线技术和软件参考设计',
@@ -1249,7 +1483,7 @@ export default {
                     ]
                   },
                   {
-                    time: '13:10-13:30',
+                    time: '13:25-13:45',
                     content: [
                       {
                         title: '灵衢内存池化关键技术和应用',
@@ -1259,7 +1493,7 @@ export default {
                     ]
                   },
                   {
-                    time: '13:30-13:50',
+                    time: '13:45-14:05',
                     content: [
                       {
                         title: '灵衢通信关键技术和应用',
@@ -1269,7 +1503,7 @@ export default {
                     ]
                   },
                   {
-                    time: '13:50-14:00',
+                    time: '14:05-14:15',
                     content: [
                       {
                         title: '灵衢设备虚拟化关键技术和应用',
@@ -1279,7 +1513,7 @@ export default {
                     ]
                   },
                   {
-                    time: '14:00-14:10',
+                    time: '14:15-14:25',
                     content: [
                       {
                         title: '超节点可靠性关键技术',
@@ -1289,7 +1523,7 @@ export default {
                     ]
                   },
                   {
-                    time: '14:10-14:30',
+                    time: '14:25-14:45',
                     content: [
                       {
                         title: '灵衢系统高阶服务关键技术和应用',
@@ -1299,10 +1533,10 @@ export default {
                     ]
                   },
                   {
-                    time: '14:30-14:40',
+                    time: '14:45-15:00',
                     content: [
                       {
-                        title: '毕昇编译器超节点技术',
+                        title: '灵衢超节点编程编译关键技术',
                         name: '杨扬',
                         post: '',
                       }
@@ -1546,7 +1780,7 @@ export default {
               },
               {
                 label: '安全与机密计算',
-                time: '11:30 - 15:00',
+                time: '11:30 - 14:45',
                 address: '',
                 children: [
                   {
@@ -1565,7 +1799,7 @@ export default {
                       {
                         title: '安全增强复式内核 HAOC 3.0 特性介绍与 4.0 规划',
                         name: '武成岗',
-                        post: '中关村实验室，研究员',
+                        post: '中国科学院计算技术研究所，研究员',
                       }
                     ]
                   },
@@ -1575,7 +1809,7 @@ export default {
                       {
                         title: '与Arm CCA共铸开源机密计算新时代',
                         name: 'Kaly Xin',
-                        post: 'Linaro，中国区总监',
+                        post: 'Linaro，软件工程总监',
                       }
                     ]
                   },
@@ -1613,9 +1847,9 @@ export default {
                     time: '13:30-13:45',
                     content: [
                       {
-                        title: 'AI安全在金融行业的应用',
-                        name: '徐琳玲',
-                        post: '工行，大数据和人工智能实验室高级经理',
+                        title: 'AI辅助CVE漏洞修复和冲突处理',
+                        name: '李萍',
+                        post: '华为技术有限公司，高级软件工程师',
                       }
                     ]
                   },
@@ -1623,24 +1857,14 @@ export default {
                     time: '13:45-14:00',
                     content: [
                       {
-                        title: 'AI辅助CVE漏洞修复和冲突处理',
-                        name: '李萍',
-                        post: 'openEuler开发部，研发工程师',
+                        title: 'AI助力开源供应链风险管控与合规审查',
+                        name: '王麟',
+                        post: '联通数字科技有限公司，高级研发专家',
                       }
                     ]
                   },
                   {
                     time: '14:00-14:15',
-                    content: [
-                      {
-                        title: 'AI助力开源供应链风险管控与合规审查',
-                        name: '王麟',
-                        post: '联通，高级研发专家',
-                      }
-                    ]
-                  },
-                  {
-                    time: '14:15-14:30',
                     content: [
                       {
                         title: '基于鲲鹏机密计算的密码服务平台解决方案',
@@ -1650,7 +1874,7 @@ export default {
                     ]
                   },
                   {
-                    time: '14:30-14:45',
+                    time: '14:15-14:30',
                     content: [
                       {
                         title: '基于openEuler的系统安全加固方案',
@@ -1660,19 +1884,19 @@ export default {
                     ]
                   },
                   {
-                    time: '14:45-15:00',
+                    time: '14:30-14:45',
                     content: [
                       {
                         title: '基于 SBOM 的供应链安全运营-自动化、可视化与欧拉生态适配实践',
                         name: '贺礼云',
-                        post: '北京凝思软件股份有限公司，产品经理',
+                        post: '凝思软件成都研发中心，副总经理',
                       }
                     ]
                   }
                 ],
               },
               {
-                label: ' RISC-V',
+                label: 'RISC-V',
                 time: '13:00 - 15:05',
                 address: '',
                 children: [
