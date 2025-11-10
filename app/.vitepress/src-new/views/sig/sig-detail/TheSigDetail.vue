@@ -80,8 +80,8 @@ const queryGetSigDetail = () => {
     sig: sigName.value,
   };
   getSigDetail(param).then((res: any) => {
-    if (res?.data?.length) {
-      const data = res.data[0];
+    if (res?.data) {
+      const data = res.data;
       sigDetailInfo.value = data;
       mail.value = data.mailing_list;
       const { maintainer_info, committer_info } = data || [];
@@ -170,8 +170,8 @@ onUnmounted(() => {
     </OBreadcrumb>
     <SigDetailInfoCard
       :description="sigDetailInfo?.description"
-      :sig-name="sigDetailInfo?.sig_name"
-      :gitee-address="`${SIG_ADDRESS}${sigDetailInfo?.sig_name}`"
+      :sig-name="sigDetailInfo?.name"
+      :gitee-address="`${SIG_ADDRESS}${sigDetailInfo?.name}`"
       :mail="sigDetailInfo?.mailing_list"
     />
     <div class="sig-detail-content">
@@ -320,7 +320,7 @@ onUnmounted(() => {
         />
         <!-- SIG贡献展示 -->
         <SigContribute
-          :sig="sigDetailInfo?.sig_name"
+          :sig="sigDetailInfo?.name"
           class="sig-floor-item"
           v-analytics.catchBubble="{
             properties: {

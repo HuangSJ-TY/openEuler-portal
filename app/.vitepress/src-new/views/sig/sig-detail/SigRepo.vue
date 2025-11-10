@@ -7,7 +7,7 @@ import { OIcon, OTable, OPagination, OScroller } from '@opensig/opendesign';
 
 import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
 
-import { getSigRepositoryList } from '@/api/api-sig';
+import { getSigRepositoryList } from '~@/api/api-sig';
 
 import FilterableTableHeader from '~@/components/FilterableTableHeader.vue';
 
@@ -73,9 +73,9 @@ const filterRepositoryList = () => {
       (!repositoryNameSelected.value ||
         item.repo === repositoryNameSelected.value) &&
       (!maintainerSelected.value ||
-        item.maintainers.includes(maintainerSelected.value)) &&
+        item.maintainers?.includes(maintainerSelected.value)) &&
       (!committerSelected.value ||
-        item.gitee_id.includes(committerSelected.value))
+        item.committers?.includes(committerSelected.value))
     );
   });
   totalRepositoryList.value;
@@ -87,20 +87,13 @@ const getRepositoryList = () => {
     sig: sigName.value,
   };
   getSigRepositoryList(param).then((data) => {
-    if (data.code === 200) {
-      const {
-        committerDetails = [],
-        committers = [],
-        maintainers = [],
-      } = data.data;
-      _totalRepositoryList.value = committerDetails.map((item: any) => ({
-        ...item,
-        maintainers,
-      }));
+    if (data.code === 1) {
+      const infos = data.data;
+      _totalRepositoryList.value = infos;
       filterRepositoryList();
-      repositoryNameList.value = committerDetails.map((item: any) => item.repo);
-      maintainerList.value = maintainers;
-      committerList.value = committers;
+      repositoryNameList.value = infos.map((item: any) => item.repo);
+      maintainerList.value = [...new Set(infos.flatMap(item => item.maintainers || []))];
+      committerList.value = [...new Set(infos.flatMap(item => item.committers || []))];
     }
   });
 };
@@ -114,12 +107,12 @@ const columns = [
   },
   {
     label: t('sig.maintainerEn'),
-    key: 'maintainer',
+    key: 'maintainers',
     style: 'width:200px',
   },
   {
     label: t('sig.committer'),
-    key: 'gitee_id',
+    key: 'committers',
     style: 'width:250px',
   },
 ];
@@ -199,7 +192,7 @@ onMounted(() => {
             {{ row.repo }}
           </a>
         </template>
-        <template #td_maintainer="{ row }">
+        <template #td_maintainers="{ row }">
           <a
             v-for="(item, index) in row.maintainers"
             :key="item"
@@ -218,10 +211,10 @@ onMounted(() => {
             }}</span>
           </a>
         </template>
-        <template #td_gitee_id="{ row }">
-          <template v-if="row.gitee_id.length">
+        <template #td_committers="{ row }">
+          <template v-if="row.committers?.length">
             <a
-              v-for="(item, index) in row.gitee_id"
+              v-for="(item, index) in row.committers"
               :key="item"
               target="_blank"
               rel="noopener noreferrer"
@@ -233,7 +226,7 @@ onMounted(() => {
               }"
             >
               {{ item
-              }}<span v-show="index !== row.gitee_id.length - 1">{{
+              }}<span v-show="index !== row.committers.length - 1">{{
                 locale === 'zh' ? '、' : ',&nbsp;'
               }}</span>
             </a>

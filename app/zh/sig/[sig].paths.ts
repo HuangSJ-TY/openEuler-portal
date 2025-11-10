@@ -2,13 +2,13 @@ export default {
   async paths() {
     const sigs = await (
       await fetch(
-        'https://dsapi.osinfra.cn/query/sig/info?community=openeuler&search=fuzzy'
+        'https://magicapi.osinfra.cn/stat/sig/info?community=openeuler'
       )
     ).json();
-    return sigs?.data.map((sig) => {
+    return sigs?.data?.map((sig) => {
       return {
         params: {
-          sig: `${sig.sig_name}`,
+          sig: `${sig.name}`,
         },
       };
     });

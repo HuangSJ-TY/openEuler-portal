@@ -84,7 +84,7 @@ const sigVisible = ref(false);
 const queryGetSigList = () => {
   getSigList().then((res) => {
     allSigInfo.value = res.data.sort((a, b) =>
-      a.sig_name.localeCompare(b.sig_name)
+      a.name.localeCompare(b.name)
     );
     sigVisible.value = true;
   });
@@ -137,8 +137,8 @@ const constructLandscapeMap = () => {
     landscapeVisible.value = true;
 
     const arr = res.data.reduce((result: GroupInfoT[], item: GroupInfoT) => {
-      const existItem = result.find((i) => i.feature === item.feature);
-      if (!existItem && item.feature) {
+      const existItem = result.find((i) => i.feature_zh === item.feature_zh);
+      if (!existItem && item.feature_zh) {
         result.push(item);
       }
       return result;
@@ -146,10 +146,10 @@ const constructLandscapeMap = () => {
 
     arr.forEach((item) => {
       featureArr.value.push({
-        value: item.en_feature,
+        value: item.feature_en,
         label: {
-          zh: item.feature,
-          en: item.en_feature,
+          zh: item.feature_zh,
+          en: item.feature_en,
         },
       });
     });
@@ -186,7 +186,7 @@ const sigDataVisible = ref();
 const mergedArray = () => {
   const mergedArray = allSigInfo.value.reduce((acc, item) => {
     const match = landscapeList.value.find(
-      (subItem) => subItem.sig_names === item.sig_name
+      (subItem) => subItem.sig_name === item.name
     );
     if (match) {
       acc.push({ ...item, ...match });
@@ -370,14 +370,14 @@ watch(
     // 分类
     const filterFeatureType =
       val[0] !== 'all'
-        ? sigList.value.filter((item) => item.en_feature === val[0])
+        ? sigList.value.filter((item) => item.feature_en === val[0])
         : sigList.value;
     // 筛选
     if (val[1] === 'sig' && val[2]) {
       // 匹配sig name 和 sig description
       filterSearchData.value = filterFeatureType.filter(
         (item) => {
-          const name = item.sig_name.toLowerCase().includes(val[2].toLowerCase())
+          const name = item.name.toLowerCase().includes(val[2].toLowerCase())
           const desc = item?.description?.toLowerCase().includes(val[2].toLowerCase())
 
           return name || desc
@@ -385,7 +385,7 @@ watch(
     }
     if (val[1] === 'repos' && val[2]) {
       filterSearchData.value = filterFeatureType.filter((item) => {
-        const index = item.repos.findIndex(text => text?.toLowerCase().includes(val[2].toLowerCase()))
+        const index = item.repositories.findIndex(text => text?.toLowerCase().includes(val[2].toLowerCase()))
         return index > -1
       });
     }
@@ -401,9 +401,9 @@ watch(
     if (val[1] === 'all' && val[2]) {
       filterSearchData.value = filterFeatureType.filter(
         (item) => {
-          const name = item.sig_name.toLowerCase().includes(val[2].toLowerCase())
+          const name = item.name.toLowerCase().includes(val[2].toLowerCase())
           const desc = item?.description?.toLowerCase().includes(val[2].toLowerCase())
-          const repoIndex = item.repos.findIndex(text => text.toLowerCase().includes(val[2].toLowerCase()))
+          const repoIndex = item.repositories.findIndex(text => text.toLowerCase().includes(val[2].toLowerCase()))
           const maintainerNameIndex = item.maintainer_info.findIndex(text => text?.name?.toLowerCase().includes(val[2].toLowerCase()))
           const maintainerGiteeIdIndex = item.maintainer_info.findIndex(text => text?.gitee_id?.toLowerCase().includes(val[2].toLowerCase()))
           return name || desc || repoIndex > -1 || maintainerNameIndex > -1 || maintainerGiteeIdIndex > -1
@@ -414,9 +414,9 @@ watch(
     }
 
     filterSearchData.value.sort((a, b) => {
-      let aHasSearchTerm = a.sig_name.toLowerCase().includes(val[2]?.toLowerCase());
-      let bHasSearchTerm = b.sig_name.toLowerCase().includes(val[2]?.toLowerCase());
-
+      let aHasSearchTerm = a.name.toLowerCase().includes(val[2]?.toLowerCase());
+      let bHasSearchTerm = b.name.toLowerCase().includes(val[2]?.toLowerCase());
+      
       if (aHasSearchTerm && !bHasSearchTerm) return -1;
       if (!aHasSearchTerm && bHasSearchTerm) return 1;
       return 0;
@@ -700,39 +700,39 @@ const onClickSearchRes = (type: string, ev: Event) => {
       <OCol
         :flex="lePadV ? '0 0 100%' : '0 0 50%'"
         v-for="sig in filterSigData"
-        :key="sig.sig_name"
+        :key="sig.name"
       >
         <div v-if="!lePadV" class="sig-card">
           <div class="title-top">
             <span
               class="sig-name" 
-              @click="toSigDetail(sig.sig_name)"
+              @click="toSigDetail(sig.name)"
               v-analytics="{
                 properties: {
                   module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
-                  target: sig.sig_name,
+                  target: sig.name,
                   type: 'sig'
                 }
               }"
             >
-              {{ sig.sig_name }}
+              {{ sig.name }}
             </span>
             <OTag variant="outline" class="type-tag">
-              {{ (locale === 'zh' ? sig.feature : sig.en_feature) || t('sig.other') }}
+              {{ (locale === 'zh' ? sig.feature_zh : sig.feature_en) || t('sig.other') }}
             </OTag>
           </div>
           <div class="sig-link">
             <OLink
-              :href="`https://gitee.com/openeuler/community/tree/master/sig/${sig.sig_name}`"
+              :href="`https://gitee.com/openeuler/community/tree/master/sig/${sig.name}`"
               target="_blank"
               v-analytics="{
                 properties: {
                   module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
-                  target: sig.sig_name,
+                  target: sig.name,
                   type: 'sig-gitee'
                 }
               }"
@@ -754,7 +754,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
                   module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
-                  target: sig.sig_name,
+                  target: sig.name,
                   type: 'sig-mail'
                 }
               }"
@@ -775,7 +775,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
                   module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
-                  target: sig.sig_name,
+                  target: sig.name,
                   type: 'sig-subcribe-mail'
                 }
               }"
@@ -810,7 +810,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
                   module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
-                  level3: sig.sig_name,
+                  level3: sig.name,
                   type: 'sig-repo'
                 }
               }"
@@ -822,19 +822,19 @@ const onClickSearchRes = (type: string, ev: Event) => {
                 wrap-class="sig-popup-repos"
               >
                 <template #target>
-                  <p class="text">{{t('sig.repo')}} {{ sig.repos?.length }}</p>
+                  <p class="text">{{t('sig.repo')}} {{ sig.repositories?.length }}</p>
                 </template>
                 <div class="popup-content">
                   <OScroller showType="always" size="small">
                     <OLink
-                      v-for="(item, i) in sig.repos"
+                      v-for="(item, i) in sig.repositories"
                       :key="item"
                       class="repo-item"
                       color="primary"
                       :href="`https://gitee.com/${item}`"
                       target="_blank"
                     >
-                      {{ item + (i === sig.repos.length - 1 ? '' : '、') }}
+                      {{ item + (i === sig.repositories.length - 1 ? '' : '、') }}
                     </OLink>
                   </OScroller>
                 </div>
@@ -852,7 +852,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
                   module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
-                  level3: sig.sig_name,
+                  level3: sig.name,
                   type: 'sig-maintainer'
                 }
               }"
@@ -888,11 +888,11 @@ const onClickSearchRes = (type: string, ev: Event) => {
         </div>
         <div v-else class="sig-card">
           <div class="title-top">
-            <span class="sig-name" @click="toSigDetail(sig.sig_name)">{{
-              sig.sig_name
+            <span class="sig-name" @click="toSigDetail(sig.name)">{{
+              sig.name
             }}</span>
             <OTag variant="outline" class="type-tag">
-              {{ (locale === 'zh' ? sig.feature : sig.en_feature) || t('sig.other') }}
+              {{ (locale === 'zh' ? sig.feature_zh : sig.feature_en) || t('sig.other') }}
             </OTag>
           </div>
           <div
@@ -920,11 +920,11 @@ const onClickSearchRes = (type: string, ev: Event) => {
             </OIcon>
             <OLink
               color="primary"
-              :href="`https://gitee.com/openeuler/community/tree/master/sig/${sig.sig_name}`"
+              :href="`https://gitee.com/openeuler/community/tree/master/sig/${sig.name}`"
               target="_blank"
               class="icon-link"
             >
-              {{ `https://gitee.com...sig/${sig.sig_name}` }}
+              {{ `https://gitee.com...sig/${sig.name}` }}
             </OLink>
           </div>
           <div class="sig-link">
@@ -961,19 +961,19 @@ const onClickSearchRes = (type: string, ev: Event) => {
                 wrap-class="sig-popup-repos"
               >
                 <template #target>
-                  <p class="text">{{t('sig.repo')}} {{ sig.repos?.length }}</p>
+                  <p class="text">{{t('sig.repo')}} {{ sig.repositories?.length }}</p>
                 </template>
                 <div class="popup-content">
                   <OScroller showType="always" size="small">
                     <OLink
-                      v-for="(item, i) in sig.repos"
+                      v-for="(item, i) in sig.repositories"
                       :key="item"
                       class="repo-item"
                       color="primary"
                       :href="`https://gitee.com/${item}`"
                       target="_blank"
                     >
-                      {{ item + (i === sig.repos.length - 1 ? '' : '、') }}
+                      {{ item + (i === sig.repositories.length - 1 ? '' : '、') }}
                     </OLink>
                   </OScroller>
                 </div>

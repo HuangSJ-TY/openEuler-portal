@@ -6,7 +6,7 @@ import { SigContributeArrT } from '@/shared/@types/type-sig';
 import IconSearch from '~icons/app-new/icon-search.svg';
 import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
 
-import { querySigUserContribute } from '@/api/api-sig';
+import { querySigUserContribute } from '~@/api/api-sig';
 import ListProgress from './ListProgress.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
 import { OInput, OPagination } from '@opensig/opendesign';
@@ -30,13 +30,13 @@ const contributionSelectBox = ref([
     color: 'bg-color-maintainer',
     isSelected: true,
     label: 'Maintainer',
-    key: 'maintainers',
+    key: 'maintainer',
   },
   {
     color: 'bg-color-committer',
     isSelected: true,
     label: 'Committer',
-    key: 'committers',
+    key: 'committer',
   },
   {
     color: 'bg-color-contributor',
@@ -148,7 +148,7 @@ const pageSize = ref(10);
 const querySearch = () => {
   if (searchVal.value !== '') {
     const newList = memberData.value.filter((item: any) =>
-      item.gitee_id.toLowerCase().includes(searchVal.value)
+      item.user_login.toLowerCase().includes(searchVal.value)
     );
     realData.value = newList;
     filterrealData();
@@ -303,7 +303,7 @@ const renderData = computed(() => {
               <span v-else>{{ index + 1 }}</span>
             </div>
             <ListProgress
-              :giteeName="item.gitee_id"
+              :giteeName="item.user_login"
               :item="item.contribute"
               :member-list="memberMax"
               :usertype="item.usertype"

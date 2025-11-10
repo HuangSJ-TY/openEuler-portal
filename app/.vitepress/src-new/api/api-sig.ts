@@ -15,7 +15,7 @@ import {
 export function getSigLandscape(): Promise<{
   data: GroupInfoT[];
 }> {
-  const url = '/api-dsapi/query/sig/scoreAll?community=openeuler';
+  const url = '/api-magic/sig/scoreAll?community=openeuler';
   return request.get(url).then((res: AxiosResponse) => {
     return res?.data;
   });
@@ -39,8 +39,8 @@ export function getRepoList(params): Promise<{
  * @returns {Object}
  */
 export function getSigList(): Promise<SigCompleteListT> {
-  const url = '/api-dsapi/query/sig/info?community=openeuler&search=fuzzy';
-  return request.post(url).then((res: AxiosResponse) => res.data);
+  const url = '/api-magic/stat/sig/info?community=openeuler';
+  return request.get(url).then((res: AxiosResponse) => res.data);
 }
 
 /**
@@ -66,7 +66,7 @@ export function getSigRepositoryList(params: object): Promise<{
   msg: string;
   update_at: string;
 }> {
-  const url = '/api-dsapi/query/sig/repo/committers';
+  const url = '/api-magic/sig/repo/committers';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 
@@ -85,7 +85,7 @@ export function querySigUserContribute(params: object): Promise<{
   msg: string;
   update_at: string;
 }> {
-  const url = '/api-dsapi/query/sig/usercontribute';
+  const url = '/api-magic/stat/sig/user/contribute';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 
@@ -102,7 +102,7 @@ export function getSigDetail(params: object): Promise<{
   msg: string;
   update_at: string;
 }> {
-  const url = '/api-dsapi/query/sig/info';
+  const url = '/api-magic/stat/sig/info';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 

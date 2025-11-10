@@ -173,7 +173,7 @@ export default defineConfig({
         rewrite: (url) => url.replace(/^\/api-dsapi/, ''),
       },
       '/api-magic/': {
-        target: 'https://magicapi.osinfra.cn/',
+        target: 'https://magicapi.test.osinfra.cn/',
         changeOrigin: true,
         rewrite: (url) => url.replace(/^\/api-magic/, ''),
       },
