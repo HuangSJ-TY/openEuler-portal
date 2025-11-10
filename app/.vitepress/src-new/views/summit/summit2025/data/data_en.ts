@@ -31,6 +31,89 @@ import baolande_dark from '../img/logo/baolande_dark.png';
 import tongxin from '../img/logo/tongxin_light.png';
 import tongxin_dark from '../img/logo/tongxin_dark.png';
 
+import xiexiuqi from '../img/guest/xiexiuqi.png';
+import luoyukai from '../img/guest/luoyukai.png';
+import dukaitian from '../img/guest/dukaitian.png';
+import lichenbin from '../img/guest/lichenbin.png';
+import tanggeliang from '../img/guest/tanggeliang.png';
+import zhutao from '../img/guest/zhutao.png';
+import zhangyizheng from '../img/guest/zhangyizheng.png';
+import chenxin from '../img/guest/chenxin.png';
+import zhuzexu from '../img/guest/zhuzexu.png';
+import liyang from '../img/guest/liyang.png';
+
+import dudongdong from '../img/guest/dudongdong.png';
+import lujun from '../img/guest/lujun.png';
+import zhangtao from '../img/guest/zhangtao.png';
+import jianghaoran from '../img/guest/jianghaoran.png';
+import duanchenghao from '../img/guest/duanchenghao.png';
+import tangyouling from '../img/guest/tangyouling.png';
+import songshi from '../img/guest/songshi.png';
+import yaoguangzhong from '../img/guest/yaoguangzhong.png';
+import yanglu from '../img/guest/yanglu.png';
+import zhangrui from '../img/guest/zhangrui.png';
+import wangwenkuan from '../img/guest/wangwenkuan.png';
+import cryolitia from '../img/guest/cryolitia.png';
+import songjiayu from '../img/guest/songjiayu.png';
+import renwei from '../img/guest/renwei.png';
+import wangjingwei from '../img/guest/wangjingwei.png';
+import zhangxiaopeng from '../img/guest/zhangxiaopeng.png';
+import jinxiaoxu from '../img/guest/jinxiaoxu.png';
+import zhangxiao from '../img/guest/zhangxiao.png';
+import zhangzehua from '../img/guest/zhangzehua.png';
+import sunzhenghua from '../img/guest/sunzhenghua.png';
+import zhouqiang from '../img/guest/zhouqiang.png';
+import liubingwei from '../img/guest/liubingwei.png';
+
+import caixinqi from '../img/guest/caixinqi.png';
+import zengyi from '../img/guest/zengyi.png';
+import dingjiahui from '../img/guest/dingjiahui.png';
+import feijianqiang from '../img/guest/feijianqiang.png';
+import hukuang from '../img/guest/hukuang.png';
+import jiangdongping from '../img/guest/jiangdongping.png';
+import jinlong from '../img/guest/jinlong.png';
+import lichaoyang from '../img/guest/lichaoyang.png';
+import lipeng from '../img/guest/lipeng.png';
+import liangyi from '../img/guest/liangyi.png';
+import liaochengbin from '../img/guest/liaochengbin.png';
+import liubaoyu from '../img/guest/liubaoyu.png';
+import luweijun from '../img/guest/luweijun.png';
+import tanrui from '../img/guest/tanrui.png';
+import wanfeng from '../img/guest/wanfeng.png';
+import wangdawei from '../img/guest/wangdawei.png';
+import wangwei from '../img/guest/wangwei.png';
+import wangxiaoyun from '../img/guest/wangxiaoyun.png';
+import wangzhiqiang from '../img/guest/wangzhiqiang.png';
+import weijiangang from '../img/guest/weijiangang.png';
+import wuheng from '../img/guest/wuheng.png';
+import wuzhiguo from '../img/guest/wuzhiguo.png';
+import xulei from '../img/guest/xulei.png';
+import xupeiwen from '../img/guest/xupeiwen.png';
+import yangbin from '../img/guest/yangbin.png';
+import yunlipeng from '../img/guest/yunlipeng.png';
+import zhuowenjie from '../img/guest/zhuowenjie.png';
+import zhongmaoheng from '../img/guest/zhongmaoheng.png';
+import zhongtao from '../img/guest/zhongtao.png';
+import liuxinliang from '../img/guest/liuxinliang.png';
+
+import chengxiaoming from '../img/guest/chengxiaoming.png';
+import niguangnan from '../img/guest/niguangnan.png';
+import penghonghua from '../img/guest/penghonghua.png';
+import xiongwei from '../img/guest/xiongwei.png';
+import yangchaobin from '../img/guest/yangchaobin.png';
+import yangmingming from '../img/guest/yangmingming.png';
+import zengwenbin from '../img/guest/zengwenbin.png';
+
+import andrew from '../img/guest/andrew.png';
+import chenyouxuan from '../img/guest/chenyouxuan.png';
+import tangxiaolei from '../img/guest/tangxiaolei.png';
+import gaolijiang from '../img/guest/gaolijiang.png';
+import grant from '../img/guest/grant.png';
+import huchunming from '../img/guest/huchunming.png';
+import huxinwei from '../img/guest/huxinwei.png';
+import linzhenfu from '../img/guest/linzhenfu.png';
+import yeqinglong from '../img/guest/yeqinglong.png';
+
 export default {
   banner: {
     bg: {
@@ -402,7 +485,366 @@ export default {
       }
     ]
   },
-  guest: {},
+  guest: {
+    title: 'Speakers',
+    list: [
+      {
+        title: 'Operating System Conference Keynote',
+        children: [
+          {
+            name: 'Ni Guangnan',
+            img: niguangnan,
+            title: 'Academician\nChinese Academy of Engineering',
+          },
+          {
+            name: 'Yang Chaobin',
+            img: yangchaobin,
+            title: 'Director\nCEO of the ICT Business Group, Huawei',
+          },
+          {
+            name: 'Dr. Xiong Wei',
+            img: xiongwei,
+            title: 'Chairperson\nOpenAtom openEuler Committee',
+          },
+          {
+            name: 'Yang Mingming',
+            img: yangmingming,
+            title: 'Vice President\nPhoenix Contact China',
+          },
+          {
+            name: 'Zeng Wenbin',
+            img: zengwenbin,
+            title: 'Director of Operating System\nMeituan',
+          },
+        ]
+      },
+      {
+        title: 'openEuler Summit 2025 Keynote',
+        children: [
+          {
+            name: 'Dr. Xiong Wei',
+            img: xiongwei,
+            title: 'Chairperson\nOpenAtom openEuler Committee',
+          },
+          {
+            name: 'Tang Xiaolei',
+            img: tangxiaolei,
+            title: 'Vice President\nAMD',
+          },
+          {
+            name: 'Andrew Wafaa',
+            img: andrew,
+            title: 'Senior Director Software Communities & Fellow at Arm\nMember of PyTorch Governing Board',
+          },
+          {
+            name: 'Grant Likely',
+            img: grant,
+            title: 'Linaro\nCTO',
+          },
+          {
+            name: 'Hu Xinwei',
+            img: huxinwei,
+            title: 'Technical Committee Chairperson\nOpenAtom openEuler',
+          },
+          {
+            name: 'Hu Chunming',
+            img: huchunming,
+            title: 'Dean\nSchool of Software, Beihang University',
+          },
+          {
+            name: 'Lin Zhenfu',
+            img: linzhenfu,
+            title: 'Technology Expert\nCSG Digital Power Grid',
+          },
+          {
+            name: 'Gao Lijiang',
+            img: gaolijiang,
+            title: 'Head of Cloud Native Platform\nChina Post Information Technology',
+          },
+          {
+            name: 'Ye Qinglong',
+            img: yeqinglong,
+            title: 'R&D Director\nKylinsec',
+          },
+          {
+            name: 'Chen Youxuan',
+            img: chenyouxuan,
+            title: 'Head of HPC\nGAC Group',
+          },
+        ]
+      },
+      {
+        title: 'Technical Sessions Produced by',
+        children: [
+          {
+            name: 'Du Dongdong',
+            img: dudongdong,
+            title: 'Assistant Professor\nShanghai Jiao Tong University',
+          },
+          {
+            name: 'Lu Jun',
+            img: lujun,
+            title: 'Deputy Director\nLineage Engineering Technology Center, Guangzhou Institutes of Biomedicine and Health, Chinese Academy of Sciences ',
+          },
+          {
+            name: 'Zhang Tao',
+            img: zhangtao,
+            title: 'Manager of Embedded Dept\nHopeRun',
+          },
+          {
+            name: 'Jiang Haoran',
+            img: jianghaoran,
+            title: 'R&D Engineer\nKylinsoft',
+          },
+          {
+            name: 'Song Shi',
+            img: songshi,
+            title: 'Chief Engineer\nGSK CNC Equipment',
+          },
+          {
+            name: 'Yao Guangzhong',
+            img: yaoguangzhong,
+            title: 'Principal Engineer of OS\nxFusion',
+          },
+          {
+            name: 'Yang Lu',
+            img: yanglu,
+            title: 'Director of PLCnext Software Application\nPhoenix Contact',
+          },
+          {
+            name: 'Zhang Rui',
+            img: zhangrui,
+            title: 'Software Engineer\nIntel',
+          },
+          {
+            name: 'Wang Wenkuan',
+            img: wangwenkuan,
+            title: 'Senior Member of Technical Staff\nAMD',
+          },
+          {
+            name: 'Song Jiayu',
+            img: songjiayu,
+            title: 'Secretary-General\nCXL Tech Application Club',
+          },
+          {
+            name: 'Zhang Xiaopeng',
+            img: zhangxiaopeng,
+            title: 'Director of Overseas Business\nChina Telecom eSurfing Cloud',
+          },
+          {
+            name: 'Jin Xiaoxu',
+            img: jinxiaoxu,
+            title: 'Director of Chinese Enterprise Go Global\nYonyou',
+          },
+          {
+            name: 'Zhang Xiao',
+            img: zhangxiao,
+            title: 'Director\nIntelligent Computing Platform, iFLYTEK Spark AI Research Institute',
+          },
+          {
+            name: 'Zhang Zehua',
+            img: zhangzehua,
+            title: 'Director\nAds Algorithm, JD.com',
+          },
+          {
+            name: 'Sun Zhenghua',
+            img: sunzhenghua, 
+            title: 'R&D Director\nCentral Platform Dept, Sangfor',
+          },
+          {
+            name: 'Liu Bingwei',
+            img: liubingwei,
+            title: 'Senior Director\nSoftware Technology Group, Intel China',
+          },
+          {
+            name: 'Cai Xinqi',
+            img: caixinqi,
+            title: 'R&D Center\n9th Academy, China Aerospace Science and Technology Corporation',
+          },
+          {
+            name: 'Zeng Yi',
+            img: zengyi,
+            title: 'Director of Robotics Market\nTopstar',
+          },
+          {
+            name: 'Ding Jiahui',
+            img: dingjiahui,
+            title: 'Senior Engineer\nHuawei',
+          },
+          {
+            name: 'Fei Jianqiang',
+            img: feijianqiang,
+            title: 'Cloud Native Expert\nHuawei',
+          },
+          {
+            name: 'Hu Kuang',
+            img: hukuang,
+            title: 'Director\nAgiBot',
+          },
+          {
+            name: 'Jiang Dongping',
+            img: jiangdongping,
+            title: 'Director\nQino',
+          },
+          {
+            name: 'Jin Long',
+            img: jinlong,
+            title: 'Solution Director\nPowerLeader',
+          },
+          {
+            name: 'Li Chaoyang',
+            img: lichaoyang,
+            title: 'Huazhong University of Science and Technology',
+          },
+          {
+            name: 'Li Peng',
+            img: lipeng,
+            title: 'Institute of Software\nChinese Academy of Sciences',
+          },
+          {
+            name: 'Liang Yi',
+            img: liangyi,
+            title: 'Serverless Chief Expert\nHuawei',
+          },
+          {
+            name: 'Liao Chengbin',
+            img: liaochengbin,
+            title: 'TD Tech',
+          },
+          {
+            name: 'Liu Baoyu',
+            img: liubaoyu,
+            title: 'Greater Bay Area National Center of Technology Innovation',
+          },
+          {
+            name: 'Lu Weijun',
+            img: luweijun,
+            title: 'Senior Engineer\nHuawei',
+          },
+          {
+            name: 'Tan Rui',
+            img: tanrui,
+            title: 'Product Manager\nIntewell',
+          },
+          {
+            name: 'Wan Feng',
+            img: wanfeng,
+            title: 'Senior Software Engineer\nKylinsoft',
+          },
+          {
+            name: 'Wang Dawei',
+            img: wangdawei,
+            title: 'JRLC',
+          },
+          {
+            name: 'Wang Wei',
+            img: wangwei,
+            title: 'Head of Unmanned Equipment\nJRLC',
+          },
+          {
+            name: 'Wang Xiaoyun',
+            img: wangxiaoyun,
+            title: 'Institute of Software\nChinese Academy of Sciences',
+          },
+          {
+            name: 'Wang Zhiqiang',
+            img: wangzhiqiang,
+            title: 'The head of CODESYS Marketing\nCODESYS Software Group',
+          },
+          {
+            name: 'Wei Jiangang',
+            img: weijiangang,
+            title: 'HopeRun',
+          },
+          {
+            name: 'Wu Heng',
+            img: wuheng,
+            title: 'R&D Expert\nChina Telecom eSurfing Cloud',
+          },
+          {
+            name: 'Wu Zhiguo',
+            img: wuzhiguo,
+            title: 'Engineer\nLinaro',
+          },
+          {
+            name: 'Xu Lei',
+            img: xulei,
+            title: 'xFusion',
+          },
+          {
+            name: 'Xu Peiwen',
+            img: xupeiwen,
+            title: 'Phoenix Contact',
+          },
+          {
+            name: 'Yang Bin',
+            img: yangbin,
+            title: 'Director\nopenEuler Research Center, iSoftStone',
+          },
+          {
+            name: 'Yuan Lipeng',
+            img: yunlipeng,
+            title: 'Senior Engineer\nHuawei',
+          },
+          {
+            name: 'Zhai Wenjie',
+            img: zhuowenjie,
+            title: 'Senior Engineer\nHuawei',
+          },
+          {
+            name: 'Zhong Maoheng',
+            img: zhongmaoheng,
+            title: 'Beijing Linx Software Co., Ltd\nManager',
+          },
+          {
+            name: 'Zhong Tao',
+            img: zhongtao,
+            title: 'Engineer\nHuawei',
+          },
+          {
+            name: 'Liu Xinliang',
+            img: liuxinliang,
+            title: 'Engineer\nLinaro',
+          },
+        ]
+      },
+      {
+        title: 'Technical Sessions',
+        children: [
+          {
+            name: 'Xie Xiuqi',
+            img: xiexiuqi,
+            title: 'openEuler Kernel SIG Maintainer',
+          },
+          {
+            name: 'Luo Yukai',
+            img: luoyukai,
+            title: 'Security Committee Member\nopenEuler',
+          },
+          {
+            name: 'Du Kaitian',
+            img: dukaitian,
+            title: 'Maintainer\nopenEuler',
+          },
+          {
+            name: 'Zhu Tao',
+            img: zhutao,
+            title: 'openEuler\nsig-UnifiedBus Maintainer',
+          },
+          {
+            name: 'Ren Wei',
+            img: renwei,
+            title: 'openEuler Technical Committee\nMember',
+          },
+          {
+            name: 'Li Yang',
+            img: liyang,
+            title: 'Distributed Middleware SIG Maintainer',
+          }
+        ]
+      }
+    ]
+  },
   partner: {
     title: 'Sponsors',
     list: [

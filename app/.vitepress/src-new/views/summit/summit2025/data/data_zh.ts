@@ -40,6 +40,7 @@ import zhutao from '../img/guest/zhutao.png';
 import zhangyizheng from '../img/guest/zhangyizheng.png';
 import chenxin from '../img/guest/chenxin.png';
 import zhuzexu from '../img/guest/zhuzexu.png';
+import liyang from '../img/guest/liyang.png';
 
 import dudongdong from '../img/guest/dudongdong.png';
 import lujun from '../img/guest/lujun.png';
@@ -63,6 +64,55 @@ import zhangzehua from '../img/guest/zhangzehua.png';
 import sunzhenghua from '../img/guest/sunzhenghua.png';
 import zhouqiang from '../img/guest/zhouqiang.png';
 import liubingwei from '../img/guest/liubingwei.png';
+
+import caixinqi from '../img/guest/caixinqi.png';
+import zengyi from '../img/guest/zengyi.png';
+import dingjiahui from '../img/guest/dingjiahui.png';
+import feijianqiang from '../img/guest/feijianqiang.png';
+import hukuang from '../img/guest/hukuang.png';
+import jiangdongping from '../img/guest/jiangdongping.png';
+import jinlong from '../img/guest/jinlong.png';
+import lichaoyang from '../img/guest/lichaoyang.png';
+import lipeng from '../img/guest/lipeng.png';
+import liangyi from '../img/guest/liangyi.png';
+import liaochengbin from '../img/guest/liaochengbin.png';
+import liubaoyu from '../img/guest/liubaoyu.png';
+import luweijun from '../img/guest/luweijun.png';
+import tanrui from '../img/guest/tanrui.png';
+import wanfeng from '../img/guest/wanfeng.png';
+import wangdawei from '../img/guest/wangdawei.png';
+import wangwei from '../img/guest/wangwei.png';
+import wangxiaoyun from '../img/guest/wangxiaoyun.png';
+import wangzhiqiang from '../img/guest/wangzhiqiang.png';
+import weijiangang from '../img/guest/weijiangang.png';
+import wuheng from '../img/guest/wuheng.png';
+import wuzhiguo from '../img/guest/wuzhiguo.png';
+import xulei from '../img/guest/xulei.png';
+import xupeiwen from '../img/guest/xupeiwen.png';
+import yangbin from '../img/guest/yangbin.png';
+import yunlipeng from '../img/guest/yunlipeng.png';
+import zhuowenjie from '../img/guest/zhuowenjie.png';
+import zhongmaoheng from '../img/guest/zhongmaoheng.png';
+import zhongtao from '../img/guest/zhongtao.png';
+import liuxinliang from '../img/guest/liuxinliang.png';
+
+import chengxiaoming from '../img/guest/chengxiaoming.png';
+import niguangnan from '../img/guest/niguangnan.png';
+import penghonghua from '../img/guest/penghonghua.png';
+import xiongwei from '../img/guest/xiongwei.png';
+import yangchaobin from '../img/guest/yangchaobin.png';
+import yangmingming from '../img/guest/yangmingming.png';
+import zengwenbin from '../img/guest/zengwenbin.png';
+
+import andrew from '../img/guest/andrew.png';
+import chenyouxuan from '../img/guest/chenyouxuan.png';
+import tangxiaolei from '../img/guest/tangxiaolei.png';
+import gaolijiang from '../img/guest/gaolijiang.png';
+import grant from '../img/guest/grant.png';
+import huchunming from '../img/guest/huchunming.png';
+import huxinwei from '../img/guest/huxinwei.png';
+import linzhenfu from '../img/guest/linzhenfu.png';
+import yeqinglong from '../img/guest/yeqinglong.png';
 
 export default {
   banner: {
@@ -1780,6 +1830,96 @@ export default {
     title: '活动嘉宾',
     list: [
       {
+        title: '操作系统大会主论坛嘉宾',
+        children: [
+          {
+            name: '倪光南',
+            img: niguangnan,
+            title: '中国工程院\n院士',
+          },
+          {
+            name: '杨超斌',
+            img: yangchaobin,
+            title: '华为公司董事、ICT BG\nCEO',
+          },
+          {
+            name: '熊伟',
+            img: xiongwei,
+            title: '开放原子开源基金会\nopenEuler委员会主席',
+          },
+          {
+            name: '杨明明',
+            img: yangmingming,
+            title: '菲尼克斯中国公司\n副总裁',
+          },
+          {
+            name: '曾文斌',
+            img: zengwenbin,
+            title: '美团操作系统\n总监',
+          },
+        ]
+      },
+      {
+        title: 'openEuler Summit 2025主论坛嘉宾',
+        children: [
+          {
+            name: '彭红华',
+            img: penghonghua,
+            title: '华为ICT战略与业务发展部\n总裁',
+          },
+          {
+            name: '熊伟',
+            img: xiongwei,
+            title: '开放原子开源基金会\nopenEuler委员会主席',
+          },
+          {
+            name: '唐晓蕾',
+            img: tangxiaolei,
+            title: 'AMD公司全球\n副总裁',
+          },
+          {
+            name: 'Andrew Wafaa',
+            img: andrew,
+            title: 'Arm Senior Director Software Communities & Fellow, PyTorch Board',
+          },
+          {
+            name: 'Grant Likely',
+            img: grant,
+            title: 'CTO\nLinaro',
+          },
+          {
+            name: '胡欣蔚',
+            img: huxinwei,
+            title: 'openEuler技术委员会\n主席',
+          },
+          {
+            name: '胡春明',
+            img: huchunming,
+            title: '北京航空航天大学软件学院\n院长',
+          },
+          {
+            name: '林振福',
+            img: linzhenfu,
+            title: '南网数研院\n技术专家',
+          },
+          {
+            name: '高立江',
+            img: gaolijiang,
+            title: '中邮信科-云原生平台\n负责人',
+          },
+          {
+            name: '叶青龙',
+            img: yeqinglong,
+            title: '麒麟信安(广东)科技有限公司\n研发总监',
+          },
+          {
+            name: '陈友宣',
+            img: chenyouxuan,
+            title: '广州汽车集团股份有限公司\nHPC负责人',
+          },
+        ]
+      },
+      {
         title: '分论坛演讲嘉宾',
         children: [
           {
@@ -1882,6 +2022,156 @@ export default {
             img: liubingwei,
             title: '英特尔（中国）\n软件技术事业部高级总监',
           },
+          {
+            name: '蔡鑫奇',
+            img: caixinqi,
+            title: '航天科技九院北京航天微系统与信息技术研究所\n主任设计师',
+          },
+          {
+            name: '曾逸',
+            img: zengyi,
+            title: '广东拓斯达科技股份有限公司\n机器人市场总监',
+          },
+          {
+            name: '丁嘉辉',
+            img: dingjiahui,
+            title: '华为技术有限公司\n高级软件工程师',
+          },
+          {
+            name: '费建强',
+            img: feijianqiang,
+            title: '华为\n云原生专家',
+          },
+          {
+            name: '胡旷',
+            img: hukuang,
+            title: '智元机器人\n生态总监',
+          },
+          {
+            name: '江东平',
+            img: jiangdongping,
+            title: '南京启诺信息技术有限公司\n总监',
+          },
+          {
+            name: '金龙',
+            img: jinlong,
+            title: '宝德计算机系统股份有限公司\n解决方案销售总监',
+          },
+          {
+            name: '李朝阳',
+            img: lichaoyang,
+            title: '华中科技大学开放原子俱乐部\n学生',
+          },
+          {
+            name: '李鹏',
+            img: lipeng,
+            title: '中国科学院软件研究所\n副研究员',
+          },
+          {
+            name: '梁义',
+            img: liangyi,
+            title: '华为\n通用Serverless首席专家',
+          },
+          {
+            name: '廖承斌',
+            img: liaochengbin,
+            title: '鼎桥技术有限公司\n具身智能首席专家',
+          },
+          {
+            name: '刘保玉',
+            img: liubaoyu,
+            title: '粤港澳大湾区国家技术创新中心\n嵌入式数据库总经理',
+          },
+          {
+            name: '鲁卫军',
+            img: luweijun,
+            title: '华为技术有限公司\n高级软件工程师',
+          },
+          {
+            name: '谭睿',
+            img: tanrui,
+            title: '北京光亚鸿道操作系统有限公司\n产品经理',
+          },
+          {
+            name: '万峰',
+            img: wanfeng,
+            title: '麒麟软件有限公司\n高级软件工程师',
+          },
+          {
+            name: '王大维',
+            img: wangdawei,
+            title: '成都菁蓉联创科技有限公司\n技术总工',
+          },
+          {
+            name: '王伟',
+            img: wangwei,
+            title: '成都菁蓉联创科技有限公司\n无人装备事业部部长',
+          },
+          {
+            name: '王晓云',
+            img: wangxiaoyun,
+            title: '中国科学院软件研究所\n机器人系统工程师',
+          },
+          {
+            name: '王志强',
+            img: wangzhiqiang,
+            title: 'CODESYS软件集团(中国)\n市场负责人',
+          },
+          {
+            name: '魏建刚',
+            img: weijiangang,
+            title: '润和软件股份有限公司\nOS资深专家',
+          },
+          {
+            name: '吴衡',
+            img: wuheng,
+            title: '天翼云科技有限公司\n研发工程师',
+          },
+          {
+            name: '吴治国',
+            img: wuzhiguo,
+            title: 'Linaro\nEngineer',
+          },
+          {
+            name: '徐磊',
+            img: xulei,
+            title: '超聚变数字技术有限公司\n高级研发工程师',
+          },
+          {
+            name: '徐佩文',
+            img: xupeiwen,
+            title: '南京菲尼克斯电气\nPLCnext产品经理',
+          },
+          {
+            name: '杨彬',
+            img: yangbin,
+            title: '软通动力信息技术（集团）股份有限公司\n开源欧拉研究中心主任',
+          },
+          {
+            name: '袁礼鹏',
+            img: yunlipeng,
+            title: '华为技术有限公司\n高级软件工程师',
+          },
+          {
+            name: '翟文杰',
+            img: zhuowenjie,
+            title: '华为技术有限公司\n高级软件工程师',
+          },
+          {
+            name: '钟茂恒',
+            img: zhongmaoheng,
+            title: '北京凝思软件股份有限公司\nManager',
+          },
+          {
+            name: '钟涛',
+            img: zhongtao,
+            title: '华为技术有限公司\n工程师',
+          },
+          {
+            name: '刘新良',
+            img: liuxinliang,
+            title: 'Linaro Limited\nEngineer',
+          },
         ]
       },
       {
@@ -1941,6 +2231,11 @@ export default {
             name: '王经纬',
             img: wangjingwei,
             title: '中国科学院软件研究所\nopenEuler TC',
+          },
+          {
+            name: '李洋',
+            img: liyang,
+            title: 'openEuler社区\nsig-分布式中间件maintainer',
           }
         ]
       }
