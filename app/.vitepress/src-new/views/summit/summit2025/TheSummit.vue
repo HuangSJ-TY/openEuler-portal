@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, watch, onMounted } from 'vue';
 import { useData } from 'vitepress';
+
+import { oaReport } from '@/shared/analytics';
+import { getUrlParams } from '~@/utils/common';
+import { useCookieStore } from '~@/stores/common';
 
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
@@ -14,9 +18,37 @@ import data_zh from './data/data_zh';
 import data_en from './data/data_en';
 
 const { lang } = useData();
+const cookieStore = useCookieStore();
 
 const summitData = computed(() => {
   return lang.value === 'zh' ? data_zh : data_en;
+});
+
+// 埋点统计投放流量
+function collectAdvertisedData() {
+  const { href } = window.location;
+  const regex = /[\\?&]utm_source=/;
+  const containsUtmSource = regex.test(href);
+  if (!containsUtmSource) {
+    return;
+  }
+  const channel = getUrlParams(href)?.get('utm_source');
+  oaReport('fromAdvertised', {
+    origin: href,
+    channel,
+  });
+  history.pushState(null, '', location.origin + location.pathname);
+}
+
+onMounted(() => {
+  watch(
+    () => cookieStore.isAllAgreed,
+    (val) => {
+      if (!val) return;
+      collectAdvertisedData();
+    },
+    { immediate: true }
+  );
 });
 </script>
 
