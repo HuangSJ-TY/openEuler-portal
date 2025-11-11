@@ -137,7 +137,7 @@ export const entranceList = {
       icon: IconCodeRepo,
       title: '代码仓列表',
       desc: '查看 openYuanrong 代码仓、联系方式等信息',
-      href: '/zh/sig/sig-YuanRong/#repositories',
+      href: '/zh/sig/sig-YuanRong#repositories',
     },
     {
       icon: IconDocument,
@@ -152,7 +152,7 @@ export const entranceList = {
       icon: IconCodeRepo,
       title: 'Repositories',
       desc: 'Get immediate access to the openYuanrong repository, contact details, and more.',
-      href: '/en/sig/sig-YuanRong/#repositories',
+      href: '/en/sig/sig-YuanRong#repositories',
     },
     {
       icon: IconDocument,
@@ -175,7 +175,7 @@ export const ubEntranceList = [
     icon: IconCodeRepo,
     title: '代码仓列表',
     desc: '查看 UB Service Core 代码仓、联系方式等信息',
-    href: '/zh/sig/sig-YuanRong/#repositories',
+    href: '/zh/sig/sig-UB-ServiceCore#repositories',
   },
   {
     icon: IconDocument,
