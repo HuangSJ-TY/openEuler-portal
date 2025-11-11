@@ -7,6 +7,7 @@ import yuanrong from '~@/assets/category/projects/yuanrong.png';
 
 import IconCodeRepo from '~icons/yuanrong/icon-code-repo.svg';
 import IconDocument from '~icons/yuanrong/icon-document.svg';
+import IconWhitePaper from '~icons/yuanrong/icon-white-paper.svg';
 
 export const projectData = {
   zh: [
@@ -64,6 +65,13 @@ export const projectData = {
       desc: 'openYuanrong是一个Serverless分布式计算引擎，致力于以一套统一Serverless结构支持AI、大数据、微服务等各类分布式应用。它提供多语言函数编程接口，以单机编程体验简化分布式应用开发；提供分布式动态调度和数据共享能力，实现分布式应用的高性能运行和集群的高校资源利用',
       icon: yuanrong,
       url: '/projects/yuanrong',
+      giteeUrl: '',
+    },
+    {
+      title: 'UB Service Core',
+      desc: 'UB Service Core构筑5大集群级系统服务，支持不同OS并全面开源至openEuler社区，释放超节点平等互联架构优势，全面使能应用加速30~50%，促进灵衢系统软件生态构筑。',
+      icon: '',
+      url: '/projects/ub-service-core',
       giteeUrl: '',
       tag: 'NEW',
     },
@@ -155,3 +163,25 @@ export const entranceList = {
     },
   ]
 }
+
+export const ubEntranceList = [
+  {
+    icon: IconWhitePaper,
+    title: '白皮书',
+    desc: '了解 UB Service Core，使用、开发、管理和维护灵衢产品',
+    href: '/projects/ub-service-core/white-paper/灵衢系统高阶服务软件架构参考设计.pdf',
+  },
+  {
+    icon: IconCodeRepo,
+    title: '代码仓列表',
+    desc: '查看 UB Service Core 代码仓、联系方式等信息',
+    href: '/zh/sig/sig-YuanRong/#repositories',
+  },
+  {
+    icon: IconDocument,
+    title: '相关文档',
+    desc: '了解如何开发，使用 UB Service Core',
+    href: 'https://gitee.com/openeuler/community/tree/master/sig/sig-UB-ServiceCore ',
+    isOutlink: true,
+  },
+];

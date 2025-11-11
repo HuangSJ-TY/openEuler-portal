@@ -101,8 +101,8 @@ const onClickNav = (item: any) => {
           </OIcon>
           <OTag
             v-if="subItem.TAG"
-            round="pill"
             color="danger"
+            variant="solid"
             size="small"
             class="content-tag"
             >{{ subItem.TAG }}</OTag

@@ -26,6 +26,7 @@ import defectCenter from './defect-center';
 import brand from './brand'
 import yuanrong from './yuanrong'
 import project from './project'
+import ubServiceCore from './ub-service-core';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -89,6 +90,7 @@ const messages = {
     brand: brand.zh,
     yuanrong: yuanrong.zh,
     project: project.zh,
+    ubServiceCore: ubServiceCore.zh,
   },
   en: {
     // 公共模块
