@@ -312,7 +312,7 @@ const tdks: {
     keywords: 'OS, Linux, open source software, privacy',
   },
   'en/other/legal': {
-    title: '"Legal Notice',
+    title: 'Legal Notice',
     description:
       'View the legal notice and disclaimer for openEuler, the open source OS for various scenarios.',
     keywords: 'OS, Linux, legal notice, open source software, license',
