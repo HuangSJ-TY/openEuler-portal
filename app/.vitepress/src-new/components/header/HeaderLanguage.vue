@@ -3,6 +3,7 @@ import { ref, Ref, watch } from 'vue';
 import { useRouter, useData } from 'vitepress';
 import { OIcon, ODropdown, ODropdownItem } from '@opensig/opendesign';
 import { useScreen } from '~@/composables/useScreen';
+import { AR_URL } from '~@/data/header';
 
 import IconLocale from '~icons/app-new/icon-locale.svg';
 
@@ -21,8 +22,9 @@ const { lePadV } = useScreen();
 
 // 选择语言;
 const langOptions = [
-  { id: 'zh', label: '中文' },
-  { id: 'en', label: 'English' },
+  { id: 'zh', label: '简体中文', simple: '中' },
+  { id: 'en', label: 'English', simple: 'EN'  },
+  { id: 'ar', label: 'العربية', simple: 'AR' },
 ];
 
 // 选择语言
@@ -35,13 +37,18 @@ const changeLanguageMobile = (newlang: string) => {
 function changeLanguage(newlang: string) {
   if (lang.value === newlang) return;
   const { pathname, search } = window.location;
-  const newHref = pathname.replace(`/${lang.value}/`, `/${newlang}/`);
-  router.go(newHref + search);
+  if ( newlang === 'ar' ) {
+    window.location.href = `${AR_URL}${pathname.replace(`/${lang.value}/`, `/${newlang}/`)}`;
+  } else {
+    const newHref = pathname.replace(`/${lang.value}/`, `/${newlang}/`);
+    router.go(newHref + search);
+  }
 }
 
 interface LangType {
   id: string;
   label: string;
+  simple: string;
 }
 const langList: Ref<LangType[]> = ref([]);
 const filterLang = () => {
@@ -64,9 +71,13 @@ watch(
 );
 
 const getLang = (lang: String, simple?: boolean) => {
-  return lePadV.value ? 
-  lang === 'zh' ? '中文' : 'EN'
-  : lang === 'zh' ? simple ? '中' : '简体中文' : simple ? 'EN' : 'English';
+  const item = langOptions.find((el: LangType) => el.id === lang);
+  if (item) {
+    return simple ? item.simple : item.label;
+  }
+
+  return simple ? 'EN': 'English';
+
 };
 </script>
 
@@ -109,7 +120,7 @@ const getLang = (lang: String, simple?: boolean) => {
       :key="item.id"
       :class="{ active: lang === item.id }"
       @click.stop="changeLanguageMobile(item.id)"
-      >{{ getLang(item.id) }}</span
+      >{{ getLang(item.id, true) }}</span
     >
   </div>
 </template>
@@ -198,7 +209,7 @@ const getLang = (lang: String, simple?: boolean) => {
   height: 36px;
   span {
     color: var(--o-color-info1);
-    margin-right: var(--o-gap-3);
+    margin-right: var(--o-gap-1);
     text-align: center;
     @include text1;
     cursor: pointer;
@@ -209,7 +220,7 @@ const getLang = (lang: String, simple?: boolean) => {
     &:not(:last-child) {
       &:after {
         content: '|';
-        margin-left: var(--o-gap-3);
+        margin-left: var(--o-gap-1);
         color: var(--o-color-info1);
       }
     }
