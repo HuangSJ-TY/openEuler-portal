@@ -519,7 +519,6 @@ onMounted(() => {
             bottom: 14px;
           }
           :deep(.confirm-btn) {
-            width: 96px;
             display: flex;
             justify-content: center;
 
