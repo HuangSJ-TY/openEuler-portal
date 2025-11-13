@@ -4,6 +4,7 @@ import { useRouter, useData } from 'vitepress';
 
 import { useScreen } from '~@/composables/useScreen';
 import navFilterConfig from '@/data/common/nav-filter';
+import { arList } from '~@/data/header';
 
 import HeaderNav from './HeaderNav.vue';
 import SearchHeaderMo from '~@/views/search/SearchHeaderMo.vue';
@@ -52,14 +53,29 @@ const goBack = (href: string) => {
   router.go(href);
 };
 
+// 检查当前路径是否支持阿语
+const isArabicSupported = (path: string) => {
+  const purePath = path.replace(/^\/(zh|en|ar)\//, '/');
+  return arList.some(arPath => {
+    // 精确匹配
+    if (purePath === arPath || purePath === `${arPath}/`) {
+      return true;
+    }
+    return false;
+  });
+};
+
 watch(
   () => router.route.path,
   (val: string) => {
     routerPath.value = val;
+    
+    // 默认显示中文和英文
     langShow.value = ['zh', 'en'];
 
     // 首页
     if (isHome.value) {
+      langShow.value = ['zh', 'en', 'ar'];
       return;
     }
 
@@ -69,8 +85,11 @@ watch(
       return;
     }
 
-    // 英文页面一定有中文
+    // 英文页面：检查是否有对应的阿语版本
     if (lang.value === 'en') {
+      if (isArabicSupported(val)) {
+        langShow.value = ['zh', 'en', 'ar'];
+      }
       return;
     }
 
@@ -94,6 +113,9 @@ watch(
         langShow.value = navFilterConfig[i].lang;
         break;
       }
+    }
+    if (isArabicSupported(val)) {
+      langShow.value = ['zh', 'en', 'ar'];
     }
   },
   { immediate: true }
