@@ -102,6 +102,8 @@ import xiongwei from '../img/guest/xiongwei.png';
 import yangchaobin from '../img/guest/yangchaobin.png';
 import yangmingming from '../img/guest/yangmingming.png';
 import zengwenbin from '../img/guest/zengwenbin.png';
+import shaoguanglu from '../img/guest/shaoguanglu.png';
+import duhai from '../img/guest/duhai.png';
 
 import andrew from '../img/guest/andrew.png';
 import chenyouxuan from '../img/guest/chenyouxuan.png';
@@ -121,6 +123,13 @@ import wangyucheng from '../img/guest/wangyucheng.png';
 import wuchenggang from '../img/guest/wuchenggang.png';
 import xinxiaohui from '../img/guest/xinxiaohui.png';
 import zhangchi from '../img/guest/zhangchi.png';
+import fengyan from '../img/guest/fengyan.png';
+import hanyuankun from '../img/guest/hanyuankun.png';
+import huangjun from '../img/guest/huangjun.png';
+import lijingjing from '../img/guest/lijingjing.png';
+import liyuzhen from '../img/guest/liyuzhen.png';
+import sunyanan from '../img/guest/sunyanan.png';
+import zhegnchenhui from '../img/guest/zhegnchenhui.png';
 
 export default {
   banner: {
@@ -280,7 +289,7 @@ export default {
                       },
                       {
                         name: '邵广禄',
-                        post: '中国电信集团科技委主任',
+                        post: '中国电信集团科技委主任、中国电信集团原总经理',
                       },
                     ]
                   },
@@ -650,7 +659,7 @@ export default {
                           },
                           {
                             name: '王文宽',
-                            post: 'AMD高级技术专家',
+                            post: '超威半导体产品（中国）有限公司 AMD Linux内核专家',
                           },
                         ]
                       }
@@ -1514,14 +1523,14 @@ export default {
               },
               {
                 label: 'AI',
-                time: '13:00 - 15:45',
+                time: '13:00 - 16:00',
                 address: '',
                 children: [
                   {
                     time: '13:00-13:15',
                     content: [
                       {
-                        title: '基于openEuler intelligence打造补丁管理智能体，实现补丁管理效率倍级提升',
+                        title: '基于openEuler intelligence组建一支OS开发团队',
                         name: '孙政华',
                         post: '深信服科技有限公司 中央平台部研发主管',
                       }
@@ -1541,7 +1550,7 @@ export default {
                     time: '13:30-13:45',
                     content: [
                       {
-                        title: '基于LLM的证券核心交易系统智能调优探索',
+                        title: '基于大模型的新一代核心交易信创系统智能调优探索',
                         name: '黄俊',
                         post: '招商证券股份有限公司 核心系统架构师',
                       }
@@ -1582,8 +1591,8 @@ export default {
                     content: [
                       {
                         title: 'AI赋能 - 智能运维平台',
-                        name: '马仁富',
-                        post: '北京凝思软件股份有限公司 产品总监',
+                        name: '钟茂恒',
+                        post: '北京凝思软件股份有限公司 研发经理',
                       }
                     ]
                   },
@@ -1591,7 +1600,7 @@ export default {
                     time: '14:45-15:00',
                     content: [
                       {
-                        title: '中间件智能体',
+                        title: '东方通中间件智能体',
                         name: '李静静',
                         post: '东方通科技有限公司 产品经理',
                       }
@@ -1603,7 +1612,7 @@ export default {
                       {
                         title: '昇腾亲和的大EP通信加速库技术与生态介绍',
                         name: '韩远坤',
-                        post: '华为技术有限公司 主任工程师',
+                        post: '华为技术有限公司 华为AI通信专家',
                       }
                     ]
                   },
@@ -1611,9 +1620,9 @@ export default {
                     time: '15:15-15:30',
                     content: [
                       {
-                        title: '超聚变基于昇腾软FP8的极致调优',
+                        title: '河南昆仑基于昇腾软FP8的极致调优',
                         name: '孙亚楠',
-                        post: '超聚变数字技术有限公司 高级工程师',
+                        post: '河南昆仑技术有限公司 算子开发高级工程师',
                       }
                     ]
                   },
@@ -1624,6 +1633,16 @@ export default {
                         title: 'ANNC：基于XLA的深度学习图编译器在搜推场景的探索与应用',
                         name: '郑晨卉',
                         post: '华为技术有限公司 软件工程师',
+                      }
+                    ]
+                  },
+                  {
+                    time: '15:45-16:00',
+                    content: [
+                      {
+                        title: 'CTyunOS智能安全中心',
+                        name: '吴开顺',
+                        post: '天翼云科技有限公司 后端开发工程师',
                       }
                     ]
                   }
@@ -2020,9 +2039,19 @@ export default {
             title: '中国工程院\n院士',
           },
           {
+            name: '程晓明',
+            img: chengxiaoming,
+            title: '开放原子开源基金会\n理事长',
+          },
+          {
             name: '杨超斌',
             img: yangchaobin,
             title: '华为公司董事、ICT BG\nCEO',
+          },
+          {
+            name: '邵广禄',
+            img: shaoguanglu,
+            title: '中国电信集团科技委主任\n中国电信集团原总经理',
           },
           {
             name: '熊伟',
@@ -2030,14 +2059,19 @@ export default {
             title: '开放原子开源基金会\nopenEuler委员会主席',
           },
           {
-            name: '杨明明',
-            img: yangmingming,
-            title: '菲尼克斯中国公司\n副总裁',
+            name: '杜海',
+            img: duhai,
+            title: '百度智能云混合云部\n总经理',
           },
           {
             name: '曾文斌',
             img: zengwenbin,
             title: '美团操作系统\n总监',
+          },
+          {
+            name: '杨明明',
+            img: yangmingming,
+            title: '菲尼克斯中国公司\n副总裁',
           },
         ]
       },
@@ -2062,12 +2096,7 @@ export default {
           {
             name: 'Andrew Wafaa',
             img: andrew,
-            title: 'Arm Senior Director Software Communities & Fellow, PyTorch Board',
-          },
-          {
-            name: 'Grant Likely',
-            img: grant,
-            title: 'CTO\nLinaro',
+            title: 'Arm Senior Director Software Communities & Fellow\nPyTorch Board',
           },
           {
             name: '胡欣蔚',
@@ -2078,6 +2107,11 @@ export default {
             name: '胡春明',
             img: huchunming,
             title: '北京航空航天大学软件学院\n院长',
+          },
+          {
+            name: 'Grant Likely',
+            img: grant,
+            title: 'CTO\nLinaro',
           },
           {
             name: '林振福',
@@ -2388,6 +2422,41 @@ export default {
             name: '张驰',
             img: zhangchi,
             title: '三未信安科技股份有限公司\n技术总监',
+          },
+          {
+            name: '冯焱',
+            img: fengyan,
+            title: '北京惠每云科技有限公司\n高级后端工程师',
+          },
+          {
+            name: '韩远坤',
+            img: hanyuankun,
+            title: '华为技术有限公司\n华为AI通信专家',
+          },
+          {
+            name: '黄俊',
+            img: huangjun,
+            title: '招商证券股份有限公司\n核心系统架构师',
+          },
+          {
+            name: '李静静',
+            img: lijingjing,
+            title: '北京东方通科技有限公司\n产品经理',
+          },
+          {
+            name: '李宇振',
+            img: liyuzhen,
+            title: '华为技术有限公司\nAI工程师',
+          },
+          {
+            name: '孙亚楠',
+            img: sunyanan,
+            title: '河南昆仑技术有限公司\n算子开发高级工程师',
+          },
+          {
+            name: '郑晨卉',
+            img: zhegnchenhui,
+            title: '华为技术有限公司\n软件工程师',
           },
         ]
       },

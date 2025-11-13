@@ -102,6 +102,8 @@ import xiongwei from '../img/guest/xiongwei.png';
 import yangchaobin from '../img/guest/yangchaobin.png';
 import yangmingming from '../img/guest/yangmingming.png';
 import zengwenbin from '../img/guest/zengwenbin.png';
+import shaoguanglu from '../img/guest/shaoguanglu.png';
+import duhai from '../img/guest/duhai.png';
 
 import andrew from '../img/guest/andrew.png';
 import chenyouxuan from '../img/guest/chenyouxuan.png';
@@ -121,6 +123,13 @@ import wangyucheng from '../img/guest/wangyucheng.png';
 import wuchenggang from '../img/guest/wuchenggang.png';
 import xinxiaohui from '../img/guest/xinxiaohui.png';
 import zhangchi from '../img/guest/zhangchi.png';
+import fengyan from '../img/guest/fengyan.png';
+import hanyuankun from '../img/guest/hanyuankun.png';
+import huangjun from '../img/guest/huangjun.png';
+import lijingjing from '../img/guest/lijingjing.png';
+import liyuzhen from '../img/guest/liyuzhen.png';
+import sunyanan from '../img/guest/sunyanan.png';
+import zhegnchenhui from '../img/guest/zhegnchenhui.png';
 
 export default {
   banner: {
@@ -188,7 +197,7 @@ export default {
           {
             liveId: 15930,
             liveTestId: 15916,
-            name: 'Kylinsoft',
+            name: 'KylinSoft',
           },
           {
             liveId: 15931,
@@ -298,7 +307,7 @@ export default {
                     post: ' Chief Expert of Cloud Computing and Computing Power, China Telecom',
                   },
                   {
-                    title: 'openEuler Practitioners and Practices Award Ceremony 2025',
+                    title: '2025 openEuler Practitioners and Practices Award',
                     name: 'User representatives',
                     post: '',
                   }
@@ -318,7 +327,7 @@ export default {
                     post: '',
                   },
                   {
-                    title: 'openEuler Global Pioneer Partners Award Ceremony',
+                    title: 'openEuler Global Pioneer Partners Award',
                     name: 'Partner representatives',
                     post: '',
                   }
@@ -332,7 +341,7 @@ export default {
             children: [],
             tab: [
               {
-                label: 'Kylinsoft',
+                label: 'KylinSoft',
                 time: '13:30 - 15:45',
                 address: '',
                 children: [
@@ -362,7 +371,7 @@ export default {
                       {
                         title: 'Embracing Open Source × AI: KylinOS Integrated Solution for Servers',
                         name: 'Hou Jian',
-                        post: 'Deputy General Manager, Server R&D Center, Kylinsoft',
+                        post: 'Deputy General Manager, Server R&D Center, KylinSoft',
                       }
                     ]
                   },
@@ -634,8 +643,8 @@ export default {
                         title: 'Remarks by Hardware Vendors',
                         guest: [
                           {
-                            name: 'Andrew Wafaa',
-                            post: 'Senior Director Software Communities & Fellow at Arm, Member of PyTorch Governing Board',
+                            name: 'Andrew Wafaa',
+                            post: 'Arm Senior Director Software Communities & Fellow, PyTorch Board',
                           },
                           {
                             name: 'Liu Bingwei',
@@ -929,7 +938,7 @@ export default {
                       },
                       {
                         name: 'Andrew Wafaa',
-                        post: 'Senior Director Software Communities & Fellow at Arm, Member of PyTorch Governing Board',
+                        post: 'Arm Senior Director Software Communities & Fellow, PyTorch Board',
                       },
                       {
                         name: 'Grant Likely',
@@ -966,7 +975,7 @@ export default {
                 time: '10:30 - 10:50',
                 content: [
                   {
-                    title: 'Kylinsoft × China Post: Joint Innovation and Practice',
+                    title: 'KylinSoft × China Post: Joint Innovation and Practice',
                     name: 'Gao Lijiang',
                     post: ' Head of Cloud Native Platform, China Post Information Technology (Beijing)',
                   },
@@ -989,17 +998,17 @@ export default {
                 time: '10:50 - 11:00',
                 content: [
                   {
-                    title: '2025 openEuler Top Contribution Award Ceremony',
+                    title: '2025 openEuler Top Contribution Award',
                     name: 'Partner representatives',
                     post: '',
                   },
                   {
-                    title: '2025 openEuler Project Star Award Ceremony',
+                    title: '2025 openEuler Project Star Award',
                     name: 'Project representatives',
                     post: '',
                   },
                   {
-                    title: '2025 openEuler Contribution Star Award Ceremony',
+                    title: '2025 openEuler Contribution Star Award',
                     name: 'Developer representatives',
                     post: '',
                   },
@@ -1083,7 +1092,7 @@ export default {
                       {
                         title: 'Industry Embodied AI Based on openEuler Embedded: Solution and Practices',
                         name: 'Wu Jian',
-                        post: 'Chief Solutions Architect for Robotics, TD Tech',
+                        post: 'TD Tech',
                       }
                     ]
                   },
@@ -1208,7 +1217,7 @@ export default {
                     time: '13:50-14:05',
                     content: [
                       {
-                        title: 'Hot Patch Tool Based on LibcarePlus: Enhancements and Multi-architecture Multi-Language Support',
+                        title: 'Hot Patch Tool Based on LibcarePlus: Enhancements and Multi-architecture Multi-language Support',
                         name: 'Wu Heng',
                         post: 'R&D Expert, China Telecom eSurfing Cloud',
                       }
@@ -1347,7 +1356,7 @@ export default {
                       {
                         title: 'Real-time Topology Visualization and O&M of Cloud Native Networks',
                         name: 'Wan Feng',
-                        post: 'Senior Software Engineer, Kylinsoft',
+                        post: 'Senior Software Engineer, KylinSoft',
                       }
                     ]
                   },
@@ -1377,7 +1386,7 @@ export default {
                       {
                         title: 'Cloud Native Immutable Infrastructure Based on CTyunOS',
                         name: 'Liu Min',
-                        post: 'eSurfing Cloud Technology',
+                        post: 'China Telecom eSurfing Cloud Technology',
                       }
                     ]
                   },
@@ -1502,14 +1511,14 @@ export default {
               },
               {
                 label: 'AI',
-                time: '13:00 - 15:45',
+                time: '13:00 - 16:00',
                 address: '',
                 children: [
                   {
                     time: '13:00-13:15',
                     content: [
                       {
-                        title: 'Patch Management AI Agent Based on openEuler Intelligence',
+                        title: 'Building an OS Development Team on openEuler Intelligence',
                         name: 'Sun Zhenghua',
                         post: 'R&D Director, Central Platform Dept, Sangfor',
                       }
@@ -1529,7 +1538,7 @@ export default {
                     time: '13:30-13:45',
                     content: [
                       {
-                        title: 'LLM-based Tuning for Core Securities Trading Systems',
+                        title: 'LLM-based Tuning for Next-gen Core Trading Systems',
                         name: 'Huang Jun',
                         post: 'Core System Architect, China Merchants Securities',
                       }
@@ -1569,9 +1578,9 @@ export default {
                     time: '14:30-14:45',
                     content: [
                       {
-                        title: 'AI-powered O&M Platform  ',
-                        name: 'Ma Renfu',
-                        post: 'Product Director, Linx Software',
+                        title: 'AI-powered O&M Platform',
+                        name: 'Zhong Maoheng',
+                        post: 'R&D Manager, Linx Software',
                       }
                     ]
                   },
@@ -1579,7 +1588,7 @@ export default {
                     time: '14:45-15:00',
                     content: [
                       {
-                        title: 'Middleware AI Agent',
+                        title: 'TongTech Middleware AI Agent',
                         name: 'Li Jingjing',
                         post: 'Product Manager, TongTech',
                       }
@@ -1591,7 +1600,7 @@ export default {
                       {
                         title: 'Ascend-optimized MoE EP Communication Acceleration Library',
                         name: 'Han Yuankun',
-                        post: 'Principal Engineer, Huawei',
+                        post: 'AI Communication Expert, Huawei',
                       }
                     ]
                   },
@@ -1599,9 +1608,9 @@ export default {
                     time: '15:15-15:30',
                     content: [
                       {
-                        title: 'Ultimate Tuning Based on Ascend Soft FP8',
+                        title: 'KunLun Ultimate Tuning Based on Ascend Soft FP8',
                         name: 'Sun Yanan',
-                        post: 'Senior Engineer, xFusion',
+                        post: 'Senior Engineer, Operator Development, KunLun Technology',
                       }
                     ]
                   },
@@ -1612,6 +1621,16 @@ export default {
                         title: 'ANNC: XLA-based Deep Learning Graph Compiler for Search and Recommendation',
                         name: 'Zheng Chenhui',
                         post: 'Software Engineer, Huawei',
+                      }
+                    ]
+                  },
+                  {
+                    time: '15:45-16:00',
+                    content: [
+                      {
+                        title: 'CTyunOS, an AI-powered Security Center',
+                        name: 'Wu Kaishun',
+                        post: 'Development Engineer, China Telecom eSurfing Cloud Technology',
                       }
                     ]
                   }
@@ -1677,8 +1696,8 @@ export default {
                     content: [
                       {
                         title: 'Programmable I/O Scheduler Design',
-                        name: 'Cheng Kaitao ',
-                        post: 'Kernel Engineer, Kylinsoft',
+                        name: 'Cheng Kaitao',
+                        post: 'Kernel Engineer, KylinSoft',
                       }
                     ]
                   },
@@ -1688,7 +1707,7 @@ export default {
                       {
                         title: 'trampoline and kexec_file Features Based on LoongArch',
                         name: 'Jiang Haoran',
-                        post: 'R&D Engineer, Kylinsoft',
+                        post: 'R&D Engineer, KylinSoft',
                       }
                     ]
                   },
@@ -1824,8 +1843,8 @@ export default {
                     content: [
                       {
                         title: 'SBOM for Supply Chain Security Operations: Automation, Visualization, and openEuler Adaptation',
-                        name: 'He Liyu',
-                        post: 'Deputy General Manager, Linx',
+                        name: 'He Liyun',
+                        post: 'Deputy General Manager, Linx Software Chengdu R&D Center',
                       }
                     ]
                   },
@@ -2008,9 +2027,19 @@ export default {
             title: 'Academician\nChinese Academy of Engineering',
           },
           {
+            name: 'Cheng Xiaoming',
+            img: chengxiaoming,
+            title: 'Chairman\nOpenAtom Foundation',
+          },
+          {
             name: 'Yang Chaobin',
             img: yangchaobin,
             title: 'Director, CEO of the ICT Business Group\nHuawei',
+          },
+          {
+            name: 'Shao Guanglu',
+            img: shaoguanglu,
+            title: 'Director of Science and Technology Committee and Former General Manager\nChina Telecom Group',
           },
           {
             name: 'Dr. Xiong Wei',
@@ -2018,20 +2047,30 @@ export default {
             title: 'Chairperson\nOpenAtom openEuler Committee',
           },
           {
-            name: 'Yang Mingming',
-            img: yangmingming,
-            title: 'Vice President\nPhoenix Contact China',
+            name: 'Du Hai',
+            img: duhai,
+            title: 'General Manager of Hybrid Cloud\nBaidu AI Cloud',
           },
           {
             name: 'Zeng Wenbin',
             img: zengwenbin,
             title: 'Director of Operating System\nMeituan',
           },
+          {
+            name: 'Yang Mingming',
+            img: yangmingming,
+            title: 'Vice President\nPhoenix Contact China',
+          },
         ]
       },
       {
         title: 'openEuler Summit 2025 Keynote',
         children: [
+          {
+            name: 'Ritchie Peng',
+            img: penghonghua,
+            title: 'Director of the ICT Strategy & Business Development Dept\nHuawei',
+          },
           {
             name: 'Dr. Xiong Wei',
             img: xiongwei,
@@ -2045,12 +2084,7 @@ export default {
           {
             name: 'Andrew Wafaa',
             img: andrew,
-            title: 'Senior Director Software Communities & Fellow at Arm\nMember of PyTorch Governing Board',
-          },
-          {
-            name: 'Grant Likely',
-            img: grant,
-            title: 'CTO\nLinaro',
+            title: 'Arm Senior Director Software Communities & Fellow\nPyTorch Board',
           },
           {
             name: 'Hu Xinwei',
@@ -2061,6 +2095,11 @@ export default {
             name: 'Hu Chunming',
             img: huchunming,
             title: 'Dean, School of Software\nBeihang University',
+          },
+          {
+            name: 'Grant Likely',
+            img: grant,
+            title: 'CTO\nLinaro',
           },
           {
             name: 'Lin Zhenfu',
@@ -2105,7 +2144,7 @@ export default {
           {
             name: 'Jiang Haoran',
             img: jianghaoran,
-            title: 'R&D Engineer\nKylinsoft',
+            title: 'R&D Engineer\nKylinSoft',
           },
           {
             name: 'Song Shi',
@@ -2235,7 +2274,7 @@ export default {
           {
             name: 'Wan Feng',
             img: wanfeng,
-            title: 'Senior Software Engineer\nKylinsoft',
+            title: 'Senior Software Engineer\nKylinSoft',
           },
           {
             name: 'Wang Dawei',
@@ -2318,19 +2357,19 @@ export default {
             title: 'Security Engineer\nJD.com',
           },
           {
-            name: 'ian He',
+            name: 'He Liyun',
             img: heliyun,
             title: 'Vice General Manager of R&D Center\nBeijing Linx Software Corp.',
           },
           {
             name: 'Emma',
             img: liping,
-            title: 'Senior Software Engineer\nHuawei Technologies Co., Ltd',
+            title: 'Senior Software Engineer\nHuawei',
           },
           {
             name: 'Leon Wang',
             img: wanglin,
-            title: 'Senior R&D Expert\nUnicom Digital Technology Co., Ltd.',
+            title: 'Senior R&D Expert\nChina Unicom Digital Technology',
           },
           {
             name: 'Wang Yucheng',
@@ -2340,17 +2379,52 @@ export default {
           {
             name: 'Wu Chenggang',
             img: wuchenggang,
-            title: 'Professor\nInstitute of Computing Technology，CAS/ZGC Lab',
+            title: 'Professor\nInstitute of Computing Technology, CAS/ZGC Lab',
           },
           {
             name: 'Kaly Xin',
             img: xinxiaohui,
-            title: 'Software Engineering Director\nLinaro Limited',
+            title: 'Software Engineering Director\nLinaro',
           },
           {
             name: 'Charles Zhang',
             img: zhangchi,
-            title: 'Director\nSansec Technology Co., Ltd.',
+            title: 'Director\nSansec Technology',
+          },
+          {
+            name: 'Feng Yan',
+            img: fengyan,
+            title: 'Senior Java Backend Engineer\nHuimei Cloud Technology',
+          },
+          {
+            name: 'Han Yuankun',
+            img: hanyuankun,
+            title: 'AI Communication Expert\nHuawei',
+          },
+          {
+            name: 'Kevin',
+            img: huangjun,
+            title: 'Core System Architect\nChina Merchants Securities',
+          },
+          {
+            name: 'Li Jingjing',
+            img: lijingjing,
+            title: 'Product Manager\nBeijing TongTech',
+          },
+          {
+            name: 'Li Yuzhen',
+            img: liyuzhen,
+            title: 'AI Engineer\nHuawei',
+          },
+          {
+            name: 'Sun Yanan',
+            img: sunyanan,
+            title: 'Senior Operator Development Engineer\nHenan KunLun Technology',
+          },
+          {
+            name: 'Zheng Chenhui',
+            img: zhegnchenhui,
+            title: 'Engineer\nHuawei',
           },
         ]
       },
