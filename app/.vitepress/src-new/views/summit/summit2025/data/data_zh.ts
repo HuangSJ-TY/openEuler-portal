@@ -669,7 +669,7 @@ export default {
                     time: '13:50-14:00',
                     content: [
                       {
-                        title: '开源基础软件与A技术创新路线',
+                        title: '开源基础软件与AI技术创新路线',
                         name: '熊伟',
                         post: 'openEuler委员会主席',
                       }
