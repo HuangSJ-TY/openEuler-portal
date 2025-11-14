@@ -8,6 +8,7 @@ import { VHALLYUN } from '~@/shared/config';
 
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
+import { uniqueId } from '@/shared/utils';
 
 const { lePad } = useScreen();
 
@@ -38,31 +39,23 @@ const renderData: Array<RenderData> = props.liveData as any;
 const roomId = ref(0);
 const setLiveRoom = (item: RenderData, index: number): void => {
   roomId.value = index;
-  createUserId(item.liveId);
+  getLiveUrl(item.liveId);
 };
 
-const createUserId = (liveId: number) => {
-  let returnId = '',
-    userName = '';
-  if (localStorage.getItem('live-user-name')) {
-    userName = localStorage.getItem('live-user-name') || '';
-  } else {
-    let digit = Math.round(Math.random() * 10);
-    digit > 3 ? digit : (digit = 3);
-
-    const charStr =
-      '0123456789@#$%&~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    for (let i = 0; i < digit; i++) {
-      const index = Math.round(Math.random() * (charStr.length - 1));
-      returnId += charStr.substring(index, index + 1);
-    }
-    userName = returnId;
-    localStorage.setItem('live-user-name', userName);
+const createUserId = () => {
+  let userId = uniqueId();
+  if (
+    typeof window !== 'undefined' &&
+    localStorage.getItem('oa-openEuler-client')
+  ) {
+    userId = JSON.parse(localStorage.getItem('oa-openEuler-client') || '')?.value?.id;
   }
 
-  // landScape 是否启用 H5 直播间横屏适配
-  // logout=1 增加参数 logout=1 时，页面会做退出登录处理，会以游客身份观看
-  liveUrl.value = `${VHALLYUN}/v2/watch/${liveId}?lang=zh&thirdId=${userName}&landScape=true`;
+  return userId;
+}
+
+const getLiveUrl = (liveId: number) => {
+  liveUrl.value = `${VHALLYUN}/v2/watch/${liveId}?lang=zh&thirdId=${createUserId()}&landScape=true`;
 }
 const height = ref(800);
 function setHeight(data: any) {
@@ -101,7 +94,7 @@ function messageEvent() {
 const liveRoom = ref();
 
 const changeLive = (val: number): void => {
-  createUserId(val);
+  getLiveUrl(val);
 };
 
 onMounted(async () => {
