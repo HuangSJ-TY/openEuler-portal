@@ -894,9 +894,9 @@ export default {
                     time: '15:40-16:00',
                     content: [
                       {
-                        title: 'KunLun Dedicated Computing for Smart Manufacturing',
+                        title: 'Software Empowers Industrial Intelligence',
                         name: 'Yao Guangzhong',
-                        post: 'Principal Engineer of OS, xFusion',
+                        post: 'Technology Expert, Henan KunLun Technology',
                       }
                     ]
                   },
@@ -2154,7 +2154,7 @@ export default {
           {
             name: 'Yao Guangzhong',
             img: yaoguangzhong,
-            title: 'Principal Engineer of OS\nxFusion',
+            title: 'Technology Expert\nHenan KunLun Technology',
           },
           {
             name: 'Yang Lu',
