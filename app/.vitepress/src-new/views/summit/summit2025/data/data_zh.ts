@@ -901,9 +901,9 @@ export default {
                     time: '15:40-16:00',
                     content: [
                       {
-                        title: '算力革新，智控未来——昆仑技术专用计算业务赋能智能制造升级',
+                        title: '软件赋能工业智能化',
                         name: '姚广忠',
-                        post: '超聚变 OS主任工程师',
+                        post: '河南昆仑技术有限公司技术专家',
                       }
                     ]
                   },
@@ -993,7 +993,7 @@ export default {
                 ]
               },
               {
-                time: '10:10 - 11:00',
+                time: '10:40 - 11:00',
                 content: [
                   {
                     title: '构建中国邮政安全可信的云原生镜像体系实践分享',
@@ -1620,9 +1620,9 @@ export default {
                     time: '15:15-15:30',
                     content: [
                       {
-                        title: '河南昆仑基于昇腾软FP8的极致调优',
+                        title: '昆仑技术基于昇腾软FP8的极致调优',
                         name: '孙亚楠',
-                        post: '河南昆仑技术有限公司 算子开发高级工程师',
+                        post: '河南昆仑技术有限公司 高级工程师',
                       }
                     ]
                   },
@@ -2176,7 +2176,7 @@ export default {
           {
             name: '姚广忠',
             img: yaoguangzhong,
-            title: '河南昆仑技术有限公司\n主任工程师',
+            title: '河南昆仑技术有限公司\n技术专家',
           },
           {
             name: '杨露',
@@ -2451,7 +2451,7 @@ export default {
           {
             name: '孙亚楠',
             img: sunyanan,
-            title: '河南昆仑技术有限公司\n算子开发高级工程师',
+            title: '河南昆仑技术有限公司\n高级工程师',
           },
           {
             name: '郑晨卉',
