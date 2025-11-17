@@ -58,7 +58,7 @@ export const projectData = {
       desc: 'openEuler 智能化解决方案是搭载在 openEuler 上的大模型平台，具有对接支持 openAI 大模型、构建本地知识库的基础功能；也具备注册语义接口和mcp服务、构建Agent和工作流应用等功能。支持web和客户端两种形式，为开发者和企业的使用提供了巨大的便利',
       icon: intelligence,
       url: '/projects/intelligence/',
-      giteeUrl: 'https://gitee.com/openeuler/openeuler-intelligence-sandbox',
+      giteeUrl: 'https://gitee.com/openeuler/euler-copilot-framework',
     },
     {
       title: 'openYuanrong',
@@ -109,16 +109,16 @@ export const projectData = {
     {
       title: 'BiSheng JDK',
       desc: 'As a downstream product of OpenJDK, BiSheng JDK is a high-performance OpenJDK distribution that can be used in production environments. BiSheng JDK fixes some performance and stability issues encountered in Huawei internal applications, optimizes performance and enhances stability on the ARM architecture, and delivers improved performance in big data scenarios.',
-      icon: intelligence,
+      icon: '',
       url: '/other/projects/bishengjdk/',
       giteeUrl: 'https://gitee.com/openeuler/bishengjdk-8',
     },
     {
       title: 'openEuler Intelligence',
       desc: 'openEuler Intelligence is a comprehensive large language model (LLM) platform built on openEuler. It offers fundamental capabilities for integrating with OpenAI APIs and creating custom local knowledge bases. The platform also enables users to register semantic interfaces and Model Context Protocol (MCP) services, and develop Agent-based applications and workflows. Available in both web and client versions, it delivers exceptional convenience for developers and enterprises alike.',
-      icon: '',
+      icon: intelligence,
       url: '/projects/intelligence/',
-      giteeUrl: 'https://gitee.com/openeuler/openeuler-intelligence-sandbox',
+      giteeUrl: 'https://gitee.com/openeuler/euler-copilot-framework',
     },
     {
       title: 'openYuanrong',
