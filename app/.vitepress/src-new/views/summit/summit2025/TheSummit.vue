@@ -54,7 +54,7 @@ onMounted(() => {
   );
 });
 //-------- 直播 --------
-const tabLive = ref(1)
+const tabLive = ref(0)
 </script>
 
 <template>

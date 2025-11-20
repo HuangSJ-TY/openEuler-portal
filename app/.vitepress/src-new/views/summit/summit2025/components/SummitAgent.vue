@@ -97,7 +97,7 @@ watch(
         month: 'NOV',
       })
     });
-    setDateIndex(1);
+    setDateIndex(0);
   },
   { immediate: true }
 );

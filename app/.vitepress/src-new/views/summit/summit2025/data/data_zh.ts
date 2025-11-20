@@ -150,6 +150,8 @@ export default {
       dark: textMbDark,
     },
     signUpTitle: '立即报名',
+    watchReplay: '观看回放',
+    replayLink: '/zh/interaction/summit-list/summit2025/#live',
     link: {
       pc: 'https://openatomcon.openatom.cn/registration/?code=Nhvt&activityNo=HD20251013162127',
       mo: 'https://openatomcon.openatom.cn/registration_mobile/?code=Nhvt&activityNo=HD20251013162127',
