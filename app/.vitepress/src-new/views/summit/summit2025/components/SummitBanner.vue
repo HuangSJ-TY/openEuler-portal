@@ -43,10 +43,10 @@ onMounted(() => {
           variant="solid"
           color="primary"
           size="large"
-          :href="isMobile ? bannerData.link.mo : bannerData.link.pc"
-          target="_blank"
+          :href="bannerData.replayLink"
+          target="_self"
         >
-          {{ bannerData.signUpTitle }}
+          {{ bannerData.watchReplay }}
         </OButton>
       </div>
     </div>
