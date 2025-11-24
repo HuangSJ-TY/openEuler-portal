@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, type PropType, ref, watch } from 'vue';
 
-import { OLink } from '@opensig/opendesign';
+import { OLink, OFigure } from '@opensig/opendesign';
 
 import { useData } from 'vitepress';
 import { oaReport } from '@/shared/analytics';
@@ -138,12 +138,28 @@ const loadingFn = useLoading(
   contentRef
 );
 
-const sortType = ['commercialRelease', 'mail', 'news', 'blog'];
+const sortType = ['commercialRelease', 'mail', 'news', 'blog', 'whitepaper'];
 
 watch(
   () => props.loading,
   (val: boolean) => {
     loadingFn.toggle(val);
+  }
+);
+
+watch(
+  () => props.searchResultList,
+  (val) => {
+    if (!val?.length) return;
+    val.forEach((res: any) => {
+      if (res.type === 'whitepaper') {
+        res.pageIndex = 0;
+
+        res.aggreList?.forEach((page: any) => {
+          page.obsUrl = generatePdfUrl(page);
+        })
+      }
+    })
   }
 );
 
@@ -261,6 +277,13 @@ const allVersion = () => {
     target: '',
   });
 };
+
+const generatePdfUrl = (page) => {
+  if (!page) return;
+  const obsUrl = 'https://openeuler-website-unifiedbus.obs.cn-north-4.myhuaweicloud.com';
+  const paperName = page.title.replace(/<span[^>]*>(.*?)<\/span>/g, '$1').replace('.pdf', '-v1');
+  return `${obsUrl}/${encodeURIComponent(encodeURIComponent(paperName))}/page_${page.page}.png`;
+}
 </script>
 <template>
   <ContentWrapper class="search-result" :vertical-padding="verticalPadding">
@@ -353,7 +376,44 @@ const allVersion = () => {
               "
               class="search-card"
             >
-              <div @click="goSearchDetail(item, index)">
+              <div v-if="item.type === 'whitepaper' && item.aggreList" class="whitepaper-content">
+                <div class="whitepaper-layout">
+                  <div @click="goSearchDetail(item.aggreList?.[item?.pageIndex], index)">
+                    <div class="whitepaper-title">
+                      <h3 v-dompurify-html="item.aggreList?.[item.pageIndex]?.title"></h3>
+                      <span class="title-tip">{{ $t('search.pageX', {
+                        page: item.aggreList?.[item.pageIndex]?.page,
+                      }) }}</span>
+                    </div>
+                    <p
+                      v-dompurify-html="item.aggreList?.[item.pageIndex]?.textContent"
+                      class="detail"
+                    ></p>
+                  </div>
+                  <div class="whitepaper-preview pdf-mb">
+                    <OFigure :src="item.aggreList?.[item.pageIndex]?.obsUrl" lazy preview alt="" />
+                  </div>
+                  <div class="page-container">
+                    <p class="page-text">{{ $t('search.mostRelevant') }}</p>
+                    <div class="page-list">
+                      <p
+                        v-for="(page, pageIndex) in item.aggreList"
+                        :key="page.page"
+                        @click="item.pageIndex = pageIndex"
+                        :class="['page-num', item.pageIndex === pageIndex ? 'active' : '']"
+                      >
+                        {{ page.page }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="whitepaper-preview pdf-pc">
+                  <OFigure :src="item.aggreList?.[item.pageIndex]?.obsUrl" lazy preview alt="" />
+                </div>
+              </div>
+
+              <div v-else @click="goSearchDetail(item, index)">
                 <h3
                   v-dompurify-html="
                     item.title.replace(
@@ -676,6 +736,109 @@ const allVersion = () => {
           .version {
             margin-top: 8px;
           }
+
+          .whitepaper-content {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;
+
+            .whitepaper-layout {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+
+            @include respond-to('<=pad_v') {
+              flex-direction: column;
+            }
+
+            .whitepaper-title {
+              & h3 {
+                display: inline;
+              }
+
+              .title-tip {
+                line-height: 14px;
+                font-size: 10px;
+                margin-left: var(--o-gap-2);
+                border: 1px solid var(--o-color-info3);
+                color: var(--o-color-info3);
+                border-radius: var(--o-radius-xs);
+                padding: 0 2px;
+                white-space: nowrap;
+              }
+            }
+
+            .page-container {
+              @include tip2;
+              display: flex;
+              color: var(--o-color-info3);
+              margin-top: var(--o-gap-2);
+              align-items: flex-start;
+              width: 100%;
+
+              .page-text {
+                white-space: nowrap;
+                flex-shrink: 0;
+                margin-right: var(--o-gap-2);
+              }
+
+              .page-list {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 100%;
+
+                & p {
+                  margin-right: var(--o-gap-2);
+                }
+
+                .page-num {
+                  width: 30px;
+                  display: inline-block;
+                  text-align: center;
+                  cursor: pointer;
+
+                  &.active {
+                    border-radius: var(--o-radius-xs);
+                    color: var(--o-color-primary1);
+                    border: 1px solid var(--o-color-primary1);
+                  }
+                }
+              }
+            }
+
+            .whitepaper-preview {
+              :deep(.o-figure) {
+                --figure-radius: var(--o-radius-xs);
+                border: 1px solid rgba(224, 226, 230, 1);
+              }
+
+              width: 108px;
+              height: 148px;
+              margin-left: var(--o-gap-8);
+              flex-shrink: 0;
+
+              &.pdf-mb {
+                display: none;
+              }
+
+              @include respond-to('<=pad_v') {
+                margin-left: 0;
+
+                &.pdf-pc {
+                  display: none;
+                }
+                &.pdf-mb {
+                  display: flex;
+                  margin: var(--o-gap-2) 0;
+                }
+              }
+
+              @include in-dark {
+                @include img-in-dark;
+              }
+            }
+          }
         }
       }
       .pagination {
@@ -701,6 +864,12 @@ const allVersion = () => {
   }
   .o-icon {
     margin: 0 4px;
+  }
+}
+
+[data-o-theme='dark'] {
+  .whitepaper-preview {
+    @include img-in-dark;
   }
 }
 </style>

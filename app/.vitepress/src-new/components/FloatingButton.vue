@@ -118,6 +118,7 @@ const tipsObj: TitleItemT = {
   '/community/meeting-system/': TITLES2[3],
   '/community/user-group/': TITLES2[3],
   '/contact-us/': TITLES2[3],
+  '/showcase/': TITLES2[3],
   '/showcase/technical-white-paper/': TITLES2[3],
   '/showcase/market-report/': TITLES2[3],
   '/showcase/industry-white-paper/': TITLES2[3],

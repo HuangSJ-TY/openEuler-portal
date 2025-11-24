@@ -36,4 +36,6 @@ export default {
   emptyVersion1: '未找到相关内容',
   emptyVersion2: '请尝试其他搜索词或切换版本为“',
   emptyVersion3: '”查看',
+  mostRelevant: '最相关页面',
+  pageX: '第{page}页'
 };

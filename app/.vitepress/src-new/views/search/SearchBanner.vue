@@ -169,7 +169,7 @@ defineExpose({ searchRecommendRef });
         <template v-for="item in tabData" :key="item.value">
           <OTabPane :value="item.value">
             <template #nav>
-              {{ item.label[locale] }}（{{ item.total }}）
+              {{ item.label[locale] }} ({{ item.total }})
             </template>
           </OTabPane>
         </template>

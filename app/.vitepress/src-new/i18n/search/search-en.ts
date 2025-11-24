@@ -38,4 +38,6 @@ export default {
   emptyVersion1: 'No relevant content found.',
   emptyVersion2: 'Try another seach keyword or change the version top',
   emptyVersion3: '.',
+  mostRelevant: 'Most Relevant Pages',
+  pageX: 'Page {page}'
 };

@@ -19,6 +19,16 @@ export const moduleMap = new Map([
     },
   ],
   [
+    'develop',
+    {
+      label: {
+        zh: '开发',
+        en: 'Develop',
+      },
+      subModules: ['sig', 'etherpad'],
+    },
+  ],
+  [
     'docs',
     {
       label: {
@@ -28,13 +38,12 @@ export const moduleMap = new Map([
     },
   ],
   [
-    'learn',
+    'migration',
     {
       label: {
-        zh: '学习',
-        en: 'Learn',
+        zh: '迁移',
+        en: 'Migration',
       },
-      subModules: ['whitepaper', 'showcase', 'migration'],
     },
   ],
   [
@@ -44,7 +53,7 @@ export const moduleMap = new Map([
         zh: '社区',
         en: 'Community',
       },
-      subModules: ['sig', 'etherpad', 'mail', 'forum'],
+      subModules: ['whitepaper', 'showcase', 'mail', 'forum'],
     },
   ],
   [
@@ -121,8 +130,8 @@ export const subModuleMap = new Map([
     'docs',
     {
       from: {
-        zh: ['学习', '文档中心'],
-        en: ['Learn', 'Documentation'],
+        zh: ['文档', '文档中心'],
+        en: ['Document', 'Documentation'],
       },
     },
   ],
@@ -143,8 +152,8 @@ export const subModuleMap = new Map([
         en: 'White Papers',
       },
       from: {
-        zh: ['学习', '技术展示', '白皮书'],
-        en: ['Learn', 'Tech Highlights', 'White Papers'],
+        zh: ['社区', '关于社区', '白皮书'],
+        en: ['Community', 'About', 'White Papers'],
       },
     },
   ],
@@ -156,8 +165,8 @@ export const subModuleMap = new Map([
         en: 'Success Stories',
       },
       from: {
-        zh: ['学习', '技术展示', '用户案例'],
-        en: ['Learn', 'Tech Highlights', 'Success Stories'],
+        zh: ['社区', '关于社区', '用户案例'],
+        en: ['Community', 'About', 'Success Stories'],
       },
     },
   ],
@@ -169,8 +178,8 @@ export const subModuleMap = new Map([
         en: 'SIG',
       },
       from: {
-        zh: ['社区', '贡献与成长', 'SIG中心'],
-        en: ['Community', 'Contribute', 'SIG'],
+        zh: ['开发', '贡献', 'SIG中心'],
+        en: ['Develop', 'Contribute', 'SIG'],
       },
     },
   ],
@@ -182,8 +191,8 @@ export const subModuleMap = new Map([
         en: '',
       },
       from: {
-        zh: ['社区', '社区交流', 'SIG组会议纪要'],
-        en: [''],
+        zh: ['开发', '贡献', 'SIG中心'],
+        en: ['Develop', 'Contribute', 'SIG'],
       },
     },
   ],
@@ -256,8 +265,8 @@ export const subModuleMap = new Map([
         en: 'Migration',
       },
       from: {
-        zh: ['学习', '迁移与运维', '迁移专区'],
-        en: ['Learn', 'Migration', 'Migrate to openEuler'],
+        zh: ['支持', '迁移与运维', '迁移专区'],
+        en: ['Support', 'Migration', 'Migrate to openEuler'],
       },
     },
   ],
