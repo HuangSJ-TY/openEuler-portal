@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { showGuard, logout, useStoreData, getUserAuth } from '@/shared/login';
 import { OIcon, ODropdown, ODropdownItem } from '@opensig/opendesign';
+import { useScreen } from '~@/composables/useScreen';
 
 import AppBadge from '@/components/badge/AppBadge.vue';
 import { getUnreadMsgCount } from '@/api/api-messageCenter';
@@ -12,10 +13,12 @@ import IconLogin from '~icons/app-new/icon-header-person.svg';
 const { lang } = useData();
 const { token } = getUserAuth();
 const { guardAuthClient } = useStoreData();
+const { lePadV } = useScreen();
 
 const jumpToUserZone = () => {
   const language = lang.value === 'zh' ? 'zh' : 'en';
-  window.open(`/${language}/my`, '_blank');
+  const path = lePadV.value ? 'settings' : 'workbench';
+  window.open(`/${language}/my/${path}`, '_blank');
 };
 
 const jumpToMsgCenter = () => {
