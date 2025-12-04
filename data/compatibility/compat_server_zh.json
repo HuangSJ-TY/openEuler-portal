@@ -32368,6 +32368,7 @@
       "hostBusAdapter": "Broadcom / LSI MegaRAID 12GSAS/PCIe Secure SAS39xx",
       "hardDiskDrive": "Micron 5400 Pro SSD 3.84TB"
     }
+  },
   {
     "hardwareFactory": "超越科技股份有限公司",
     "hardwareModel": "RM5220-F",
@@ -32384,7 +32385,7 @@
         "architecture": "aarch64",
         "os": "openEuler 24.03 LTS SP1",
         "driverName": "ngbe",
-        "version": "无",
+        "version": "NA",
         "type": "NIC",
         "date": "2025/10/30",
         "sha256": "178da4464638676a9bf666f409dea253353f906b53394860d60e07bb0aebd1c2",
@@ -32873,4 +32874,5 @@
       "hardDiskDrive": "enclosu BROADCOM VirtualSES 03 - "
     }
   }
+
 ]
