@@ -139,7 +139,7 @@ const visibilityChangeHandler = () => {
       $url: location.href,
       module: 'sig-detail',
       level1: sigName.value,
-    });
+    }, 'sig');
     visitTime = null;
   }
 };
@@ -164,6 +164,7 @@ onUnmounted(() => {
             target: t('sig.sigCenter'),
             type: 'breadcrumb',
           },
+          service: 'sig',
         }">{{ t('sig.sigCenter') }}</OBreadcrumbItem
       >
       <OBreadcrumbItem>{{ sigName }}</OBreadcrumbItem>
@@ -184,7 +185,8 @@ onUnmounted(() => {
           properties: {
             module: 'sig-detail',
             level1: sigName,
-          }
+          },
+          service: 'sig',
         }"
       />
       <div class="sig-floor">
@@ -210,6 +212,7 @@ onUnmounted(() => {
                         level3: t('sig.workMeeting'),
                         target: t('sig.meetingSummary'),
                       },
+                      service: 'sig',
                     }"
                   >
                     {{ t('sig.meetingSummary') }}
@@ -244,6 +247,7 @@ onUnmounted(() => {
                       level3: t('sig.mailList'),
                       target: sigDetailInfo?.mailing_list,
                     },
+                    service: 'sig',
                   }"
                 >
                   {{ sigDetailInfo?.mailing_list }}
@@ -266,6 +270,7 @@ onUnmounted(() => {
                       level3: t('sig.mailList'),
                       target: t('sig.subscribe'),
                     },
+                    service: 'sig',
                   }"
                 >
                   {{ $t('sig.subscribe') }}
@@ -285,6 +290,7 @@ onUnmounted(() => {
                   level1: sigName,
                   level2: t('sig.sigMettingActive'),
                 },
+                service: 'sig',
               }"
             />
             <div v-else-if="!isLoading" class="result-empty-box sig-floor-item">
@@ -316,6 +322,7 @@ onUnmounted(() => {
               module: 'sig-detail',
               level1: sigName,
             },
+            service: 'sig',
           }"
         />
         <!-- SIG贡献展示 -->
@@ -327,6 +334,7 @@ onUnmounted(() => {
               module: 'sig-detail',
               level1: sigName,
             },
+            service: 'sig',
           }"
         />
       </div>

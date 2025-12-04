@@ -24,13 +24,13 @@ const reportLinkClick = (ev: Event) => {
 
   return {
     properties: {
-      module: 'sig',
       level1: i18n.value.sig.sigCenter,
       level2: i18n.value.sig.welcomeJoin,
       level3: (ev.currentTarget as HTMLElement).querySelector('.title')!.textContent.trim(),
       target: target.textContent,
       detail: target.href
-    }
+    },
+    service: 'sig',
   };
 };
 </script>

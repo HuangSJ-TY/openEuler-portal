@@ -25,7 +25,7 @@ const visibilityChangeHandler = () => {
         module: 'sig',
         level1: element.querySelector('.section-title')!.textContent,
         duration: Date.now() - val.start,
-      });
+      }, 'sig');
     });
     inViewSectionInfos.clear();
   } else {

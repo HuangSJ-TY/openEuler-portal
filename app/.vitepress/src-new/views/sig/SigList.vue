@@ -515,12 +515,11 @@ onUnmounted(() => {
 const i18n = useI18n();
 const onSearchInput = useDebounceFn(() => {
   oaReport('input', {
-    module: 'sig',
     level1: i18n.value.sig.sigCenter,
     level2: i18n.value.sig.sigList,
     type: 'search-input',
     content: sigInput.value
-  });
+  }, 'sig');
 }, 300);
 
 const onSearchPressEnter = (e: KeyboardEvent) => {
@@ -528,25 +527,25 @@ const onSearchPressEnter = (e: KeyboardEvent) => {
   return {
     event: 'input',
     properties: {
-      module: 'sig',
       level1: i18n.value.sig.sigCenter,
       level2: 'openEuler SIGs',
       type: 'search',
       content: sigInput.value
-    }
+    },
+    service: 'sig',
   };
 };
 
 const onClickSearchRes = (type: string, ev: Event) => {
   return {
     properties: {
-      module: 'sig',
       level1: i18n.value.sig.sigCenter,
       level2: 'openEuler SIGs',
       target: (ev.currentTarget as HTMLElement).textContent.trim(),
       category: type,
       type: 'search-result'
-    }
+    },
+    service: 'sig',
   };
 };
 </script>
@@ -576,12 +575,12 @@ const onClickSearchRes = (type: string, ev: Event) => {
                 @click="clearChecked(checked)"
                 v-analytics="{
                   properties: {
-                    module: 'sig',
                     level1: $t('sig.sigCenter'),
                     level2: 'openEuler SIGs',
                     target: option.label[locale],
                     type: 'category'
-                  }
+                  },
+                  service: 'sig',
                 }"
               >
                 {{ option.label[locale] }}
@@ -611,12 +610,12 @@ const onClickSearchRes = (type: string, ev: Event) => {
               :value="item.value"
               v-analytics="{
                 properties: {
-                  module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
                   target: item.label,
                   type: 'search-category'
-                }
+                },
+                service: 'sig',
               }"
             />
           </OSelect>
@@ -631,11 +630,11 @@ const onClickSearchRes = (type: string, ev: Event) => {
             @input="onSearchInput"
             v-analytics="{
               properties: {
-                module: 'sig',
                 level1: $t('sig.sigCenter'),
                 level2: 'openEuler SIGs',
                 type: 'search-input'
-              }
+              },
+              service: 'sig',
             }"
             v-analytics:keydown="onSearchPressEnter"
           >
@@ -709,12 +708,12 @@ const onClickSearchRes = (type: string, ev: Event) => {
               @click="toSigDetail(sig.name)"
               v-analytics="{
                 properties: {
-                  module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
                   target: sig.name,
                   type: 'sig'
-                }
+                },
+                service: 'sig',
               }"
             >
               {{ sig.name }}
@@ -729,12 +728,12 @@ const onClickSearchRes = (type: string, ev: Event) => {
               target="_blank"
               v-analytics="{
                 properties: {
-                  module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
                   target: sig.name,
                   type: 'sig-gitee'
-                }
+                },
+                service: 'sig',
               }"
             >
               <OIcon class="gitee-icon">
@@ -751,12 +750,12 @@ const onClickSearchRes = (type: string, ev: Event) => {
               target="_blank"
               v-analytics="{
                 properties: {
-                  module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
                   target: sig.name,
                   type: 'sig-mail'
-                }
+                },
+                service: 'sig',
               }"
             >
               {{ sig.mailing_list }}
@@ -772,12 +771,12 @@ const onClickSearchRes = (type: string, ev: Event) => {
               target="_blank"
               v-analytics="{
                 properties: {
-                  module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
                   target: sig.name,
                   type: 'sig-subcribe-mail'
-                }
+                },
+                service: 'sig',
               }"
             >
               {{ $t('sig.subscribe') }}
@@ -807,12 +806,12 @@ const onClickSearchRes = (type: string, ev: Event) => {
               v-analytics:mouseenter="{
                 event: 'hover',
                 properties: {
-                  module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
                   level3: sig.name,
                   type: 'sig-repo'
-                }
+                },
+                service: 'sig',
               }"
             >
               <OIcon><IconSigSpace /></OIcon>
@@ -849,12 +848,12 @@ const onClickSearchRes = (type: string, ev: Event) => {
               v-analytics:mouseenter="{
                 event: 'hover',
                 properties: {
-                  module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: 'openEuler SIGs',
                   level3: sig.name,
                   type: 'sig-maintainer'
-                }
+                },
+                service: 'sig',
               }"
             >
               <OIcon><IconUser /></OIcon>
