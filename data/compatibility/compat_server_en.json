@@ -32309,7 +32309,7 @@
     }
   },
   {
-    "hardwareFactory": “Lenovo",
+    "hardwareFactory": "Lenovo",
     "hardwareModel": "Lenovo WenTian WR5220 G3(Sapphire Rapids)",
     "osVersion": "openEuler 24.03 LTS SP1",
     "architecture": "x86_64",
@@ -32368,7 +32368,7 @@
       "hostBusAdapter": "Broadcom / LSI MegaRAID 12GSAS/PCIe Secure SAS39xx",
       "hardDiskDrive": "Micron 5400 Pro SSD 3.84TB"
     }
-  }
+  },
   {
     "hardwareFactory": "chaoyue",
     "hardwareModel": "RM5220-F",
@@ -32509,6 +32509,8 @@
       "hostBusAdapter": "Huawei",
       "hardDiskDrive": "BROADCOM MR9560-8i"
     }
+  },
+
   {
     "hardwareFactory": "HuaKun",
     "hardwareModel": "HuaKun TG525 B2",
