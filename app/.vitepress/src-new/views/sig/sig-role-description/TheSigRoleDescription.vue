@@ -73,7 +73,7 @@ const visibilityChangeHandler = () => {
       $url: location.href,
       module: 'sig',
       level1: t('sig.roleDescription'),
-    });
+    }, 'sig');
     visitTime = null;
   }
 };
@@ -104,12 +104,12 @@ const reportMemberCardLinkClick = (e: Event, name: string) => {
 
   return {
     properties: {
-      module: 'sig',
       level1: t('sig.roleDescription'),
       level2: communityMember.title[locale.value],
       level3: name,
       target: target.textContent.trim(),
     },
+    service: 'sig',
   };
 };
 
@@ -123,12 +123,12 @@ const reportSectionLinkClick = (
 
   return {
     properties: {
-      module: 'sig',
       level1: t('sig.roleDescription'),
       level2: section.title[locale.value],
       level3: name,
       target: target.textContent.trim(),
     },
+    service: 'sig',
   };
 };
 </script>
@@ -146,11 +146,11 @@ const reportSectionLinkClick = (
           :href="`/${locale}/sig/sig-list/`"
           v-analytics="{
             properties: {
-              module: 'sig',
               level1: t('sig.roleDescription'),
               target: t('sig.sigCenter'),
               type: 'breadcrumb',
             },
+            service: 'sig',
           }"
           >{{ t('sig.sigCenter') }}</OBreadcrumbItem
         >
@@ -183,12 +183,12 @@ const reportSectionLinkClick = (
             :icon="OIconFile"
             v-analytics="{
               properties: {
-                module: 'sig',
                 level1: t('sig.roleDescription'),
                 level2: communityMember.title[locale],
                 level3: item.name.zh,
                 target: communityMember.viewDetail.zh,
               },
+              service: 'sig',
             }"
             >{{ communityMember.viewDetail[locale] }}</OLink
           >

@@ -36,6 +36,11 @@ export default {
     }
     app.use(installer, {
       appKey: 'openEuler',
+      onPageView(_, to) {
+        if (to.includes('/security/cve')) {
+          return { $service: 'cvemanager' };
+        }
+      },
       onEnable() {
         const hm = document.createElement('script');
         hm.src = 'https://hm.baidu.com/hm.js?ab8d86daab9a8e98cf8faa239aefcd3c';

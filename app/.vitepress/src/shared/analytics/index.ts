@@ -62,7 +62,7 @@ export const installer = (
         if (oa?.enabled) disableOA();
       }
     });
-    startListenHistoryChange();
+    startListenHistoryChange(options.onPageView);
     if (options.onPageView) {
       reportPV(options.onPageView('/', location.pathname));
     } else {

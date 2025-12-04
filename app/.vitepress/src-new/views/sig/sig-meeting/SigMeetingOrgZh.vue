@@ -8,10 +8,10 @@ import iconOrgSig from '~icons/sig/org-sig.svg';
     class="sig-meeting-org"
     v-analytics.catchBubble="{
       properties: {
-        module: 'sig',
         level1: '会议指南',
         level2: '组织会议',
       },
+      service: 'sig',
     }"
   >
     <div class="sig-meeting-content">

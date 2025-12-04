@@ -66,7 +66,7 @@ const visibilityChangeHandler = () => {
       $url: location.href,
       module: 'sig',
       level1: t('sig.meetingBannerTitle'),
-    });
+    }, 'sig');
     visitTime = null;
   }
 };
@@ -97,11 +97,11 @@ const reportIntroLinkClick = (ev: Event) => {
 
   return {
     properties: {
-      module: 'sig',
       level1: t('sig.meetingBannerTitle'),
       level2: t('sig.meetingIntroTitle'),
       target: target.textContent.trim()
-    }
+    },
+    service: 'sig',
   };
 };
 </script>
@@ -118,11 +118,11 @@ const reportIntroLinkClick = (ev: Event) => {
           :href="`/${locale}/sig/sig-list/`" 
           v-analytics="{
             properties: {
-              module: 'sig',
               level1: $t('sig.meetingBannerTitle'),
               target: $t('sig.sigCenter'),
               type: 'breadcrumb',
             },
+            service: 'sig',
           }"
           >{{ t('sig.sigCenter') }}</OBreadcrumbItem
         >

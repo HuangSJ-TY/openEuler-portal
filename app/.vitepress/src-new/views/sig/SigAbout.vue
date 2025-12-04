@@ -47,19 +47,19 @@ const processDetail = computed(() => {
           :href="card.path[locale]"
           v-analytics="{
             properties: {
-              module: 'sig',
               level1: $t('sig.sigCenter'),
               level2: $t('sig.aboutSig'),
               target: card.title[locale]
-            }
+            },
+            service: 'sig',
           }"
           v-analytics:mouseenter="{
             properties: {
-              module: 'sig',
               level1: $t('sig.sigCenter'),
               level2: $t('sig.aboutSig'),
               target: card.title[locale]
-            }
+            },
+            service: 'sig',
           }"
         >
           <template #title>
@@ -101,12 +101,12 @@ const processDetail = computed(() => {
               }"
               v-analytics="{
                 properties: {
-                  module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: $t('sig.aboutSig'),
                   level3: $t('sig.applicationProcess'),
                   target: step.process.zh,
-                }
+                },
+                service: 'sig',
               }"
             >
               <OIcon class="icon">
@@ -145,12 +145,12 @@ const processDetail = computed(() => {
               <div class="process-title" 
               v-analytics="{
                 properties: {
-                  module: 'sig',
                   level1: $t('sig.sigCenter'),
                   level2: $t('sig.aboutSig'),
                   level3: $t('sig.applicationProcess'),
                   target: step.process[locale],
-                }
+                },
+                service: 'sig',
               }">
                 <div class="num">
                   {{ (index + 1).toString().padStart(2, '0') }}
