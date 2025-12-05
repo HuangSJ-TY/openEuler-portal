@@ -74,8 +74,8 @@
       <div class="detail-para-one">
         <p>
           <span>● 项目地址&详细说明：</span>
-          <a href="https://gitee.com/openeuler/nestos-kubernetes-deployer"
-            >https://gitee.com/openeuler/nestos-kubernetes-deployer</a
+          <a href="https://atomgit.com/openeuler/nestos-kubernetes-deployer"
+            >https://atomgit.com/openeuler/nestos-kubernetes-deployer</a
           >
         </p>
         <p>● NKD目前仅处于演示阶段，暂不适用于生产环境。</p>

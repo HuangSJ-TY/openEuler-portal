@@ -39,8 +39,8 @@
     <div class="detail-para">
       <p class="detail-para-title">●详细说明请参阅：</p>
       <div class="detail-para-one">
-        <a href="https://gitee.com/openeuler/x2nestos"
-          >https://gitee.com/openeuler/x2nestos</a
+        <a href="https://atomgit.com/openeuler/x2nestos"
+          >https://atomgit.com/openeuler/x2nestos</a
         >
       </div>
     </div>

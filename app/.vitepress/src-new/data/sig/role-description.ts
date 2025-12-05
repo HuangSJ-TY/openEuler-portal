@@ -44,8 +44,8 @@ export const communityMember = {
     en: 'Community Roles',
   },
   subtitle: {
-    zh: '在openEuler社区，大部分角色的职责限于 SIG (Special Interest Group)内。Maintainer 和 Committer 在 Gitee 的权限上不做区分，两者的区分主要是集中在 SIG 治理的管理范围，详细可见下面的描述',
-    en: 'In the openEuler community, most roles operate within the scope of Special Interest Groups (SIGs). While maintainers and committers have identical permissions on Gitee, they differ primarily in their SIG governance responsibilities, as outlined below.',
+    zh: '在openEuler社区，大部分角色的职责限于 SIG (Special Interest Group)内。Maintainer 和 Committer 在 AtomGit 的权限上不做区分，两者的区分主要是集中在 SIG 治理的管理范围，详细可见下面的描述',
+    en: 'In the openEuler community, most roles operate within the scope of Special Interest Groups (SIGs). While maintainers and committers have identical permissions on AtomGit, they differ primarily in their SIG governance responsibilities, as outlined below.',
   },
   viewDetail: {
     zh: '查看详情',
@@ -114,8 +114,8 @@ export const communityMember = {
         en: 'New Contributor',
       },
       desc: {
-        zh: '欢迎新成员加入社区。我们有关于如何开始贡献的指导文档请参考：<a href="https://gitee.com/openeuler/community/blob/master/zh/contributors/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler 贡献</a>',
-        en: 'Welcome to join the community. Start contributing by referring to: <a href="https://gitee.com/openeuler/community/blob/master/zh/contributors/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">contribution guidience</a>',
+        zh: '欢迎新成员加入社区。我们有关于如何开始贡献的指导文档请参考：<a href="https://atomgit.com/openeuler/community/blob/master/zh/contributors/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler 贡献</a>',
+        en: 'Welcome to join the community. Start contributing by referring to: <a href="https://atomgit.com/openeuler/community/blob/master/zh/contributors/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">contribution guidience</a>',
       },
     },
     {
@@ -125,8 +125,8 @@ export const communityMember = {
         en: 'Existing Community Member',
       },
       desc: {
-        zh: '既有的社区成员应遵守<a href="https://gitee.com/openeuler/community/blob/master/code-of-conduct.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler 社区的行为守则</a>以及<a href="https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler 社区开发行为规范</a>，熟悉 SIG 的组织、角色、政策、软件、约定等，以及相关的技术和/或写作能力。社区成员角色的期望、职责和要求，请参考下面的内容',
-        en: `Existing community members must adhere to the <a href="https://gitee.com/openeuler/community/blob/master/code-of-conduct_en.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler Community Code of Conduct</a> and <a href="https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler Community Code of Conduct for Development</a>, demonstrate familiarity with SIG structures, roles, policies, software tools, and conventions, along with relevant technical and/or documentation skills. Refer to the following content for detailed expectations, responsibilities, and requirements for community roles.`,
+        zh: '既有的社区成员应遵守<a href="https://atomgit.com/openeuler/community/blob/master/code-of-conduct.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler 社区的行为守则</a>以及<a href="https://atomgit.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler 社区开发行为规范</a>，熟悉 SIG 的组织、角色、政策、软件、约定等，以及相关的技术和/或写作能力。社区成员角色的期望、职责和要求，请参考下面的内容',
+        en: `Existing community members must adhere to the <a href="https://atomgit.com/openeuler/community/blob/master/code-of-conduct_en.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler Community Code of Conduct</a> and <a href="https://atomgit.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler Community Code of Conduct for Development</a>, demonstrate familiarity with SIG structures, roles, policies, software tools, and conventions, along with relevant technical and/or documentation skills. Refer to the following content for detailed expectations, responsibilities, and requirements for community roles.`,
       },
     },
   ],
@@ -159,15 +159,15 @@ export const contributor = {
       },
       points: {
         zh: [
-          'Gitee 上的注册会员',
-          '为 SIG 或社区做出多方面贡献，包括不限于：在 Gitee 上提交或审核 PR；在 Gitee 上对问题进行归档或评论；参与 SIG 或社区讨论',
-          '已阅读 <a href="https://gitee.com/openeuler/community/blob/master/zh/contributors/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">贡献者指南</a>',
+          'AtomGit 上的注册会员',
+          '为 SIG 或社区做出多方面贡献，包括不限于：在 AtomGit 上提交或审核 PR；在 AtomGit 上对问题进行归档或评论；参与 SIG 或社区讨论',
+          '已阅读 <a href="https://atomgit.com/openeuler/community/blob/master/zh/contributors/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">贡献者指南</a>',
           '积极参与 1 个或多个 SIG',
         ],
         en: [
-          'Registered member on Gitee',
-          'Contribute to SIG or community in many ways, including but not limited to: Submitting or reviewing PR(Pull Request) on Gitee; Documenting or commenting issues on Gitee; Participating in SIG or community discussions.',
-          'Read <a href="https://gitee.com/openeuler/community/blob/master/zh/contributors/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">Contribution Guideline</a>',
+          'Registered member on AtomGit',
+          'Contribute to SIG or community in many ways, including but not limited to: Submitting or reviewing PR(Pull Request) on AtomGit; Documenting or commenting issues on AtomGit; Participating in SIG or community discussions.',
+          'Read <a href="https://atomgit.com/openeuler/community/blob/master/zh/contributors/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">Contribution Guideline</a>',
           'Join one or more SIGs',
         ],
       },
@@ -265,8 +265,8 @@ export const committer = {
       },
       points: {
         zh: [
-          '评审 PR：对 Contributor 提交的 PR 完成评审，评审可以参考社区的<a href="https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md" target="_blank" rel="noopener noreferrer" class="underline-link">软件包开发规范</a>和<a href="https://gitee.com/openeuler/security-committee/blob/master/docs/zh/developer-guide/SecureCoding.md"  target="_blank" rel="noopener noreferrer" class="underline-link">安全编程指南</a>。',
-          '分发处理问题:请参考“<a href="https://gitee.com/openeuler/community/blob/master/zh/contributors/issue-submit.md" target="_blank" rel="noopener noreferrer" class="underline-link">问题处理流程</a>”',
+          '评审 PR：对 Contributor 提交的 PR 完成评审，评审可以参考社区的<a href="https://atomgit.com/openeuler/community/blob/master/zh/contributors/packaging.md" target="_blank" rel="noopener noreferrer" class="underline-link">软件包开发规范</a>和<a href="https://atomgit.com/openeuler/security-committee/blob/master/docs/zh/developer-guide/SecureCoding.md"  target="_blank" rel="noopener noreferrer" class="underline-link">安全编程指南</a>。',
+          '分发处理问题:请参考“<a href="https://atomgit.com/openeuler/community/blob/master/zh/contributors/issue-submit.md" target="_blank" rel="noopener noreferrer" class="underline-link">问题处理流程</a>”',
           '跟踪依赖性问题：在开发分支中，其他 SIG 组的软件包的更新可能会到导致破坏本 SIG 内软件包的依赖关系。此时 Committer 会收到告警提示，Committer 应尽力重建软件包。依赖关系出错可能会使最终用户无法更新系统，打包团队也会介入并重建存在依赖性问题的软件包，但 Committer 不应依赖这些重建',
           '如有接口变更，通知可能会影响到的 SIG：其他 SIG 或项目会依赖本 SIG 的软件包，对软件包接口的变更可能会对他们造成影响。Committer 应了解并评审&决策变更造成的依赖影响，并公告和发送 API 或 ABI 变更的告警邮件。这类公告应在变更发生至少一周前完成，并应通知到所有可能受影响的 SIG。具体请参考<a href="https://www.openeuler.org/zh/oEEP/?name=oEEP-0009%20openEuler%20LTS%20%E7%89%88%E6%9C%AC%E5%86%85%E6%A0%B8%20KABI%20%E5%8F%98%E6%9B%B4%E7%AD%96%E7%95%A5" target="_blank" rel="noopener noreferrer" class="underline-link">KABI接口变更评审实例</a>',
           '更新和维护软件包版本：遵守社区的<a href="https://www.openeuler.org/zh/oEEP/?name=oEEP-0017%20openEuler%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%88%86%E7%BA%A7%26%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5" target="_blank" rel="noopener noreferrer" class="underline-link">软件包更新质量控制策略</a>完成软件包的更新',
@@ -274,8 +274,8 @@ export const committer = {
           '和测试团队合作，包括：在提交软件包时，向质量检查人员提供如何调试/分类软件包的信息，以供问题的分类；提供基本功能的测试用例，用于测试回归；提交软件包更新时，提供有关更新中已经修复问题的测试用例，以供质量检查人员使用',
         ],
         en: [
-          'Review PR：Review the PR submitted by contributor. The review can refer to community coding suggestions and <a href="https://gitee.com/openeuler/security-committee/blob/master/guide/SecureCoding_en.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler Secure Coding Guide</a>.',
-          'Distribute and deal with problems:Please refer to <a href="https://gitee.com/openeuler/community/blob/master/en/contributors/issue-submit.md" target="_blank" rel="noopener noreferrer" class="underline-link">Issue Submission and Handling Guide</a>.',
+          'Review PR：Review the PR submitted by contributor. The review can refer to community coding suggestions and <a href="https://atomgit.com/openeuler/security-committee/blob/master/guide/SecureCoding_en.md" target="_blank" rel="noopener noreferrer" class="underline-link">openEuler Secure Coding Guide</a>.',
+          'Distribute and deal with problems:Please refer to <a href="https://atomgit.com/openeuler/community/blob/master/en/contributors/issue-submit.md" target="_blank" rel="noopener noreferrer" class="underline-link">Issue Submission and Handling Guide</a>.',
           `Tracking dependency issues：In the development branch, software package's dependencies in the SIG may be broken due to the software package updates in other SIG. At this time, the Committer will receive an alert. Then, the committer should try to rebuild the software package. Because dependency problem may prevent users from updating the system, the build team will also participates in rebuilding packages that have dependency issues, but the Maintainer should not rely on these works.`,
           'Notify SIG that may be affected due to interface changes：Because other SIGs or projects rely on software package of this SIG, changes to the package interface may affect them. Maintainer should review the dependency impact caused by decision changes. Then Maintainer should announce and send alert emails of API or ABI changes. Those work should be completed at least one week before the change occurs, and all SIGs that may be affected should be notified. For detailed informationes please refer to <a href="https://www.openeuler.org/en/sig/role-description/" target="_blank" rel="noopener noreferrer" class="underline-link">API Change Notification Process</a>.',
           'Update and maintain package version：Follow the startegy of <a href="https://www.openeuler.org/en/sig/role-description/" target="_blank" rel="noopener noreferrer" class="underline-link">Software Package Update Quality Control Policies</a> and complete the package update.',

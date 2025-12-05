@@ -4,7 +4,7 @@
       <p>
         <img src="@/assets/nestos/cards/cards-work.png" alt="" />
       </p>
-      <el-button @click="goLink('https://gitee.com/openeuler/NestOS')">{{
+      <el-button @click="goLink('https://atomgit.com/openeuler/NestOS')">{{
         i18n.nestos.card.nestosTitle
       }}</el-button>
     </div>
@@ -23,7 +23,7 @@
           >{{ i18n.nestos.card.mainDesc2
           }}<span
             class="text-style"
-            @click="goLink('https://gitee.com/openeuler/NestOS/issues')"
+            @click="goLink('https://atomgit.com/openeuler/NestOS/issues')"
             >{{ i18n.nestos.card.linksText }}</span
           >。</span
         >

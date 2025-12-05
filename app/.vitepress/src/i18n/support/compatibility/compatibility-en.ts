@@ -147,9 +147,9 @@ export default {
         ID: '01',
         TITLE: 'Apply to join the openEuler community (0.5 days).',
         DESCRIPTION_1:
-          'You need to apply to join the openEuler community on the Gitee platform to become a member of the organization. Application address:',
+          'You need to apply to join the openEuler community on the AtomGit platform to become a member of the organization. Application address:',
         A_TEXT:
-          'https://gitee.com/openeuler/infrastructure/blob/master/docs/openEuler-Infra-FAQ-en.md',
+          'https://atomgit.com/openeuler/infrastructure/blob/master/docs/openEuler-Infra-FAQ-en.md',
         DESCRIPTION_2: '.',
       },
       {
@@ -179,7 +179,7 @@ export default {
         TITLE: 'Create an issue (0.5 days).',
         DESCRIPTION_1:
           'After signing the agreement, create an issue under the oec-hardware project (',
-        A_TEXT: 'https://gitee.com/openeuler/oec-hardware',
+        A_TEXT: 'https://atomgit.com/openeuler/oec-hardware',
         DESCRIPTION_2:
           ') in the openEuler community and specify the hardware information in the issue. The SIG will give feedback on the issue in a timely manner.',
       },
@@ -191,8 +191,8 @@ export default {
         A_TEXT: 'Click here to obtain oec-hardware.',
         A_TEXT_2: 'Click here to obtain the user guide.',
         DESCRIPTION_2: '.',
-        A_HREF: 'https://gitee.com/src-openeuler/oec-hardware/releases',
-        A_HREF_2: 'https://gitee.com/openeuler/oec-hardware',
+        A_HREF: 'https://atomgit.com/src-openeuler/oec-hardware/releases',
+        A_HREF_2: 'https://atomgit.com/openeuler/oec-hardware',
         DOWNLOAD_NAME: 'oec-hardware User Guide',
       },
       {
@@ -229,7 +229,7 @@ export default {
         ID: '01',
         TITLE: 'Create an issue.',
         DESCRIPTION_1: 'Create an issue under the oec-application project (',
-        A_TEXT: 'https://gitee.com/openeuler/oec-application',
+        A_TEXT: 'https://atomgit.com/openeuler/oec-application',
         DESCRIPTION_2:
           ') in the openEuler community and specify the software information in the issue. The SIG will give feedback on the issue in a timely manner.',
       },
@@ -239,7 +239,7 @@ export default {
         DESCRIPTION_1:
           'After the issue is created, perform the compatibility test. openEuler provides the',
         A_TEXT: 'Compass-CI',
-        A_HREF: 'https://gitee.com/openeuler/compass-ci',
+        A_HREF: 'https://atomgit.com/openeuler/compass-ci',
         DESCRIPTION_2:
           'automated testing platform and user guide to help you complete the test.',
       },

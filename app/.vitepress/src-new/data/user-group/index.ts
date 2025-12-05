@@ -61,7 +61,7 @@ export const introData = {
         {
           text: '输出用户案例',
           operation: '投递案例',
-          url: 'https://gitee.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md',
+          url: 'https://atomgit.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md',
         },
         {
           text: '反馈用户诉求',
@@ -151,5 +151,5 @@ export const detailData = {
 export const linkData = {
   applyEvent: '/zh/interaction/event-list/#activity-apply',
   provideCase:
-    'https://gitee.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md',
+    'https://atomgit.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md',
 };

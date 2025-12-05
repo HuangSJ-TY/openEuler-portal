@@ -71,7 +71,7 @@ export const moduleMap = new Map([
     {
       label: {
         zh: '代码仓',
-        en: 'GITEE',
+        en: 'AtomGit',
       },
     },
   ],

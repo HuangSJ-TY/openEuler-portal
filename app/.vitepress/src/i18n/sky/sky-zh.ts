@@ -118,7 +118,7 @@ export default {
     CARD_TITLE: 'Call for 基础设施资源贡献',
     GUIDELINES: '贡献指南',
     GUIDELINES_URL:
-      'https://gitee.com/openeuler/infrastructure/blob/master/docs/resource-donation-guide/resource-donation.md',
+      'https://atomgit.com/openeuler/infrastructure/blob/master/docs/resource-donation-guide/resource-donation.md',
     CARD_INTRODUCTION:
       'openEuler社区的发展离不开支撑社区运作的基础设施，openEuler社区基础设施由Infrastructure SIG管理和运维，为社区提供南北向兼容性测试、代码门禁检查、软件包及操作系统镜像构建、软件包仓库等众多服务。社区秉承共建、共享的理念，接受来自各社区参与者提供的Call for 基础设施资源贡献。',
     CARD_INTRODUCTION2: 'infra@openeuler.org',

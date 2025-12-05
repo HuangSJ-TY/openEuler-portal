@@ -304,7 +304,7 @@ onUnmounted(() => {
           <p class="intriduce">{{ openGaussTask.intriduce }}</p>
           <div class="btn">
             <a
-              href="https://gitee.com/opengauss/opensource-intership/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true"
+              href="https://atomgit.com/opengauss/opensource-intership/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openlookeng-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=newest&state=open&target_project&skip_mobile=true"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -452,7 +452,7 @@ onUnmounted(() => {
                 {{ RULE.MORE[0] }}
                 <a
                   class="this-post"
-                  href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
+                  href="https://atomgit.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
                   target="_blank"
                   rel="noopener noreferrer"
                   >{{ RULE.MORE[1] }}</a

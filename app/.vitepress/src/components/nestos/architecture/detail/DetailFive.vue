@@ -69,7 +69,7 @@
       <p class="detail-para-title">● 详细说明请参阅</p>
       <p>
         <a
-          href="https://gitee.com/openeuler/NestOS/blob/master/docs/zh/usr_manual/NestOS-For-Container%E4%BB%A5OCI%E6%96%B9%E5%BC%8F%E5%AE%9A%E5%88%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md"
+          href="https://atomgit.com/openeuler/NestOS/blob/master/docs/zh/usr_manual/NestOS-For-Container%E4%BB%A5OCI%E6%96%B9%E5%BC%8F%E5%AE%9A%E5%88%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md"
           >NestOS For Container以OCI方式定制使用手册</a
         >
       </p>

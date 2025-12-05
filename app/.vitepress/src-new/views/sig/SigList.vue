@@ -37,7 +37,7 @@ import type { SigCompleteItemT, GroupInfoT } from '~@/@types/type-sig';
 
 import { getSigLandscape, getSigList, getSigFilter } from '~@/api/api-sig';
 
-import IconGitee from '~icons/app-new/icon-gitee.svg';
+import IconAtomGit from '~icons/app-new/icon-atomgit.svg';
 import IconSearch from '~icons/app-new/icon-search.svg';
 import IconUser from '~icons/sig/icon-user.svg';
 import IconSigSpace from '~icons/sig/sig-space.svg';
@@ -724,7 +724,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
           </div>
           <div class="sig-link">
             <OLink
-              :href="`https://gitee.com/openeuler/community/tree/master/sig/${sig.name}`"
+              :href="`https://atomgit.com/openeuler/community/tree/master/sig/${sig.name}`"
               target="_blank"
               v-analytics="{
                 properties: {
@@ -737,7 +737,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
               }"
             >
               <OIcon class="gitee-icon">
-                <IconGitee />
+                <IconAtomGit />
               </OIcon>
             </OLink>
             <ODivider
@@ -793,7 +793,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
               <div class="lebal">{{ $t('sig.repo') }}:</div>
               <OLink
                 color="primary"
-                :href="`https://gitee.com/${activeRepo}`"
+                :href="`https://atomgit.com/${activeRepo}`"
                 target="_blank"
               >
                 {{ activeRepo }}
@@ -830,7 +830,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
                       :key="item"
                       class="repo-item"
                       color="primary"
-                      :href="`https://gitee.com/${item}`"
+                      :href="`https://atomgit.com/${item}`"
                       target="_blank"
                     >
                       {{ item + (i === sig.repositories.length - 1 ? '' : '、') }}
@@ -905,7 +905,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
               <div class="lebal">{{ $t('sig.repo') }}:</div>
               <OLink
                 color="primary"
-                :href="`https://gitee.com/${activeRepo}`"
+                :href="`https://atomgit.com/${activeRepo}`"
                 target="_blank"
               >
                 {{ activeRepo }}
@@ -915,11 +915,11 @@ const onClickSearchRes = (type: string, ev: Event) => {
           <ODivider direction="h" :style="{ '--o-divider-gap': '8px' }" />
           <div class="sig-link">
             <OIcon class="gitee-icon">
-              <IconGitee />
+              <IconAtomGit />
             </OIcon>
             <OLink
               color="primary"
-              :href="`https://gitee.com/openeuler/community/tree/master/sig/${sig.name}`"
+              :href="`https://atomgit.com/openeuler/community/tree/master/sig/${sig.name}`"
               target="_blank"
               class="icon-link"
             >
@@ -969,7 +969,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
                       :key="item"
                       class="repo-item"
                       color="primary"
-                      :href="`https://gitee.com/${item}`"
+                      :href="`https://atomgit.com/${item}`"
                       target="_blank"
                     >
                       {{ item + (i === sig.repositories.length - 1 ? '' : '、') }}
@@ -1333,6 +1333,9 @@ const onClickSearchRes = (type: string, ev: Event) => {
     }
     .gitee-icon {
       --icon-size: 24px;
+      svg {
+        fill: none;
+      }
     }
     .o-btn {
       margin-left: 12px;

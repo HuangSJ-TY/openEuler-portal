@@ -17,7 +17,7 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler',
+      URL: 'https://atomgit.com/openeuler',
       BLANK: true,
     },
     {
@@ -81,11 +81,11 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/community/blob/master/en/contributors/create-package.md',
+      URL: 'https://atomgit.com/openeuler/community/blob/master/en/contributors/create-package.md',
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/src-openeuler',
+      URL: 'https://atomgit.com/src-openeuler',
       BLANK: true,
     },
     {
@@ -93,7 +93,7 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/community/blob/master/en/contributors/packaging.md',
+      URL: 'https://atomgit.com/openeuler/community/blob/master/en/contributors/packaging.md',
       BLANK: true,
     },
     {
@@ -109,11 +109,11 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/security-committee/blob/master/security-disclosure-en.md',
+      URL: 'https://atomgit.com/openeuler/security-committee/blob/master/security-disclosure-en.md',
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/QA/blob/master/GuideBook/community-test-system.md',
+      URL: 'https://atomgit.com/openeuler/QA/blob/master/GuideBook/community-test-system.md',
       BLANK: true,
     },
     // call for x 暂无英文页面(lenk-en(27))

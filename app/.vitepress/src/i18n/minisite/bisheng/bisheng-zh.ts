@@ -32,19 +32,19 @@ export default {
       LINK_LIST: [
         {
           TEXT: '毕昇JDK 8',
-          LINK: 'https://gitee.com/openeuler/bishengjdk-8',
+          LINK: 'https://atomgit.com/openeuler/bishengjdk-8',
         },
         {
           TEXT: '毕昇JDK 11',
-          LINK: 'https://gitee.com/openeuler/bishengjdk-11',
+          LINK: 'https://atomgit.com/openeuler/bishengjdk-11',
         },
         {
           TEXT: '毕昇JDK 17',
-          LINK: 'https://gitee.com/openeuler/bishengjdk-17',
+          LINK: 'https://atomgit.com/openeuler/bishengjdk-17',
         },
         {
           TEXT: '毕昇JDK 21',
-          LINK: 'https://gitee.com/openeuler/bishengjdk-21',
+          LINK: 'https://atomgit.com/openeuler/bishengjdk-21',
         },
       ],
       SHOW: false,
@@ -56,19 +56,19 @@ export default {
       LINK_LIST: [
         {
           TEXT: '毕昇JDK 8',
-          LINK: 'https://gitee.com/openeuler/bishengjdk-8/issues',
+          LINK: 'https://atomgit.com/openeuler/bishengjdk-8/issues',
         },
         {
           TEXT: '毕昇JDK 11',
-          LINK: 'https://gitee.com/openeuler/bishengjdk-11/issues',
+          LINK: 'https://atomgit.com/openeuler/bishengjdk-11/issues',
         },
         {
           TEXT: '毕昇JDK 17',
-          LINK: 'https://gitee.com/openeuler/bishengjdk-17/issues',
+          LINK: 'https://atomgit.com/openeuler/bishengjdk-17/issues',
         },
         {
           TEXT: '毕昇JDK 21',
-          LINK: 'https://gitee.com/openeuler/bishengjdk-21/issues',
+          LINK: 'https://atomgit.com/openeuler/bishengjdk-21/issues',
         },
       ],
       SHOW: false,
@@ -80,7 +80,7 @@ export default {
       LINK_LIST: [
         {
           TEXT: '2021',
-          LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234',
+          LINK: 'https://atomgit.com/openeuler/bishengjdk-8/wikis/Compiler%20SIG%E4%BE%8B%E4%BC%9A?sort_id=4182234',
         },
         {
           TEXT: '2022及以后',
@@ -94,7 +94,7 @@ export default {
       DARK_IMG: uploadImg,
       TITLE: 'Roadmap',
       LINK_LIST: [
-        'https://gitee.com/openeuler/bishengjdk-8/wikis/%E9%A1%B9%E7%9B%AE%E8%B7%AF%E6%A0%87?sort_id=4182245',
+        'https://atomgit.com/openeuler/bishengjdk-8/wikis/%E9%A1%B9%E7%9B%AE%E8%B7%AF%E6%A0%87?sort_id=4182245',
       ],
       SHOW: false,
     },
@@ -145,19 +145,19 @@ export default {
         LINK: [
           {
             TEXT: '毕昇JDK 8',
-            LINK: 'https://gitee.com/openeuler/bishengjdk-8/wikis/Home',
+            LINK: 'https://atomgit.com/openeuler/bishengjdk-8/wikis/Home',
           },
           {
             TEXT: '毕昇JDK 11',
-            LINK: 'https://gitee.com/openeuler/bishengjdk-11/wikis/Home',
+            LINK: 'https://atomgit.com/openeuler/bishengjdk-11/wikis/Home',
           },
           {
             TEXT: '毕昇JDK 17',
-            LINK: 'https://gitee.com/openeuler/bishengjdk-17/wikis/Home',
+            LINK: 'https://atomgit.com/openeuler/bishengjdk-17/wikis/Home',
           },
           {
             TEXT: '毕昇JDK 21',
-            LINK: 'https://gitee.com/openeuler/bishengjdk-21/wikis/Home',
+            LINK: 'https://atomgit.com/openeuler/bishengjdk-21/wikis/Home',
           },
         ],
         BACKGROUND: {
