@@ -160,7 +160,7 @@ watch(
         })
       }
     })
-  }
+  }, { deep: true }
 );
 
 const getLink = (data: any) => {
@@ -755,6 +755,7 @@ const generatePdfUrl = (page) => {
             .whitepaper-title {
               & h3 {
                 display: inline;
+                vertical-align: middle;
               }
 
               .title-tip {
@@ -766,6 +767,7 @@ const generatePdfUrl = (page) => {
                 border-radius: var(--o-radius-xs);
                 padding: 0 2px;
                 white-space: nowrap;
+                vertical-align: middle;
               }
             }
 
