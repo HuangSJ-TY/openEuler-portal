@@ -289,6 +289,18 @@ useInViewDuration(container, (duration) => {
     duration,
   });
 });
+
+watch(
+  () => tabType.value,
+  (val) => {
+    oaReport('click', {
+      module: 'homepage',
+      level1: 'openEuler开发者日历',
+      level2: titleList.find((item) => item.value === val)?.label || '',
+      type: 'tab',
+    });
+  }
+);
 </script>
 <template>
   <AppSection
@@ -296,17 +308,16 @@ useInViewDuration(container, (duration) => {
     class="home-calendar"
     ref="container"
     v-analytics.bubble.noTrigger="{ level1: 'openEuler开发者日历' }"
-    data-v-analytics-title="openEuler开发者日历"
   >
     <div class="calendar-body">
       <el-calendar ref="calendar" class="calender">
         <template #header="{ date }">
           <div class="left-title">
-            <OIcon @click="selectDate('prev-month', date)">
+            <OIcon @click="selectDate('prev-month', date)" v-analytics.bubble="{ target: date, type: 'prev-month' }">
               <IconLeft :class="{ disable: isLimit }"></IconLeft>
             </OIcon>
             <span class="month-date">{{ date }}</span>
-            <OIcon @click="selectDate('next-month', date)">
+            <OIcon @click="selectDate('next-month', date)" v-analytics.bubble="{ target: date, type: 'next-month' }">
               <IconRight></IconRight>
             </OIcon>
           </div>
@@ -455,6 +466,7 @@ useInViewDuration(container, (duration) => {
                         v-analytics.bubble="{
                           level2: tabType,
                           level3: item.name || item.title,
+                          level4: item.group_name,
                           target: item[keys.key],
                         }"
                         >{{ item[keys.key] }}</a
