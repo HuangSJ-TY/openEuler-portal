@@ -40,6 +40,12 @@ export default {
         if (to.includes('/security/cve')) {
           return { $service: 'cvemanager' };
         }
+        if (to.includes('/sig')) {
+          return { $service: 'sig' };
+        }
+        if (to.includes('/download')) {
+          return { $service: 'download' };
+        }
       },
       onEnable() {
         const hm = document.createElement('script');
