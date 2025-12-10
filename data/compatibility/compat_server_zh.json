@@ -32873,6 +32873,328 @@
       "hostBusAdapter": "Huawei Technologies Co., Ltd. HiSilicon SAS 3.0 HBA (rev 21)",
       "hardDiskDrive": "enclosu BROADCOM VirtualSES 03 - "
     }
+  },
+  {
+    "hardwareFactory": "安擎计算机",
+    "hardwareModel": "EG8828H4",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/11/03",
+    "friendlyLink": "https://td1.enginetech.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1563",
+        "svID": "1dcf",
+        "ssID": "0307",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "date": "2025/07/22",
+        "sha256": "e68c2b62a901b21b99e6add214a639279e5555e99fd10e395b2a9f46f5cc94cb",
+        "driverSize": "723k",
+        "chipVendor": "Intel",
+        "boardModel": "SND E10GI2-X550 2-PORT 10G RJ45 NIC ",
+	"chipModel": "X550",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://td1.enginetech.cn/",
+      "certificationTime": "2025/11/03",
+      "commitID": "ID4FC7",
+      "mainboardModel": "62DC24X_U8",
+      "biosUefi": "CYH1050018",
+      "cpu": "Hygon C86 7490 64-core Processor",
+      "ram": "24*96G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "08:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "[9:0:0:0]   disk   ATA   SSSTC ER3-GD480  402  /dev/sda
+	[25:0:0:0]   disk   ATA   SAMSUNG MZ7L3480 604Q  /dev/sdb"
+    }
+  },
+  {
+    "hardwareFactory": "安擎计算机",
+    "hardwareModel": "EG5210H4",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/11/03",
+    "friendlyLink": "https://td1.enginetech.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8088",
+        "deviceID": "0101",
+        "svID": "8088",
+        "ssID": "8201",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "ngbe",
+        "version": "1.1.0oe",
+        "type": "NIC",
+        "date": "2025/05/23",
+        "sha256": "66498355110d93685f8bf9754bbce34bf5c2aa1103dfc343b3af261252161790",
+        "driverSize": "391819",
+        "chipVendor": "Net-Swift",
+        "boardModel": "Net-Swift WX1860A2 2-port 1G RJ45 NIC",
+	"chipModel": "WX1860A2",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://td1.enginetech.cn/",
+      "certificationTime": "2025/05/03",
+      "commitID": "ID4FG0",
+      "mainboardModel": "22DD4",
+      "biosUefi": "CXH1050012",
+      "cpu": "Hygon C86-4G (OPN:3490)",
+      "ram": "2*16GB DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "[12:0:0:0]  disk  ATA   SAMSUNG MZ7L31T9 304Q  /dev/sda
+	[13:0:0:0]   disk   ATA   SAMSUNG MZ7L31T9 304Q  /dev/sdb"
+    }
+  },
+  {
+    "hardwareFactory": "安擎计算机",
+    "hardwareModel": "EG5221H4",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/11/03",
+    "friendlyLink": "https://td1.enginetech.cn/",
+    "boardCards": [
+      {
+        "vendorID": "1000",
+        "deviceID": "10e2",
+        "svID": "1000",
+        "ssID": "4010",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "megaraid_sas",
+        "version": "0.7.706.03.00-rc1",
+        "type": "RAID",
+        "date": "2025/04/22",
+        "sha256": "1321b4bd6917fb1cd86a317ce7d77bde4fd4d96f69cf4d2df062ff333d54ba91",
+        "driverSize": "296459",
+        "chipVendor": "Broadcom",
+        "boardModel": "BCM 9560-8i Tri-Mode RAID",
+	"chipModel": "RAID_SAS3908",
+        "item": "",
+        "downloadLink": "inbox"
+      },
+      {
+        "vendorID": "15b3",
+        "deviceID": "0001",
+        "svID": "15b3",
+        "ssID": "0001",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "mlx5_core",
+        "version": "5.0-0",
+        "type": "NIC",
+        "date": "2025/04/22",
+        "sha256": "7f48e90903bb797e976f6187b8fa62fc3fdf950fdb0442545c13909f743dd70a",
+        "driverSize": "1434867",
+        "chipVendor": "Mellanox",
+        "boardModel": "MLX MCX631102AN-ADAT 2-port 25G SFP28 NIC",
+	"chipModel": "ConnectX-6 Lx",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://td1.enginetech.cn/",
+      "certificationTime": "2025/11/03",
+      "commitID": "ID4FH9",
+      "mainboardModel": "52DC16",
+      "biosUefi": "CHH2051022",
+      "cpu": "Hygon C86-4G (OPN:5480)",
+      "ram": "8*64G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "0d:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": "BCM 9560-8i Tri-Mode RAID",
+      "hardDiskDrive": ""
+    }
+  },
+  {
+    "hardwareFactory": "安擎计算机",
+    "hardwareModel": "EG5425H4",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/11/03",
+    "friendlyLink": "https://td1.enginetech.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8088",
+        "deviceID": "0101",
+        "svID": "8088",
+        "ssID": "8201",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "ngbe",
+        "version": "1.1.0oe",
+        "type": "NIC",
+        "date": "2025/05/23",
+        "sha256": "66498355110d93685f8bf9754bbce34bf5c2aa1103dfc343b3af261252161790",
+        "driverSize": "391819",
+        "chipVendor": "Net-Swift",
+        "boardModel": "Net-Swift WX1860A2 2-port 1G RJ45 NIC",
+	"chipModel": "WX1860A2",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://td1.enginetech.cn/",
+      "certificationTime": "2025/11/03",
+      "commitID": "ID4DQM",
+      "mainboardModel": "62DC24",
+      "biosUefi": "CXH1050012",
+      "cpu": "Hygon C86-4G (OPN:7480)",
+      "ram": "2*16GB DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "[12:0:0:0]  disk  ATA   SAMSUNG MZ7L31T9 304Q  /dev/sda
+	[13:0:0:0]   disk   ATA   SAMSUNG MZ7L31T9 304Q  /dev/sdb"
+    }
+  },
+  {
+    "hardwareFactory": "安擎计算机",
+    "hardwareModel": "EG8440H4",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/11/03",
+    "friendlyLink": "https://td1.enginetech.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1563",
+        "svID": "1dcf",
+        "ssID": "0307",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "date": "2025/07/22",
+        "sha256": "e68c2b62a901b21b99e6add214a639279e5555e99fd10e395b2a9f46f5cc94cb",
+        "driverSize": "723k",
+        "chipVendor": "Intel",
+        "boardModel": "SND E10GI2-X550 2-port 10G RJ45 NIC",
+	"chipModel": "X550",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://td1.enginetech.cn/",
+      "certificationTime": "2025/11/03",
+      "commitID": "ID4FL4",
+      "mainboardModel": "82DA48",
+      "biosUefi": "CYH1050018",
+      "cpu": "Hygon C86 7490 64-core Processor",
+      "ram": "24*96G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "08:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "[9:0:0:0]  disk  ATA   SSSTC ER3-GD480 402  /dev/sda
+	[25:0:0:0]   disk   ATA   SAMSUNG MZ7L3480 604Q  /dev/sdb"
+    }
+  },
+  {
+    "hardwareFactory": "安擎计算机",
+    "hardwareModel": "EG8420H4",
+    "osVersion": "openEuler 20.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/11/03",
+    "friendlyLink": "https://td1.enginetech.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8086",
+        "deviceID": "1563",
+        "svID": "1dcf",
+        "ssID": "0307",
+        "architecture": "x86_64",
+        "os": "openEuler 20.03 LTS SP4",
+        "driverName": "ixgbe",
+        "version": "5.1.0-k",
+        "type": "NIC",
+        "date": "2025/07/22",
+        "sha256": "e68c2b62a901b21b99e6add214a639279e5555e99fd10e395b2a9f46f5cc94cb",
+        "driverSize": "723k",
+        "chipVendor": "Intel",
+        "boardModel": "SND E10GI2-X550 2-port 10G RJ45 NIC",
+	"chipModel": "X550",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://td1.enginetech.cn/",
+      "certificationTime": "2025/11/03",
+      "commitID": "ID4FL4",
+      "mainboardModel": "82DA48",
+      "biosUefi": "CYH1050018",
+      "cpu": "Hygon C86 7490 64-core Processor",
+      "ram": "24*96G DIMMs",
+      "portsBusTypes": "",
+      "videoAdapter": "08:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "[9:0:0:0]  disk  ATA   SSSTC ER3-GD480 402  /dev/sda
+	[25:0:0:0]   disk   ATA   SAMSUNG MZ7L3480 604Q  /dev/sdb"
+    }
+  },
+  {
+    "hardwareFactory": "安擎计算机",
+    "hardwareModel": "EG5220H4",
+    "osVersion": "openEuler 22.03 LTS SP4",
+    "architecture": "x86_64",
+    "date": "2025/11/03",
+    "friendlyLink": "https://td1.enginetech.cn/",
+    "boardCards": [
+      {
+        "vendorID": "8088",
+        "deviceID": "0101",
+        "svID": "8088",
+        "ssID": "8201",
+        "architecture": "x86_64",
+        "os": "openEuler 22.03 LTS SP4",
+        "driverName": "ngbe",
+        "version": "1.2.2oe",
+        "type": "NIC",
+        "date": "2025/05/23",
+        "sha256": "9c7203faa22eba3766a5ff464c0ae234368c18e08f46fe7100226f20f574c8b3",
+        "driverSize": "98688",
+        "chipVendor": "Net-Swift",
+        "boardModel": "Net-Swift WX1860A2 2-port 1G RJ45 NIC",
+	"chipModel": "WX1860A2",
+        "item": "",
+        "downloadLink": "inbox"
+      }
+    ],
+    "compatibilityConfiguration": {
+      "productInformation": "http://td1.enginetech.cn/",
+      "certificationTime": "2025/11/03",
+      "commitID": "ID4FMV",
+      "mainboardModel": "62DC24",
+      "biosUefi": "CXH1050012",
+      "cpu": "Hygon C86-4G (OPN:7490)",
+      "ram": "8*32GB DIMMs",
+      "portsBusTypes": "Type: x16 PCI Express 5
+      Type: x4 PCI Express 5 x16
+      Type: x4 PCI Express 5 x16
+      Type: x2 PCI Express",
+      "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
+      "hostBusAdapter": "",
+      "hardDiskDrive": "[12:0:0:0]  disk  ATA   SAMSUNG MZ7L31T9 304Q  /dev/sda
+	[13:0:0:0]  disk  ATA   SAMSUNG MZ7L31T9 304Q  /dev/sdb"
+    }
   }
 
 ]
