@@ -32914,8 +32914,7 @@
       "portsBusTypes": "",
       "videoAdapter": "08:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
       "hostBusAdapter": "",
-      "hardDiskDrive": "[9:0:0:0]   disk   ATA   SSSTC ER3-GD480  402  /dev/sda
-	[25:0:0:0]   disk   ATA   SAMSUNG MZ7L3480 604Q  /dev/sdb"
+      "hardDiskDrive": "[9:0:0:0] disk ATA SSSTC ER3-GD480 402 /dev/sda [25:0:0:0] disk ATA SAMSUNG MZ7L3480 604Q /dev/sdb"
     }
   },
   {
@@ -32957,8 +32956,7 @@
       "portsBusTypes": "",
       "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
       "hostBusAdapter": "",
-      "hardDiskDrive": "[12:0:0:0]  disk  ATA   SAMSUNG MZ7L31T9 304Q  /dev/sda
-	[13:0:0:0]   disk   ATA   SAMSUNG MZ7L31T9 304Q  /dev/sdb"
+      "hardDiskDrive": "[12:0:0:0] disk ATA SAMSUNG MZ7L31T9 304Q /dev/sda [13:0:0:0] disk ATA SAMSUNG MZ7L31T9 304Q /dev/sdb"
     }
   },
   {
@@ -33061,8 +33059,7 @@
       "portsBusTypes": "",
       "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
       "hostBusAdapter": "",
-      "hardDiskDrive": "[12:0:0:0]  disk  ATA   SAMSUNG MZ7L31T9 304Q  /dev/sda
-	[13:0:0:0]   disk   ATA   SAMSUNG MZ7L31T9 304Q  /dev/sdb"
+      "hardDiskDrive": "[12:0:0:0] disk ATA SAMSUNG MZ7L31T9 304Q /dev/sda [13:0:0:0] disk ATA SAMSUNG MZ7L31T9 304Q /dev/sdb"
     }
   },
   {
@@ -33104,8 +33101,7 @@
       "portsBusTypes": "",
       "videoAdapter": "08:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
       "hostBusAdapter": "",
-      "hardDiskDrive": "[9:0:0:0]  disk  ATA   SSSTC ER3-GD480 402  /dev/sda
-	[25:0:0:0]   disk   ATA   SAMSUNG MZ7L3480 604Q  /dev/sdb"
+      "hardDiskDrive": "[9:0:0:0] disk ATA SSSTC ER3-GD480 402 /dev/sda [25:0:0:0] disk ATA SAMSUNG MZ7L3480 604Q /dev/sdb"
     }
   },
   {
@@ -33147,8 +33143,7 @@
       "portsBusTypes": "",
       "videoAdapter": "08:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
       "hostBusAdapter": "",
-      "hardDiskDrive": "[9:0:0:0]  disk  ATA   SSSTC ER3-GD480 402  /dev/sda
-	[25:0:0:0]   disk   ATA   SAMSUNG MZ7L3480 604Q  /dev/sdb"
+      "hardDiskDrive": "[9:0:0:0] disk ATA SSSTC ER3-GD480 402 /dev/sda [25:0:0:0] disk ATA SAMSUNG MZ7L3480 604Q /dev/sdb"
     }
   },
   {
@@ -33193,8 +33188,7 @@
       Type: x2 PCI Express",
       "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
       "hostBusAdapter": "",
-      "hardDiskDrive": "[12:0:0:0]  disk  ATA   SAMSUNG MZ7L31T9 304Q  /dev/sda
-	[13:0:0:0]  disk  ATA   SAMSUNG MZ7L31T9 304Q  /dev/sdb"
+      "hardDiskDrive": "[12:0:0:0] disk ATA SAMSUNG MZ7L31T9 304Q /dev/sda [13:0:0:0] disk ATA SAMSUNG MZ7L31T9 304Q /dev/sdb"
     }
   }
 
