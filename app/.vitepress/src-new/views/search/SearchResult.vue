@@ -160,6 +160,7 @@ watch(
         })
       }
     })
+    localSearchResultList.value = JSON.parse(JSON.stringify(val));
   }, { deep: true }
 );
 
@@ -196,6 +197,7 @@ const downloadZoneData = computed(() => {
 const downloadAggre = computed(() => {
   return props.searchResultList.find((item) => item.type === 'aggre');
 });
+const localSearchResultList = ref(JSON.parse(JSON.stringify(props.searchResultList)));
 //
 // ----------------------- 埋点相关 ----------------------------
 let SEARCH_EVENT_ID = uniqueId();
@@ -348,7 +350,7 @@ const generatePdfUrl = (page) => {
     <div class="search-content">
       <!-- 搜索内容列表 -->
       <div ref="contentRef" class="content-box">
-        <div v-if="searchResultList.length" class="content-list">
+        <div v-if="localSearchResultList.length" class="content-list">
           <div v-if="zoneShownCondition" class="search-zone">
             <SearchDownloadAggre v-if="downloadAggre && !downloadZoneData" />
             <SearchDownloadZone
@@ -361,7 +363,7 @@ const generatePdfUrl = (page) => {
               :search-value="searchValue"
             />
           </div>
-          <template v-for="(item, index) in searchResultList" :key="item.id">
+          <template v-for="(item, index) in localSearchResultList" :key="item.id">
             <template v-if="index === MO_FEEDBACK_INDEX && lePadV">
               <SearchFeedback
                 class="mo-feedback"
