@@ -51,7 +51,7 @@ summary: 'openEuler 代码托管平台切换'
 2025年12月12日
 
 **附常见FAQ:**    
-https://gitcode.com/openeuler/openEuler-agreements/blob/main/Guide/migration-guide.md
+[openEuler社区代码托管平台迁移指导](https://atomgit.com/openeuler/openEuler-agreements/blob/main/Guide/migration-guide.md)
 
 **附测试仓库清单：**
 | SIG组 | 测试的仓库 |
