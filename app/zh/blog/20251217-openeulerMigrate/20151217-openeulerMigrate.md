@@ -15,7 +15,6 @@ summary: 'openEuler 代码托管平台切换'
 #### 我们需要您协助完成：
 1.  登录 Gitee平台 (https://gitee.com/profile/account_information) ，如已登录则忽略；    
 2.  根据指引(https://atomgit.com/openeuler-guide) 完成新账号绑定和同意书签署 ；   
-3.  选择邮件末尾所附SIG组测试仓库进行试用，完成PR/ISSUE/Comment提交等相关测试 ；    
 
 #### 您在社区的历史贡献数据不会因迁移受到影响。
 ####  我们将会：
