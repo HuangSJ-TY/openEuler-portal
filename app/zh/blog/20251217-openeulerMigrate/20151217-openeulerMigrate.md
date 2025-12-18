@@ -20,7 +20,8 @@ summary: 'openEuler 代码托管平台切换'
 #### 您在社区的历史贡献数据不会因迁移受到影响。
 ####  我们将会：
 1.  自动收集您绑定后的AtomGit平台账号；    
-2.  将您的账号配置到community仓库(https://atomgit.com/openeuler/community) ，确保您的社区权限和原平台一致；    
+2.  将openEuler社区SIG组的maintainer和commiter账号配置到community仓库(https://atomgit.com/openeuler/community), 确保openEuler社区的SIG组的权限和原平台一致；  
+3.  我们将会将您加入到AtomGit平台 [openEuler](https://atomgit.com/openeuler) 和 [src-openeuler](https://atomgit.com/src-openeuler) 组织下； 
 
 #### 迁移计划：
 1.  12月10日前完成社区代码仓/分支/PR/ISSUE/Comment等内容迁移，由Infrastructure团队联合托管平台统一实施，开发者无需操作；    
