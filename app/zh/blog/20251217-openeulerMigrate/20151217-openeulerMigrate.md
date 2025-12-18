@@ -10,7 +10,7 @@ summary: 'openEuler 代码托管平台切换'
 
 
 根据开放原子开源基金会openEuler项目群委员会决议，openEuler社区代码托管平台将由 gitee.com平台迁换至 atomgit.com 平台；
-近期基础设置（以下称：我们）将牵头开展社区代码托管平台迁移工作，现将迁移工作相关事宜通知如下：
+近期基础设施（以下称：我们）将牵头开展社区代码托管平台迁移工作，现将迁移工作相关事宜通知如下：
 
 #### 我们需要您协助完成：
 1.  登录 Gitee平台 (https://gitee.com/profile/account_information) ，如已登录则忽略；    
