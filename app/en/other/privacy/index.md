@@ -14,7 +14,8 @@ The OpenAtom Foundation (hereinafter referred to as "we," "us," or "foundation")
 
 Please carefully review the following updates to this privacy policy:
 
-1. Update Account Service in section "How We Collect and Process Your Personal Data".
+1. Changed the code hosting platform to AtomGit (operated by the OpenAtom Foundation).
+2. Added the AtomGit login mode.
 
 ## 1. How We Collect and Process Your Personal Data
 
@@ -24,14 +25,28 @@ Please carefully review the following updates to this privacy policy:
 
   1. When you register for an openEuler community account, we will collect your **user name**, **email address**, **phone number**, **password**, and **email/phone verification code**. A unique account identifier will be automatically generated. Refusal to provide this information will prevent account creation.
   2. When you log in to the openEuler community using your **user name**, **email address**, or **phone number**, we will collect your **user name**, **email address**, **phone number**, **password** and **verification code** for authentication. Refusal to provide this information will prevent login.
-  3. When you log in using a third-party account (Gitee, GitHub, or OpenAtom), we will collect your **Gitee UUID**、**Gitee ID**、Gitee nickname、**Gitee email address**、Gitee avatar、**Github UUID**、**Github ID**、Github nickname、**Github email address**、Github avatar、**OpenAtom UUID**、**OpenAtom username**、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar from that platform for authentication and code repository access management. If you use Gitee or GitHub without an existing bound openEuler account, a new openEuler account with a unique identifier will be automatically generated, deriving from your **Gitee ID** or **GitHub ID**. Refusal to provide this information will prevent login via third-party accounts.
+  3. When you log in using a third-party account (Gitee, GitHub, OpenAtom, or AtomGit), we will collect the following information based on your login mode:
+    - **Gitee UUID**、**Gitee ID**、Gitee nickname、**Gitee email address**、Gitee avatar;
+    - **Github UUID**、**Github ID**、Github nickname、**Github email address**、Github avatar;
+    - **OpenAtom UUID**、**OpenAtom username**、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar;
+    - **AtomGit UUID**、**AtomGit ID**AtomGit nickname、**AtomGit email address**AtomGit avatar;
+
+      If you use Gitee or GitHub without an existing bound openEuler account, a new openEuler account with a unique identifier will be automatically generated, deriving from your **Gitee ID**  **GitHub ID**, **OpenAtom username** or 、**AtomGit ID**. Refusal to provide this information will prevent login via third-party accounts.
+
   4. After logging in, you can optionally provide your avatar, nickname, and **company** in User Center. This information is not required for using openEuler community features.
   5. After logging in, you can modify your **email address**, **phone number**, and **password** in User Center, we will collect **email address**, **phone number**, **password** and **verification code** for authentication.
-  6. After logging in, you can bind your openEuler account to a third-party account (GitHub, Gitee, or OpenAtom) in User Center. We will collect your **Gitee UUID**,**Gitee ID**, Gitee nickname, **Gitee email address**, Gitee avatar, **Github UUID**, **Github ID**, Github nickname, **Github email address**, Github avatar, **OpenAtom UUID**, **OpenAtom username**, OpenAtom nickname, **OpenAtom email address**, and OpenAtom avatar from the bound platform. Refusal to provide this information will prevent third-party account binding for login purposes.
+  6. After logging in, you can bind your openEuler account to a third-party account (GitHub, Gitee, OpenAtom or AtomGit) in User Center. We will collect the following information about that third-party account accordingly:
+
+    - **Gitee UUID**、**Gitee ID**、Gitee nickname、**Gitee email address**、Gitee avatar;
+    - **Github UUID**、**Github ID**、Github nickname、**Github email address**、Github avatar;
+    - **OpenAtom UUID**、**OpenAtom username**、OpenAtom nickname、**OpenAtom email address**、OpenAtom avatar;
+    - **AtomGit UUID**、**AtomGit ID**AtomGit nickname、**AtomGit email address**AtomGit avatar;
+
+    Refusal to provide this information will prevent third-party account binding for login purposes.
 
 **b) Forum Service**
 
-  1. When you sign up or log in to the forum service, we will collect your **user name**, **email address**, **phone number**, **password**, nickname, avatar, **Gitee ID** and **GitHub ID** from your unified account, and assign permissions and roles to your account. In addition, we will collect **IP address**, **region**, device information, login time, and **preference settings** to provide you with more secure services;
+  1. When you sign up or log in to the forum service, we will collect your **user name**, **email address**, **phone number**, **password**, nickname, avatar, collect the following information based on your login mode: **Gitee ID**, **GitHub ID**, **OpenAtom username** or **AtomGit ID** from your unified account, and assign permissions and roles to your account. In addition, we will collect **IP address**, **region**, device information, login time, and **preference settings** to provide you with more secure services;
   2. When you use the forum service, we collect your like information, follow information, favorite content, post count, reply count, follow count, fan count, personal profile, badge acquisition, sidebar settings, follow list, fan list, email summary, time zone, post and reply content, images, audio, video, documents, and comments to understand your personal preferences and better serve you;
   3. When you report a concern about a forum post or reply, we will collect your report type, description, **user name**, **IP address**, **region**, organization, and host name to verify and confirm the content of the report.
 
@@ -41,11 +56,11 @@ Please carefully review the following updates to this privacy policy:
 
 **e) Contributor License Agreement ("CLA") Signing**. When you participate in code contribution through the Contributor License Agreement ("CLA") signing system (click [here](https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340?lang=en) to learn more), you need to submit your [relevant personal data](https://clasign.osinfra.cn/privacy/corp/gitee_openeuler-1611298811283968340?lang=en) to the CLA signing system. We will obtain such personal data to verify whether you have signed the CLA, and to conduct relevant statistical analysis to understand how the community is operating.
 
-**f) Content Release**. When you participate in Community meetings, Community activities, contribution in the open source Community, blogs, newsgroups, or Community organization, you may submit your **photo**, **name**, **email address**, **company name**, **position**, **school**, **profile**, **region** and **Gitee ID** for posting on our website so that developers can better understand the community, quickly make contact, and participate in the community.
+**f) Content Release**. When you participate in Community meetings, Community activities, contribution in the open source Community, blogs, newsgroups, or Community organization, you may submit your **photo**, **name**, **email address**, **company name**, **position**, **school**, **profile**, **region** and **code hosting platform user ID** for posting on our website so that developers can better understand the community, quickly make contact, and participate in the community.
 
 **g) Meetup**. When you apply organize an openEuler meetup, the community will collect your **name**, **phone number**, **email address**, **company**, and meetup details (including organization, agenda, date, duration, city, event scale, event form, event support, and topics) from the application form you fill in. The collected data will be used to contact you for the purpose of confirming your application and related matters, as well as arranging for relevant affairs, including sign-ins and nameplates.
 
-**h) Quick Issue Creation**. When you submit an issue through the community's QuickIssue service, if you submit the issue using your Gitee account, we will collect your **Gitee ID**; if you submit the issue using your email, we will collect your **email address** and **email verification code**. In addition, we will collect issue related information (title, SIG name, scenario, repository name, and issue description). The above information is used for quick issue submission. After your issue is successfully created, we will display your **Gitee ID** or anonymous email in the description information of the issue page and the submitter field of the issue board to facilitate your search for your issue information.
+**h) Quick Issue Creation**. When you submit an issue through the community's QuickIssue service, if you submit the issue using your Gitee account, we will collect your **AtomGit ID**; if you submit the issue using your email, we will collect your **email address** and **email verification code**. In addition, we will collect issue related information (title, SIG name, scenario, repository name, and issue description). The above information is used for quick issue submission. After your issue is successfully created, we will display your **AtomGit ID** or anonymous email in the description information of the issue page and the submitter field of the issue board to facilitate your search for your issue information.
 
 **i) Compatibility Certification**. When you use the compatibility certification service, we will collect your **UUID**, **user name**, **phone number** and **email address** from your openEuler account for identity verification purposes. Your **user name** and **phone number** will be used to notify you of the enterprise certification results, while your **user name** and **email address** will be used to inform you of the progress of the compatibility certification. Upon successful completion of the openEuler compatibility certification, the compatibility certification service will collect your enterprise information (including the enterprise name, business license, unified social credit code/organization code, business address, legal representative, registered capital, date of establishment, business term, **applicant's name**, **applicant's phone number**, **applicant's email address**, business registration country/region, and enterprise email address) for the purpose of enterprise certification. The compatibility certification service will also collect the **project leader's signature** via the certificate confirmation page for the purpose of generating your compatibility certificate.
 
@@ -59,7 +74,9 @@ We may also supplement the personal data we collect from you with additional per
 
 ## 2. How We Use Cookies and Similar Technologies
 
-To ensure our website works properly, we may at times place cookies on your computers or mobile devices. Please refer to [About Cookies](/en/other/cookies/) for details about how we use cookies and similar technologies and how they process your personal data.
+To ensure our website works properly, we may at times place cookies on your computers or mobile devices. A cookie is a plain-text file stored on a computer or mobile device by a web server. The contents of a cookie can only be retrieved or read by the server that created it. Each cookie is unique to your web browser or mobile application. Cookies typically contain identifiers, site names, and specific numbers and characters. We utilize cookies for the same purpose as most websites or internet service providers: to enhance the user experience. By means of cookies, the website is enabled to remember either a single visit (session cookies) or multiple visits (persistent cookies), and to store settings such as language, font size, and other browsing preferences, thereby precluding the need for you to reconfigure such settings upon each visit. In the absence of cookie usage, a website may treat you as a new visitor each time a page is opened. For instance, if you navigate to another page after logging into a website, the website may fail to recognize your login status, potentially requiring you to log in again.
+
+We will utilize cookies only within the scope of the purposes described in this policy. You may, according to your own preferences, manage, reject, or delete cookies through your browser settings. For further details regarding our use of cookies and similar technologies, the manner in which they process your personal data, and instructions on how to manage cookies via your browser, see the [About Cookies](/en/other/cookies/).
 
 ## 3. How We Share Your Personal Data
 
@@ -90,6 +107,9 @@ For service optimization, the access timestamp, **IP address**, **region**, requ
 ## 5. How We Protect Your Personal Data
 
 We take the security of your personal data seriously. We take appropriate physical, organizational, and technical measures to protect your personal data. For example, we use encryption technologies to ensure the confidentiality of data; we implement protection mechanisms to protect data from attacks. We deploy access control mechanisms to ensure that only authorized personnel can access your personal data. In addition, we hold security and privacy protection training. <u>**In a word, we are committed to protecting your personal data. Nevertheless, no security measure is perfect and no product, service, website, data transfer, computing system, or network connection is absolutely secure**</u>.
+
+
+If any personal data security incident occurs, we will timely inform you via email, letter, phone call, or push notification, pursuant to applicable laws and regulations, of basic information and possible impacts of the security incident, measures we have taken or will take, suggestions you can take to prevent and reduce risks, and so on. When it is difficult to inform personal data subjects individually, we will pose a notice in a reasonable and effective manner. In addition, we will report the handling of the personal data security incident as required by applicable laws or supervisory authorities.
 
 ## 6. How We Access or Control Your Personal Data
 
@@ -128,7 +148,7 @@ You can log in using an openEuler community account and perform the following op
 
 1. Change your avatar.
 2. Choose Settings > Account Management > My Profile to view and correct your basic information(nickname, **company**).
-3. Choose Settings > Account Management > Account Settings to check and correct you **email address**, **phone number**, and **Gitee/Github/OpenAtom account**.
+3. Choose Settings > Account Management > Account Settings to check and correct you **email address**, **phone number**, and  third-party account (Gitee, GitHub, OpenAtom, or AtomGit).
 4. Choose Settings > Account Management > Account Settings to reset your **login password**.
 5. Choose Settings > Personal Tokens to view or modify your token name, granted permissions, and validity periods, or generate new **tokens**.
 
@@ -139,7 +159,7 @@ You have the right to update or modify your personal data processed by us when y
 You can log in using an openEuler community account and perform the following operations in User Center:
 
 1. Choose Settings > Account Management > My Profile to delete basic informatio(nickname, **company**) about your openEuler community account,
-2. Choose Settings > Account Management > Account Settings to unbind your **phone number** and **Gitee/GitHub/OpenAtom account**.
+2. Choose Settings > Account Management > Account Settings to unbind your **phone number** and  third-party account (Gitee, GitHub, OpenAtom, or AtomGit).
 3. Choose Settings > Personal Tokens to delete any **personal tokens** you have generated.
 
 ### 6.4 Revocation of Consent
@@ -153,9 +173,9 @@ You can log in using an openEuler community account and perform the following op
 
 You can log in to the openEuler community and choose User Center > Settings > Account Management > Account Settings > Account Security > Delete to delete your openEuler community account. This action will also delete your personal information in the openEuler community. Exercise caution when performing this operation.
 
-## 7. Where Your Personal Data Is Stored
+## 7. Where Your Personal Data Is Stored and How It Is Transferred
 
-To enable our affiliates and partners to provide better support, some of your personal data will be transferred from the Hong Kong Special Administrative Region of the People's Republic of China to the Chinese mainland. In such cases, we will fulfill our compliance obligations in accordance with applicable laws and regulations and this policy to ensure that your personal data is protected as required by applicable laws and regulations and in line with the terms set forth in this policy. We will also implement appropriate safeguards during the transfer of your personal data. For example, when transferring your personal data over public networks, we will encrypt the data to prevent unauthorized access.
+Your personal information will be stored on servers located in the Hong Kong Special Administrative Region of the People's Republic of China. To enable our affiliates and partners to provide better support, some of your personal data will be transferred from the Hong Kong Special Administrative Region of the People's Republic of China to the Chinese mainland. In such cases, we will fulfill our compliance obligations in accordance with applicable laws and regulations and this policy to ensure that your personal data is protected as required by applicable laws and regulations and in line with the terms set forth in this policy. We will also implement appropriate safeguards during the transfer of your personal data. For example, when transferring your personal data over public networks, we will encrypt the data to prevent unauthorized access.
 
 ## 8. How This Policy Is Updated
 
@@ -177,10 +197,8 @@ If you want to contact us or exercise your rights, please contact us at:
 
 Email: **<contact@openeuler.io>**
 
-Hotline: **+86 15311871505**
+Last updated: **Dec 19, 2025**
 
-Last updated: **April 25, 2025**
-
-Privacy policy version: **v20250425**
+Privacy policy version: **v20251219**
 
 </div>

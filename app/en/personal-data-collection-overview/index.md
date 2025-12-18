@@ -17,14 +17,14 @@ This website involves the following personal data collection scenarios:
 - **Purpose**: Verify identity during login and registration on this website and maintain your personal data.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input or shared by third-party accounts
-- **Personal data fields**: **user name**, **company**, **email address**, **phone number**, **password**, **email or phone verification code**, avatar, nickname and **Gitee UUID**, **Gitee ID**, Gitee nickname, **Gitee email address**, Gitee avatar, **Github UUID**, **Github ID**, Github nickname, **Github email address**, Github avatar, **OpenAtom UUID**, **OpenAtom username**, OpenAtom nickname, **OpenAtom email address**, OpenAtom avatar.
+- **Personal data fields**: **user name**, **company**, **email address**, **phone number**, **password**, **email or phone verification code**, avatar, nickname and the following information based on your login mode: 1)**Gitee UUID**, **Gitee ID**, Gitee nickname, **Gitee email address**, Gitee avatar; 2)**Github UUID**, **Github ID**, Github nickname, **Github email address**, Github avatar; 3)**OpenAtom UUID**, **OpenAtom username**, OpenAtom nickname, **OpenAtom email address**, OpenAtom avatar; 4)**AtomGit UUID**, **AtomGit ID**, AtomGit nickname, **AtomGit email address**, AtomGit avatar.
 
 ## 2. Forum Service
 
 - **Purpose**: Verify account identity and permissions, provide more secure services, and verify reported contents.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input, shared by third-party accounts, or collected by the system
-- **Personal data fields**: **user name**, **email address**, **phone number**, **password**, nickname, avatar, **Gitee ID**, **GitHub ID**, **IP address**, **region**, device information, login time, **preference settings**, like information, follow information, favorite content, post count, reply count, follow count, fan count, personal profile, badge acquisition, sidebar settings, follow list, fan list, email summary, time zone, post and reply content, images, audio, video, documents, comments, report type, description, organization, and host name.
+- **Personal data fields**: **user name**, **email address**, **phone number**, **password**, nickname, avatar, the following information based on your login mode: 1)**Gitee ID**; 2)**GitHub ID**; 3)**OpenAtom username**; 4)**AtomGit ID**; **IP address**, **region**, device information, login time, **preference settings**, like information, follow information, favorite content, post count, reply count, follow count, fan count, personal profile, badge acquisition, sidebar settings, follow list, fan list, email summary, time zone, post and reply content, images, audio, video, documents, comments, report type, description, organization, and host name.
 
 ## 3. Mailing List Service
 
@@ -38,7 +38,7 @@ This website involves the following personal data collection scenarios:
 - **Purpose**: Maintain service quality and operational requirements.
 - **Personal data type**: application or device information
 - **Collection method**: collected by the system
-- **Personal data fields**: access timestamp, **IP address**, **region**, request details, access status, accessed resource size, access source, user agent, device information (device name, device type, device vendor, operating system, operating system version, screen width, screen height), application information (application ID, SDK version , browser, browser version, browser viewport width, browser viewport height), application usage information (event name, event attributes, reporting time, client anonymous ID, **username (if you have logged into community account)**)
+- **Personal data fields**: access timestamp, **IP address**, **region**, request details, access status, accessed resource size, access source, user agent, device information (device name, device type, device vendor, operating system, operating system version, screen width, screen height), application information (application ID, SDK version, browser, browser version, browser viewport width, browser viewport height), application usage information (event name, event attributes, reporting time, client anonymous ID, **username (if you have logged into community account)**)
 
 ## 5. Contributor License Agreement (CLA) Signing
 
@@ -49,7 +49,7 @@ Regarding the purpose of collecting personal data, the types of personal data, t
 - **Purpose**: Help developers better understand and connect with the community, enabling faster engagement.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input
-- **Personal data fields**: **photo**, **name**, **email address**, **company name**, **position**, **school**, **profile**, **region**, and **Gitee ID**
+- **Personal data fields**: **photo**, **name**, **email address**, **company name**, **position**, **school**, **profile**, **region**, and **code hosting platform user ID**
 
 ## 7. Meetup Application
 
@@ -63,7 +63,7 @@ Regarding the purpose of collecting personal data, the types of personal data, t
 - **Purpose**: Help developers submit issues in the community.
 - **Personal data type**: data you voluntarily submit
 - **Collection method**: user input
-- **Personal data fields**: **Gitee ID**, **email address**, **email verification code**, and issue detail(title, SIG name, scenario, repository name, and issue description)
+- **Personal data fields**: **AtomGit ID**, **email address**, **email verification code**, and issue detail(title, SIG name, scenario, repository name, and issue description)
 
 ## 9. Compatibility Certification
 
