@@ -49,7 +49,7 @@ export default {
         LINK: [
           {
             TEXT: 'Read me',
-            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/introduction_to_secgear.md',
+            LINK: 'https://atomgit.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/introduction_to_secgear.md',
           },
         ],
         BACKGROUND: {
@@ -64,7 +64,7 @@ export default {
         LINK: [
           {
             TEXT: 'Read me',
-            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/secgear_installation.md',
+            LINK: 'https://atomgit.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/secgear_installation.md',
           },
         ],
         BACKGROUND: {
@@ -79,7 +79,7 @@ export default {
         LINK: [
           {
             TEXT: 'Read me',
-            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/developer_guide.md',
+            LINK: 'https://atomgit.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/developer_guide.md',
           },
         ],
         BACKGROUND: {
@@ -94,7 +94,7 @@ export default {
         LINK: [
           {
             TEXT: 'Read me',
-            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/using_secgear_tools.md',
+            LINK: 'https://atomgit.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/using_secgear_tools.md',
           },
         ],
         BACKGROUND: {
@@ -109,7 +109,7 @@ export default {
         LINK: [
           {
             TEXT: 'Read me',
-            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/api_reference.md',
+            LINK: 'https://atomgit.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/api_reference.md',
           },
         ],
         BACKGROUND: {
@@ -124,7 +124,7 @@ export default {
         LINK: [
           {
             TEXT: 'Read me',
-            LINK: 'https://gitee.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/application_scenarios.md',
+            LINK: 'https://atomgit.com/openeuler/secGear/blob/master/docs/en/2403_LTS_SP2/application_scenarios.md',
           },
         ],
         BACKGROUND: {

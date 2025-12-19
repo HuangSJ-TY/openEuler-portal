@@ -46,7 +46,7 @@ const STEP = {
   STEP_TOW: {
     TITLE: '领取任务',
     P_TEXT: [
-      '（1）在Gitee查看任务，找到你想做的任务issue。',
+      '（1）在AtomGit查看任务，找到你想做的任务issue。',
       '（2）在任务issue下方评论区输入',
       '/intern-assign',
       '命令，认领该任务，然后发送邮件给任务导师请求审核。邮件需包括你的简历和该任务的开发方案。',
@@ -140,7 +140,7 @@ const STEP = {
           <p>
             {{ STEP.STEP_ONE.TEXT2 }}
             <a
-              href="https://gitee.com/openeuler/opensource-intern/issues/IC9BQW?from=project-issue"
+              href="https://atomgit.com/openeuler/opensource-intern/issues/IC9BQW?from=project-issue"
               target="_blank"
               rel="noopener noreferrer"
               >{{ STEP.STEP_ONE.LINK1 }}</a

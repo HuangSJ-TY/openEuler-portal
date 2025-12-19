@@ -39,7 +39,7 @@ export default {
       DARK_IMG: workImg,
       TITLE: 'Try Now',
       LINK_LIST: [
-        'https://gitee.com/openeuler/community/tree/master/sig/iSulad',
+        'https://atomgit.com/openeuler/community/tree/master/sig/iSulad',
       ],
       SHOW: false,
     },
@@ -133,7 +133,7 @@ export default {
           LINK: [
             {
               TEXT: 'Read more',
-              LINK: 'https://gitee.com/openeuler/iSulad/blob/master/README.md',
+              LINK: 'https://atomgit.com/openeuler/iSulad/blob/master/README.md',
             },
           ],
           BACKGROUND: {
@@ -148,7 +148,7 @@ export default {
           LINK: [
             {
               TEXT: 'Read more',
-              LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/design/architecture.md',
+              LINK: 'https://atomgit.com/openeuler/iSulad/blob/master/docs/design/architecture.md',
             },
           ],
           BACKGROUND: {
@@ -163,7 +163,7 @@ export default {
           LINK: [
             {
               TEXT: 'Read more',
-              LINK: 'https://gitee.com/openeuler/iSulad/blob/master/docs/build_docs/guide/build_guide.md',
+              LINK: 'https://atomgit.com/openeuler/iSulad/blob/master/docs/build_docs/guide/build_guide.md',
             },
           ],
           BACKGROUND: {
@@ -182,7 +182,7 @@ export default {
           LINK: [
             {
               TEXT: 'Read more',
-              LINK: 'https://gitee.com/openeuler/isula-build/blob/master/README.zh.md',
+              LINK: 'https://atomgit.com/openeuler/isula-build/blob/master/README.zh.md',
             },
           ],
           BACKGROUND: {
@@ -197,7 +197,7 @@ export default {
           LINK: [
             {
               TEXT: 'Read more',
-              LINK: 'https://gitee.com/openeuler/isula-build/blob/master/doc/manual_zh.md',
+              LINK: 'https://atomgit.com/openeuler/isula-build/blob/master/doc/manual_zh.md',
             },
           ],
           BACKGROUND: {
@@ -216,7 +216,7 @@ export default {
           LINK: [
             {
               TEXT: 'Read more',
-              LINK: 'https://gitee.com/openeuler/isula-transform/blob/master/README.md',
+              LINK: 'https://atomgit.com/openeuler/isula-transform/blob/master/README.md',
             },
           ],
           BACKGROUND: {

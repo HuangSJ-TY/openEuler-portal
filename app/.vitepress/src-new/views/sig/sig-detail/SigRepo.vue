@@ -182,7 +182,7 @@ onMounted(() => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            :href="`https://gitee.com/${row.repo}`"
+            :href="`https://atomgit.com/${row.repo}`"
             v-analytics.bubble="{
               level2: $t('sig.repoList').replace(/（.*）/, ''),
               level3: t('sig.repositoryName'),

@@ -27,7 +27,7 @@ export default {
   searchSig: 'Search SIG information',
   searchSigName: 'Search SIG names and works',
   searchSigRepo: 'Search repository names',
-  searchSigMaintainer: 'Search Gitee IDs',
+  searchSigMaintainer: 'Search AtomGit IDs',
   all: 'All',
   sigGroup: 'SIGs',
   other: 'Other',
@@ -46,7 +46,7 @@ export default {
   allSig: 'All SIGs',
   allRepo: 'All repositories',
   allMaintainer: 'All maintainers',
-  contributePlaceholder: 'Please enter an Gitee ID',
+  contributePlaceholder: 'Please enter an AtomGit ID',
   sig: 'SIG',
   METRIC: 'Metric',
   TIMERANGE: 'Time Range',
@@ -57,7 +57,7 @@ export default {
   LAST_HALF_YEAR: 'Last 6 Months',
   LAST_YEAR: 'Last Year',
   ALL: 'All',
-  ENTER_GITEE: 'Please enter a Gitee ID',
+  ENTER_GITEE: 'Please enter a AtomGit ID',
   NUMBER: 'Number',
   roleDescription: 'Role Description',
   roleDescriptionIntro:
@@ -67,5 +67,5 @@ export default {
   filterResultTip3: ' records found',
   filterResultTip4: '',
   filterResultTip5: ' records found',
-  giteeMore: 'View More on Gitee',
+  giteeMore: 'View More on AtomGit',
 };

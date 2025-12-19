@@ -43,21 +43,21 @@ export default {
       IMG: workImg,
       DARK_IMG: workImg,
       TITLE: '开启StratoVirt之旅',
-      LINK_LIST: ['https://gitee.com/openeuler/stratovirt'],
+      LINK_LIST: ['https://atomgit.com/openeuler/stratovirt'],
       SHOW: false,
     },
     {
       IMG: letterImg,
       DARK_IMG: letterImg,
       TITLE: '想对StratoVirt说',
-      LINK_LIST: ['https://gitee.com/openeuler/stratovirt/issues'],
+      LINK_LIST: ['https://atomgit.com/openeuler/stratovirt/issues'],
       SHOW: false,
     },
     {
       IMG: tvImg,
       DARK_IMG: tvImg,
       TITLE: '加入StratoVirt大家庭',
-      LINK_LIST: ['https://gitee.com/openeuler/community/tree/master/sig/Virt'],
+      LINK_LIST: ['https://atomgit.com/openeuler/community/tree/master/sig/Virt'],
       SHOW: false,
     },
     {
@@ -135,7 +135,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/stratovirt_introduction.md',
+            LINK: 'https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/stratovirt_introduction.md',
           },
         ],
         BACKGROUND: {
@@ -149,7 +149,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/install_stratovirt.md',
+            LINK: 'https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/install_stratovirt.md',
           },
         ],
         BACKGROUND: {
@@ -163,7 +163,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/prepare_env.md',
+            LINK: 'https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/prepare_env.md',
           },
         ],
         BACKGROUND: {
@@ -177,7 +177,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/vm_configuration.md',
+            LINK: 'https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/vm_configuration.md',
           },
         ],
         BACKGROUND: {
@@ -191,7 +191,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/vm_management.md',
+            LINK: 'https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/vm_management.md',
           },
         ],
         BACKGROUND: {
@@ -205,7 +205,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/interconnect_isula.md',
+            LINK: 'https://atomgit.com/openeuler/Virt-docs/blob/master/docs/zh/virtualization_platform/stratovirt/interconnect_isula.md',
           },
         ],
         BACKGROUND: {

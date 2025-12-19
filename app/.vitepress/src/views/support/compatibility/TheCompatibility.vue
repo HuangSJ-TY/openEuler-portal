@@ -314,7 +314,7 @@ const goDetailPage = () => {
     router.go(`/${lang.value}/compatibility/software/`);
   } else {
     window.open(
-      'https://gitee.com/openeuler/technical-certification',
+      'https://atomgit.com/openeuler/technical-certification',
       '_blank'
     );
   }

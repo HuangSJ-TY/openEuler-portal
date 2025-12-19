@@ -85,7 +85,7 @@ export default {
           {
             text: 'issue',
             isLink: true,
-            link: 'https://gitee.com/openeuler/oec-application/issues',
+            link: 'https://atomgit.com/openeuler/oec-application/issues',
           },
           {
             text: '来跟踪解决。',
@@ -131,7 +131,7 @@ export default {
           {
             text: '兼容性测评平台',
             isLink: true,
-            link: 'https://gitee.com/openeuler/technical-certification',
+            link: 'https://atomgit.com/openeuler/technical-certification',
           },
           {
             text: '进行认证，并获取认证证书，同时会同步发布',

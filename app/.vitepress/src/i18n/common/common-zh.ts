@@ -312,7 +312,7 @@ export default {
             {
               NAME: 'oecp',
               LABEL: '操作系统差异比较分析工具',
-              PATH: 'https://gitee.com/openeuler/oecp',
+              PATH: 'https://atomgit.com/openeuler/oecp',
               OUTLINK: true,
             },
           ],
@@ -324,7 +324,7 @@ export default {
             {
               NAME: 'EulerLauncher',
               LABEL: '跨平台openEuler虚拟机管理工具',
-              PATH: 'https://gitee.com/openeuler/eulerlauncher',
+              PATH: 'https://atomgit.com/openeuler/eulerlauncher',
               OUTLINK: true,
             },
             {
@@ -341,13 +341,13 @@ export default {
             {
               NAME: '代码仓',
               LABEL: '',
-              PATH: 'https://gitee.com/openeuler',
+              PATH: 'https://atomgit.com/openeuler',
               OUTLINK: true,
             },
             {
               NAME: '软件包仓',
               LABEL: '',
-              PATH: 'https://gitee.com/src-openeuler',
+              PATH: 'https://atomgit.com/src-openeuler',
               OUTLINK: true,
             },
             {

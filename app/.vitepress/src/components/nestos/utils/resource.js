@@ -342,7 +342,7 @@ export const cardsLink = [
     HREF: true,
     IMG: CardsWork,
     TITLE: `card.nestosTitle`,
-    LINK: 'https://gitee.com/openeuler/NestOS',
+    LINK: 'https://atomgit.com/openeuler/NestOS',
   },
   {
     HREF: false,
@@ -353,7 +353,7 @@ export const cardsLink = [
     HREF: true,
     IMG: CardsLetter,
     TITLE: `card.issueTitle`,
-    LINK: 'https://gitee.com/openeuler/NestOS/issues',
+    LINK: 'https://atomgit.com/openeuler/NestOS/issues',
   },
 ];
 
@@ -379,6 +379,6 @@ export const verLink = [
  * 性能测试对比地址
  */
 export const comparision_url =
-  'https://gitee.com/openeuler/NestOS/blob/master/docs/zh/usr_manual/%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%95.md';
+  'https://atomgit.com/openeuler/NestOS/blob/master/docs/zh/usr_manual/%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%95.md';
 
 export const features = [kernel, pitgo, cloud, rubik, image, tool];

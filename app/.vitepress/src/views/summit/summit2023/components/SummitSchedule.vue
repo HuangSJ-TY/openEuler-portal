@@ -53,7 +53,7 @@ function convertMd(data: string) {
     </p>
     <p v-if="agendaData.lable.includes('技术分论坛')" class="go-etherpad">
       <a
-        href="https://gitee.com/openeuler/marketing/tree/master/events/openEuler%20Summit%202023"
+        href="https://atomgit.com/openeuler/marketing/tree/master/events/openEuler%20Summit%202023"
         target="_blank"
         rel="noopener noreferrer"
         >演讲PPT下载</a

@@ -28,11 +28,11 @@ export const deployList = [
       },
       {
         text: '智能调优 - ​自主调优助力主力场景性能提升',
-        href: 'https://gitee.com/openeuler/A-Tune/blob/euler-copilot-tune/README.md',
+        href: 'https://atomgit.com/openeuler/A-Tune/blob/euler-copilot-tune/README.md',
       },
       {
         text: '智能运维 - ​全栈协同观测支撑运维效率提升',
-        href: 'https://gitee.com/openeuler/sysTrace/blob/master/docs/0.quickstart.md',
+        href: 'https://atomgit.com/openeuler/sysTrace/blob/master/docs/0.quickstart.md',
       },
     ],
   },
@@ -81,7 +81,7 @@ export const deployList = [
     list: [
       {
         text: '版本与兼容性信息',
-        href: 'https://gitee.com/openeuler/euler-copilot-framework/blob/master/documents/user-guide/%E7%89%88%E6%9C%AC%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E8%AF%B4%E6%98%8E.md',
+        href: 'https://atomgit.com/openeuler/euler-copilot-framework/blob/master/documents/user-guide/%E7%89%88%E6%9C%AC%E5%8F%8A%E5%85%BC%E5%AE%B9%E6%80%A7%E8%AF%B4%E6%98%8E.md',
       },
     ],
   },

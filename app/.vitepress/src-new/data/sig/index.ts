@@ -61,8 +61,8 @@ export const welcomeJoin = [
       en: 'Contributing to SIGs',
     },
     subtitle: {
-      zh: '每一个SIG在Gitee上都会拥有一个或多个项目，这些项目会拥有一个或多个Repository，SIG的交付成果会保存在这些Repository内。您可以通过提交Issue或PR、会议讨论、检视代码等参与SIG贡献，详情请查看<a href="/zh/community/contribution" target="_blank" rel="noopener noreferrer" class="underline-link">贡献指南</a>',
-      en: 'Each SIG maintains one or more projects on Gitee, with each project containing one or more repositories where SIG deliverables are stored. You can contribute to SIGs by submitting issues or pull requests, participating in discussions, conducting code reviews, and more. Refer to the <a href="/en/community/contribution" target="_blank" rel="noopener noreferrer" class="underline-link">contribution guide</a> for details.',
+      zh: '每一个SIG在AtomGit上都会拥有一个或多个项目，这些项目会拥有一个或多个Repository，SIG的交付成果会保存在这些Repository内。您可以通过提交Issue或PR、会议讨论、检视代码等参与SIG贡献，详情请查看<a href="/zh/community/contribution" target="_blank" rel="noopener noreferrer" class="underline-link">贡献指南</a>',
+      en: 'Each SIG maintains one or more projects on AtomGit, with each project containing one or more repositories where SIG deliverables are stored. You can contribute to SIGs by submitting issues or pull requests, participating in discussions, conducting code reviews, and more. Refer to the <a href="/en/community/contribution" target="_blank" rel="noopener noreferrer" class="underline-link">contribution guide</a> for details.',
     },
   },
 ];
@@ -123,8 +123,8 @@ export const applicationProcess = [
       en: 'Apply',
     },
     detail: {
-      zh: '按照成立 SIG 组的<a href="https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">成立流程</a>，在 Gitee 上创建申请文件，发起 Pull Request ；预约技术委员会会议的时间',
-      en: 'Create an application file on Gitee and initiate a pull request (PR) according to the <a href="https://gitee.com/openeuler/community/blob/master/en/technical-committee/governance/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">procedure</a> for setting up a SIG. Make an appointment for attending the Technical Committee (TC) meeting.',
+      zh: '按照成立 SIG 组的<a href="https://atomgit.com/openeuler/community/blob/master/zh/technical-committee/governance/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">成立流程</a>，在 AtomGit 上创建申请文件，发起 Pull Request ；预约技术委员会会议的时间',
+      en: 'Create an application file on AtomGit and initiate a pull request (PR) according to the <a href="https://atomgit.com/openeuler/community/blob/master/en/technical-committee/governance/README.md" target="_blank" rel="noopener noreferrer" class="underline-link">procedure</a> for setting up a SIG. Make an appointment for attending the Technical Committee (TC) meeting.',
     },
   },
   {

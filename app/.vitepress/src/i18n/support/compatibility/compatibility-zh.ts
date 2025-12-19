@@ -144,9 +144,9 @@ export default {
         ID: '01',
         TITLE: '申请加入openEuler社区（0.5天）',
         DESCRIPTION_1:
-          '您需要在Gitee平台申请加入openEuler社区，成为组织成员。申请地址：',
+          '您需要在AtomGit平台申请加入openEuler社区，成为组织成员。申请地址：',
         A_TEXT:
-          'https://gitee.com/openeuler/infrastructure/blob/master/docs/openEuler-Infra-FAQ.md',
+          'https://atomgit.com/openeuler/infrastructure/blob/master/docs/openEuler-Infra-FAQ.md',
         DESCRIPTION_2: '。',
       },
       {
@@ -173,7 +173,7 @@ export default {
         ID: '04',
         TITLE: '创建issue（0.5天）',
         DESCRIPTION_1: '完成协议签署后，您需要在openEuler社区（',
-        A_TEXT: 'https://gitee.com/openeuler/oec-hardware',
+        A_TEXT: 'https://atomgit.com/openeuler/oec-hardware',
         DESCRIPTION_2:
           '）的oec-hardware项目下创建issue，将所需要认证的硬件信息在issue中明确。openEuler团队会及时了解issue的信息，并提出建议。',
       },
@@ -185,7 +185,7 @@ export default {
         A_TEXT: '兼容性测试工具套件',
         A_TEXT_2: '点击此处获取使用指南',
         DESCRIPTION_2: '。',
-        A_HREF: 'https://gitee.com/src-openeuler/oec-hardware/releases',
+        A_HREF: 'https://atomgit.com/src-openeuler/oec-hardware/releases',
         A_HREF_2:
           '/category/support/compatibility/openEuler硬件兼容性测试工具使用指南.pdf',
         DOWNLOAD_NAME: 'openEuler硬件兼容性测试工具使用指南.pdf',
@@ -223,7 +223,7 @@ export default {
         ID: '01',
         TITLE: '创建issue',
         DESCRIPTION_1: '您需要在openEuler社区（',
-        A_TEXT: 'https://gitee.com/openeuler/oec-application',
+        A_TEXT: 'https://atomgit.com/openeuler/oec-application',
         DESCRIPTION_2:
           '）的oec-application项目下创建issue，将所需认证的软件信息在issue中明确。openEuler团队会及时了解issue信息，并给出建议。',
       },
@@ -233,7 +233,7 @@ export default {
         DESCRIPTION_1:
           '完成issue创建后，即可开展兼容性测试。openEuler团队提供了',
         A_TEXT: '自动化测试平台 compass-ci',
-        A_HREF: 'https://gitee.com/openeuler/compass-ci',
+        A_HREF: 'https://atomgit.com/openeuler/compass-ci',
         DESCRIPTION_2: '以及使用指南，根据使用指南自助完成兼容性测试。',
       },
       {

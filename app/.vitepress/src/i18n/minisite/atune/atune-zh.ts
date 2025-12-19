@@ -27,7 +27,7 @@ export default {
       IMG: workImg,
       DARK_IMG: workImg,
       TITLE: '开始A-Tune调优之旅',
-      LINK_LIST: ['https://gitee.com/openeuler/A-Tune'],
+      LINK_LIST: ['https://atomgit.com/openeuler/A-Tune'],
       SHOW: false,
     },
     {
@@ -41,7 +41,7 @@ export default {
       IMG: tvImg,
       DARK_IMG: tvImg,
       TITLE: 'Web UI',
-      LINK_LIST: ['https://gitee.com/openeuler/A-Tune-UI'],
+      LINK_LIST: ['https://atomgit.com/openeuler/A-Tune-UI'],
       SHOW: false,
     },
   ],
@@ -69,7 +69,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/A-Tune/blob/master/docs/zh/24.03_LTS_SP2/getting_to_know_a_tune.md',
+            LINK: 'https://atomgit.com/openeuler/A-Tune/blob/master/docs/zh/24.03_LTS_SP2/getting_to_know_a_tune.md',
           },
         ],
         BACKGROUND: {
@@ -84,7 +84,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/A-Tune/blob/master/docs/zh/24.03_LTS_SP2/installation_and_deployment.md',
+            LINK: 'https://atomgit.com/openeuler/A-Tune/blob/master/docs/zh/24.03_LTS_SP2/installation_and_deployment.md',
           },
         ],
         BACKGROUND: {
@@ -99,7 +99,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/A-Tune/blob/master/docs/zh/24.03_LTS_SP2/usage_instructions.md',
+            LINK: 'https://atomgit.com/openeuler/A-Tune/blob/master/docs/zh/24.03_LTS_SP2/usage_instructions.md',
           },
         ],
         BACKGROUND: {
@@ -114,7 +114,7 @@ export default {
         LINK: [
           {
             TEXT: '了解更多',
-            LINK: 'https://gitee.com/openeuler/docs/blob/stable-common/docs/zh/faq/server/atune_faqs.md',
+            LINK: 'https://atomgit.com/openeuler/docs/blob/stable-common/docs/zh/faq/server/atune_faqs.md',
           },
         ],
         BACKGROUND: {

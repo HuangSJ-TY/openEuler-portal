@@ -251,7 +251,7 @@ export default {
             {
               NAME: 'oecp',
               LABEL: 'Os compare anlyze tool',
-              PATH: 'https://gitee.com/openeuler/oecp',
+              PATH: 'https://atomgit.com/openeuler/oecp',
               OUTLINK: true,
             },
           ],
@@ -275,13 +275,13 @@ export default {
             {
               NAME: 'Code Sources',
               LABEL: '',
-              PATH: 'https://gitee.com/openeuler',
+              PATH: 'https://atomgit.com/openeuler',
               OUTLINK: true,
             },
             {
               NAME: 'Package Sources',
               LABEL: '',
-              PATH: 'https://gitee.com/src-openeuler',
+              PATH: 'https://atomgit.com/src-openeuler',
               OUTLINK: true,
             },
             {

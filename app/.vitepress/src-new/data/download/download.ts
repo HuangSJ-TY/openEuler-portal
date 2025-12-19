@@ -13,7 +13,7 @@ export default {
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/25.09/server/quickstart/releasenotes/introduction.html`,
         INSTALL_GUIDENCE_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/25.09/server/installation_upgrade/installation/installation_preparations.html`,
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/openEuler 25.09 技术白皮书.pdf',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
@@ -31,7 +31,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/24.03_LTS_SP2/server/releasenotes/releasenotes/introduction.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/24.03_LTS_SP2/server/installation_upgrade/installation/installation_preparations.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/openEuler 24.03 LTS SP2 技术白皮书.pdf',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
@@ -48,7 +48,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/25.03/server/releasenotes/releasenotes/introduction.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/openEuler 25.03 技术白皮书.pdf',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
@@ -66,7 +66,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/24.03_LTS_SP1/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/24.03_LTS_SP1/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/openEuler 24.03 LTS SP1 技术白皮书.pdf',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
@@ -83,7 +83,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/24.09/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/24.09/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/openEuler 24.09 技术白皮书.pdf',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
@@ -101,7 +101,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/22.03_LTS_SP4/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/openEuler 22.03 LTS SP4 技术白皮书.pdf',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
@@ -119,7 +119,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/openEuler 24.03 LTS 技术白皮书.pdf',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
@@ -137,7 +137,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/22.03_LTS_SP3/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS_SP3/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler 22.03 LTS SP3 技术白皮书.pdf',
@@ -161,7 +161,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/23.09/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/23.09/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler 23.09 技术白皮书.pdf',
@@ -184,7 +184,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/22.03_LTS_SP2/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS_SP2/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler 22.03 LTS SP2 技术白皮书.pdf',
@@ -208,7 +208,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/23.03/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/23.03/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2303.pdf',
@@ -231,7 +231,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/22.03_LTS_SP1/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS_SP1/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2203-SP1.pdf',
@@ -255,7 +255,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/22.09/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/22.09/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/openEuler-22.09/ISO/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2209.pdf',
@@ -278,7 +278,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2203.pdf',
         WEBSITE_SELECT: '/zh/mirror/select/?version=22.03-LTS',
@@ -301,7 +301,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/20.03_LTS_SP4/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/20.03_LTS_SP4/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WEBSITE_SELECT: '/zh/mirror/select/?version=20.03-LTS-SP4',
@@ -318,7 +318,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/20.03_LTS_SP3/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/20.03_LTS_SP3/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WEBSITE_SELECT: '/zh/mirror/select/?version=20.03-LTS-SP3',
@@ -335,7 +335,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/21.09/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/21.09/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://archives.openeuler.openatom.cn/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER:
@@ -354,7 +354,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/20.03_LTS_SP2/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/20.03_LTS_SP2/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WEBSITE_SELECT: '/zh/mirror/select/?version=20.03-LTS-SP2',
@@ -371,7 +371,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/21.03/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/21.03/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://archives.openeuler.openatom.cn/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2103.pdf',
@@ -389,7 +389,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WEBSITE_SELECT: '/zh/mirror/select/?version=20.03-LTS-SP1',
@@ -406,7 +406,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/20.09/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/20.09/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://archives.openeuler.openatom.cn/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2009.pdf',
@@ -424,7 +424,7 @@ export default {
           'https://docs.openeuler.org/zh/docs/20.03_LTS/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/20.03_LTS/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WEBSITE_SELECT: '/zh/mirror/select/?version=20.03-LTS',
@@ -445,7 +445,7 @@ export default {
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/25.09/server/quickstart/releasenotes/introduction.html`,
         INSTALL_GUIDENCE_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/25.09/server/installation_upgrade/installation/installation_preparations.html`,
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=25.09',
@@ -463,7 +463,7 @@ export default {
           'https://docs.openeuler.org/en/docs/24.03_LTS_SP2/server/releasenotes/releasenotes/introduction.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/24.03_LTS_SP2/server/installation_upgrade/installation/installation_preparations.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/en/openEuler 24.03 LTS SP2 Technical White Paper.pdf',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
@@ -480,7 +480,7 @@ export default {
           'https://docs.openeuler.org/en/docs/25.03/server/releasenotes/releasenotes/introduction.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/25.03/server/installation_upgrade/installation/installation-preparations.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=25.03',
@@ -499,7 +499,7 @@ export default {
           'https://docs.openeuler.org/en/docs/24.03_LTS_SP1/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/24.03_LTS_SP1/docs/Installation/Installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WHITE_PAPER:
@@ -518,7 +518,7 @@ export default {
           'https://docs.openeuler.org/en/docs/24.09/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/24.09/docs/Installation/Installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=24.09',
@@ -535,7 +535,7 @@ export default {
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP4/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP4/docs/Installation/Installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WHITE_PAPER:
@@ -554,7 +554,7 @@ export default {
           'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/Installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER:
           '/whitepaper/en/openEuler 24.03 LTS Technical White Paper.pdf',
@@ -573,7 +573,7 @@ export default {
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP3/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP3/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WHITE_PAPER:
@@ -598,7 +598,7 @@ export default {
           'https://docs.openeuler.org/en/docs/23.09/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/23.09/docs/Installation/Installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/en/openEuler 23.09 Technical White Paper.pdf',
@@ -623,7 +623,7 @@ export default {
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP2/docs/Releasenotes/installing-the-os.html',
         WHITE_PAPER:
           '/whitepaper/en/openEuler 22.03 LTS SP2 Technical White Paper.pdf',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=22.03-LTS-SP2',
@@ -646,7 +646,7 @@ export default {
           'https://docs.openeuler.org/en/docs/23.03/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/23.03/docs/Releasenotes/installing-the-os.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/en/openEuler 23.03 Technical White Paper.pdf',
@@ -669,7 +669,7 @@ export default {
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP1/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP1/docs/Releasenotes/installing-the-os.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=22.03-LTS-SP1',
@@ -692,7 +692,7 @@ export default {
           'https://docs.openeuler.org/en/docs/22.09/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/22.09/docs/Installation/installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=22.09',
@@ -717,7 +717,7 @@ export default {
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/22.03_LTS/docs/Installation/installation.html',
         SEEK_HELP_URL:
-          'https://gitee.com/openeuler/community-issue/blob/master/README.md',
+          'https://atomgit.com/openeuler/community-issue/blob/master/README.md',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=22.03-LTS',
         GET_ISO_URL: 'https://repo.openeuler.org/',
@@ -739,7 +739,7 @@ export default {
           'https://docs.openeuler.org/en/docs/20.03_LTS_SP4/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/20.03_LTS_SP4/docs/Installation/Installation.html',
-        SEEK_HELP_URL: 'https://gitee.com/openeuler/community-issue',
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WEBSITE_SELECT: '/zh/mirror/select/?version=20.03-LTS-SP4',
@@ -757,7 +757,7 @@ export default {
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/20.03_LTS_SP3/docs/Installation/Installation.html',
         SEEK_HELP_URL:
-          'https://gitee.com/openeuler/community-issue/blob/master/README.md',
+          'https://atomgit.com/openeuler/community-issue/blob/master/README.md',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=20.03-LTS-SP3',
@@ -775,7 +775,7 @@ export default {
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/21.09/docs/Installation/installation.html',
         SEEK_HELP_URL:
-          'https://gitee.com/openeuler/community-issue/blob/master/README.md',
+          'https://atomgit.com/openeuler/community-issue/blob/master/README.md',
         GET_ISO_URL: 'https://archives.openeuler.openatom.cn/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WHITE_PAPER:
@@ -795,7 +795,7 @@ export default {
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/20.03_LTS_SP2/docs/Installation/Installation.html',
         SEEK_HELP_URL:
-          'https://gitee.com/openeuler/community-issue/blob/master/README.md',
+          'https://atomgit.com/openeuler/community-issue/blob/master/README.md',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=20.03-LTS-SP2',
@@ -813,7 +813,7 @@ export default {
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/21.03/docs/Installation/Installation.html',
         SEEK_HELP_URL:
-          'https://gitee.com/openeuler/community-issue/blob/master/README.md',
+          'https://atomgit.com/openeuler/community-issue/blob/master/README.md',
         GET_ISO_URL: 'https://archives.openeuler.openatom.cn/',
         WHITE_PAPER: '/whitepaper/en/openEuler-21.03-Technical-White-Paper.pdf',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
@@ -832,7 +832,7 @@ export default {
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/20.03_LTS_SP1/docs/Installation/Installation.html',
         SEEK_HELP_URL:
-          'https://gitee.com/openeuler/community-issue/blob/master/README.md',
+          'https://atomgit.com/openeuler/community-issue/blob/master/README.md',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=20.03-LTS-SP1',
@@ -850,7 +850,7 @@ export default {
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/20.09/docs/Installation/Installation.html',
         SEEK_HELP_URL:
-          'https://gitee.com/openeuler/community-issue/blob/master/README.md',
+          'https://atomgit.com/openeuler/community-issue/blob/master/README.md',
         GET_ISO_URL: 'https://archives.openeuler.openatom.cn/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=20.09',
@@ -868,7 +868,7 @@ export default {
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/20.03_LTS/docs/Installation/Installation.html',
         SEEK_HELP_URL:
-          'https://gitee.com/openeuler/community-issue/blob/master/README.md',
+          'https://atomgit.com/openeuler/community-issue/blob/master/README.md',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=20.03-LTS',

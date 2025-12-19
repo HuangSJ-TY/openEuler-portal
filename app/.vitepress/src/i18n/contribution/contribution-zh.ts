@@ -18,7 +18,7 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler',
+      URL: 'https://atomgit.com/openeuler',
       BLANK: true,
     },
     {
@@ -82,19 +82,19 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4',
+      URL: 'https://atomgit.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4',
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4',
+      URL: 'https://atomgit.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4',
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/community/blob/master/zh/contributors/create-package.md',
+      URL: 'https://atomgit.com/openeuler/community/blob/master/zh/contributors/create-package.md',
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/src-openeuler',
+      URL: 'https://atomgit.com/src-openeuler',
       BLANK: true,
     },
     {
@@ -106,7 +106,7 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md',
+      URL: 'https://atomgit.com/openeuler/community/blob/master/zh/contributors/packaging.md',
       BLANK: true,
     },
     {
@@ -118,15 +118,15 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/security-committee/blob/master/security-disclosure.md',
+      URL: 'https://atomgit.com/openeuler/security-committee/blob/master/security-disclosure.md',
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB%E4%BB%8B%E7%BB%8D.md',
+      URL: 'https://atomgit.com/openeuler/QA/blob/master/%E7%A4%BE%E5%8C%BA%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB%E4%BB%8B%E7%BB%8D.md',
       BLANK: true,
     },
     {
-      URL: 'https://gitee.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md',
+      URL: 'https://atomgit.com/openeuler/community/blob/master/zh/contributors/non-code-contributions.md',
       BLANK: true,
     },
     {

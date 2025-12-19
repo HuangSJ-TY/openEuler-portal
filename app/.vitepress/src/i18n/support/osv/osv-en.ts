@@ -18,16 +18,16 @@ export default {
       ID: '01',
       TITLE: '申请加入openEuler社区',
       TEXT_1:
-        '您需要在Gitee平台申请加入openEuler社区，成为组织成员。申请地址：',
+        '您需要在AtomGit平台申请加入openEuler社区，成为组织成员。申请地址：',
       LINK_1:
-        'https://gitee.com/openeuler/infrastructure/blob/master/docs/openEuler-Infra-FAQ.md',
+        'https://atomgit.com/openeuler/infrastructure/blob/master/docs/openEuler-Infra-FAQ.md',
     },
     {
       ID: '02',
       TITLE: '了解OSV技术测评策略',
       TEXT_1:
         '开展OSV技术测评之前，您需要了解OSV技术测评策略，测评标准，以及使用OSV技术测评工具进行自验证。地址如下：',
-      LINK_1: 'https://gitee.com/openeuler/oecp',
+      LINK_1: 'https://atomgit.com/openeuler/oecp',
     },
     {
       ID: '03',
@@ -44,7 +44,7 @@ export default {
       ID: '04',
       TITLE: '提交OSV技术测评申请issue',
       TEXT_1: '完成协议签署后，您需要在openEuler社区（',
-      LINK_1: 'https://gitee.com/openeuler/oecp/issues',
+      LINK_1: 'https://atomgit.com/openeuler/oecp/issues',
       TEXT_2:
         '）的OSV技术测评项目下创建issue，将所需要测评的操作系统信息在issue中明确，以及ISO镜像地址。openEuler团队会及时了解issue的信息，并提出建议。',
     },

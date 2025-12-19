@@ -117,7 +117,7 @@ onMounted(() => {
             size="large"
             @click="
               jumpTo(
-                'https://gitee.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md'
+                'https://atomgit.com/openeuler/community/blob/master/zh/contributors/user-story-guideline.md'
               )
             "
             >投稿案例</OButton
