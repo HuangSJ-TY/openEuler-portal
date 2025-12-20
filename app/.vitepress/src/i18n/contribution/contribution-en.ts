@@ -49,19 +49,19 @@ export default {
       BLANK: true,
     },
     {
-      URL: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
+      URL: 'https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9',
       BLANK: true,
     },
     {
-      URL: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
+      URL: 'https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9',
       BLANK: true,
     },
     {
-      URL: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
+      URL: 'https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9',
       BLANK: true,
     },
     {
-      URL: 'https://clasign.osinfra.cn/sign/gitee_openeuler-1611298811283968340',
+      URL: 'https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9',
       BLANK: true,
     },
     {

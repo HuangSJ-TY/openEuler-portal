@@ -42,7 +42,7 @@ This website involves the following personal data collection scenarios:
 
 ## 5. Contributor License Agreement (CLA) Signing
 
-Regarding the purpose of collecting personal data, the types of personal data, the methods of collection, and the specific personal data fields, refer to the [Personal Data Collection Overview](https://clasign.osinfra.cn/information-list/corp/gitee_openeuler-1611298811283968340?lang=en).
+Regarding the purpose of collecting personal data, the types of personal data, the methods of collection, and the specific personal data fields, refer to the [Personal Data Collection Overview](https://clasign.osinfra.cn/information-list/corp/6946817fe1b3f3e542b4e2d9?lang=en).
 
 ## 6. Content Release
 

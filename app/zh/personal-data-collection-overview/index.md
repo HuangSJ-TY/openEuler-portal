@@ -42,7 +42,7 @@ title: '个人信息收集清单'
 
 ## 5. 贡献者许可协议签署
 
-相关个人信息收集目的、个人信息类型、收集的方式、个人信息字段，请参见：[贡献者许可协议签署个人信息收集清单](https://clasign.osinfra.cn/information-list/corp/gitee_openeuler-1611298811283968340?lang=zh)。
+相关个人信息收集目的、个人信息类型、收集的方式、个人信息字段，请参见：[贡献者许可协议签署个人信息收集清单](https://clasign.osinfra.cn/information-list/corp/6946817fe1b3f3e542b4e2d9?lang=zh)。
 
 ## 6. 内容发布
 
