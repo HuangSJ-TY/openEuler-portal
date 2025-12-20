@@ -59,21 +59,21 @@ export const year2023 = {
             detail: [
               'openEuler Kernel 是 openEuler 操作系统的核心组件，是数字基础设施的关键底座。支持服务器、云、边缘、嵌入式等应用场景，支持多样性计算，致力于提供高性能、安全、稳定可靠的操作系统内核。',
             ],
-            link: 'https://gitee.com/openeuler/kernel',
+            link: 'https://atomgit.com/openeuler/kernel',
           },
           {
             name: 'iSulad',
             detail: [
               'iSulad项目是轻量级容器引擎解决方案，对比业界解决方案具有性能更高、内存开销更小、不受硬件规格和架构限制，应用的领域更为广泛等优点。',
             ],
-            link: 'https://gitee.com/openeuler/iSulad',
+            link: 'https://atomgit.com/openeuler/iSulad',
           },
           {
             name: 'StratoVirt',
             detail: [
               'StratoVirt是计算产业中面向云数据中心的企业级虚拟化平台，实现了一套架构统一支持虚拟机、容器、Serverless三种场景，在轻量低噪、软硬协同、Rust语言级安全等方面具备关键技术竞争优势。',
             ],
-            link: 'https://gitee.com/openeuler/stratovirt',
+            link: 'https://atomgit.com/openeuler/stratovirt',
           },
           {
             name: 'mugen',
@@ -83,7 +83,7 @@ export const year2023 = {
               '2、高效的用例编写和执行公共方法库。',
               '3、解耦式执行及完善的测试过程跟踪和结果统计。',
             ],
-            link: 'https://gitee.com/openeuler/mugen',
+            link: 'https://atomgit.com/openeuler/mugen',
           },
           {
             name: 'NestOS',
@@ -97,21 +97,21 @@ export const year2023 = {
             detail: [
               'sysMaster：可靠系统中1号进程的新选择, 全新实现方案，秒级自愈，保障系统全天在线。',
             ],
-            link: 'https://gitee.com/openeuler/sysMaster',
+            link: 'https://atomgit.com/openeuler/sysMaster',
           },
           {
             name: 'A-ops',
             detail: [
               '以操作系统基础，提供可观测，自动/智能化和热修复的系统级运维平台。',
             ],
-            link: 'https://gitee.com/openeuler/aops-apollo',
+            link: 'https://atomgit.com/openeuler/aops-apollo',
           },
           {
             name: 'A-Tune',
             detail: [
               'A-Tune是一款基于AI的操作系统性能调优引擎。A-Tune利用AI技术，使操作系统“懂”业务，简化IT系统调优工作的同时，让应用程序发挥出色性能。',
             ],
-            link: 'https://gitee.com/openeuler/A-Tune',
+            link: 'https://atomgit.com/openeuler/A-Tune',
           },
         ],
       },
@@ -125,7 +125,7 @@ export const year2023 = {
             detail: [
               'DDE（深度桌面环境）是由统信软件完全自主研发的图形化操作界面，具有美观易用、安全可靠等特点。DDE（深度桌面环境）已集成到openEuler和UOS所有发行版本中，并应用到党政、教育、金融等多个行业。',
             ],
-            link: 'https://gitee.com/openeuler/dde',
+            link: 'https://atomgit.com/openeuler/dde',
           },
           {
             name: 'Kiran桌面环境',
@@ -139,14 +139,14 @@ export const year2023 = {
             detail: [
               '针对openEuler Embedded开发的元工具，负责构建环境管理、构建配置生成等工作，可大幅提升openEuler Embedded开发效率。',
             ],
-            link: 'https://gitee.com/openeuler/oebuild',
+            link: 'https://atomgit.com/openeuler/oebuild',
           },
           {
             name: 'GCC for openEuler',
             detail: [
               'GCC for openEuler是openEuler的默认编译器，继承了开源 GCC 能力的基础上，增强自动反馈优化、软硬件协同、内存优化、自动向量化等特性，并适配鲲鹏、飞腾、龙芯等硬件平台，充分释放硬件算力。',
             ],
-            link: 'https://gitee.com/openeuler/gcc',
+            link: 'https://atomgit.com/openeuler/gcc',
           },
           {
             name: 'Bigtop on openEuler',
@@ -181,21 +181,21 @@ export const year2023 = {
             detail: [
               'ZVM是一款基于Zephyr实时操作系统的虚拟化管理平台，可在同一硬件上同时运行社区Linux、openEuler embedded及Zephyr等操作系统，满足高性能嵌入式场景对富功能与硬实时的双重需求，赋能混合关键部署。ZVM开源共享，实时性强，支持灵活的系统配置和端侧实时AI推理，适用于智能汽车、航空航天、工业控制、智能装备等场景 。ZVM同时具备实时（RTOS底座）、智能（RTOS推理）、开源（Apache 2.0）、灵活（自适应分区）四大优势。',
             ],
-            link: 'https://gitee.com/openeuler/zvm',
+            link: 'https://atomgit.com/openeuler/zvm',
           },
           {
             name: 'secGear',
             detail: [
               'secGear 机密计算统一开发框架致力于提供简单易用的机密计算软件栈及解决方案，降低机密计算开发门槛，推动机密计算生态发展。',
             ],
-            link: 'https://gitee.com/openeuler/secGear',
+            link: 'https://atomgit.com/openeuler/secGear',
           },
           {
             name: 'FangTian视窗引擎',
             detail: [
               '构建openEuler视窗根技术，打造桌面环境基础底座。提供显示服务，窗口管理，图形绘制、合成、送显等。',
             ],
-            link: 'https://gitee.com/openeuler/ft_engine',
+            link: 'https://atomgit.com/openeuler/ft_engine',
           },
         ],
       },
@@ -209,14 +209,14 @@ export const year2023 = {
             detail: [
               'PilotGo作为一款插件式的运维管理平台，提供强大的扩展能力，集管理、监控、性能优化于一体，为客户提供完善、一致、流畅的运维管理体验。',
             ],
-            link: 'https://gitee.com/openeuler/PilotGo',
+            link: 'https://atomgit.com/openeuler/PilotGo',
           },
           {
             name: 'Migration-tools',
             detail: [
               'Migration-tools是一款操作系统迁移软件，面向已部署业务应用于CentOS系列操作系统且具有替换需求的用户，帮助其快速、平滑、稳定且安全地迁移至openEuler操作系统。',
             ],
-            link: 'https://gitee.com/openeuler/migration-tools',
+            link: 'https://atomgit.com/openeuler/migration-tools',
           },
           {
             name: 'radiaTest',
@@ -224,14 +224,14 @@ export const year2023 = {
               'radiaTest是孵化于openEuler社区的基于openEuler操作系统环境开发的测试管理平台。',
               '提供测试资产管理、测试任务管理、测试资源调度与测试任务执行等功能，以更深远的覆盖社区测试需求为目标，意在一体化承载社区测试流程。',
             ],
-            link: 'https://gitee.com/openeuler/radiaTest',
+            link: 'https://atomgit.com/openeuler/radiaTest',
           },
           {
             name: ' sysBoost',
             detail: [
               ' sysBoost是一个针对CPU微架构的程序优化工具，能够帮助用户无感提升业务性能。该工具使用了包括二进制合并，布局优化，汇编指令优化，内存大页等多项技术。',
             ],
-            link: 'https://gitee.com/openeuler/sysboost',
+            link: 'https://atomgit.com/openeuler/sysboost',
           },
         ],
       },
@@ -245,19 +245,19 @@ export const year2023 = {
             detail: [
               'Gala-ragdoll是基于OS的配置托管服务，能够实现对OS配置的集群式管理，屏蔽不同OS类型的配置差异，实现统一的、可溯源的、预期配置可管理的可信的OS配置运维入口。',
             ],
-            link: 'https://gitee.com/openeuler/gala-ragdoll',
+            link: 'https://atomgit.com/openeuler/gala-ragdoll',
           },
           {
             name: 'Gazelle',
             detail: [
               'Gazelle作为一款高性能用户态协议栈，通过零修改、零拷贝、无锁的加速技术，专注数据库、分布式存储、低时延等场景的网络I/O加速。在23年在证券交易、云盘场景分别获得了62.5%的时延优化，15%的IPOS优化成果。目前该项目已在电信、金融多个行业客户应用落地。',
             ],
-            link: 'https://gitee.com/openeuler/gazelle',
+            link: 'https://atomgit.com/openeuler/gazelle',
           },
           {
             name: 'CVE-ease',
             detail: ['天翼云原创的多源CVE信息数据抓取、清洗、合并工具。'],
-            link: 'https://gitee.com/openeuler/cve-ease',
+            link: 'https://atomgit.com/openeuler/cve-ease',
           },
         ],
       },
@@ -271,7 +271,7 @@ export const year2023 = {
             detail: [
               '由中国移动云能力中心主导研发，它是一款在操作系统迁移后对操作系统进行全面检查的工具，用户可以通过检查报告来确认系统环境的健康状况，以确保操作系统在迁移后的使用过程中不会出现潜在的问题。',
             ],
-            link: 'https://gitee.com/openeuler/env_check',
+            link: 'https://atomgit.com/openeuler/env_check',
           },
           {
             name: 'CTinspector',
@@ -283,14 +283,14 @@ export const year2023 = {
             detail: [
               '该项目的主要目标是提供一个功能齐全、高效、易用的界面，使用户能够通过浏览器访问和操作CPM4OSSP系统的各种功能、服务和数据。',
             ],
-            link: 'https://gitee.com/openeuler/CTinspector',
+            link: 'https://atomgit.com/openeuler/CTinspector',
           },
           {
             name: 'safeguard',
             detail: [
               '针对操作系统、内核安全，safeguard是一个基于eBPF的Linux安全防护系统，可以实现安全操作的拦截及审计记录。',
             ],
-            link: 'https://gitee.com/openeuler/safeguard',
+            link: 'https://atomgit.com/openeuler/safeguard',
           },
         ],
       },
@@ -325,9 +325,9 @@ export const year2023 = {
               '1. PR提交、Issue反馈、Issue修复、CVE修复',
               '   a. 2023全年在sig-Cloudnative合入111个，在sig-K8sDistro合入14个。',
               '   b. 同时作为相关软件包维护者，积极评审，累计评审230+，提出有效issue单13个，CVE修复4个，解决openEuler版本开发问题12个。以下为部分PR和issue单：',
-              '   - eggo新增rpm-ostree字段：https://gitee.com/openeuler/eggo/pulls/203',
-              '   - nkd新增证书管理模块：https://gitee.com/openeuler/nestos-kubernetes-deployer/pulls/35',
-              '   - rpm-ostree组件升级与问题修复：https://gitee.com/src-openeuler/rpm-ostree/pulls/28',
+              '   - eggo新增rpm-ostree字段：https://atomgit.com/openeuler/eggo/pull/203',
+              '   - nkd新增证书管理模块：https://atomgit.com/openeuler/nestos-kubernetes-deployer/pull/35',
+              '   - rpm-ostree组件升级与问题修复：https://atomgit.com/src-openeuler/rpm-ostree/pull/28',
               '   - skopeo问题修复：https://gitee.com/src-openeuler/skopeo/issues/I795G3?from=project-issue',
               '2. 特性开发、生态发展、公共事务、技术步道',
               '   a. 积极探索生态发展道路，将社区eggo工具与NestOS进行结合，实现可以使用eggo在NestOS中一键拉起K8S集群，并提交相关代码至社区；',
@@ -376,14 +376,14 @@ export const year2023 = {
               '作为 OpenStack SIG maintainer，长期积极参与 SIG 的相关开发和运营工作：',
               '1. 参与 22.03-LTS-SP2、22.03-LTS-SP3、20.03-LTS-SP4 中  OpenStack Train、Wallaby 支持工作，2023年度已合并 PR 293 个，修复 Issue 12 个，在 SIG 2023 年度贡献排名第 1 。',
               '例如：',
-              'https://gitee.com/src-openeuler/openstack-masakari/pulls/1',
-              'https://gitee.com/src-openeuler/ovn/pulls/4',
+              'https://atomgit.com/src-openeuler/openstack-masakari/pull/1',
+              'https://atomgit.com/src-openeuler/ovn/pull/4',
               'https://gitee.com/openeuler/openstack/issues/I77LN7',
               '2. 负责 SIG 联合创新特性-网络流量分散特性的设计与开发。特性开发已完成，本地测试通过，将在 20.03-LTS-SP4 及 22.03-LTS-SP3 发布。',
               '特性SPEC：',
-              'https://gitee.com/openeuler/openstack/blob/master/docs/spec/distributed-traffic.md',
+              'https://atomgit.com/openeuler/openstack/blob/master/docs/spec/distributed-traffic.md',
               '3. 持续维护 SIG 开发者工具软件，保障 SIG 开发效率；积极响应 SIG 用户问题；认真参与开发者 PR 审核。将实际生产问题，引入为 SIG 联合创新点开发，并实践将创新特性，落实到实际生产场景。积极参与 SIG 运营及 SIG 生态推广、落地。',
-              '    https://gitee.com/openeuler/openstack/pulls/688',
+              '    https://atomgit.com/openeuler/openstack/pull/688',
               '4. 作为统信在 OpenStack SIG 的负责人，承接向 OpenStack 上游社区的 OpenStack-Helm 项目添加 openEuler 系统支持的工作。积极参与 openEuler 推广及生态发展，在各大互动中演讲 openEuler 相关议题，例如今年的OpenInfra China Day 就有相关呈现。',
             ],
             post: ['统信软件技术有限公司', 'han-guangyu'],
@@ -465,7 +465,7 @@ export const year2023 = {
               '[1] https://github.com/openhpc/ohpc/releases/tag/v3.0.GA',
               '[2] https://bioconductor.org/checkResults/3.19/bioc-LATEST/long-report.html',
               '[3] https://www.openeuler.org/zh/oEEP/?name=oEEP-0005%20openEuler%E5%AE%98%E6%96%B9%E5%AE%B9%E5%99%A8%E9%95%9C%E5%83%8F%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B',
-              '[4] https://gitee.com/openeuler/eulerpublisher',
+              '[4] https://atomgit.com/openeuler/eulerpublisher',
               '[5] https://datastat.openeuler.org/zh/user/yikunkero',
               '',
             ],
@@ -531,7 +531,7 @@ export const year2023 = {
             detail: [
               '1. 管理SIG日常事务，策划课程、博客、海外参会翻译支撑等SIG活动；组织openEuler Developer Day 2023 G11N SIG组开放工作会议，收集开发者对G11N SIG在社区本地化、课程视频和技术博客等方面的意见和建议。组织技术直播-关于openEuler社区内容英文化的那些事儿，直播包含5个主题，持续1个多小时，受到开发者的欢迎和认可；',
               '2. 与docs和infrastructure SIG合作，推动落地CI Bot自动检测docs仓库中文内容变更，推送翻译issue；在openEuler/docs仓库上，贡献者只需认领和处理翻译Issues，提交PR合入译文，规避了中文内容漏翻译的问题，保障了中英文文档的一致性；推动落地docs仓库英文文档捉虫功能，调动社区开发者一起维护openEuler的英文文档；',
-              '3. 为社区开发者参与FOSS Asia、IstioCon、OSSUMMIT EU等国际会议提供演示材料翻译；翻译Issue/PR模板、优化openEuler在Gitee的介绍页及README英文文件；',
+              '3. 为社区开发者参与FOSS Asia、IstioCon、OSSUMMIT EU等国际会议提供演示材料翻译；翻译Issue/PR模板、优化openEuler在AtomGit的介绍页及README英文文件；',
               '4. 作为实习导师，发布6大开源实习任务，吸引10+浙大等学生参与开源贡献。写作、发布6篇英文技术博客，并在翻译论坛分享开源基础知识及开源社区全球化实践，提升社区影响力。',
             ],
             post: ['华为技术有限公司', 'Judithsq'],
@@ -573,8 +573,8 @@ export const year2023 = {
             name: '王凯',
             detail: [
               '1. 在sig-application主要投入cve修复，缺陷修复，软件包升级等工作，其中提交pr 81+，提交issue 10个，评审项996+；',
-              '2. 升级sig-application的firefox软件包到102.11.0版本一并解决了260+个cve（pr举例：https://gitee.com/src-openeuler/firefox/pulls/87）；',
-              '3. 主动跟进软件包仓库下的历史遗留issue，如清理three-eight-nine-ds-base仓库下的历史缺陷问题（pr举例： https://gitee.com/src-openeuler/three-eight-nine-ds-base/pulls/45） ',
+              '2. 升级sig-application的firefox软件包到102.11.0版本一并解决了260+个cve（pr举例：https://atomgit.com/src-openeuler/firefox/pull/87）；',
+              '3. 主动跟进软件包仓库下的历史遗留issue，如清理three-eight-nine-ds-base仓库下的历史缺陷问题（pr举例： https://atomgit.com/src-openeuler/three-eight-nine-ds-base/pull/45） ',
             ],
             post: ['江苏润和软件股份有限公司', 'wk333'],
             img: wangkai,

@@ -60,7 +60,7 @@ const gap = computed(() => {
           </template>
           <template v-if="!lePadV" #footer>
             <OButton color="primary" variant="outline" size="large" class="view-btn" :href="`/${locale}${item.url}`" target="_blank">{{ t('project.viewMore') }}</OButton>
-            <OLink v-if="item.giteeUrl" color="normal" variant="text" :href="item.giteeUrl" target="_blank">
+            <OLink v-if="item.atomgitUrl" color="normal" variant="text" :href="item.atomgitUrl" target="_blank">
               <span class="gitee">{{ t('project.gitee') }}</span>
               <OIcon class="right-icon"><IconChevronRight /></OIcon>
             </OLink>
@@ -71,8 +71,8 @@ const gap = computed(() => {
               {{ t('project.viewMore') }}
               <OIcon class="right-icon"><IconChevronRight /></OIcon>
             </OLink>
-            <ODivider v-if="item.giteeUrl" />
-            <OLink v-if="item.giteeUrl" color="normal" variant="text" :href="item.giteeUrl" target="_blank">
+            <ODivider v-if="item.atomgitUrl" />
+            <OLink v-if="item.atomgitUrl" color="normal" variant="text" :href="item.atomgitUrl" target="_blank">
               <span class="gitee">{{ t('project.gitee') }}</span>
               <OIcon class="outlink-icon"><IconOutLink /></OIcon>
             </OLink>

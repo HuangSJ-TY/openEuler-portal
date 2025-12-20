@@ -923,7 +923,7 @@ const onClickSearchRes = (type: string, ev: Event) => {
               target="_blank"
               class="icon-link"
             >
-              {{ `https://gitee.com...sig/${sig.name}` }}
+              {{ `https://atomgit.com...sig/${sig.name}` }}
             </OLink>
           </div>
           <div class="sig-link">

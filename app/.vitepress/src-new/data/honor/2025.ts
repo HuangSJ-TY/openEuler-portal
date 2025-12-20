@@ -311,7 +311,7 @@ export const year2025 = {
             post: ['华为技术有限公司', 'x--h--w'],
             img: xihaowei,
             detail: [
-              '1.参与设计并作为开发负责人实现业界首个融合了机密计算及可信计算的远程证明框架Global Trust Authority （https://gitee.com/openeuler/global-trust-authority）。当前已支持TPM/vTPM/VirtCCA/iTrustee/Ascend NPU等多种异构硬件环境，为机密计算及可信计算提供了核心的基础设施，达到安全易用的商用目标，已被内外部多个团队使用。',
+              '1.参与设计并作为开发负责人实现业界首个融合了机密计算及可信计算的远程证明框架Global Trust Authority （https://atomgit.com/openeuler/global-trust-authority）。当前已支持TPM/vTPM/VirtCCA/iTrustee/Ascend NPU等多种异构硬件环境，为机密计算及可信计算提供了核心的基础设施，达到安全易用的商用目标，已被内外部多个团队使用。',
               '2.设计了核心的验证业务相关的6大模块，累计提交RUST代码20000行；作为开发负责人，累计review代码30000行，提出涉及功能实现、性能、代码架构、编译构建等多种问题。',
               '3.创新地提出三种用于安全新鲜度及重放攻击的nonce结构和验证流程。该设计可在多场景下灵活支持IETF 9334护照模式和背调模式。',
               '4.积极对接标准化，设计符合IETF 9443定义的验证流程；支持EAT(RFC-9711)及EAR(DRAFT-IETF-RATS-EAR)安全标准/草案定义的验证结果。为GTA远程证明树立了安全、开源、开放的标签。'
@@ -445,14 +445,14 @@ export const year2025 = {
             detail: [
               'openEuler Kernel 是 openEuler 操作系统的核心组件，是数字基础设施的关键底座。支持服务器、云、边缘、嵌入式等应用场景，支持多样性计算，致力于提供高性能、安全、稳定可靠的操作系统内核。',
             ],
-            link: 'https://gitee.com/openeuler/kernel',
+            link: 'https://atomgit.com/openeuler/kernel',
           },
           {
             name: 'openEuler Intelligence',
             detail: [
               'openEuler Intelligence是openEuler 生态专属智能体平台！提供智能体全流程构建、编排调度与知识流水线能力，一键打通企业服务智能化入口，大幅降低传统应用改造成本，让开发效率倍增。',
             ],
-            link: 'https://gitee.com/openeuler/euler-copilot-framework',
+            link: 'https://atomgit.com/openeuler/euler-copilot-framework',
           },
           {
             name: 'mugen',
@@ -462,21 +462,21 @@ export const year2025 = {
               '2、高效的公共用例编写和执行方法库；',
               '3、解耦式执行及完善的测试过程跟踪和结果统计。'
             ],
-            link: 'https://gitee.com/openeuler/mugen',
+            link: 'https://atomgit.com/openeuler/mugen',
           },
           {
             name: 'openEuler Embedded & yocto',
             detail: [
               'openEuler Embedded & yocto是openEuler Embedded的核心仓，在混合部署、嵌入式AI、内核小型化、ROS、边缘容器等技术方向构建竞争力，积极引导openEuler社区健康发展。',
             ],
-            link: 'https://gitee.com/openeuler/yocto-meta-openeuler.git',
+            link: 'https://atomgit.com/openeuler/yocto-meta-openeuler.git',
           },
           {
             name: 'hpcrunner',
             detail: [
               'HPC包管理器：一站式服务使能HPC应用开发者，加速部署和性能调优，大幅降低跨架构多编译器海量依赖带来的部署复杂性，高度定制可重复构建可复现的极致性能',
             ],
-            link: 'https://gitee.com/openeuler/hpcrunner',
+            link: 'https://atomgit.com/openeuler/hpcrunner',
           },
         ]
       },
@@ -490,35 +490,35 @@ export const year2025 = {
             detail: [
               '基于MCP协议，将openEuler社区工具及通用Linux工具封装为多个MCP servers。通过创新技术实现了开发工具与AI的高效协同，有力推动了开源生态的智能化发展。',
             ],
-            link: 'https://gitee.com/openeuler/mcp-servers',
+            link: 'https://atomgit.com/openeuler/mcp-servers',
           },
           {
             name: 'Global Trust Authority',
             detail: [
               'Global Trust Authority远程证明融合了机密计算及可信计算的各种使用场景, 为多种可信硬件提供了统一的信任背书，是多样化算力的安全基石。作为安全环境的仲裁者，GTA始终将安全作为设计开发的首要竞争力，依托欧拉社区，拥抱开源生态，让安全以最透明的方式呈现。',
             ],
-            link: 'https://gitee.com/openeuler/global-trust-authority',
+            link: 'https://atomgit.com/openeuler/global-trust-authority',
           },
           {
             name: 'sysTrace',
             detail: [
               'AI集群的软硬件全栈非常复杂，是一片“深海“”，其中任何节点上的一个故障都会影响整个AI集群的性能和效率，sysTrace 提供了系统化全栈采集的能力，能够在AI集群的“深海”里捞出影响全局的那一根“针”。',
             ],
-            link: 'https://gitee.com/openeuler/sysTrace/tree/master',
+            link: 'https://atomgit.com/openeuler/sysTrace/tree/master',
           },
           {
             name: 'ANNC',
             detail: [
               'ANNC是面向鲲鹏CPU的高性能AI图编译器，兼容TensorFlow/PyTorch/JAX等主流框架。通过图算融合、切分调度、自动调优与混合精度等关键技术，有效降低访存开销、提升并行效率，在搜推场景显著加速模型推理，助力AI应用高效落地。',
             ],
-            link: 'https://gitee.com/openeuler/ANNC',
+            link: 'https://atomgit.com/openeuler/ANNC',
           },
           {
             name: 'llm_solution',
             detail: [
               'llm_solution是openEuler开源社区联合23家伙伴打造的大模型全栈开源方案“Intelligence BooM”，含异构融合、任务管理、数据管理、运行加速、智能应用及安全六大平台，20+组件，支持DeepSeek、Qwen等50+主流模型与GPU/NPU/国产芯片异构算力，提供低代码Agent、量化压缩、分布式推理加速、端边云协同、镜像一键部署等功能，助力企业低成本快速落地AI',
             ],
-            link: 'https://gitee.com/openeuler/llm_solution',
+            link: 'https://atomgit.com/openeuler/llm_solution',
           },
         ]
       },
@@ -532,21 +532,21 @@ export const year2025 = {
             detail: [
               'secGear是面向计算产业的机密计算解决方案，致力提供简单、易用的机密计算软件栈及解决方案，降低机密计算的使用门槛，推动机密计算生态发展，保护数据“可用而不可见，使用可控、可计量”。',
             ],
-            link: 'https://gitee.com/openeuler/secGear',
+            link: 'https://atomgit.com/openeuler/secGear',
           },
           {
             name: 'SysCare',
             detail: [
               'SysCare是openEuler社区推出的Linux操作系统统一热补丁服务，提供内核态和用户态热补丁的统一制作和管理能力。它能够在线无感知地修复系统漏洞，支持内核、用户态服务、动态库等基础组件的热修复，通过简单的命令即可实现补丁的安装、激活和卸载，大大提升了运维效率。',
             ],
-            link: 'https://gitee.com/openeuler/syscare',
+            link: 'https://atomgit.com/openeuler/syscare',
           },
           {
             name: 'qemu',
             detail: [
               'openEuler社区深度整合QEMU虚拟化技术，为开发者提供高效、稳定的系统仿真环境。QEMU在openEuler中支持多种架构模拟，助力国产操作系统生态建设，在虚拟化性能优化和硬件兼容性方面表现卓越，25年贡献了如CCA、众核高密等重要特性，引领qemu竞争力持续领先。社区通过QEMU技术赋能，推动云计算、边缘计算等场景创新应用，是开源基础设施的重要技术支撑。',
             ],
-            link: 'https://gitee.com/openeuler/qemu',
+            link: 'https://atomgit.com/openeuler/qemu',
           },
         ]
       },
@@ -560,21 +560,21 @@ export const year2025 = {
             detail: [
               'openEuler on RISCV 项目为 openEuler 构建 RISC-V 软硬件生态，主导了 RVA20 版本构建，RVA23 版本计划，RVCK 内核同源计划等面向国内外 RISC-V 操作系统生态的核心项目，推动 openEuler 24.03 LTS 成为首批原生支持 RISC-V 架构的 Linux 发行版之一。',
             ],
-            link: 'https://gitee.com/openeuler/RISC-V',
+            link: 'https://atomgit.com/openeuler/RISC-V',
           },
           {
             name: 'cantian',
             detail: [
               'Cantian引擎，是一个存储引擎，采用了存算分离的架构，通过分布式缓存技术、事务MVCC机制、多主集群高可用等关键技术，可以让普通的单机数据库变得具有类似Oracle RAC的多读多写能力。',
             ],
-            link: 'https://gitee.com/openeuler/cantian',
+            link: 'https://atomgit.com/openeuler/cantian',
           },
           {
             name: 'llvm-project',
             detail: [
               'LLVM基础设施是一个用于构建高度优化的编译器、优化器和运行时环境的工具包',
             ],
-            link: 'https://gitee.com/openeuler/llvm-project',
+            link: 'https://atomgit.com/openeuler/llvm-project',
           },
         ]
       },
@@ -588,21 +588,21 @@ export const year2025 = {
             detail: [
               'epkg 是一款用rust写的轻量级软件包管理器，支持在openEuler或其他Linux OS上创建多个软件环境，每个环境里安装一个版本的openEuler/fedora/suse/debian/ubuntu/archlinux/alpine软件，从而实现多版本、多软件源的组合使用。',
             ],
-            link: 'https://gitee.com/openeuler/epkg',
+            link: 'https://atomgit.com/openeuler/epkg',
           },
           {
             name: 'oeAware-manager',
             detail: [
               'oeAware是在openEuler上实现低负载采集感知调优的框架，目标是动态感知系统行为后智能使能系统的调优特性。传统调优特性都以独立运行且静态打开关闭为主，oeAware将调优拆分采集、感知和调优三层，每层通过订阅方式关联，各层采用插件式开发尽可能复用。',
             ],
-            link: 'https://gitee.com/openeuler/oeAware-manager',
+            link: 'https://atomgit.com/openeuler/oeAware-manager',
           },
           {
             name: '分布式文件系统FalconFS ',
             detail: [
               '针对AI深度学习负载带来的存储层的挑战，例如华为智驾训练中：（1）千亿级以上海量小文件，（2）完全随机文件访问，（3）十万卡大规模集群，我们设计和实现了新的高性能分布式并行文件系统FalconFS。FalconFS基于PostgreSQL构建了高性能和分布式线性可扩展的元数据引擎，并提出三项创新的技术解决上述挑战。相比Lustre，FalconFS提高了一倍以上的小文件读写吞吐；端到端的Resnet-50训练负载下，减少一半训练时间。FalconFS在华为ADS智驾AI集群部署使用，为华为智驾ADS 4.0正式发布的模型训练和数据生产提供了坚实的存储底座。',
             ],
-            link: 'https://gitee.com/openeuler/FalconFS',
+            link: 'https://atomgit.com/openeuler/FalconFS',
           },
         ]
       },
@@ -616,22 +616,22 @@ export const year2025 = {
             detail: [
               'Infrastructure项目是openEuler社区基础设施团队开发、看护的重要项目；该项目主要25年主要承载软件包自动升级、代码智能Review等功能设计与开发，有效提升社区代码开发效率和软件包维护效率。',
             ],
-            link: 'https://gitee.com/openeuler/infrastructure',
+            link: 'https://atomgit.com/openeuler/infrastructure',
           },
           {
             name: 'openEuler-portal',
             detail: [
               'openEuler Portal是社区官网源码仓库，致力于为社区用户提供全面的信息、资源与支持帮助。',
             ],
-            link: 'https://gitee.com/openeuler/openEuler-portal',
+            link: 'https://atomgit.com/openeuler/openEuler-portal',
           },
           {
             name: 'docs',
             detail: [
               'docs 项目旨在为社区用户提供 openEuler 相关文档和知识，建立软件和用户之间的联系，以获得更好的社区体验。',
             ],
-            link: 'https://gitee.com/openeuler/docs',
-            link1: 'https://gitee.com/openeuler/docs-centralized'
+            link: 'https://atomgit.com/openeuler/docs',
+            link1: 'https://atomgit.com/openeuler/docs-centralized'
           },
         ]
       }
