@@ -13,22 +13,22 @@ summary: 'openEuler 代码托管平台切换'
 近期基础设施（以下称：我们）将牵头开展社区代码托管平台迁移工作，现将迁移工作相关事宜通知如下：
 
 #### 我们需要您协助完成：
-1.  登录 Gitee平台 (https://gitee.com/profile/account_information) ，如已登录则忽略；    
-2.  根据指引(https://atomgit.com/openeuler-guide) 完成新账号绑定和同意书签署 ；   
+1.  登录 [Gitee平台](https://gitee.com/profile/account_information) ，如已登录则忽略；    
+2.  根据[迁移指引](https://atomgit.com/openeuler-guide)完成新账号绑定和同意书签署 ；   
 
 #### 您在社区的历史贡献数据不会因迁移受到影响。
 ####  我们将会：
 1.  自动收集您绑定后的AtomGit平台账号；    
-2.  将openEuler社区SIG组的maintainer和committer账号配置到community仓库(https://atomgit.com/openeuler/community), 确保openEuler社区的SIG组成员的权限和原平台一致；  
+2.  将openEuler社区SIG组的maintainer和committer账号配置到[community仓库](https://atomgit.com/openeuler/community), 确保openEuler社区的SIG组成员的权限和原平台一致；  
 3.  我们会将您加入到AtomGit平台 [openEuler](https://atomgit.com/openeuler) 和 [src-openeuler](https://atomgit.com/src-openeuler) 组织成员中； 
 
 #### 迁移计划：
 1.  12月10日前完成社区代码仓/分支/PR/ISSUE/Comment等内容迁移，由Infrastructure团队联合托管平台统一实施，开发者无需操作；    
-2.  12月10日开放账号迁移，开发者在登录Gitee(https://gitee.com) 后根据迁移指引(https://atomgit.com/openeuler-guide) 完成个人账号迁移；    
-3.  12月10日至12月17日作为开发者试用期，提供试用仓库完成相关测试，可联系基础设施增加测试仓库；    
+2.  12月10日开放账号迁移，开发者在登录[Gitee](https://gitee.com)后根据[迁移指引](https://atomgit.com/openeuler-guide) 完成个人账号迁移；    
+3.  12月10日至12月17日作为开发者试用期，提供试用仓库完成相关测试；    
 4.  12月20日社区启动托管平台切换：    
-       i. 原组织(https://gitee.com/openeuler, https://gitee.com/src-openeuler) 仓库将调整为只读，并发布平台切换公告；    
-       ii. 开发者在在新平台组织(https://atomgit.com/openeuler, https://atomgit.com/src-openeuler) 下代码仓开展贡献；    
+       i. 原组织(https://gitee.com/openeuler,  https://gitee.com/src-openeuler) 仓库将调整为只读，并发布平台切换公告；    
+       ii. 开发者在在新平台组织(https://atomgit.com/openeuler, https://atomgit.com/src-openeuler) 下代码仓开展贡献；
  
 #### 迁移影响：
 1.  迁移后，开发者参与贡献需重新fork atomgit平台代码仓库, 本地git config配置需同步适配atomgit账号邮箱；
