@@ -52,21 +52,21 @@ export const year2024 = {
             detail: [
               'openEuler Embedded是基于openEuler社区、面向嵌入式场景的版本，旨在成为一个高质量、开放的以Linux为中心的综合嵌入式系统软件平台。',
             ],
-            link: 'https://gitee.com/openeuler/yocto-meta-openeuler.git',
+            link: 'https://atomgit.com/openeuler/yocto-meta-openeuler.git',
           },
           {
             name: 'mugen ',
             detail: [
               'mugen是openEuler社区孵化的Linux操作系统测试框架，提供了用例的调度执行、结果统计、公共方法等以便于社区开发者进行测试代码的编译和执行。',
             ],
-            link: 'https://gitee.com/openeuler/mugen.git',
+            link: 'https://atomgit.com/openeuler/mugen.git',
           },
           {
             name: 'openEuler Kernel',
             detail: [
               'openEuler Kernel 是 openEuler 操作系统的核心组件，是数字基础设施的关键底座。支持服务器、云、边缘、嵌入式等应用场景，支持多样性计算，致力于提供高性能、安全、稳定可靠的操作系统内核。',
             ],
-            link: 'https://gitee.com/openeuler/kernel.git',
+            link: 'https://atomgit.com/openeuler/kernel.git',
           },
         ],
       },
@@ -80,35 +80,35 @@ export const year2024 = {
             detail: [
               'libkperf是一个轻量级linux性能采集库，它能够让开发者以API的方式执行性能采集，包括pmu采样和符号解析。',
             ],
-            link: 'https://gitee.com/openeuler/libkperf.git',
+            link: 'https://atomgit.com/openeuler/libkperf.git',
           },
           {
             name: 'dde_autotest_euler',
             detail: [
               'dde_autotest_euler是用于openEuler系统桌面环境（DDE）的自动化测试项目，项目基于YouQu（有趣）自动化测试框架开发。',
             ],
-            link: 'https://gitee.com/openeuler/dde_autotest_euler.git',
+            link: 'https://atomgit.com/openeuler/dde_autotest_euler.git',
           },
           {
             name: 'devkit-pipeline',
             detail: [
               'devkit-pipeline帮助用户鲲鹏架构下的原子能力快速对接Jenkins/Gitlab流水线，支持一条流水线同时出x86/鲲鹏等多架构软件包',
             ],
-            link: 'https://gitee.com/openeuler/devkit-pipeline.git',
+            link: 'https://atomgit.com/openeuler/devkit-pipeline.git',
           },
           {
             name: 'sysSentry',
             detail: [
               'sysSentry是操作系统级可靠性管理框架，南向覆盖多类型硬件故障，北向集中可靠性能力。支持硬件可靠性能力插件化扩展，对运维人员提供统一的故障预防、故障感知、故障定位等能力。',
             ],
-            link: 'https://gitee.com/openeuler/sysSentry.git',
+            link: 'https://atomgit.com/openeuler/sysSentry.git',
           },
           {
             name: 'secureguardian',
             detail: [
               'secureguardian是一款基于《openEuler 安全配置基线》开发的 Linux 系统安全审计工具，通过自动化检查机制帮助管理员识别安全风险，为企业提供便捷高效的系统安全保障，助力构建更加安全、稳健的操作系统环境。',
             ],
-            link: 'https://gitee.com/openeuler/secureguardian.git',
+            link: 'https://atomgit.com/openeuler/secureguardian.git',
           },
         ],
       },
@@ -122,21 +122,21 @@ export const year2024 = {
             detail: [
               'Gazelle作为一款高性能用户态协议栈，通过零修改、零拷贝、无锁的加速技术，专注数据库、分布式存储、低时延等场景的网络I/O加速。',
             ],
-            link: 'https://gitee.com/openeuler/gazelle.git',
+            link: 'https://atomgit.com/openeuler/gazelle.git',
           },
           {
             name: 'openEuler on RISC-V',
             detail: [
               'RISC-V 架构在 2024 年成为 openEuler 的主要支持架构。RISC-V SIG 组协同社区伙伴，完成了一套社区代码、一套基础设施、一套质量标准和统一镜像发布这些关键工作。并且在此基础上集成了大量先进创新特性，如内核热补丁、蓬莱 TEE 等等，让 openEuler 成为对 RISC-V 支持的发行版之一。',
             ],
-            link: 'https://gitee.com/openeuler/RISC-V.git',
+            link: 'https://atomgit.com/openeuler/RISC-V.git',
           },
           {
             name: 'PilotGo',
             detail: [
               'PilotGo是一款专为运维人员提供的、可用来进行操作系统内容管理的工具，可以为操作系统集群提供全生命周期的监控、管理和服务。',
             ],
-            link: 'https://gitee.com/openeuler/PilotGo.git',
+            link: 'https://atomgit.com/openeuler/PilotGo.git',
           },
         ],
       },
@@ -150,21 +150,21 @@ export const year2024 = {
             detail: [
               'ZVM是基于开源实时操作系统 Zephyr开发的一款虚拟机管理器，支持在单一硬件平台上构建安全隔离的多内核混合部署系统。',
             ],
-            link: 'https://gitee.com/openeuler/zvm.git',
+            link: 'https://atomgit.com/openeuler/zvm.git',
           },
           {
             name: 'openEuler Copilot SyStem',
             detail: [
               'openEuler Copilot System通过LLM+RAG+多Agent协同机制，实现自然语言交互方式；智能辅助开发、运维、调优等日常OS操作，降低OS使用门槛；未来，新增系统级Agent、提供一套AI开发工具链、一套语义接口开发规范，引领AI应用开发标准，加速行业智能化。',
             ],
-            link: 'https://gitee.com/openeuler/euler-copilot-framework',
+            link: 'https://atomgit.com/openeuler/euler-copilot-framework',
           },
           {
             name: 'Signatrust',
             detail: [
               'Signatrust基于Rust对常见的Linux软件包提供了一个异步，安全和高性能的签名解决方案。',
             ],
-            link: 'https://gitee.com/openeuler/signatrust',
+            link: 'https://atomgit.com/openeuler/signatrust',
           },
         ],
       },
@@ -178,21 +178,21 @@ export const year2024 = {
             detail: [
               '在openEuler之上提供原生的OpenStack，构建开放可靠的云计算技术栈，OpenStack问题交流讨论入口。',
             ],
-            link: 'https://gitee.com/openeuler/openstack.git',
+            link: 'https://atomgit.com/openeuler/openstack.git',
           },
           {
             name: 'iSulad',
             detail: [
               'iSulad 是一个由C/C++编写实现的轻量级容器引擎，具有轻、灵、巧、快的特点，不受硬件规格和架构限制，底噪开销更小，可应用于云、边、端等多个领域。',
             ],
-            link: 'https://gitee.com/openeuler/iSulad.git',
+            link: 'https://atomgit.com/openeuler/iSulad.git',
           },
           {
             name: 'DDE\n(Deepin Desktop Enviroment)',
             detail: [
               'DDE (Deepin Desktop Enviroment) 是由统信软件研发的一套国产桌面环境，现已适配部署到openEuler社区现有的各个主要发行版中。',
             ],
-            link: 'https://gitee.com/openeuler/dde.git',
+            link: 'https://atomgit.com/openeuler/dde.git',
           },
         ],
       },
@@ -206,21 +206,21 @@ export const year2024 = {
             detail: [
               'openEuler社区官网源码仓库，致力于为社区用户提供全面的信息、资源与支持帮助。',
             ],
-            link: 'https://gitee.com/openeuler/openEuler-portal.git',
+            link: 'https://atomgit.com/openeuler/openEuler-portal.git',
           },
           {
             name: 'extuner',
             detail: [
               'extuner是一款轻量级场景性能调优工具，其通过执行一条命令，可收集服务器的全量性能数据，包括CPU实时占用情况，NUMA实时状态，网络实时流量状态，磁盘I/O实时读取状态，内核参数统计等指标数据，并形成可视化数据报告，引导客户实施调优，提升场景应用性能。',
             ],
-            link: 'https://gitee.com/openeuler/extuner.git',
+            link: 'https://atomgit.com/openeuler/extuner.git',
           },
           {
             name: 'Qingzhou',
             detail: [
               '轻舟是一款开源的轻量级软件开发平台，其愿景是优化通用型Web管理软件的开发质量与效率，并实现不同类型软件的集中化统一管理。\n基于轻舟开发Web管理软件，只需编写简单的 Java\nBean，即可自动获得前端网页、REST接口、JMX接口、国际化、本地和远程集中管理、公共组件等能力，从而优化企业内部复杂业务系统的管理效能。',
             ],
-            link: 'https://gitee.com/openeuler/qingzhou.git',
+            link: 'https://atomgit.com/openeuler/qingzhou.git',
           },
         ],
       },
@@ -371,9 +371,9 @@ export const year2024 = {
             post: ['麒麟软件有限公司', 'peijiankang'],
             detail: [
               '在2024年度累计提交合入PR共342个，升级UKUI 4.0版本、解决2403、2409中用户的使用问题，同时适配了KDE最新版本5.115，修复qt相关的CVE，给2024开源之夏同学解惑答疑，使其完成项目结项。',
-              '如：https://gitee.com/src-openeuler/ukui-panel/pulls/84 修复ukui4.0任务栏相关问题',
-              '      https://gitee.com/src-openeuler/ukui-media/pulls/83 修复ukui4.0 媒体段错误',
-              'https://gitee.com/src-openeuler/extra-cmake-modules/pulls/30升级kde 5.115.0',
+              '如：https://atomgit.com/src-openeuler/ukui-panel/pull/84 修复ukui4.0任务栏相关问题',
+              '      https://atomgit.com/src-openeuler/ukui-media/pull/83 修复ukui4.0 媒体段错误',
+              'https://atomgit.com/src-openeuler/extra-cmake-modules/pull/30 升级kde 5.115.0',
             ],
           },
           {
@@ -405,8 +405,8 @@ export const year2024 = {
             img: sunyi,
             post: ['英特尔亚太研发中心', 'syqust'],
             detail: [
-              '1. 为openEuler社区创建了 Linux Kernel Validation Suite（LKVS）仓库，提供vendor CPU的Kernel兼容性测试套件（目前是Intel CPU）- https://gitee.com/openeuler/intel-lkvs',
-              '2. LKVS 已经集成到openEuler的 Compliance Tool - https://gitee.com/openeuler/oec-hardware',
+              '1. 为openEuler社区创建了 Linux Kernel Validation Suite（LKVS）仓库，提供vendor CPU的Kernel兼容性测试套件（目前是Intel CPU）- https://atomgit.com/openeuler/intel-lkvs',
+              '2. LKVS 已经集成到openEuler的 Compliance Tool - https://atomgit.com/openeuler/oec-hardware',
               '3. 目前也正在和社区合作，创建英特尔兼容性认证的kernel验证套件',
               '4. 引入 Intel 0-Day 测试，保障内核开发过程补丁质量',
               'https://lore.kernel.org/oe-kbuild-all/?q=openeuler&o=-1001',
@@ -506,7 +506,7 @@ export const year2024 = {
             img: wangqingzheng,
             post: ['麒麟软件有限公司', 'qz_cx'],
             detail: [
-              '贡献主要在kytuning-server仓库和kytuning-client仓库，如https://gitee.com/openeuler/kytuning-server/pulls/325',
+              '贡献主要在kytuning-server仓库和kytuning-client仓库，如https://atomgit.com/openeuler/kytuning-server/pull/325',
               '积极回答提问者问题入pr合入等。',
             ],
           },
@@ -516,15 +516,15 @@ export const year2024 = {
             post: ['华为技术有限公司', 'xuraoqing'],
             detail: [
               '参与sig-confidential-computing组的secGear项目开发，设计实现远程证明服务对鲲鹏等平台的支持，完成3个核心组件的开发。',
-              'https://gitee.com/openeuler/secGear/pulls/235',
+              'https://atomgit.com/openeuler/secGear/pull/235',
               '维护audit，krb5，gnutls等7款软件，积极修复不同维护分支的bug修复，提交PR100+。',
-              'https://gitee.com/src-openeuler/audit/pulls/127',
-              'https://gitee.com/src-openeuler/krb5/pulls/118',
-              'https://gitee.com/src-openeuler/gnutls/pulls/145',
+              'https://atomgit.com/src-openeuler/audit/pull/127',
+              'https://atomgit.com/src-openeuler/krb5/pull/118',
+              'https://atomgit.com/src-openeuler/gnutls/pull/145',
               '',
               '积极响应社区issue问题，及时响应CVE问题涉及版本的排查及修复10+。',
-              'https://gitee.com/src-openeuler/krb5/pulls/159',
-              'https://gitee.com/src-openeuler/gnutls/pulls/127',
+              'https://atomgit.com/src-openeuler/krb5/pull/159',
+              'https://atomgit.com/src-openeuler/gnutls/pull/127',
             ],
           },
           {
@@ -564,12 +564,12 @@ export const year2024 = {
               '3.创新贡献：',
               '新功能建议2条，于sig 8月例会提出，优化OpenStack部署工具并随openEuler版本一起发布，9月例会提出自动化适配OpenStack版本到openEuler，已完成申请建仓',
               '会议纪要：https://etherpad.openeuler.org/p/sig-openstack-meetings',
-              '建仓pr：https://gitee.com/openeuler/community/pulls/5710，https://gitee.com/openeuler/community/pulls/5856 ',
+              '建仓pr：https://atomgit.com/openeuler/community/pull/5710，https://atomgit.com/openeuler/community/pull/5856 ',
               '4.社区活动组织者：',
               '积极参与opneEuler推广及生态发展，与全球社区的开发者探讨OpenStack相关技术，如组织参与OpenInfra基金会线上PTG',
               '5.新成员引导：',
               '引导伙伴新成员找到合适的贡献路径，指导参与22.03-LTS-SP4、24.03-LTS中OpenStack适配工作（统信-王静）',
-              'https://gitee.com/openeuler/community/pulls/5709 伙伴新成员成为OpenStack SIG commiter提名',
+              'https://atomgit.com/openeuler/community/pull/5709 伙伴新成员成为OpenStack SIG commiter提名',
               '',
               '数据统计方法补充如下：',
               'PR统计方法，访问https://e.gitee.com/open_euler/code/pulls?page=11&pr%5Bauthor_id%5D=13269947 ，每页20个PR，第11也的第17个位2024年合入的第一个PR。计算的2024年度合入PR总数为10*20+13=213',
@@ -593,7 +593,7 @@ export const year2024 = {
               '2. 核心代码贡献：',
               '近半年持续参与 SIG 贡献，参与22.03-LTS-SP4、24.03-LTS中OpenStack Train、Wallaby、Antelope开发和部署测试工作，进行软件包刷新、修复等工作，合入 PR 136个[3]。在OpenStack SIG 2024年度贡献排名第2[2]。最近 6 个月在 SIG 贡献排名第 2[2]（非 maintainer 排名第 1）。并在 22.03 LTS SP4 开发中负责版本测试工作，按时完成。积极 review 其他开发者的 PR，持续协助合入 PR。',
               '3. 积极参与社区活动：',
-              '积极参加社区例会和主动认领社区开发测试工作，进一步提升自己的技术能力。参与opneEuler SIG Gathering 2024活动，与志同道合的开发者共同推动OpenStack的应用和发展。经过近一年的积极参与社区工作和活动，经 OpenStack SIG 半年度贡献审视，经过 SIG maintainer 评审并全票通过，提名为 committer[4]。半年间，从刚加入社区快速成为一个成熟的开发者，作为committer在gitee、微信群等渠道长期参与讨论，帮助引导新成员参与社区、使用openEuler。',
+              '积极参加社区例会和主动认领社区开发测试工作，进一步提升自己的技术能力。参与opneEuler SIG Gathering 2024活动，与志同道合的开发者共同推动OpenStack的应用和发展。经过近一年的积极参与社区工作和活动，经 OpenStack SIG 半年度贡献审视，经过 SIG maintainer 评审并全票通过，提名为 committer[4]。半年间，从刚加入社区快速成为一个成熟的开发者，作为committer在AtomGit、微信群等渠道长期参与讨论，帮助引导新成员参与社区、使用openEuler。',
               '',
             ],
           },

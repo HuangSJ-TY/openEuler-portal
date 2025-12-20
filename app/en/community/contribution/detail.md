@@ -47,7 +47,7 @@ Experience a range of original open source projects in the openEuler community.
 - [pkgship](https://pkgmanage.openeuler.org/): software package dependency management with detailed dependency graphs
 - [BiSheng JDK](https://www.openeuler.org/en/other/projects/bishengjdk/): open source version of Huawei JDK, a high-performance, production-ready OpenJDK distribution
 - [Compass-CI](https://compass-ci.openeuler.org/): open source software platform for continuous integration (CI) with an open and comprehensive test system
-- [More](https://gitee.com/openeuler)
+- [More](https://atomgit.com/openeuler)
 
 ## 2. Sign the CLA
 
@@ -75,7 +75,7 @@ Special interest groups (SIGs) are a crucial part in the [openEuler community or
 
 ## 4. Contribute to the Community
 
-After signing the CLA and joining a SIG, you can start your contribution journey. To maintain the friendly environment for development and collaboration, observe the [_openEuler Community Code of Conduct_](https://gitee.com/openeuler/community/blob/master/code-of-conduct_en.md) and [_openEuler Community Code of Conduct for Development_](https://gitee.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md) when you engage in community contributions.
+After signing the CLA and joining a SIG, you can start your contribution journey. To maintain the friendly environment for development and collaboration, observe the [_openEuler Community Code of Conduct_](https://atomgit.com/openeuler/community/blob/master/code-of-conduct_en.md) and [_openEuler Community Code of Conduct for Development_](https://atomgit.com/openeuler/community/blob/master/zh/technical-committee/governance/openEuler%E7%A4%BE%E5%8C%BA%E5%BC%80%E5%8F%91%E8%A1%8C%E4%B8%BA%E8%A7%84%E8%8C%83.md) when you engage in community contributions.
 
 - [Contribute Original Open Source Projects](#_4-1-contribute-original-open-source-projects)
 - [Contribute Code](#_4-2-contribute-code)
@@ -93,27 +93,27 @@ If you want to contribute your original open source project to the openEuler com
 
 - Method 1: Develop a project in the community and integrate it into openEuler.
 
-  Creating an original project directly in [openEuler code repositories](https://gitee.com/openeuler) is like hosting the project in the openEuler community. This is the practice of [iSula](https://gitee.com/openeuler/iSulad) and [A-Tune](https://gitee.com/openeuler/A-Tune).
+Creating an original project directly in [openEuler code repositories](https://atomgit.com/openeuler) is like hosting the project in the openEuler community. This is the practice of [iSula](https://atomgit.com/openeuler/iSulad) and [A-Tune](https://atomgit.com/openeuler/A-Tune).
 
-  If you have a great idea that you want to implement in the openEuler community, follow the procedure below to get deeply involved in the openEuler community.
+If you have a great idea that you want to implement in the openEuler community, follow the procedure below to get deeply involved in the openEuler community.
 
-  1. Apply for setting up an open source project in [regular meetings of the TC](https://www.openeuler.org/en/sig/sig-detail/?name=TC).
+1. Apply for setting up an open source project in [regular meetings of the TC](https://www.openeuler.org/en/sig/sig-detail/?name=TC).
 
-  2. If the TC determines that your proposal is valuable and deserves further development, a repository will be created in [https://gitee.com/openeuler](https://gitee.com/openeuler).
+2. If the TC determines that your proposal is valuable and deserves further development, a repository will be created in [https://atomgit.com/openeuler](https://atomgit.com/openeuler).
 
-  3. The project will be continuously developed and incubated within openEuler until it reaches maturity. At that point, a repository can be created in src-openeuler to provide the relevant spec file for packaging the project into an RPM file, which will eventually be used by people around the world with openEuler releases.
+3. The project will be continuously developed and incubated within openEuler until it reaches maturity. At that point, a repository can be created in src-openeuler to provide the relevant spec file for packaging the project into an RPM file, which will eventually be used by people around the world with openEuler releases.
 
 - Method 2: Develop a project in another community and integrate it into openEuler.
 
-  Assuming that you already have a project on GitHub, GitLab, or Gitee, simply add the software to [src-openeuler](https://gitee.com/src-openeuler) by referring to [Adding a New Software Package](https://gitee.com/openeuler/community/blob/master/en/contributors/create-package.md).
+  Assuming that you already have a project on GitHub, GitLab, Gitee, or AtomGit, simply add the software to [src-openeuler](https://atomgit.com/src-openeuler) by referring to [Adding a New Software Package](https://atomgit.com/openeuler/community/blob/master/en/contributors/create-package.md).
 
 ### 4.2 Contribute Code
 
 The openEuler community has two repositories:
 
-1. Code repository: [https://gitee.com/openeuler](https://gitee.com/openeuler)
+1. Code repository: [https://atomgit.com/openeuler](https://atomgit.com/openeuler)
 
-2. Software package repository: [https://gitee.com/src-openeuler](https://gitee.com/src-openeuler)
+2. Software package repository: [https://atomgit.com/src-openeuler](https://atomgit.com/src-openeuler)
 
 The **openeuler** repository stores source code.
 
@@ -135,11 +135,11 @@ The **src-openeuler** repository stores the software packages required for build
 
 - Issue list
 
-  Enter the home page of the SIG or project that interests you from the community code repository, then click **Issues** on the toolbar to check the issue list, for example, [the issue list of the **community** repository](https://gitee.com/openeuler/community/issues).
+  Enter the home page of the SIG or project that interests you from the community code repository, then click **Issues** on the toolbar to check the issue list, for example, [the issue list of the **community** repository](https://atomgit.com/openeuler/community/issues).
 
 - Issue submission
 
-  You can submit issues regarding bugs or requests to related repositories in the community. For details, see the [_Issue Submission and Handling Guide_](https://gitee.com/openeuler/community/blob/master/en/contributors/issue-submit.md). To attract more attention, you can also attach the issue link to an email and send it to a [mailing list](https://www.openeuler.org/en/community/mailing-list/).
+  You can submit issues regarding bugs or requests to related repositories in the community. For details, see the [_Issue Submission and Handling Guide_](https://atomgit.com/openeuler/community/blob/master/en/contributors/issue-submit.md). To attract more attention, you can also attach the issue link to an email and send it to a [mailing list](https://www.openeuler.org/en/community/mailing-list/).
 
 - Issue discussion
 
@@ -155,9 +155,9 @@ The **src-openeuler** repository stores the software packages required for build
 
 - Development environment setup
 
-  1. If you want to submit code, you need to prepare an openEuler development environment. For details, see [Development Environment Preparations](https://gitee.com/openeuler/community/blob/master/en/contributors/prepare-environment.md).
+  1. If you want to submit code, you need to prepare an openEuler development environment. For details, see [Development Environment Preparations](https://atomgit.com/openeuler/community/blob/master/en/contributors/prepare-environment.md).
 
-  2. If you want to download, modify, build, or verify an openEuler software package, see [Software Package Building](https://gitee.com/openeuler/community/blob/master/en/contributors/package-install.md).
+  2. If you want to download, modify, build, or verify an openEuler software package, see [Software Package Building](https://atomgit.com/openeuler/community/blob/master/en/contributors/package-install.md).
 
 - Development precautions
 
@@ -165,15 +165,15 @@ The **src-openeuler** repository stores the software packages required for build
 
 - Code download and branching
 
-  To submit code, you also need to know how to download code from Gitee and merge code through pull request (PRs). The openEuler community hosts code on Gitee. For details, see [Gitee Workflow](https://gitee.com/openeuler/community/blob/master/en/contributors/Gitee-workflow.md). Gitee provides similar experience to GitHub. If you have used GitHub before, you can have a quick look at or even skip this chapter.
+  To submit code, you also need to know how to download code from AtomGit and merge code through pull request (PRs). The openEuler community hosts code on AtomGit. For details, see [AtomGit Workflow](https://atomgit.com/openeuler/community/blob/master/en/contributors/Gitee-workflow.md). AtomGit provides similar experience to GitHub. If you have used GitHub before, you can have a quick look at or even skip this chapter.
 
 - Build modification and local verification
 
-  After modifying code on a local branch, you can perform building and verification locally by referring to [Software Package Building](https://gitee.com/openeuler/community/blob/master/en/contributors/package-install.md).
+  After modifying code on a local branch, you can perform building and verification locally by referring to [Software Package Building](https://atomgit.com/openeuler/community/blob/master/en/contributors/package-install.md).
 
 - PR submission
 
-  When you submit a PR, you are starting to contribute code to the community. The [_Pull Request Submission Guide_](https://gitee.com/openeuler/community/blob/master/en/contributors/pull-request.md) will familiarize you with PR submission requirements. To increase the chances of your PR being accepted, you should:
+  When you submit a PR, you are starting to contribute code to the community. The [_Pull Request Submission Guide_](https://atomgit.com/openeuler/community/blob/master/en/contributors/pull-request.md) will familiarize you with PR submission requirements. To increase the chances of your PR being accepted, you should:
 
   1. Comply with any coding conventions of the SIG.
 
@@ -189,15 +189,15 @@ Note: If your PR does not draw enough attention, you can seek help from the SIG 
 
 If you find a software package missing from openEuler, you can add it to supplement openEuler and help expand its functionality.
 
-- When a software package is added on Gitee, openEuler automatically creates a repository with the same name in openEuler:Factory of the Open Build Service (OBS). In this way, every time code is submitted to the created Gitee repository, a code compilation check is automatically triggered. [Adding a New Software Package](https://gitee.com/openeuler/community/blob/master/en/contributors/create-package.md) describes the detailed process.
+- When a software package is added on AtomGit, openEuler automatically creates a repository with the same name in openEuler:Factory of the Open Build Service (OBS). In this way, every time code is submitted to the created AtomGit repository, a code compilation check is automatically triggered. [Adding a New Software Package](https://atomgit.com/openeuler/community/blob/master/en/contributors/create-package.md) describes the detailed process.
 
-- You can also participate in community component packaging. For details, see the [_openEuler Packaging Guide_](https://gitee.com/openeuler/community/blob/master/en/contributors/packaging.md).
+- You can also participate in community component packaging. For details, see the [_openEuler Packaging Guide_](https://atomgit.com/openeuler/community/blob/master/en/contributors/packaging.md).
 
 - If you find that some software packages are missing or the existing packages do not satisfy your needs, you can help supplement openEuler by using [openEuler User Repo (EUR)](https://eur.openeuler.openatom.cn). For details, see [Introduction to the openEuler User Software Repository](https://www.openeuler.org/en/blog/waaagh/waaagh/openEuler-user-repo-intro.html) and [How to Use the openEuler User Repository](https://www.openeuler.org/en/blog/waaagh/waaagh/openEuler-user-repo-howto.html).
 
 #### 4.2.4 Review Code
 
-openEuler is an open community and every community member is expected to be an active reviewer. For details about responsibilities of different contributor roles, see [Community Membership](https://gitee.com/openeuler/community/blob/master/community-membership.md).
+openEuler is an open community and every community member is expected to be an active reviewer. For details about responsibilities of different contributor roles, see [Community Membership](https://atomgit.com/openeuler/community/blob/master/community-membership.md).
 
 As a SIG committer or maintainer, you have the responsibility and permission to review code. It is strongly recommended that you comply with the _Code of Conduct_ and respect others to foster a collaborative environment and improve yourself. When reviewing PRs, consider the key points outlined in [_The Gentle Art Of Patch Review_](https://sage.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/). This resource emphasizes fostering an encouraging environment for new contributors instead of giving nit-picking comments. To this end, please keep the following points in mind during your review:
 
@@ -209,18 +209,18 @@ As a SIG committer or maintainer, you have the responsibility and permission to 
 
 #### 4.2.5 Test
 
-Testing is the responsibility of all contributors. The [QA SIG](https://gitee.com/openeuler/QA) is the official organization responsible for testing activities related to the community version. If you want to carry out testing activities on your own infrastructure, see [Community Test System](https://gitee.com/openeuler/QA/blob/master/GuideBook/community-test-system.md).
+Testing is the responsibility of all contributors. The [QA SIG](https://atomgit.com/openeuler/QA) is the official organization responsible for testing activities related to the community version. If you want to carry out testing activities on your own infrastructure, see [Community Test System](https://atomgit.com/openeuler/QA/blob/master/GuideBook/community-test-system.md).
 
-A successful release of the community version requires multiple types of testing activities. Different tests target different code segments and require varying execution environments. For details, see [Community Developer Test Contribution Guide](https://gitee.com/openeuler/QA/blob/master/GuideBook/community-developer-test-contribution-guide.md).
+A successful release of the community version requires multiple types of testing activities. Different tests target different code segments and require varying execution environments. For details, see [Community Developer Test Contribution Guide](https://atomgit.com/openeuler/QA/blob/master/GuideBook/community-developer-test-contribution-guide.md).
 
 #### 4.2.6 Report Community Security Issues
 
-- [openEuler Community Security Issue Handling Process](https://gitee.com/openeuler/security-committee/blob/master/docs/en/vulnerability-management-process/security-process-en.md) briefly introduces the process of handling security issues.
-- [openEuler Security Disclosure](https://gitee.com/openeuler/security-committee/blob/master/docs/en/vulnerability-management-process/security-disclosure-en.md) describes how to report security vulnerabilities.
+- [openEuler Community Security Issue Handling Process](https://atomgit.com/openeuler/security-committee/blob/master/docs/en/vulnerability-management-process/security-process-en.md) briefly introduces the process of handling security issues.
+- [openEuler Security Disclosure](https://atomgit.com/openeuler/security-committee/blob/master/docs/en/vulnerability-management-process/security-disclosure-en.md) describes how to report security vulnerabilities.
 
 ### 4.3 Make Non-Code Contributions
 
-If you are not interested in coding, you can make [Non-Code Contributions](https://gitee.com/openeuler/community/blob/master/en/contributors/non-code-contributions.md). This section will describe some common non-code community work.
+If you are not interested in coding, you can make [Non-Code Contributions](https://atomgit.com/openeuler/community/blob/master/en/contributors/non-code-contributions.md). This section will describe some common non-code community work.
 
 #### 4.3.1 openEuler Call for X
 
