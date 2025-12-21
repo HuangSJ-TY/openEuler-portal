@@ -69,7 +69,7 @@ const organizationData: any = computed(() => {
             ><OIcon><IconEmailFill /></OIcon
           ></a>
           <a
-            v-if="item.gitee"
+            v-if="false"
             :href="'https://gitee.com/' + item.gitee"
             class="gitee"
             target="_blank"
@@ -213,7 +213,6 @@ const organizationData: any = computed(() => {
           align-items: center;
           font-size: 24px;
           color: var(--e-color-brand1);
-          margin-right: 18px;
           img {
             width: 24px;
           }

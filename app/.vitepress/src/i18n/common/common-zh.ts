@@ -307,7 +307,7 @@ export default {
             {
               NAME: 'EulerMaker',
               LABEL: '开放式统一构建服务',
-              PATH: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
+              PATH: 'https://eulermaker.openeuler.openatom.cn/',
             },
             {
               NAME: 'oecp',

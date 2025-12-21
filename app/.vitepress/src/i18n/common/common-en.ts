@@ -246,7 +246,7 @@ export default {
             {
               NAME: 'EulerMaker',
               LABEL: 'Build service platform',
-              PATH: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
+              PATH: 'https://eulermaker.openeuler.openatom.cn/',
             },
             {
               NAME: 'oecp',
