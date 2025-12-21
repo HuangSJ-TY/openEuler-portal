@@ -139,7 +139,7 @@ export default {
               NAME: 'EulerMaker',
               DESCRIPTION:
                 'An open, unified build service for streamlined development.',
-              URL: 'https://eulermaker.compass-ci.openeuler.openatom.cn/',
+              URL: 'https://eulermaker.openeuler.openatom.cn/',
               ANALYTICSNAME: 'eulermaker',
             },
             {

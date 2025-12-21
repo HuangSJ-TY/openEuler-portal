@@ -74,19 +74,19 @@ export default {
       BLANK: true,
     },
     {
-      URL: '/zh/sig/sig-detail/?name=TC',
+      URL: '/zh/sig/TC',
       BLANK: true,
     },
     {
-      URL: '/zh/sig/sig-detail/?name=TC&mail=dev%40openeuler.org',
+      URL: 'https://mailweb.openeuler.org/postorius/lists/tc@openeuler.org/',
       BLANK: true,
     },
     {
-      URL: 'https://atomgit.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4',
+      URL: 'https://raw.atomgit.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4',
       BLANK: true,
     },
     {
-      URL: 'https://atomgit.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4',
+      URL: 'https://raw.atomgit.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4',
       BLANK: true,
     },
     {

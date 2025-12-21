@@ -87,7 +87,7 @@ openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命
 
 1. 项目代码必须开源开放，遵循相关的[开源协议](https://opensource.org/licenses/alphabetical)。
 
-2. [通过邮件列表预约 TC（即 openEuler 技术委员会）例会](https://www.openeuler.org/zh/sig/sig-detail/?name=TC)，在会上申请将您的开源项目融入到社区中。
+2. [通过邮件列表预约 TC（即 openEuler 技术委员会）例会](https://www.openeuler.org/zh/sig/TC)，在会上申请将您的开源项目融入到社区中。
 
 #### 4.1.1 经 TC 例会之后，您可以参考以下两种方式将您的作品融入到 openEuler 中：
 
@@ -97,13 +97,13 @@ openEuler 社区版本分为长期支持版本（LTS）和创新版本[（生命
 
 如果您有了一个很棒的 idea 想要在 openEuler 社区里实现，那么可以依照下面的过程来深度参与到 openEuler 中。
 
-1.在 [TC 委员会的例会中](https://www.openeuler.org/zh/sig/sig-detail/?id=21&name=TC&mail=dev%40openeuler.org) 申请一个开源项目；
+1.在 [TC 委员会的例会中](https://mailweb.openeuler.org/postorius/lists/tc@openeuler.org/) 申请一个开源项目；
 
 2.如果 TC 委员会认为这是一个很好的 idea，并且认为值得去推进，那么我们会在[ https://atomgit.com/openeuler ](https://atomgit.com/openeuler)中建立一个 repo；
 
 3.这个项目在 openEuler 中持续开发和孵化，直到项目逐渐成熟，那么就可以在 src-openeuler 中建立一个仓，为该项目提供相关的 spec 文件，制作成为一个 rpm，跟随着 openEuler 的版本发布，为世界人民所使用。
 
-4.具体可参考：[openEuler 社区项目运作流程介绍（第 4 页）](https://gitee.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4)
+4.具体可参考：[openEuler 社区项目运作流程介绍（第 4 页）](https://raw.atomgit.com/openeuler/community/raw/master/zh/contributors/openEuler%E7%A4%BE%E5%8C%BA%E9%A1%B9%E7%9B%AE%E8%BF%90%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%AF%B4%E6%98%8E.pdf#page=4)
 
 方式二：在其它社区开发，集成到 openEuler 中：
 
@@ -244,17 +244,17 @@ openEuler 用户组（openEuler User Group），简称 oEUG，这是为方便 op
 
 - 参与社区宣传推广与内容制作，包括 [文档捉虫](https://docs.openeuler.org/zh/)、[博客写作](https://www.openeuler.org/zh/interaction/blog-list/)、[用户案例编写](https://www.openeuler.org/zh/showcase/) 、事件/技术/课程/视频投稿（联系小助手，微信号：openeuler123）等；
 
-- 参与社区基础设施建设，请加入 [sig-infrastructure](https://www.openeuler.org/zh/sig/sig-detail/?name=Infrastructure)
+- 参与社区基础设施建设，请加入 [sig-infrastructure](https://www.openeuler.org/zh/sig/Infrastructure)
 
-- 参与社区视觉设计，请加入 [sig-OpenDesign](https://www.openeuler.org/zh/sig/sig-detail/?name=sig-OpenDesign)
+- 参与社区视觉设计，请加入 [sig-OpenDesign](https://www.openeuler.org/zh/sig/sig-OpenDesign)
 
-- 参与社区翻译服务，请加入 [sig-G11N](https://www.openeuler.org/zh/sig/sig-detail/?name=G11N)
+- 参与社区翻译服务，请加入 [sig-G11N](https://www.openeuler.org/zh/sig/G11N)
 
 ## 5. 和社区一起成长
 
 - openEuler 技术委员会
 
-  openEuler 技术委员会（Technical Committee，简称 TC）是 openEuler 社区的技术决策机构，负责社区技术决策和技术资源的协调。详情请查看  [openEuler 技术委员会介绍](https://www.openeuler.org/zh/sig/sig-detail/?id=21&name=TC&mail=dev%40openeuler.org)。
+  openEuler 技术委员会（Technical Committee，简称 TC）是 openEuler 社区的技术决策机构，负责社区技术决策和技术资源的协调。详情请查看  [openEuler 技术委员会介绍](https://www.openeuler.org/zh/sig/TC)。
 
 - 社区角色说明
 

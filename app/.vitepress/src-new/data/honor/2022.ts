@@ -166,7 +166,7 @@ export const year2022 = {
             '在云原生调度、内存可靠性、新文件系统、可编程内核等领域孵化多个新技术点，在调度、网络、IO、文件系统等多个核心子系统性能优化，支撑下游商用发行版，在电信、金融等多个核心领域成功应用。',
             '及时修复400余个安全漏洞，发布 140 余个 update 版本，保障下游各个版本及时获得安全更新。改进和优化代码提交合入方式，并通过基础设施，推广到整个社区。',
           ],
-          link: 'https://www.openeuler.org/zh/sig/sig-detail/?name=Kernel',
+          link: 'https://www.openeuler.org/zh/sig/Kernel',
         },
         {
           name: 'SIG Compiler',
@@ -174,14 +174,14 @@ export const year2022 = {
             '孵化gcc多版本、A-FOT、bishengjdk-17、bishengjdk-riscv等项目，支持多样性算力生态，包括intel SPR特性、龙芯LoongArch支持等。',
             '完成4个openJDK版本发布，完成KAE Provider、dynamic CDS等特性，支持大数据领域应用性能提升10%，且多数项目已经商用落地。',
           ],
-          link: 'https://www.openeuler.org/zh/sig/sig-detail/?name=Compiler',
+          link: 'https://www.openeuler.org/zh/sig/Compiler',
         },
         {
           name: 'SIG CloudNative',
           detail: [
             '汇聚来自20+企业的超过300位开发者，孵化iSula、CPDS、Eggo、Rubik、KubeOS、NestOS等原创技术项目，涵盖容器运行时、故障监测、部署、资源利用率提升等全栈能力，为用户提供高性能、高可靠的云原生解决方案，已在在金融、互联网、运营商等领域规模落地。',
           ],
-          link: 'https://www.openeuler.org/zh/sig/sig-detail/?name=sig-CloudNative',
+          link: 'https://www.openeuler.org/zh/sig/sig-CloudNative',
         },
       ],
     },

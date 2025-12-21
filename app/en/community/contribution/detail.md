@@ -87,7 +87,7 @@ If you want to contribute your original open source project to the openEuler com
 
 1. Open the source code of your project under an [open source license](https://opensource.org/license).
 
-2. Use the mailing list to schedule a [Technical Committee (TC) regular meeting](https://www.openeuler.org/en/sig/sig-detail/?name=TC) and apply to contribute your project to the community.
+2. Use the mailing list to schedule a [Technical Committee (TC) regular meeting](https://www.openeuler.org/en/sig/TC) and apply to contribute your project to the community.
 
 #### With approval from the TC, you can integrate your work into openEuler using either of the following methods:
 
@@ -97,7 +97,7 @@ Creating an original project directly in [openEuler code repositories](https://a
 
 If you have a great idea that you want to implement in the openEuler community, follow the procedure below to get deeply involved in the openEuler community.
 
-1. Apply for setting up an open source project in [regular meetings of the TC](https://www.openeuler.org/en/sig/sig-detail/?name=TC).
+1. Apply for setting up an open source project in [regular meetings of the TC](https://www.openeuler.org/en/sig/TC).
 
 2. If the TC determines that your proposal is valuable and deserves further development, a repository will be created in [https://atomgit.com/openeuler](https://atomgit.com/openeuler).
 
@@ -238,17 +238,17 @@ Contact: [events@openeuler.sh](mailto:events@openeuler.sh)
 
 - Participating in community publicity, promotion, and content creation, including [document bug catching](https://docs.openeuler.org/en/), [blog writing](https://www.openeuler.org/en/interaction/blog-list/), and [success story writing](https://www.openeuler.org/en/showcase/).
 
-- Participating in community infrastructure construction by joining the [infrastructure SIG](https://www.openeuler.org/en/sig/sig-detail/?name=Infrastructure)
+- Participating in community infrastructure construction by joining the [infrastructure SIG](https://www.openeuler.org/en/sig/Infrastructure)
 
-- Participating in community visual design by joining the [OpenDesign SIG](https://www.openeuler.org/en/sig/sig-detail/?name=sig-OpenDesign)
+- Participating in community visual design by joining the [OpenDesign SIG](https://www.openeuler.org/en/sig/sig-OpenDesign)
 
-- Participating in community translation by joining the [G11N SIG](https://www.openeuler.org/en/sig/sig-detail/?name=G11N)
+- Participating in community translation by joining the [G11N SIG](https://www.openeuler.org/en/sig/G11N)
 
 ## 5. Grow with the Community
 
 - openEuler TC
 
-  The openEuler TC makes technical decisions and coordinates technical resources. For details, see the [TC home page](https://www.openeuler.org/en/sig/sig-detail/?id=21&name=TC&mail=dev%40openeuler.org).
+  The openEuler TC makes technical decisions and coordinates technical resources. For details, see the [TC home page](https://www.openeuler.org/en/sig/TC).
 
 - Community roles
 

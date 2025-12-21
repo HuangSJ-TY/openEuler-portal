@@ -73,11 +73,11 @@ export default {
       BLANK: true,
     },
     {
-      URL: '/en/sig/sig-detail/?name=TC',
+      URL: '/en/sig/name=TC',
       BLANK: true,
     },
     {
-      URL: '/zh/sig/sig-detail/?name=TC&mail=dev%40openeuler.org',
+      URL: 'https://mailweb.openeuler.org/postorius/lists/tc@openeuler.org/',
       BLANK: true,
     },
     {
