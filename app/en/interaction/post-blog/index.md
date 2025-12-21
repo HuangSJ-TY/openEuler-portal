@@ -7,18 +7,18 @@ category: blog
 
 ## Preparation
 
-1. Refer to <http://git.mydoc.io/?t=179267> to register Gitee account.
+1. Refer to <http://git.mydoc.io/?t=179267> to register AtomGit account.
 
-2. Set your primary mail box in gitee settings <https://gitee.com/profile/emails>.
+2. Set your primary mail box in AtomGit settings <https://atomgit.com/setting/email>.
 
-3. Sign your CLA in <https://www.openeuler.org/en/other/cla>.
+3. Sign your CLA in <https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9?lang=en>.
 
 4. Prepare your git environment refering to <http://git.mydoc.io/?t=180692>.
 
 ## Understand blog format
 
 The openEuler blog is written in markdown format.
-You can read <https://gitee.com/openeuler/openEuler-portal/blob/master/app/en/interaction/post-blog/index.md> to get understand how the blog is designed.
+You can read <https://atomgit.com/openeuler/openEuler-portal/blob/master/app/en/interaction/post-blog/index.md> to get understand how the blog is designed.
 
 The head includes the following information:
 
@@ -41,18 +41,18 @@ summary: Just about everything you'll need to style in the theme：headings, par
 Here you can edit your blog.
 ```
 
-Tips: you can copy `https://gitee.com/openeuler/openEuler-portal/blob/master/app/en/interaction/post-blog/blog_example/20220901-sample-post.md` to your folder and edit it.
+Tips: you can copy `https://atomgit.com/openeuler/openEuler-portal/blob/master/app/en/interaction/post-blog/blog_example/20220901-sample-post.md` to your folder and edit it.
 
 ## Post your blog
 
-The blog posting follows the pull request of [Gitee](https://gitee.com/).
+The blog posting follows the pull request of [AtomGit](https://atomgit/).
 
-1. Fork openEuler blog project <https://gitee.com/openeuler/openEuler-portal> to your own gitee. Refer to <http://git.mydoc.io/?t=153749> for detailed guidance.
+1. Fork openEuler blog project <https://atomgit/openeuler/openEuler-portal> to your own atomgit. Refer to <http://git.mydoc.io/?t=153749> for detailed guidance.
 
 2. Clone the code to your local environment.
 
 ```
-git clone https://gitee.com/<your-gitee-id>/openEuler-portal
+git clone https://atomgit/<your-atomgit-id>/openEuler-portal
 ```
 
 3. Create a branch
@@ -70,8 +70,8 @@ Assume that you are preparing an English blog.
 
 ```
 cd app/en/blog
-mkdir <your-gitee-id>
-cd <your-gitee-id>
+mkdir <your-atomgit-id>
+cd <your-atomgit-id>
 touch YEAR-MONTH-DAY-title.md
 ```
 
