@@ -11,7 +11,7 @@ category: wiki
 
 1. 容器镜像仓库
 
-   openEuler 官方容器镜像仓库，包含 openEuler 基础镜像、应用镜像。在这里，你可以找到相应镜像的使用和介绍。- [openeuler-docker-images](https://gitee.com/openeuler/openeuler-docker-images)
+   openEuler 官方容器镜像仓库，包含 openEuler 基础镜像、应用镜像。在这里，你可以找到相应镜像的使用和介绍。- [openeuler-docker-images](https://atomgit.com/openeuler/openeuler-docker-images)
 
 2. 基础镜像地址
 
