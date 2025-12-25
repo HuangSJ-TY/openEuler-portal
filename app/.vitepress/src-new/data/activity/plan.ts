@@ -105,7 +105,7 @@ export const yearPlanData = {
           month: '11',
           actives: [
             {
-              location: '中国 TBD',
+              location: '中国 北京',
               activeName: '操作系统大会&openEuler Summit 2025',
             },
           ],
@@ -273,8 +273,36 @@ export const yearPlanData = {
             },
           ]
         },
-        { month: '11' },
-        { month: '12' },
+        { 
+          month: '11',
+          actives: [
+            {
+              location: '中国 北京',
+              activeName: 'openEuler 云原生开源中间件Meetup',
+            },
+            {
+              location: 'Online',
+              activeName: 'openEuler SDS Meetup Online',
+            },
+            {
+              location: 'Online',
+              activeName: 'openEuler Intelligence Meetup Online',
+            },
+          ]
+        },
+        {
+          month: '12',
+          actives: [
+            {
+              location: '中国 香港',
+              activeName: 'openEuler Intelligence Meetup 香港站',
+            },
+            {
+              location: '中国 苏州',
+              activeName: 'openEuler AI 创新应用技术Meetup 苏州站',
+            },
+          ]
+        },
       ],
     },
     college: {
