@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
+import { useRouter } from 'vitepress';
 import { OFigure, ORow, OCol, OLink, OIcon, ODivider } from '@opensig/opendesign';
 
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
+import DropButton from './DropButton.vue';
 
 import banner from '~@/assets/category/ub-service-core/banner.jpg';
 
@@ -16,11 +18,13 @@ import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
+import type { LocaleT } from '~@/@types/type-locale';
 
-import { ubEntranceList } from '~@/data/project';
+import { ubEntranceList, ubServiceCoreUrl } from '~@/data/project';
 
 const { locale, t } = useLocale();
 const { lePadV } = useScreen();
+const router = useRouter();
 
 const commonStore = useCommon();
 const isDark = computed(() => (commonStore.theme === 'dark' ? true : false));
@@ -47,6 +51,10 @@ const frameworkList = [
     desc: t('ubServiceCore.ioDesc'),
   },
 ]
+
+const viewWhitepaper = (lang: LocaleT) => {
+  router.go(ubServiceCoreUrl[`whitepaper_${lang}`]);
+}
 </script>
 
 <template>
@@ -82,7 +90,8 @@ const frameworkList = [
           <div class="info-content">
             <p class="content-desc">{{ item.desc }}</p>
             <ODivider v-if="lePadV" />
-            <OLink :color="lePadV ? 'normal' : 'primary'" :href="item.href" target="_blank" :hover-underline="lePadV ? false : true">
+            <DropButton v-if="item.title === '白皮书'" class="drop-button" @click="viewWhitepaper">{{ t('ubServiceCore.viewMore') }}</DropButton>
+            <OLink v-else :color="lePadV ? 'normal' : 'primary'" :href="item.href" target="_blank" :hover-underline="lePadV ? false : true">
               <p>{{ t('ubServiceCore.viewMore') }}</p>
               <OIcon v-if="item?.isOutlink" class="outlink-icon"><IconOutLink /></OIcon>
               <OIcon v-if="lePadV && !item?.isOutlink" class="outlink-icon"><IconChevronRight /></OIcon>
@@ -306,6 +315,16 @@ const frameworkList = [
     margin-top: 8px;
     color: var(--o-color-info3);
     @include text1;
+  }
+  .drop-button {
+    margin-top: auto;
+
+    :deep(.o-btn-text) {
+      &:hover {
+        --btn-bg-color-hover: unset;
+        --btn-bg-color-active: unset;
+      }
+    }
   }
 }
 
