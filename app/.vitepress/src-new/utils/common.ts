@@ -98,3 +98,26 @@ export const changeTimeStamp = (timestamp: number) => {
 
   return `${year}/${month}/${day}`;
 };
+
+/**
+ * 判断链接来自GITEE/ATONGIT
+ * @param {string} 链接字符串
+ * @returns {string} 返回链接所属平台，gitee/atomgit/unknown
+ */
+export const detectGitPlatform = (url: string) => {
+  if (!url || typeof url !== 'string') return 'unknown';
+  
+  const normalized = url.trim().toLowerCase();
+  
+  // 匹配 gitee
+  if (/^(https?:\/\/)?(www\.)?gitee\.com\//.test(normalized)) {
+    return 'gitee';
+  }
+  
+  // 匹配 atomgit
+  if (/^(https?:\/\/)?(www\.)?atomgit\.com\//.test(normalized)) {
+    return 'atomgit';
+  }
+  
+  return 'unknown';
+}

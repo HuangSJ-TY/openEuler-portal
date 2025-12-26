@@ -195,17 +195,17 @@ onMounted(() => {
         <template #td_maintainers="{ row }">
           <a
             v-for="(item, index) in row.maintainers"
-            :key="item"
+            :key="item.user_login"
             target="_blank"
             rel="noopener noreferrer"
-            :href="`https://gitee.com/${item}`"
+            :href="item.user_homepage_url"
             v-analytics.bubble="{
               level2: $t('sig.repoList').replace(/（.*）/, ''),
               level3: t('sig.maintainerEn'),
               target: item
             }"
           >
-            {{ item
+            {{ item.user_login
             }}<span v-show="index !== row.maintainers.length - 1">{{
               locale === 'zh' ? '、' : ',&nbsp;'
             }}</span>
@@ -215,17 +215,17 @@ onMounted(() => {
           <template v-if="row.committers?.length">
             <a
               v-for="(item, index) in row.committers"
-              :key="item"
+              :key="item.user_login"
               target="_blank"
               rel="noopener noreferrer"
-              :href="`https://gitee.com/${item}`"
+              :href="item.user_homepage_url"
               v-analytics.bubble="{
                 level2: $t('sig.repoList').replace(/（.*）/, ''),
                 level3: t('sig.committer'),
                 target: item
               }"
             >
-              {{ item
+              {{ item.user_login
               }}<span v-show="index !== row.committers.length - 1">{{
                 locale === 'zh' ? '、' : ',&nbsp;'
               }}</span>

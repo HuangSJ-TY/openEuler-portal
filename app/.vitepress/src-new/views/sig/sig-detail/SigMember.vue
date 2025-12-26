@@ -6,6 +6,7 @@ import { OIcon, ODivider } from '@opensig/opendesign';
 import WordAvatar from '~@/components/WordAvatar.vue';
 
 import IconGitee from '~icons/app-new/icon-gitee.svg';
+import IconAtomGit from '~icons/app-new/icon-atomgit.svg';
 import IconMail from '~icons/app-new/icon-mail.svg';
 import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
 
@@ -16,6 +17,7 @@ import { sigMaintainerT } from '~@/@types/type-sig';
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
+import { detectGitPlatform } from '~@/utils/common';
 
 const props = defineProps({
   maintainerList: {
@@ -119,14 +121,14 @@ watch(
               :custom-size="lePadV ? 32 : 0"
             />
             <div class="info">
-              <div class="member-id">{{ member.gitee_id }}</div>
+              <div class="member-id">{{ member.user_login }}</div>
               <div class="member-name">{{ member.name }}</div>
             </div>
           </div>
           <ODivider direction="v" />
           <div class="member-info-right">
             <a
-              :href="`${GITEE_ADDRESS}/${member?.gitee_id}`"
+              :href="member.user_homepage_url"
               target="_blank"
               rel="noopener noreferrer"
               v-analytics.bubble="{
@@ -136,7 +138,8 @@ watch(
               }"
             >
               <OIcon>
-                <IconGitee />
+                <IconGitee v-if="detectGitPlatform(member.user_homepage_url) === 'gitee'" />
+                <IconAtomGit v-if="detectGitPlatform(member.user_homepage_url) === 'atomgit'" />
               </OIcon>
             </a>
             <a
@@ -172,19 +175,19 @@ watch(
         <div v-for="member in committerData" class="member-info">
           <div class="member-info-left" :class="{'member-info-id': !member.name}">
             <WordAvatar
-              :name="member?.gitee_id"
+              :name="member?.user_login"
               size="medium"
               :custom-size="lePadV ? 32 : 0"
             />
             <div class="info">
-              <div class="member-id">{{ member.gitee_id }}</div>
+              <div class="member-id">{{ member.user_login }}</div>
               <div class="member-name">{{ member.name }}</div>
             </div>
           </div>
           <ODivider direction="v" />
           <div class="member-info-right">
             <a
-              :href="`${GITEE_ADDRESS}/${member?.gitee_id}`"
+              :href="member.user_homepage_url"
               target="_blank"
               rel="noopener noreferrer"
               v-analytics.bubble="{
@@ -194,7 +197,8 @@ watch(
               }"
             >
               <OIcon>
-                <IconGitee />
+                <IconGitee v-if="detectGitPlatform(member.user_homepage_url) === 'gitee'" />
+                <IconAtomGit v-if="detectGitPlatform(member.user_homepage_url) === 'atomgit'" />
               </OIcon>
             </a>
             <a

@@ -863,20 +863,20 @@ const onClickSearchRes = (type: string, ev: Event) => {
                 wrap-class="sig-popup-maintainers"
               >
                 <template #target>
-                  <p class="text">Maintainer {{ sig.maintainers?.length }}</p>
+                  <p class="text">Maintainer {{ sig.maintainer_info?.length }}</p>
                 </template>
                 <div class="popup-content">
                   <OScroller showType="always" size="small">
                     <OLink
-                      v-for="(item, i) in sig.maintainers"
-                      :key="item"
+                      v-for="(item, i) in sig.maintainer_info"
+                      :key="item.user_login"
                       class="repo-item"
                       color="primary"
-                      :href="`https://gitee.com/${item}`"
+                      :href="item.user_homepage_url"
                       target="_blank"
                     >
                       {{
-                        item + (i === sig.maintainers.length - 1 ? '' : '、')
+                        item.user_login + (i === sig.maintainer_info.length - 1 ? '' : '、')
                       }}
                     </OLink>
                   </OScroller>
@@ -990,20 +990,20 @@ const onClickSearchRes = (type: string, ev: Event) => {
                 wrap-class="sig-popup-maintainers"
               >
                 <template #target>
-                  <p class="text">Maintainer {{ sig.maintainers?.length }}</p>
+                  <p class="text">Maintainer {{ sig.maintainer_info?.length }}</p>
                 </template>
                 <div class="popup-content">
                   <OScroller showType="always" size="small">
                     <OLink
-                      v-for="(item, i) in sig.maintainers"
-                      :key="item"
+                      v-for="(item, i) in sig.maintainer_info"
+                      :key="item.user_login"
                       class="repo-item"
                       color="primary"
-                      :href="`https://gitee.com/${item}`"
+                      :href="item.user_homepage_url"
                       target="_blank"
                     >
                       {{
-                        item + (i === sig.maintainers.length - 1 ? '' : '、')
+                        item.user_login + (i === sig.maintainer_info.length - 1 ? '' : '、')
                       }}
                     </OLink>
                   </OScroller>
