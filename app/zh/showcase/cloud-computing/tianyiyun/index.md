@@ -27,7 +27,7 @@ img: /category/showcase/cloud-computing.png
 
 ## 方案架构图
 
-<img src="./media/image1.png" width="1000" >
+<img src="./media/image1.jpg" width="1000" >
 
 
 

@@ -32,6 +32,12 @@ import detail_250926 from '~@/assets/category/event/list/250926.jpg';
 import detail_251016 from '~@/assets/category/event/list/251016.jpg';
 import detail_251023 from '~@/assets/category/event/list/251023.jpg';
 
+import suzhou from '~@/assets/category/user-group/city/suzhou.jpg';
+import suzhouMb from '~@/assets/category/event/city/suzhou-mb.jpg';
+import detail_251126 from '~@/assets/category/event/list/251126.jpg';
+import detail_251220 from '~@/assets/category/event/list/251220.jpg';
+import detail_251226 from '~@/assets/category/event/list/251226.jpg';
+
 export const EventSeries = new Map([
   [
     'all',
@@ -141,10 +147,55 @@ export const EventState = new Map([
 export const MEETUP_DATA = {
   zh: [
     {
+      id: 13,
+      title: 'openEuler AI 创新应用技术Meetup 苏州站',
+      date: '2025-12-26 14:00-16:30',
+      activity_type: 1,
+      synopsis:
+        '本次AI 创新应用技术主题 Meetup聚焦技术落地与产业融合，旨在汇聚行业先锋与实践者，共同探索 AI 技术的创新应用、落地挑战及未来演进方向。参会者将有机会聆听来自移动云、华为等头部科技企业，以及苏州大学等科研院校的专家分享，直击智能操作系统、智能助手、大模型、推理引擎、流控算法等前沿技术动态，同时与同行深度交流实践经验，共商 AI 技术规模化应用的可行路径，助力产业高质量发展。',
+      address: '苏州市姑苏区十梓街1号苏州大学计算机科学与技术学院504会议室',
+      city: '苏州市',
+      isAdditional: true,
+      posterImg: suzhou,
+      posterImgMb: suzhouMb,
+      series: '3',
+      detail_img: detail_251226,
+    },
+    {
+      id: 12,
+      title: 'openEuler Intelligence Meetup 香港站',
+      date: '2025-12-20 13:00-17:00',
+      activity_type: 1,
+      synopsis:
+        '12月20日，openEuler Intelligence Meetup 再一次来到香港，欢迎高校开发者、企业技术专家及开源爱好者共同参与。本次Meetup 将汇聚主要软件厂商与客户，分享智能操作系统技术最新开源进展，并邀请高校开发者分享Intelligence技术实践案例。',
+      address: '香港城市大学杨建文学术楼-紫区- P4704教室',
+      city: '香港市',
+      isAdditional: true,
+      posterImg: xianggang,
+      posterImgMb: xianggangMb,
+      series: '3',
+      detail_img: detail_251220,
+    },
+    {
+      id: 11,
+      title: 'openEuler 云原生开源中间件Meetup',
+      date: '2025-11-26 14:00-17:00',
+      activity_type: 1,
+      synopsis:
+        '11月26日，东方通、openEuler社区、北京信息科技大学联合将在北京信息科技大学举办以“轻舟泛海，云翼冲天”为主题的Meetup。此次交流活动特邀多位业内专家，分享实战案例与前沿技术解析，为技术爱好者、行业从业者、高校学生等加油充电，深化技术交流与学习，同时还将进行实习宣讲互动，为高校学生解读东方通开源实习项目，提供更多宝贵的实践机会。',
+      address: '北京信息科技大学沙河校区信息楼B座',
+      city: '北京市',
+      isAdditional: true,
+      posterImg: beijing,
+      posterImgMb: beijingMb,
+      series: '3',
+      detail_img: detail_251126,
+    },
+    {
       id: 10,
       title: 'openEuler Embedded & AGIROS具身智能技术 Meetup西安站',
       date: '2025-10-23 14:00-17:30',
-      activity_type: 2,
+      activity_type: 1,
       synopsis:
         '本活动围绕具身智能相关技术，包括但不限于ROS、AI框架、OS底座、具身Agent等进行分享及探讨，同时包含已有的行业优秀案例，以及对未来技术或行业发展趋势的思考。',
       address: '西安电子科技大学北校区会议中心一层104报告厅',
@@ -161,7 +212,7 @@ export const MEETUP_DATA = {
       id: 9,
       title: 'openEuler Compiler SIG Meetup 北京站',
       date: '2025-10-16 14:00-17:30',
-      activity_type: 2,
+      activity_type: 1,
       synopsis:
         '本次Meetup特邀来自北京航空航天大学、湖南大学、字节跳动、京东、快手、麒麟软件及华为等高校与企业的多位专家学者齐聚一堂。会议涵盖前沿编译器技术、AI图编译优化、灵衢超节点编程、编译技术业务场景实践及编译器开源社区共建等核心议题，深度链接产学研用领域技术力量，共探编译器技术创新发展之路。',
       address: '北京中关村北理工亚朵S酒店3层精工厅',
