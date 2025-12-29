@@ -14830,5 +14830,437 @@
         "result": "pass"
       }
     ]
+  },
+  {
+    "osv_name": "上海云轴科技股份有限公司",
+    "os_version": "ZStack-HelixOS-aarch64-DVD-h2203sp1o.iso",
+    "arch": "aarch64",
+    "checksum": "48acf8f744f572438fc6157f67e97c26",
+    "base_openeuler_version": "openEuler 22.03 LTS SP1",
+    "os_download_link": "https://www.zstack.io",
+    "friendly_link": "https://www.zstack.io",
+    "type": "服务器",
+    "total_result": "pass",
+    "date": "2025/12/29",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "鼎桥技术有限公司",
+    "os_version": "TDTechOS-2.0-lts-aarch64-ok3588.img",
+    "arch": "aarch64",
+    "checksum": "482b327983cd29b1f1b8fe8ab9d6960c",
+    "base_openeuler_version": "openEuler Embedded 24.03 LTS",
+    "os_download_link": "https://www.td-tech.com/",
+    "friendly_link": "https://www.td-tech.com/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2025/12/29",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "陕西智安迅科技有限公司",
+    "os_version": "ZaxOS-1.0-lts-aarch64-ascend310.img",
+    "arch": "aarch64",
+    "checksum": "9e5d45f3a522abfc79116a5204780c3d\n",
+    "base_openeuler_version": "openEuler Embedded 22.03 LTS SP4",
+    "os_download_link": " http://www.zhianxun.cn/page/service/feedback.php",
+    "friendly_link": " http://www.zhianxun.cn/page/service/feedback.php",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2025/12/29",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "粤港澳大湾区（广东）国创中心",
+    "os_version": "QSemOS-tl3588-update-2.0.img",
+    "arch": "aarch64",
+    "checksum": "EFC3CE9F37EECF3AB521D8E88E2678E7 ",
+    "base_openeuler_version": "openEuler Embedded 24.03 LTS",
+    "os_download_link": "https://space.welink.huaweicloud.com/wechatshare/d84b8e401d42f9d204f9e466cc676e1c",
+    "friendly_link": "https://www.qsemos.com/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2025/12/29",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "粤港澳大湾区（广东）国创中心",
+    "os_version": "QSemOS-d9360-update-2.0.img",
+    "arch": "aarch64",
+    "checksum": "A0BC2868E6A5F0ED9FFEA4067BFB03E5",
+    "base_openeuler_version": "openEuler Embedded 24.03 LTS",
+    "os_download_link": "https://space.welink.huaweicloud.com/wechatshare/854386ba2cd7c9aedd6f382006072e48",
+    "friendly_link": "https://www.qsemos.com/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2025/12/29",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
+  },
+  {
+    "osv_name": "粤港澳大湾区（广东）国创中心",
+    "os_version": "QSemOS-e2000q-update-2.0.img",
+    "arch": "aarch64",
+    "checksum": "B76A20F99C50E7DB7E7B4CE5F1D9B611",
+    "base_openeuler_version": "openEuler Embedded 24.03 LTS",
+    "os_download_link": "https://space.welink.huaweicloud.com/wechatshare/b10c69c5a4238d8fc11bd67b3ca7781b",
+    "friendly_link": "https://www.qsemos.com/",
+    "type": "嵌入式",
+    "total_result": "pass",
+    "date": "2025/12/29",
+    "details": "详细信息",
+    "tools_result": [
+      {
+        "name": "core_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_pkg",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "KABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "ABI",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "service_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "soft_config",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "kernel_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ],
+    "platform_result": [
+      {
+        "name": "repo",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "base_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "performance_test",
+        "percent": "NA",
+        "result": "pass"
+      },
+      {
+        "name": "running_config",
+        "percent": "NA",
+        "result": "pass"
+      }
+    ]
   }
 ]
