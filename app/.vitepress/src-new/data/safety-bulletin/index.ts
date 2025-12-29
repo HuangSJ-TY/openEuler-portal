@@ -22,6 +22,17 @@ export const typeMap = new Map([
     },
   ],
   [
+    'Moderate',
+    {
+      value: 'Moderate',
+      label: {
+        zh: '中',
+        en: 'Moderate',
+      },
+      score: '4.0-6.9',
+    },
+  ],
+  [
     'High',
     {
       value: 'High',

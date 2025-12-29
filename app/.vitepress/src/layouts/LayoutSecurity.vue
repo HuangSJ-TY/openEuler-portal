@@ -126,15 +126,6 @@ onMounted(() => {
     <div class="banner-mb">
       <p class="title">{{ i18n.cve.SAFETY_CENTER }}</p>
       <p class="desc">{{ i18n.cve.SAFETY_CENTER_DESC }}</p>
-      <OTab v-model="activeTab" :line="false" @change="clickTab">
-        <OTabPane
-          v-for="item in tabsData.tabPane"
-          :key="item.name"
-          :label="item.label"
-          :value="item.name"
-        ></OTabPane>
-      </OTab>
-      <p class="title title-page">{{ title }}</p>
       <div class="btn-mb">
         <OButton
           variant="solid"
@@ -155,6 +146,14 @@ onMounted(() => {
           {{ btnDatas[1].text }}
         </OButton>
       </div>
+      <OTab v-model="activeTab" :line="false" @change="clickTab">
+        <OTabPane
+          v-for="item in tabsData.tabPane"
+          :key="item.name"
+          :label="item.label"
+          :value="item.name"
+        ></OTabPane>
+      </OTab>
     </div>
   </div>
   <Content />
@@ -172,6 +171,9 @@ onMounted(() => {
   }
 }
 
+:deep(.banner-level2) {
+  background-color: var(--o-color-fill2);
+}
 :deep(.banner-level2 .wrap) {
   .banner-text {
     max-width: 60%;
@@ -226,7 +228,7 @@ onMounted(() => {
 
 @include respond-to('<=pad_v') {
   .banner-mb {
-    padding: 24px 24px 0;
+    padding: 16px 24px 0;
     .title {
       font-weight: 500;
       color: var(--o-color-info1);
@@ -241,7 +243,7 @@ onMounted(() => {
   :deep(.o-tab) {
     --tab-nav-padding: 0 0 4px 0;
     --tab-nav-justify: flex-start;
-    margin-top: 12px;
+    margin-top: 16px;
     .o-tab-head {
       background-color: transparent;
     }

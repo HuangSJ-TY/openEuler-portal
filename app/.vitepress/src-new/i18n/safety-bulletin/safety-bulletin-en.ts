@@ -18,6 +18,7 @@ export default {
   updateTime: 'Updated At',
   release: 'Release',
   update: 'Updated',
+  time: 'Date',
   selectAll: 'All',
   search: 'Search',
   all: 'All',
