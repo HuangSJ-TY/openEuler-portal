@@ -15,9 +15,9 @@ export default {
       bg_mb: release_mb_zh,
       bg_text: '',
       bg_theme: 'light',
-      title: 'openEuler 25.09 创新版正式发布',
+      title: 'openEuler 24.03 LTS SP3 正式发布',
       btn: '下载',
-      href: '/zh/download/#openEuler%2025.09',
+      href: '/zh/download/#openEuler%2024.03%20LTS%20SP3',
       isBlank: true,
     },
     {
