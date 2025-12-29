@@ -36,3 +36,10 @@
     margin-top: 32px;
   }
 }
+
+.o-select-dlg {
+  --dlg-radius: var(--o-radius-xs);
+  .o-option-list {
+    --option-list-padding: 0;
+  }
+}

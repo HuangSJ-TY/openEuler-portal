@@ -195,7 +195,7 @@ onMounted(() => {
 
 <template>
   <div class="cve-detail">
-    <ContentWrapper :vertical-padding="['32px', '72px']">
+    <ContentWrapper>
       <OBreadcrumb v-if="!lePadV">
         <OBreadcrumbItem :href="route.path.replace('detail/', '')">{{
           t('cve.cve')
@@ -371,6 +371,10 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+.content-wrapper {
+  padding-top: 32px;
+  padding-bottom: 72px;
+}
 .o-breadcrumb {
   --breadcrumb-color-hover: var(--o-color-primary1);
   --breadcrumb-color-active: var(--o-color-primary1);
@@ -563,7 +567,33 @@ ul {
   padding-left: 16px;
 }
 
+@include respond-to('<=laptop') {
+  .content-wrapper {
+    padding-bottom: 56px;
+  }
+  .banner {
+    padding: 24px 32px;
+  }
+  .content {
+    padding: 40px 32px;
+  }
+}
+@include respond-to('<=pad') {
+  .content-wrapper {
+    padding-bottom: 40px;
+  }
+  .banner {
+    padding: 24px;
+  }
+  .content {
+    padding: 32px;
+  }
+}
 @include respond-to('<=pad_v') {
+  .content-wrapper {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
   .banner {
     padding: 24px 12px;
     margin-top: 0;

@@ -31,6 +31,7 @@ import ubOsComponent from './ub-os-component'
 import intelligenceBoom from './intelligence-boom'
 import blog from './blog';
 import news from './news';
+import compatibility from './compatibility';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -99,6 +100,7 @@ const messages = {
     intelligenceBoom: intelligenceBoom.zh,
     blog: blog.zh,
     news: news.zh,
+    compatibility: compatibility.zh,
   },
   en: {
     // 公共模块
@@ -129,6 +131,7 @@ const messages = {
     intelligenceBoom: intelligenceBoom.en,
     blog: blog.en,
     news: news.en,
+    compatibility: compatibility.en,
   },
 };
 
