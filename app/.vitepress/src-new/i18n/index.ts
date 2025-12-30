@@ -30,6 +30,7 @@ import ubServiceCore from './ub-service-core';
 import ubOsComponent from './ub-os-component'
 import intelligenceBoom from './intelligence-boom'
 import blog from './blog';
+import news from './news';
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -97,6 +98,7 @@ const messages = {
     ubOsComponent: ubOsComponent.zh,
     intelligenceBoom: intelligenceBoom.zh,
     blog: blog.zh,
+    news: news.zh,
   },
   en: {
     // 公共模块
@@ -126,6 +128,7 @@ const messages = {
     ubOsComponent: ubOsComponent.en,
     intelligenceBoom: intelligenceBoom.en,
     blog: blog.en,
+    news: news.en,
   },
 };
 

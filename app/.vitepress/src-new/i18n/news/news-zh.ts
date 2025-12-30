@@ -1,6 +1,5 @@
 export default {
-  title: '博客',
-  desc: '发博攻略',
+  title: '新闻',
   time: '时间',
   author: '作者',
   tag: '标签',
