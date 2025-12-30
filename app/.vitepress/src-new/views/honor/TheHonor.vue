@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, watch, computed } from 'vue';
-import { OTab, OTabPane, ORow, OCol, OCard, OLink, OIcon, OLayer, OFigure, OScroller, ODivider } from '@opensig/opendesign';
+import { OTab, OTabPane, ORow, OCol, OCard, OLink, OIcon, OLayer, OFigure, OScroller, ODivider, isClient } from '@opensig/opendesign';
 import { useRouter } from 'vitepress';
 
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
@@ -102,6 +102,7 @@ const flexCol = computed(() =>
 watch(
   () => router.route.path,
   () => {
+    if (!isClient) return;
     if (!location.search) {
       router.go(`/${locale.value}/community/honor/?year=2025`);
       activeTab.value = '2025';

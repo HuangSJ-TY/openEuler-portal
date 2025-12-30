@@ -2,14 +2,14 @@
 import { computed, ref } from 'vue';
 import { useData } from 'vitepress';
 
-import yearImgZh from '@/assets/category/year/euler-year-zh.png';
-import yearImgEn from '@/assets/category/year/euler-year-en.png';
-import yearImgZhMb from '@/assets/category/year/euler-year-zh-mb.png';
-import yearImgEnMb from '@/assets/category/year/euler-year-en-mb.png';
+import yearImgZh from '@/assets/category/year/openeuler-year-zh.png';
+import yearImgEn from '@/assets/category/year/openeuler-year-en.png';
+import yearImgZhMb from '@/assets/category/year/openeuler-year-zh-mb.png';
+import yearImgEnMb from '@/assets/category/year/openeuler-year-en-mb.png';
 
-import useWindowResize from '@/components/hooks/useWindowResize';
+import { useScreen } from '~@/composables/useScreen';
 
-const screenWidth = ref(useWindowResize());
+const { lePadV } = useScreen();
 const { lang } = useData();
 const EULER_YEAR = 'https://summary.openeuler.org/';
 
@@ -19,12 +19,12 @@ function closeYear() {
 }
 const yearImg = computed(() => {
   return lang.value === 'zh'
-    ? screenWidth.value > 840
-      ? yearImgZh
-      : yearImgZhMb
-    : screenWidth.value > 840
-    ? yearImgEn
-    : yearImgEnMb;
+    ? lePadV.value
+      ? yearImgZhMb
+      : yearImgZh
+    : lePadV.value
+      ? yearImgEnMb
+      : yearImgEn;
 });
 </script>
 <template>
@@ -58,7 +58,7 @@ const yearImg = computed(() => {
   .close-year {
     cursor: pointer;
     position: absolute;
-    right: 20px;
+    right: 0;
     top: -2px;
     width: 20px;
     height: 20px;
@@ -66,14 +66,15 @@ const yearImg = computed(() => {
     @include respond-to('<=pad') {
       width: 16px;
       height: 16px;
-      right: 12px;
+      right: -4px;
+      top: -4px;
     }
   }
   img {
-    width: 180px;
+    width: 125px;
 
     @include respond-to('<=pad') {
-      width: 120px;
+      width: 83px;
     }
   }
 }
