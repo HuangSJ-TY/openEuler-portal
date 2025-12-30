@@ -31,6 +31,7 @@ import LayouWhitePaper from '@/layouts/LayouWhitePaper.vue';
 import FloatingButton from '~@/components/FloatingButton.vue';
 import FloatingButtonEn from '~@/components/FloatingButtonEn.vue';
 import CookieNotice from '~@/components/CookieNotice.vue';
+import AppYear from '@/components/AppYear.vue';
 
 import AppTour from '~@/components/AppTour.vue';
 
@@ -118,6 +119,7 @@ onMounted(() => {
           <Content v-else />
           <FloatingButton v-if="lang === 'zh' && !isReport && showNss" />
           <FloatingButtonEn v-else-if="!isReport && showNss" />
+          <AppYear />
         </main>
       </el-config-provider>
     </OConfigProvider>
