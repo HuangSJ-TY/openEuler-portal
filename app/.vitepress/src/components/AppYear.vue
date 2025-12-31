@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 import { useData } from 'vitepress';
+import { isClient } from '@opensig/opendesign';
 
 import yearImgZh from '@/assets/category/year/openeuler-year-zh.png';
 import yearImgEn from '@/assets/category/year/openeuler-year-en.png';
@@ -13,10 +14,22 @@ const { lePadV } = useScreen();
 const { lang } = useData();
 const EULER_YEAR = 'https://summary.openeuler.org/';
 
-const isShow = ref(true);
+const isShow = ref(false);
+
+onMounted(() => {
+  if (isClient) {
+    const summaryClose = sessionStorage.getItem('close_summary');
+    isShow.value = summaryClose === null;
+  }
+})
+
 function closeYear() {
   isShow.value = false;
+  if (isClient) {
+    sessionStorage.setItem('close_summary', '1');
+  }
 }
+
 const yearImg = computed(() => {
   return lang.value === 'zh'
     ? lePadV.value
@@ -63,7 +76,15 @@ const yearImg = computed(() => {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    @include respond-to('<=pad') {
+
+    @include respond-to('pad_v-laptop') {
+      width: 18px;
+      height: 18px;
+      right: -4px;
+      top: -4px;
+    }
+
+    @include respond-to('<=pad_v') {
       width: 16px;
       height: 16px;
       right: -4px;
@@ -73,7 +94,11 @@ const yearImg = computed(() => {
   img {
     width: 125px;
 
-    @include respond-to('<=pad') {
+    @include respond-to('pad_v-laptop') {
+      width: 94px;
+    }
+
+    @include respond-to('<=pad_v') {
       width: 83px;
     }
   }
