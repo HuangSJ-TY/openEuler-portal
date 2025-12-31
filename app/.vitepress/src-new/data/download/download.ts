@@ -6,6 +6,23 @@ export default {
   zh: {
     COMMUNITY_LIST: [
       {
+        NAME: 'openEuler 24.03 LTS SP3',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP3/',
+        DESC: '2025年12月30日，openEuler首个支持超节点的版本正式发布。新版本openEuler 24.03 LTS SP3是基于6.6内核的24.03-LTS版本增强扩展版本（参见版本生命周期），面向服务器、云、AI场景，持续提供更多新特性和功能扩展，包括内核优化、异构协同推理、智能诊断、机密虚机、编译器、RISC-V架构优化、智能开发者桌面、安全加固、灵衢超节点、身份认证、虚拟化等，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
+        RELEASE_DESC_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP3/server/releasenotes/releasenotes/introduction.html`,
+        INSTALL_GUIDENCE_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP3/server/installation_upgrade/installation/installation_preparations.html`,
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '/whitepaper/openEuler 24.03 LTS SP3 技术白皮书.pdf',
+        LIFE_CYCLE_URL: '/zh/other/lifecycle/',
+        PUBLISH_DATE: '2025/12',
+        LTS: true,
+        VERSION: '24.03-LTS-SP3',
+        PLANNED_EOL: '2027/12',
+      },
+      {
         NAME: 'openEuler 25.09',
         DOWNLOAD_URL: 'https://repo.openeuler.org/25.09/',
         DESC: 'openEuler 25.09 是基于6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
@@ -437,6 +454,23 @@ export default {
   },
   en: {
     COMMUNITY_LIST: [
+      {
+        NAME: 'openEuler 24.03 LTS SP3',
+        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP3/',
+        DESC: 'openEuler 24.03 LTS SP3, built on Linux Kernel 6.6, introduces support for the groundbreaking UnifiedBus SuperPoD architecture. Engineered for server, cloud, and AI workloads, it delivers robust performance and scalability for next-generation digital infrastructure.',
+        RELEASE_DESC_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP3/server/releasenotes/releasenotes/introduction.html`,
+        INSTALL_GUIDENCE_URL:
+          `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP3/server/installation_upgrade/installation/installation_preparations.html`,
+        SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
+        GET_ISO_URL: 'https://repo.openeuler.org/',
+        WHITE_PAPER: '',
+        LIFE_CYCLE_URL: '/en/other/lifecycle/',
+        PUBLISH_DATE: '2025/12',
+        LTS: true,
+        VERSION: '24.03-LTS-SP3',
+        PLANNED_EOL: '2027/12',
+      },
       {
         NAME: 'openEuler 25.09',
         DOWNLOAD_URL: 'https://repo.openeuler.org/25.09/',
