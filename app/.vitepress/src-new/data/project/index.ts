@@ -185,3 +185,8 @@ export const ubEntranceList = [
     isOutlink: true,
   },
 ];
+
+export const ubServiceCoreUrl = {
+  whitepaper_en: '/en/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-en',
+  whitepaper_zh: '/zh/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-zh',
+}
