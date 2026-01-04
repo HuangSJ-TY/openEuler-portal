@@ -76,7 +76,7 @@ export default {
         'https://www.openeuler.org/zh/sig/sig-UKUI',
       INTRODUCE:
         '负责在openEuler上提供UKUI桌面环境，及相关软件包的规划、维护和升级',
-      TASK: 'https://atomgit.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590230&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true',
+      TASK: 'https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590230&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true',
       GITEE: 'https://atomgit.com/openeuler/community/tree/master/sig/sig-UKUI',
     },
     {
@@ -92,7 +92,7 @@ export default {
       NAME: 'sig-DDE',
       NAME_LINK: 'https://www.openeuler.org/zh/sig/sig-DDE',
       INTRODUCE: '深度科技自主开发的美观易用、极简操作的桌面环境',
-      TASK: 'https://atomgit.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590403&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true',
+      TASK: 'https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=124590403&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true',
       GITEE: 'https://atomgit.com/openeuler/community/tree/master/sig/sig-DDE',
     },
     {
@@ -110,7 +110,7 @@ export default {
         'https://www.openeuler.org/zh/sig/sig-OS-Builder',
       INTRODUCE:
         '维护openEuler业务软件包,提供更加方便的ISO构建/换标方案,提供更好的安装与升级方案',
-      TASK: 'https://atomgit.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=145511845&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true',
+      TASK: 'https://gitee.com/openeuler-competition/opensource-internship/issues?assignee_id=&author_id=&branch=&collaborator_ids=&issue_search=&label_ids=145511845&label_text=&milestone_id=&priority=&private_issue=&program_id=&project_id=openeuler-competition%2Fopensource-internship&project_type=&scope=&single_label_id=&single_label_text=&sort=&state=open&target_project&skip_mobile=true',
       GITEE:
         'https://atomgit.com/openeuler/community/tree/master/sig/sig-OS-Builder',
     },
@@ -207,7 +207,7 @@ export default {
       NAME: 'sig-dev-utils',
       NAME_LINK: 'https://www.openeuler.org/zh/sig/dev-utils',
       INTRODUCE: 'dev-utils SIG 专注于那些帮助开发人员的工具、SDK 和库',
-      TASK: 'https://atomgit.com/openeuler/qingzhou/issues?label_ids=125219718&label_text=intern',
+      TASK: 'https://gitee.com/openeuler/qingzhou/issues?label_ids=125219718&label_text=intern',
       GITEE: 'https://atomgit.com/openeuler/community/tree/master/sig/dev-utils',
     },
     {
