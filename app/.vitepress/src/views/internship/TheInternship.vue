@@ -10,6 +10,7 @@ import InternshipRank from './InternshipRank.vue';
 import InternshipTitleNav from './InternshipTitleNav.vue';
 
 import qrCode from '@/assets/category/internship/qrCode.png';
+import qrCodeDark from '@/assets/category/internship/qrCode-dark.png';
 import gitee_light from '@/assets/category/internship/logo/gitee_light.png';
 import iscas_light from '@/assets/category/internship/logo/iscas_light.png';
 import mindSpore_light from '@/assets/category/internship/logo/mindspore_light.png';
@@ -162,11 +163,11 @@ const HELP = {
   INFO: [
     '联系邮箱:',
     'intern@openeuler.sh',
-    '扫码加入“开源实习”学生QQ群，备注高校及年级，更多问题群内咨询。',
-    '群号：905195470',
+    '扫码添加openEuler小助手微信，加入交流群，备注高校及年级，更多问题群内咨询。',
   ],
   ITEM: {
     IMG: qrCode,
+    IMG_DARK: qrCodeDark,
   },
 };
 const openGaussTask = {
@@ -495,7 +496,7 @@ onUnmounted(() => {
                 <p class="pc-number">{{ HELP.INFO[3] }}</p>
               </div>
               <div class="help-right">
-                <img :src="HELP.ITEM.IMG" alt="" />
+                <img :src="commonStore.theme === 'light' ? HELP.ITEM.IMG : HELP.ITEM.IMG_DARK" alt="" />
                 <p class="mo-number">{{ HELP.INFO[3] }}</p>
               </div>
             </div>

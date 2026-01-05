@@ -154,7 +154,7 @@ const constructLandscapeMap = () => {
       });
     });
     featureArr.value.push({
-      value: '',
+      value: 'other',
       label: {
         zh: '其他',
         en: 'Other',
@@ -370,7 +370,7 @@ watch(
     // 分类
     const filterFeatureType =
       val[0] !== 'all'
-        ? sigList.value.filter((item) => item.feature_en === val[0])
+        ? sigList.value.filter((item) => val[0] === 'other' ? !item.feature_en : item.feature_en === val[0])
         : sigList.value;
     // 筛选
     if (val[1] === 'sig' && val[2]) {
