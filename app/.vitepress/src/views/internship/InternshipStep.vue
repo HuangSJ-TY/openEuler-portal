@@ -140,7 +140,7 @@ const STEP = {
           <p>
             {{ STEP.STEP_ONE.TEXT2 }}
             <a
-              href="https://atomgit.com/openeuler/opensource-intern/issues/IC9BQW?from=project-issue"
+              href="https://atomgit.com/openeuler/opensource-intern/issues/120"
               target="_blank"
               rel="noopener noreferrer"
               >{{ STEP.STEP_ONE.LINK1 }}</a

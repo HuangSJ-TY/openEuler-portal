@@ -67,7 +67,7 @@ const goTop = () => {
         />
         <img
           class="code"
-          src="@/assets/category/internship/qrCode2.png"
+          src="@/assets/category/internship/qrCode-fixed.png"
           alt=""
         />
       </div>
@@ -203,7 +203,6 @@ const goTop = () => {
     .item {
       position: relative;
       margin-bottom: 24px;
-      box-shadow: var(--e-shadow-l3);
     }
     .close {
       position: absolute;

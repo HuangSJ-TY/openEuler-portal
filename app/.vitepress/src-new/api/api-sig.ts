@@ -66,7 +66,7 @@ export function getSigRepositoryList(params: object): Promise<{
   msg: string;
   update_at: string;
 }> {
-  const url = '/api-magic/sig/repo/committers';
+  const url = '/api-magic/sig/new/repo/committers';
   return request.get(url, { params }).then((res: AxiosResponse) => res.data);
 }
 

@@ -32,6 +32,10 @@ export interface sigMaintainerT {
   name: string;
   email: string;
   avatar_url: string;
+  atomgit_id: string;
+  id_platform: string;
+  user_homepage_url: string;
+  user_login: string;
 }
 
 export interface SigContributeArrT {

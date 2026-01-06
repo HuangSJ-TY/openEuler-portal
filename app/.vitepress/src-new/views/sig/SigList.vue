@@ -154,7 +154,7 @@ const constructLandscapeMap = () => {
       });
     });
     featureArr.value.push({
-      value: '',
+      value: 'other',
       label: {
         zh: '其他',
         en: 'Other',
@@ -370,7 +370,7 @@ watch(
     // 分类
     const filterFeatureType =
       val[0] !== 'all'
-        ? sigList.value.filter((item) => item.feature_en === val[0])
+        ? sigList.value.filter((item) => val[0] === 'other' ? !item.feature_en : item.feature_en === val[0])
         : sigList.value;
     // 筛选
     if (val[1] === 'sig' && val[2]) {
@@ -863,20 +863,20 @@ const onClickSearchRes = (type: string, ev: Event) => {
                 wrap-class="sig-popup-maintainers"
               >
                 <template #target>
-                  <p class="text">Maintainer {{ sig.maintainers?.length }}</p>
+                  <p class="text">Maintainer {{ sig.maintainer_info?.length }}</p>
                 </template>
                 <div class="popup-content">
                   <OScroller showType="always" size="small">
                     <OLink
-                      v-for="(item, i) in sig.maintainers"
-                      :key="item"
+                      v-for="(item, i) in sig.maintainer_info"
+                      :key="item.user_login"
                       class="repo-item"
                       color="primary"
-                      :href="`https://gitee.com/${item}`"
+                      :href="item.user_homepage_url"
                       target="_blank"
                     >
                       {{
-                        item + (i === sig.maintainers.length - 1 ? '' : '、')
+                        item.user_login + (i === sig.maintainer_info.length - 1 ? '' : '、')
                       }}
                     </OLink>
                   </OScroller>
@@ -990,20 +990,20 @@ const onClickSearchRes = (type: string, ev: Event) => {
                 wrap-class="sig-popup-maintainers"
               >
                 <template #target>
-                  <p class="text">Maintainer {{ sig.maintainers?.length }}</p>
+                  <p class="text">Maintainer {{ sig.maintainer_info?.length }}</p>
                 </template>
                 <div class="popup-content">
                   <OScroller showType="always" size="small">
                     <OLink
-                      v-for="(item, i) in sig.maintainers"
-                      :key="item"
+                      v-for="(item, i) in sig.maintainer_info"
+                      :key="item.user_login"
                       class="repo-item"
                       color="primary"
-                      :href="`https://gitee.com/${item}`"
+                      :href="item.user_homepage_url"
                       target="_blank"
                     >
                       {{
-                        item + (i === sig.maintainers.length - 1 ? '' : '、')
+                        item.user_login + (i === sig.maintainer_info.length - 1 ? '' : '、')
                       }}
                     </OLink>
                   </OScroller>
