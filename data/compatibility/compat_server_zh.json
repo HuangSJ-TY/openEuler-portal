@@ -33181,7 +33181,7 @@
       "biosUefi": "CXH1050012",
       "cpu": "Hygon C86-4G (OPN:7490)",
       "ram": "8*32GB DIMMs",
-      "portsBusTypes": "x16 PCI Express 5",
+      "portsBusTypes": "Type: x16 PCI Express 5 Type: x4 PCI Express 5 x16 Type: x4 PCI Express 5 x16 Type: x2 PCI Express",
       "videoAdapter": "85:00.0 VGA compatible controller:ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
       "hostBusAdapter": "",
       "hardDiskDrive": "[12:0:0:0] disk ATA SAMSUNG MZ7L31T9 304Q /dev/sda [13:0:0:0] disk ATA SAMSUNG MZ7L31T9 304Q /dev/sdb"
