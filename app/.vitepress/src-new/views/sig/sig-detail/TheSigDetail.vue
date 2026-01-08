@@ -108,7 +108,7 @@ onMounted(() => {
   queryGetSigMeeting();
   nextTick(() => {
     setTimeout(() => {
-      const height = (document.querySelector(window.location.hash) as HTMLElement).offsetTop;
+      const height = window.location.hash ? (document.querySelector(window.location.hash) as HTMLElement).offsetTop : 0;
       window.scrollTo({
         top: height,
         behavior: 'smooth',

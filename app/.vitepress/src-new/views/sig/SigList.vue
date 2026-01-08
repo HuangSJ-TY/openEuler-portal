@@ -394,7 +394,7 @@ watch(
       filterSearchData.value = filterFeatureType.filter(
         (item) => {
           const nameIndex = item.maintainer_info.findIndex(text => text?.name?.toLowerCase().includes(val[2].toLowerCase()))
-          const giteeIdIndex = item.maintainer_info.findIndex(text => text?.gitee_id?.toLowerCase().includes(val[2].toLowerCase()))
+          const giteeIdIndex = item.maintainer_info.findIndex(text => text?.atomgit_id?.toLowerCase().includes(val[2].toLowerCase()))
           return nameIndex > -1 || giteeIdIndex > -1
         });
     }
@@ -405,7 +405,7 @@ watch(
           const desc = item?.description?.toLowerCase().includes(val[2].toLowerCase())
           const repoIndex = item.repositories.findIndex(text => text.toLowerCase().includes(val[2].toLowerCase()))
           const maintainerNameIndex = item.maintainer_info.findIndex(text => text?.name?.toLowerCase().includes(val[2].toLowerCase()))
-          const maintainerGiteeIdIndex = item.maintainer_info.findIndex(text => text?.gitee_id?.toLowerCase().includes(val[2].toLowerCase()))
+          const maintainerGiteeIdIndex = item.maintainer_info.findIndex(text => text?.atomgit_id?.toLowerCase().includes(val[2].toLowerCase()))
           return name || desc || repoIndex > -1 || maintainerNameIndex > -1 || maintainerGiteeIdIndex > -1
         });
     }
