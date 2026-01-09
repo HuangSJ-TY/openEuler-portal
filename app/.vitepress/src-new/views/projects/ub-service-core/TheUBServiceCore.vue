@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import { useRouter } from 'vitepress';
-import { OFigure, ORow, OCol, OLink, OIcon, ODivider } from '@opensig/opendesign';
+import { OFigure, ORow, OCol, OLink, OIcon, ODivider, OTag } from '@opensig/opendesign';
 
 import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
@@ -11,6 +11,7 @@ import banner from '~@/assets/category/ub-service-core/banner.jpg';
 
 import frameworkBgImg from '~@/assets/category/ub-service-core/framework-bg.png';
 import frameworkImg from '~@/assets/category/ub-service-core/framework.jpg';
+import frameworkImgEn from '~@/assets/category/ub-service-core/framework-en.jpg';
 
 import IconOutLink from '~icons/yuanrong/icon-outlink.svg';
 import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
@@ -33,22 +34,32 @@ const frameworkList = [
   {
     title: t('ubServiceCore.engine'),
     desc: t('ubServiceCore.engineDesc'),
+    tag: t('ubServiceCore.already'),
+    class: 'already',
   },
   {
     title: t('ubServiceCore.virt'),
     desc: t('ubServiceCore.virtDesc'),
+    tag: t('ubServiceCore.plan'),
+    class: 'plan',
   },
   {
     title: t('ubServiceCore.mem'),
     desc: t('ubServiceCore.memDesc'),
+    tag: t('ubServiceCore.plan'),
+    class: 'plan',
   },
   {
     title: t('ubServiceCore.comm'),
     desc: t('ubServiceCore.commDesc'),
+    tag: t('ubServiceCore.already'),
+    class: 'already',
   },
   {
     title: t('ubServiceCore.io'),
     desc: t('ubServiceCore.ioDesc'),
+    tag: t('ubServiceCore.plan'),
+    class: 'plan',
   },
 ]
 
@@ -67,21 +78,29 @@ const viewWhitepaper = (lang: LocaleT) => {
     <div class="intro-desc">{{ t('ubServiceCore.introDesc') }}</div>
   </AppSection>
   <AppSection :title="t('ubServiceCore.frameworkTitle')" :subtitle="t('ubServiceCore.frameworkDesc')" class="framework">
-    <div class="framework-content":class="{'framework-content-dark': isDark}">
+    <div class="framework-content" :class="{'framework-content-dark': isDark}">
       <div class="framework-bg-img" :style="{ backgroundImage: `url(${frameworkBgImg})` }"></div>
-      <OFigure v-if="lePadV" :src="frameworkImg" class="framework-img"></OFigure>
+      <OFigure v-if="lePadV" :src="locale ==='en' ? frameworkImgEn : frameworkImg" class="framework-img"></OFigure>
       <div class="framework-left">
         <div v-for="(item, i) in frameworkList" :key="i" class="item">
-          <p class="item-title">{{ item.title }}</p>
+          <div class="item-title" :class="{'item-title-dark': isDark}">
+            <span class="title-box">{{ item.title }}</span>
+            <OTag
+              :class="`${item.class}-tag`"
+              :style="{ '--tag-radius': '4px' }"
+            >
+              {{ item.tag }}
+            </OTag>
+          </div>
           <p class="item-desc">{{ item.desc }}</p>
         </div>
       </div>
-      <OFigure v-if="!lePadV" :src="frameworkImg" class="framework-img"></OFigure>
+      <OFigure v-if="!lePadV" :src="locale ==='en' ? frameworkImgEn : frameworkImg" class="framework-img"></OFigure>
     </div>
   </AppSection>
   <AppSection :title="t('ubServiceCore.entranceTitle')" class="entrance">
     <ORow :gap="lePadV ? '0 12px' : '32px 0'" wrap="wrap">
-      <OCol v-for="(item, i) in ubEntranceList" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
+      <OCol v-for="(item, i) in ubEntranceList[locale]" :key="i" :flex="lePadV ? '0 0 100%' : '0 0 33.33%'">
         <div class="item-info">
           <div class="info-title">
             <OIcon class="item-icon"><component :is="item.icon" /></OIcon>
@@ -93,8 +112,12 @@ const viewWhitepaper = (lang: LocaleT) => {
             <DropButton v-if="item.title === '白皮书'" class="drop-button" @click="viewWhitepaper">{{ t('ubServiceCore.viewMore') }}</DropButton>
             <OLink v-else :color="lePadV ? 'normal' : 'primary'" :href="item.href" target="_blank" :hover-underline="lePadV ? false : true">
               <p>{{ t('ubServiceCore.viewMore') }}</p>
-              <OIcon v-if="item?.isOutlink" class="outlink-icon"><IconOutLink /></OIcon>
-              <OIcon v-if="lePadV && !item?.isOutlink" class="outlink-icon"><IconChevronRight /></OIcon>
+              <template v-if="item?.isOutlink" #suffix>
+                <OIcon class="outlink-icon"><IconOutLink /></OIcon>
+              </template>
+              <template v-if="lePadV && !item?.isOutlink" #suffix>
+                <OIcon class="outlink-icon"><IconChevronRight /></OIcon>
+              </template>
             </OLink>
           </div>
         </div>
@@ -246,6 +269,41 @@ const viewWhitepaper = (lang: LocaleT) => {
     );
   }
 }
+.item-title-dark {
+  &::before {
+    background-image: linear-gradient(
+      180deg,
+      rgba(var(--o-kleinblue-6), 1),
+      var(--o-color-fill2) 100%
+    );
+  }
+}
+.title-box {
+  vertical-align: middle;
+}
+.o-tag {
+  --tag-padding: 1px 8px;
+  border: none;
+  font-weight: 400;
+  margin-left: 12px;
+  vertical-align: middle;
+  @include tip1;
+  :deep(.o-tag-label) {
+    display: flex;
+    align-items: center;
+    .o-icon {
+      margin-right: 4px;
+      @include text1;
+    }
+  }
+}
+.already-tag {
+  --tag-bg-color: var(--o-color-primary1);
+  --tag-color: var(--o-color-white);
+}
+.plan-tag {
+  --tag-bg-color: var(--o-color-control4-light);
+}
 .item-desc {
   color: var(--o-color-info3);
   margin-top: 8px;
@@ -283,13 +341,9 @@ const viewWhitepaper = (lang: LocaleT) => {
   flex-direction: column;
   .o-link {
     margin-top: auto;
-    :deep(.o-link-label) {
-      display: flex;
-      align-items: center;
-    }
+    --link-gap: 8px;
     .outlink-icon {
       --icon-size: 24px;
-      margin-left: 8px;
     }
   }
 }
@@ -364,6 +418,12 @@ const viewWhitepaper = (lang: LocaleT) => {
       height: 24px;
     }
   }
+  .already-tag {
+    --tag-padding: 1px 4px;
+  }
+  .plan-tag {
+    --tag-padding: 1px 0;
+  }
   .item + .item {
     margin-top: 16px;
   }
@@ -414,6 +474,12 @@ const viewWhitepaper = (lang: LocaleT) => {
       display: none;
     }
   }
+  .already-tag {
+    --tag-padding: 1px 4px;
+  }
+  .plan-tag {
+    --tag-padding: 1px 0;
+  }
   .item-desc {
     @include text2;
   }
@@ -427,13 +493,10 @@ const viewWhitepaper = (lang: LocaleT) => {
     .o-link {
       margin-top: 0;
       padding: 0;
+      justify-content: space-between;
       --link-color-hover: var(--o-color-info2);
       --link-color-active: var(--o-color-info2);
       @include text2;
-      :deep(.o-link-label) {
-        width: 100%;
-        justify-content: space-between;
-      }
       .outlink-icon {
         --icon-size: 16px;
       }

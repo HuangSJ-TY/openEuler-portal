@@ -12,6 +12,22 @@ import IconWhitePaper from '~icons/yuanrong/icon-white-paper.svg';
 export const projectData = {
   zh: [
     {
+      title: 'UB Service Core',
+      desc: 'UB Service Core构筑5大集群级系统服务，支持不同OS并全面开源至openEuler社区，释放超节点平等互联架构优势，全面使能应用加速30~50%，促进灵衢系统软件生态构筑。',
+      icon: '',
+      url: '/projects/ub-service-core',
+      atomgitUrl: '',
+      tag: 'NEW',
+    },
+    {
+      title: 'UB OS Component',
+      desc: '操作系统灵衢组件（UB OS Component）是在OS原有内存管理、通信、设备管理和虚拟化框架上扩展支持灵衢，实现异构硬件统一抽象解耦、统一内存地址空间，支持资源全局调度、计算资源动态组合扩展、设备间高性能通信，释放灵衢硬件能力',
+      icon: '',
+      url: '/projects/ub-os-component',
+      atomgitUrl: '',
+      tag: 'NEW',
+    },
+    {
       title: 'A-Tune',
       desc: 'A-Tune是一款基于openEuler开发的，自动化、智能化性能调优引擎。它利用人工智能技术，对运行在操作系统上的业务建立精准模型，动态感知业务特征并推理出具体应用，根据业务负载情况动态调节并给出最佳的参数配置组合，从而使业务处于最佳运行状态',
       icon: aTune,
@@ -67,16 +83,24 @@ export const projectData = {
       url: '/projects/yuanrong',
       atomgitUrl: '',
     },
+  ],
+  en: [
     {
       title: 'UB Service Core',
-      desc: 'UB Service Core构筑5大集群级系统服务，支持不同OS并全面开源至openEuler社区，释放超节点平等互联架构优势，全面使能应用加速30~50%，促进灵衢系统软件生态构筑。',
+      desc: 'Fully open sourced to the openEuler community with multi-OS support, UB Service Core delivers five essential cluster-level system services. By leveraging a peer-to-peer interconnect architecture, it boosts application performance by 30%-50%, fostering a robust software ecosystem for UnifiedBus.',
       icon: '',
       url: '/projects/ub-service-core',
       atomgitUrl: '',
       tag: 'NEW',
     },
-  ],
-  en: [
+    {
+      title: 'UB OS Component',
+      desc: 'UB OS Component extends the OS framework to better support UB. It abstracts and decouples heterogeneous hardware, and creates a unified memory address space. This enables global resource scheduling, dynamic combination and scaling of computing resources, and efficient communication across devices, thereby unlocking the full potential of UnifiedBus hardware.',
+      icon: '',
+      url: '/projects/ub-os-component',
+      atomgitUrl: '',
+      tag: 'NEW',
+    },
     {
       title: 'A-Tune',
       desc: 'A-Tune is an automatic and intelligent performance tuning engine developed based on openEuler. It adopts AI technologies to ensure the optimal service running. A-Tune builds precise models for services running on the operating system, understands service features dynamically to infer specific applications. And it adjusts the parameters based on service loads to provide the optimal parameter configurations.',
@@ -126,7 +150,6 @@ export const projectData = {
       icon: yuanrong,
       url: '/projects/yuanrong',
       atomgitUrl: '',
-      tag: 'NEW',
     },
   ],
 };
@@ -164,27 +187,50 @@ export const entranceList = {
   ]
 }
 
-export const ubEntranceList = [
-  {
-    icon: IconWhitePaper,
-    title: '白皮书',
-    desc: '了解 UB Service Core，使用、开发、管理和维护灵衢产品',
-    href: '/projects/ub-service-core/white-paper/灵衢系统高阶服务软件架构参考设计.pdf',
-  },
-  {
-    icon: IconCodeRepo,
-    title: '代码仓列表',
-    desc: '查看 UB Service Core 代码仓、联系方式等信息',
-    href: '/zh/sig/sig-UB-ServiceCore#repositories',
-  },
-  {
-    icon: IconDocument,
-    title: '相关文档',
-    desc: '了解如何开发，使用 UB Service Core',
-    href: 'https://atomgit.com/openeuler/community/tree/master/sig/sig-UB-ServiceCore ',
-    isOutlink: true,
-  },
-];
+export const ubEntranceList = {
+  zh: [
+    {
+      icon: IconWhitePaper,
+      title: '白皮书',
+      desc: '了解 UB Service Core，使用、开发、管理和维护灵衢产品',
+      href: '/projects/ub-service-core/white-paper/灵衢系统高阶服务软件架构参考设计.pdf',
+    },
+    {
+      icon: IconCodeRepo,
+      title: '代码仓列表',
+      desc: '查看 UB Service Core 代码仓、联系方式等信息',
+      href: '/zh/sig/sig-UB-ServiceCore#repositories',
+    },
+    {
+      icon: IconDocument,
+      title: '相关文档',
+      desc: '了解如何开发，使用 UB Service Core',
+      href: 'https://atomgit.com/openeuler/community/tree/master/sig/sig-UB-ServiceCore ',
+      isOutlink: true,
+    },
+  ],
+  en: [
+    {
+      icon: IconWhitePaper,
+      title: 'White Paper',
+      desc: 'Deploy, build, and scale with UB Service Core.',
+      href: '/projects/ub-service-core/white-paper/灵衢系统高阶服务软件架构参考设计.pdf',
+    },
+    {
+      icon: IconCodeRepo,
+      title: 'Repositories',
+      desc: 'View code and connect with us.',
+      href: '/en/sig/sig-UB-ServiceCore#repositories',
+    },
+    {
+      icon: IconDocument,
+      title: 'Documentation',
+      desc: 'Learn how to build and use UB Service Core.',
+      href: 'https://atomgit.com/openeuler/community/tree/master/sig/sig-UB-ServiceCore ',
+      isOutlink: true,
+    },
+  ]
+};
 
 export const ubServiceCoreUrl = {
   whitepaper_en: '/en/projects/docs/UB-Service-Core-SW-Arch-RD-2.0-en',

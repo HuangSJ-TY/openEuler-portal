@@ -27,6 +27,7 @@ import brand from './brand'
 import yuanrong from './yuanrong'
 import project from './project'
 import ubServiceCore from './ub-service-core';
+import ubOsComponent from './ub-os-component'
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -91,6 +92,7 @@ const messages = {
     yuanrong: yuanrong.zh,
     project: project.zh,
     ubServiceCore: ubServiceCore.zh,
+    ubOsComponent: ubOsComponent.zh,
   },
   en: {
     // 公共模块
@@ -116,6 +118,8 @@ const messages = {
     brand: brand.en,
     yuanrong: yuanrong.en,
     project: project.en,
+    ubServiceCore: ubServiceCore.en,
+    ubOsComponent: ubOsComponent.en,
   },
 };
 

@@ -15,6 +15,8 @@ export default {
   commDesc: '基于超节点提供高性能、高可靠以及生态兼容 (用户态Socket/Verbs over UB) 的通信协议。',
   io: 'UB Service Core IO (UBS IO)',
   ioDesc: '基于超节点，提供应用亲和的全局数据读写缓存系统高阶IO服务。',
+  already: '已开源',
+  plan: '计划 2026/3/30 开源',
   entranceTitle: '相关链接',
   viewMore: '查看详情',
 }
