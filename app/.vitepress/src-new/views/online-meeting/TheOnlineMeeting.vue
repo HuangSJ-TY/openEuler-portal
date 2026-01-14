@@ -14,8 +14,6 @@ import communityHelper from '~@/assets/category/online-meeting/community-helper.
 import IconChevronRight from '~icons/app/icon-chevron-right.svg';
 import IconWechat from '~icons/app-new/icon-wechat.svg';
 
-import { getMeetingActivity } from '~@/api/api-calendar';
-
 import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
@@ -27,16 +25,6 @@ const commonStore = useCommon();
 const isDark = computed(() => {
   return commonStore.theme === 'dark';
 });
-
-const calendarData = ref<string[]>([]);
-const getMeetingData = () => {
-  getMeetingActivity({ type: 'all' }).then((res) => {
-    calendarData.value = res.data;
-  });
-}
-onMounted(() => {
-  getMeetingData();
-})
 
 const gap = computed(() => {
   if (lePadV.value) {
@@ -93,8 +81,7 @@ const gap = computed(() => {
   </AppSection>
   <div id="calendar">
     <HomeCalendar
-      v-if="calendarData?.length"
-      :table-data="calendarData"
+      v-if="locale === 'zh'"
       :shown-icon="false"
     />
   </div>

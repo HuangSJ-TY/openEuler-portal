@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'summit-01',
     name: 'openEuler Summit 2024',
     url: '/zh/interaction/summit-list/summit2024/',
     dates: ['2024-11-15', '2024-11-16'],
@@ -10,6 +11,7 @@ export default [
     type: 'summit',
   },
   {
+    id: 'summit-02',
     name: 'openEuler Developer Day 2025',
     url: '/zh/interaction/summit-list/devday2025/',
     dates: ['2025-04-11'],
@@ -20,18 +22,22 @@ export default [
     type: 'summit',
   },
   {
+    id: 'summit-03',
     name: 'openEuler Summit 2023',
     url: '/zh/interaction/summit-list/summit2023/',
   },
   {
+    id: 'summit-04',
     name: 'openEuler Developer Day 2023',
     url: '/zh/interaction/summit-list/devday2023/',
   },
   {
+    id: 'summit-05',
     name: 'openEuler Summit 2022',
     url: '/zh/interaction/summit-list/summit2022/',
   },
   {
+    id: 'summit-06',
     name: 'openEuler Summit 2025',
     url: '/zh/interaction/summit-list/summit2025/',
     dates: ['2025-11-14', '2025-11-15'],

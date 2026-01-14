@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'activity-01',
     name: 'openEuler on RISC-V & deepin Meetup-北京站',
     url: '/zh/interaction/event-list/detail/?id=1000&isAdditional=true',
     dates: ['2025-03-22'],
@@ -10,6 +11,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-02',
     name: 'openEuler云原生开源中间件Meetup天津站',
     url: '/zh/interaction/event-list/detail/?id=2&isAdditional=true',
     dates: ['2025-05-27'],
@@ -20,6 +22,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-03',
     name: 'openEuler & deepin Meetup成都站',
     url: '/zh/interaction/event-list/detail/?id=1&isAdditional=true',
     dates: ['2025-05-24'],
@@ -30,6 +33,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-04',
     name: 'openEuler Meetup 香港站',
     url: '/zh/interaction/event-list/detail/?id=3&isAdditional=true',
     dates: ['2025-06-12'],
@@ -40,6 +44,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-05',
     name: 'openEuler SIG-ARM Meetup 深圳站',
     url: '/zh/interaction/event-list/detail/?id=4&isAdditional=true',
     dates: ['2025-07-18'],
@@ -51,6 +56,7 @@ export default [
     group_name:'sig-Arm'
   },
   {
+    id: 'activity-06',
     name: 'openEuler SIG-Long 异构融合技术Meetup北京站',
     url: '/zh/interaction/event-list/detail/?id=5&isAdditional=true',
     dates: ['2025-08-22'],
@@ -62,6 +68,7 @@ export default [
     group_name:'sig-Long'
   },
   {
+    id: 'activity-07',
     name: 'openEuler 多样性算力Meetup北京站',
     url: '/zh/interaction/event-list/detail/?id=6&isAdditional=true',
     dates: ['2025-09-06'],
@@ -72,6 +79,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-08',
     name: 'openEuler云原生开源中间件Meetup 武汉站',
     url: '/zh/interaction/event-list/detail/?id=7&isAdditional=true',
     dates: ['2025-09-25'],
@@ -82,6 +90,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-09',
     name: 'openEuler Meetup X openGauss Meetup 西安站',
     url: '/zh/interaction/event-list/detail/?id=8&isAdditional=true',
     dates: ['2025-09-26'],
@@ -92,6 +101,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-10',
     name: 'openEuler Compiler SIG Meetup 北京站',
     url: '/zh/interaction/event-list/detail/?id=9&isAdditional=true',
     dates: ['2025-10-16'],
@@ -102,6 +112,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-11',
     name: 'openEuler Embedded & AGIROS具身智能技术 Meetup西安站',
     url: '/zh/interaction/event-list/detail/?id=10&isAdditional=true',
     dates: ['2025-10-23'],
@@ -113,6 +124,7 @@ export default [
   },
 
   {
+    id: 'activity-12',
     name: 'openEuler 云原生开源中间件Meetup',
     url: '/zh/interaction/event-list/detail/?id=11&isAdditional=true',
     dates: ['2025-11-26'],
@@ -123,6 +135,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-13',
     name: 'openEuler SDS Meetup Online',
     dates: ['2025-11-28'],
     start_date: '2025-11-28 14:00',
@@ -131,6 +144,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-14',
     name: 'openEuler Intelligence Meetup Online',
     dates: ['2025-11-29'],
     start_date: '2025-11-26 14:10',
@@ -139,6 +153,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-15',
     name: 'openEuler Intelligence Meetup 香港站',
     url: '/zh/interaction/event-list/detail/?id=12&isAdditional=true',
     dates: ['2025-12-20'],
@@ -149,6 +164,7 @@ export default [
     type: 'activity',
   },
   {
+    id: 'activity-16',
     name: 'openEuler AI 创新应用技术Meetup 苏州站',
     url: '/zh/interaction/event-list/detail/?id=13&isAdditional=true',
     dates: ['2025-12-26'],
