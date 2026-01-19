@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 import OIcon from 'opendesign/icon/OIcon.vue';
 import IconDownload from '~icons/app/icon-download.svg';
@@ -9,10 +9,17 @@ import { useLocale } from '~@/composables/useLocale';
 
 const { isZh } = useLocale();
 
+const props = defineProps({
+  year: {
+    type: String,
+    default: () => '2024' as string,
+  },
+});
+
 const pdfRef = ref();
-const pdfUrl = isZh.value
-  ? '/annual-report/openEuler-annual-report-2024.pdf'
-  : '/annual-report/en/openEuler-annual-report-2024.pdf';
+const pdfUrl = computed(() => (isZh.value
+  ? `/annual-report/openEuler-annual-report-${props.year}.pdf`
+  : `/annual-report/en/openEuler-annual-report-${props.year}.pdf`));
 const VuePdfEmbed = ref(null);
 
 onMounted(async () => {
@@ -27,7 +34,7 @@ onMounted(async () => {
       <a
         class="download-btn"
         :href="pdfUrl"
-        download="openEuler-annual-report-2024.pdf"
+        :download="`openEuler-annual-report-${year}.pdf`"
       >
         <OIcon>
           <IconDownload />

@@ -115,7 +115,12 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
               />
 
               <!-- 标题 -->
-              <div class="banner-title" v-if="info.title">{{ info.title }}</div>
+              <div v-if="info.title">
+                <div v-if="Array.isArray(info.title)" :class="{ 'banner-btn-light': info.text_theme === 'dark', 'banner-title': true }">
+                  <div v-for="(item, index) in info.title" :key="index">{{ item }}</div>
+                </div>
+                <div v-else class="banner-title">{{ info.title }}</div>
+              </div>
               <!-- 副标题 -->
               <div class="banner-subtitle" v-if="info.subtitle">{{ info.subtitle }}</div>
               <div
@@ -252,6 +257,10 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
   color: var(--o-color-info1);
   font-weight: 500;
   --d: 10px;
+
+  &.banner-btn-light {
+    color: white;
+  }
 }
 
 .banner-subtitle {

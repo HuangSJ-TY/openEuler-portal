@@ -7,8 +7,24 @@ import release_pc from '~@/assets/category/home/banner/release/pc.jpg';
 import release_pad from '~@/assets/category/home/banner/release/pad.jpg';
 import release_mb_zh from '~@/assets/category/home/banner/release/mb.jpg';
 
+import annual_report_pc from '~@/assets/category/home/banner/annual-report/pc.jpg';
+import annual_report_pad from '~@/assets/category/home/banner/annual-report/pad.jpg';
+import annual_report_mb_zh from '~@/assets/category/home/banner/annual-report/mb.jpg';
+
 export default {
   zh: [
+    {
+      bg_pc: annual_report_pc,
+      bg_pad: annual_report_pad,
+      bg_mb: annual_report_mb_zh,
+      bg_text: '',
+      bg_theme: 'light',
+      title: ['OpenAtom openEuler', '2025 社区年报'],
+      btn: '查看详情',
+      text_theme: 'dark',
+      href: '/zh/annual-report/openEuler-annual-report-2025/',
+      isBlank: true,
+    },
     {
       bg_pc: release_pc,
       bg_pad: release_pad,
