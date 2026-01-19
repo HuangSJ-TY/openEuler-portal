@@ -7,4 +7,4 @@ category: 'report'
   import TheReport from "~@/views/report/TheReport.vue";
 </script>
 
-<TheReport />
+<TheReport year="2024" />

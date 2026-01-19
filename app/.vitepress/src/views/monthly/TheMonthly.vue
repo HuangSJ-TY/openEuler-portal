@@ -95,7 +95,17 @@ const getListData = (params: ParamsTypeT) => {
 
         // TODO:特殊处理24年年报，待后续年报单独作为一个栏目
         if (lang.value === 'zh') {
-          const yearData = {
+          const yearData = [{
+            banner: '/img/banners/annual-report-2025.jpg',
+            archives: '2026-01',
+            author: ['openEuler'],
+            date: '2026-01-19',
+            lang: 'zh',
+            title: 'openEuler 2025 社区年报',
+            summary: 'openEuler 2025 社区年报',
+            tags: ['openEuler', '社区运作报告'],
+            path: 'zh/annual-report/openEuler-annual-report-2025/',
+          }, {
             banner: '/img/banners/annual-report-2024.jpg',
             archives: '2025-01',
             author: ['openEuler'],
@@ -105,8 +115,8 @@ const getListData = (params: ParamsTypeT) => {
             summary: 'openEuler 2024 社区年报',
             tags: ['openEuler', '社区运作报告'],
             path: 'zh/annual-report/openEuler-annual-report-2024/',
-          };
-          newsCardData.value.unshift(yearData);
+          }];
+          newsCardData.value.unshift(...yearData);
         } else {
           const yearData = {
             banner: '/img/banners/annual-report-2024-en.jpg',
