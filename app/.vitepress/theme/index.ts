@@ -9,6 +9,7 @@ import '@/shared/styles/index.scss';
 import '~@/assets/style/theme/default-light.token.css';
 import '~@/assets/style/theme/dark.token.css';
 import '@opensig/opendesign/es/index.css';
+import '@opendesign-plus/components/styles';
 import '~@/assets/style/theme/index.scss';
 import '~@/assets/style/theme/media.token.scss';
 
@@ -36,6 +37,9 @@ export default {
     }
     app.use(installer, {
       appKey: 'openEuler',
+      isCookieAgreed() {
+        return location.pathname.startsWith('/zh') ? true : document.cookie.includes('agreed-cookiepolicy-en=1');
+      },
       onPageView(_, to) {
         if (to.includes('/security/cve')) {
           return { $service: 'cvemanager' };

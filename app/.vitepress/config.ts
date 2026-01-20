@@ -124,5 +124,10 @@ const config: UserConfig = {
     },
   },
   cleanUrls: true,
+  vite: {
+    ssr: {
+      noExternal: ['@opendesign-plus/components', 'element-plus']
+    }
+  }
 };
 export default config;
