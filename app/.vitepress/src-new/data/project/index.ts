@@ -9,8 +9,18 @@ import IconCodeRepo from '~icons/yuanrong/icon-code-repo.svg';
 import IconDocument from '~icons/yuanrong/icon-document.svg';
 import IconWhitePaper from '~icons/yuanrong/icon-white-paper.svg';
 
+export * from './intelligence-boom';
+
 export const projectData = {
   zh: [
+    {
+      title: 'Intelligence BooM',
+      desc: 'Intelligence BooM AI开源基础软件栈是联合多家社区、伙伴成员一起打造的大模型全栈开源解决方案，包含异构融合平台、任务管理平台、数据管理平台、运行加速平台、智能应用平台及全栈安全平台等7大平台，20+开源组件。',
+      icon: '',
+      url: '/projects/intelligence-boom',
+      giteeUrl: '',
+      tag: 'NEW',
+    },
     {
       title: 'UB Service Core',
       desc: 'UB Service Core构筑5大集群级系统服务，支持不同OS并全面开源至openEuler社区，释放超节点平等互联架构优势，全面使能应用加速30~50%，促进灵衢系统软件生态构筑。',
@@ -85,6 +95,14 @@ export const projectData = {
     },
   ],
   en: [
+    {
+      title: 'Intelligence BooM',
+      desc: 'Intelligence BooM is an open source AI foundational software solution, the result of a joint effort by community members and partners. It comprises over 20 open source components and the 7 major platforms: heterogeneous convergence, task management, data management, runtime acceleration, domain model platform, intelligent application platform, and full-stack security. ',
+      icon: '',
+      url: '/projects/intelligence-boom',
+      giteeUrl: '',
+      tag: 'NEW',
+    },
     {
       title: 'UB Service Core',
       desc: 'Fully open sourced to the openEuler community with multi-OS support, UB Service Core delivers five essential cluster-level system services. By leveraging a peer-to-peer interconnect architecture, it boosts application performance by 30%-50%, fostering a robust software ecosystem for UnifiedBus.',

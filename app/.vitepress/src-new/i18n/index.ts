@@ -28,6 +28,7 @@ import yuanrong from './yuanrong'
 import project from './project'
 import ubServiceCore from './ub-service-core';
 import ubOsComponent from './ub-os-component'
+import intelligenceBoom from './intelligence-boom'
 
 import { getCurrentLocale } from '~@/utils/locale';
 
@@ -93,6 +94,7 @@ const messages = {
     project: project.zh,
     ubServiceCore: ubServiceCore.zh,
     ubOsComponent: ubOsComponent.zh,
+    intelligenceBoom: intelligenceBoom.zh,
   },
   en: {
     // 公共模块
@@ -120,6 +122,7 @@ const messages = {
     project: project.en,
     ubServiceCore: ubServiceCore.en,
     ubOsComponent: ubOsComponent.en,
+    intelligenceBoom: intelligenceBoom.en,
   },
 };
 
