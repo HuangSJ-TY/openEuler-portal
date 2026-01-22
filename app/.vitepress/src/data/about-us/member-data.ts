@@ -124,11 +124,6 @@ export default [
         noIcon: true,
       },
       {
-        img_light: afusion_light,
-        img_dark: afusion_dark,
-        noIcon: true,
-      },
-      {
         img_light: nanfangdianwang_light,
         img_dark: nanfangdianwang_dark,
         noIcon: true,
@@ -202,6 +197,11 @@ export default [
       {
         img_light: shenzhoushuma_light,
         img_dark: shenzhoushuma_dark,
+        noIcon: true,
+      },
+      {
+        img_light: afusion_light,
+        img_dark: afusion_dark,
         noIcon: true,
       },
       {

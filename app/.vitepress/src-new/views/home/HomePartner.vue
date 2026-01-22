@@ -26,7 +26,7 @@ const publisher3 = Array(5).fill(publisher.slice(16)).flat();
     ></HomeSwiper>
     <HomeSwiper :data="publisher3" class="partner-swiper"></HomeSwiper>
     <template #footer>
-      <p class="partner-tips">{{ $t('home.publisherTips') }}</p>
+      <p>{{ $t('home.publisherTips') }}</p>
     </template>
   </AppSection>
 </template>
