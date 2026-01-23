@@ -4,18 +4,18 @@ date: '2026-01-23'
 category: news
 tags:
   - openEuler
-banner: app/zh/news/20260123-获评北京知名商标品牌/media/2026-01-23_03.jpg
+banner: app/.vitepress/public/img/news/20260123-openeuler-Beijing/20260123_openeuler-Beijing_03.jpg
 author: 'openEuler'
 summary: 'openEuler获评2025年度 “北京知名商标品牌”并入选《北京重点商标保护名录》'
 ---
 
 1月16日，首届北京商标品牌盛典在京举行，会上正式揭晓2025年度“北京知名商标品牌”评选结果，并发布第二批《北京重点商标保护名录》。开放原子开源基金会旗下开源欧拉（openEuler）凭借深厚的技术积淀、广泛的生态影响力及完善的知识产权保护体系，成功获评“北京知名商标品牌”并入选《北京重点商标保护名录》。
 
-![alt text](../media/2026-01-23_01.jpg)
+![alt text](../media/20260123_openeuler-Beijing_01.jpg)
 
 获评“北京知名商标品牌”后，openEuler商标的知名度与影响力获得权威背书，品牌价值的公信力显著提升。同时，品牌同步形成优质示范效应，为广大开源项目重视商标布局、强化品牌建设树立清晰导向。
 
-![alt text](../media/2026-01-23_02.png)
+![alt text](../media/20260123_openeuler-Beijing_02.png)
 
 入选《北京重点商标保护名录》后，openEuler商标将被纳入市场监管部门的重点关注与监测范畴，获得跨区域协同保护，能够有效遏制侵权仿冒、恶意抢注等不正当竞争行为。项目品牌的合法权益将得到更精准、更有力的保障，为开源项目品牌的长效健康发展筑牢稳固的维权屏障。
 
