@@ -4,7 +4,7 @@ date: '2026-01-23'
 category: news
 tags:
   - openEuler
-banner: 'app/zh/news/20260123-openEuler-OpenSSF OSV/20260123-openEuler-OpenSSF OSV.md'
+banner: 'img/news/20260123-openEuler-OpenSSF OSV/20260123openEuler-OpenSSF OSV_01.jpg'
 author: 'openEuler'
 summary: 'openEuler × OpenSSF OSV 协作成果分享'
 ---

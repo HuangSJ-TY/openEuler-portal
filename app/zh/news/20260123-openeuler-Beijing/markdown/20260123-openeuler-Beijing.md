@@ -4,7 +4,7 @@ date: '2026-01-23'
 category: news
 tags:
   - openEuler
-banner: app/.vitepress/public/img/news/20260123-openeuler-Beijing/20260123_openeuler-Beijing_03.jpg
+banner: img/news/20260123-openeuler-Beijing/20260123_openeuler-Beijing_03.jpg
 author: 'openEuler'
 summary: 'openEuler获评2025年度 “北京知名商标品牌”并入选《北京重点商标保护名录》'
 ---
