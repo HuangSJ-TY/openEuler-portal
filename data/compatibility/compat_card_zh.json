@@ -30654,6 +30654,25 @@
     "chipModel": "YMTC X4-9060",
     "item": "",
     "downloadLink": "inbox"
+  },
+  {
+    "vendorID": "8086",
+    "deviceID": "7a36",
+    "svID": "1043",
+    "ssID": "8882",
+    "architecture": "x86_64",
+    "os": "openEuler 24.03 LTS SP1",
+    "driverName": "ahci",
+    "version": "3.0",
+    "type": "SSD",
+    "date": "2025/12/29",
+    "sha256": "6043f23f52b377067e94429d8704c0d448691ba54fd3048a17eb7c021c25185b  /lib/modules/6.6.0-72.0.0.76.oe2403sp1.x86_64/kernel/drivers/ata/ahci.ko.xz",
+    "driverSize": "15116",
+    "chipVendor": "长江存储",
+    "boardModel": "BWG01T02",
+    "chipModel": "YMTC X4-9060",
+    "item": "",
+    "downloadLink": "inbox"
   }
 
 ]
