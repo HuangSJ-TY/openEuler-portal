@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useData, useRouter } from 'vitepress';
+import { useData, useRoute, useRouter } from 'vitepress';
 import type { Component } from 'vue';
-import { computed, onMounted, watch } from 'vue';
+import { computed, nextTick, onMounted, ref, watch } from 'vue';
 
 import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import en from 'element-plus/es/locale/lang/en';
@@ -30,7 +30,6 @@ import LayouWhitePaper from '@/layouts/LayouWhitePaper.vue';
 
 import FloatingButton from '~@/components/FloatingButton.vue';
 import FloatingButtonEn from '~@/components/FloatingButtonEn.vue';
-import CookieNotice from '~@/components/CookieNotice.vue';
 import AppYear from '@/components/AppYear.vue';
 
 import AppTour from '~@/components/AppTour.vue';
@@ -39,6 +38,8 @@ import categories from '@/data/common/category';
 import { setStoreData } from './shared/login';
 import { useLocale } from '~@/composables/useLocale';
 import { hideNssRoutes } from './data/common/nss';
+import { OCookieNotice, OPlusConfigProvider } from '@opendesign-plus/components';
+import { useCookieStore } from '~@/stores/common';
 
 const { changeLocale, isZh } = useLocale();
 const { frontmatter, lang } = useData();
@@ -107,6 +108,17 @@ watch(
 onMounted(() => {
   setStoreData();
 });
+
+const cookieStore = useCookieStore();
+const cookieRef = ref();
+const route = useRoute();
+watch(
+  () => route.path,
+  async () => {
+    await nextTick();
+    cookieRef.value?.check();
+  }
+);
 </script>
 
 <template>
@@ -123,7 +135,9 @@ onMounted(() => {
         </main>
       </el-config-provider>
     </OConfigProvider>
-    <CookieNotice />
+    <OPlusConfigProvider :locale="lang">
+      <OCookieNotice ref="cookieRef" v-model:visible="cookieStore.isNoticeVisible" commnity="openEuler" :detail-url="`/${lang}/other/cookies`" />
+    </OPlusConfigProvider>
     <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
     <ClientOnly>
       <AppTour />

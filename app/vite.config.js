@@ -168,7 +168,7 @@ export default defineConfig({
         rewrite: (url) => url.replace(/^\/api-omapi/, ''),
       },
       '/api-dsapi/': {
-        target: 'https://dsapi.osinfra.cn/',
+        target: 'https://dsapi.test.osinfra.cn/',
         changeOrigin: true,
         rewrite: (url) => url.replace(/^\/api-dsapi/, ''),
       },
