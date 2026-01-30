@@ -600,8 +600,8 @@ const tdks: {
     keywords: 'openEuler, BiSheng JDK, TCK, 宣誓书, 认证',
   },
   'zh/other/privacy': {
-    title: 'openEuler 隐私政策 | 其他信息',
-    description: '了解openEuler的隐私政策，保护您的个人信息和数据。',
+    title: 'openEuler 隐私声明 | 其他信息',
+    description: '了解openEuler的隐私声明，保护您的个人信息和数据。',
     keywords: 'openEuler, 隐私, 政策, 个人信息, 数据保护',
   },
   'zh/security/bug-bulletins/detail': {
