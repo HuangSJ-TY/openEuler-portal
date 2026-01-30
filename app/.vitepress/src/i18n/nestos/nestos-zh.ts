@@ -86,7 +86,7 @@ export default {
       'openEuler 是由开放原子开源基金会（OpenAtom Foundation）孵化及运营的开源项目',
     copyright: '版权所有 © 2024 openEuler 保留一切权利',
     Trademark: '品牌',
-    Policy: '隐私政策',
+    Policy: '隐私声明',
     Legal: '法律说明',
     Service: '服务状态',
   },

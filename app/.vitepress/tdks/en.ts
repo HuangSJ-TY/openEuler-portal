@@ -306,7 +306,7 @@ const tdks: {
     keywords: 'OS, logo, trademark, brand, open source software',
   },
   'en/other/privacy': {
-    title: 'Privacy Policy',
+    title: 'Privacy Statement',
     description:
       'Learn how openEuler collects, uses, and protects your data. We are committed to user privacy and transparency.',
     keywords: 'OS, Linux, open source software, privacy',

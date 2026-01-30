@@ -424,7 +424,7 @@ onMounted(() => {
               href="/en/other/privacy/"
               target="_blank"
               rel="noopener noreferrer"
-              >openEuler’s Privacy Policy.</a
+              >openEuler’s Privacy Statement.</a
             >
           </p>
         </div>
