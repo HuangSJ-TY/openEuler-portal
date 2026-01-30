@@ -137,7 +137,7 @@ watch(
       </el-config-provider>
     </OConfigProvider>
     <OPlusConfigProvider :locale="lang">
-      <OCookieNotice ref="cookieRef" v-model:visible="cookieStore.isNoticeVisible" commnity="openEuler" :detail-url="`/${lang}/other/cookies`" :cookie-domain="COOKIE_DOMAIN" />
+      <OCookieNotice ref="cookieRef" v-model:visible="cookieStore.isNoticeVisible" community="openEuler" :detail-url="`/${lang}/other/cookies`" :cookie-domain="COOKIE_DOMAIN" />
     </OPlusConfigProvider>
     <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
     <ClientOnly>
