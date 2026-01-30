@@ -109,6 +109,7 @@ onMounted(() => {
   setStoreData();
 });
 
+const COOKIE_DOMAIN = import.meta.env.VITE_COOKIE_DOMAIN;
 const cookieStore = useCookieStore();
 const cookieRef = ref();
 const route = useRoute();
@@ -136,7 +137,7 @@ watch(
       </el-config-provider>
     </OConfigProvider>
     <OPlusConfigProvider :locale="lang">
-      <OCookieNotice ref="cookieRef" v-model:visible="cookieStore.isNoticeVisible" commnity="openEuler" :detail-url="`/${lang}/other/cookies`" />
+      <OCookieNotice ref="cookieRef" v-model:visible="cookieStore.isNoticeVisible" commnity="openEuler" :detail-url="`/${lang}/other/cookies`" :cookie-domain="COOKIE_DOMAIN" />
     </OPlusConfigProvider>
     <AppFooter :class="{ 'is-docs': isDocs }" :lang="lang" />
     <ClientOnly>
