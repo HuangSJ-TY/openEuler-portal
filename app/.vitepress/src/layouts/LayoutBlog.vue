@@ -4,12 +4,16 @@ import { useI18n } from '@/i18n';
 import AppMdHead from './AppMdHead.vue';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 
+import { useLocale } from '~@/composables/useLocale';
+
 const { frontmatter, lang } = useData();
 const i18n = useI18n();
 const blogInfo = {
   link: `/${lang.value}/interaction/blog-list/`,
   name: i18n.value.common.NAV_ROUTER.BLOG,
 };
+
+const { t } = useLocale();
 </script>
 
 <template>
@@ -26,7 +30,11 @@ const blogInfo = {
     <Content />
     <hr />
     <div class="copyright">
-      {{ i18n.interaction.COPYRIGHT_1 }}
+      {{
+        t('blog.copyRight', {
+          year: new Date().getFullYear(),
+        })
+      }}
       <a
         target="_blank"
         rel="noopener noreferrer"

@@ -115,7 +115,7 @@ export default {
         DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP4/',
         DESC: 'openEuler 22.03 LTS SP4 是openEuler 22.03 LTS的补丁版本，生命周期与LTS版本相同。',
         RELEASE_DESC_URL:
-          'https://docs.openeuler.org/zh/docs/22.03_LTS_SP4/docs/Releasenotes/release_notes.html',
+          'https://docs.openeuler.org/zh/docs/22.03_LTS_SP4/server/releasenotes/introduction.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/installation.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
@@ -566,7 +566,7 @@ export default {
         DOWNLOAD_URL: 'https://repo.openeuler.org/openEuler-22.03-LTS-SP4/',
         DESC: 'openEuler openEuler 22.03 LTS SP4 is the patch version of openEuler 22.03 LTS, and both versions have the same lifecycle.',
         RELEASE_DESC_URL:
-          'https://docs.openeuler.org/en/docs/22.03_LTS_SP4/docs/Releasenotes/release_notes.html',
+          'https://docs.openeuler.org/en/docs/22.03_LTS_SP4/server/releasenotes/introduction.html',
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP4/docs/Installation/Installation.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
