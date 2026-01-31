@@ -17,6 +17,7 @@ summary: 通过“分布式内核”，将集群变成大“单机”
 
 ## openYuanrong 整体架构
 ![alt text](0131-openYuanrong-img_01.png)
+
 基于函数、状态、数据对象、数据流等核心概念抽象，openYuanrong 定义了一套通用Serverless分布式接口DPOSIX（Distributed Portable Serverless Inerface），它在分布式内核中起到类似单机OS POSIX接口的作用。进一步围绕这套接口，我们设计实现了整个openYuanrong。上图是其整体架构，重点包括以下 3 个核心子系统。
 
 ### 多语言函数运行时和编程接口
