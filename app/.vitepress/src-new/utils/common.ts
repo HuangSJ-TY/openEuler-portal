@@ -1,4 +1,7 @@
 import Cookies from 'js-cookie';
+import dayjs from 'dayjs';
+
+import { OptionItemT } from '~@/@types/type-meeting';
 
 /**
  * 获取url搜索参数
@@ -121,3 +124,18 @@ export const detectGitPlatform = (url: string) => {
   
   return 'unknown';
 }
+
+/**
+ * 格式化时间
+ * @param {string} date 时间
+ * @param {string} format 时间格式
+ * @returns {string} 返回
+ */
+export const formatDate = (date: string = dayjs(), format: string = 'YYYY/MM/DD') => {
+  return dayjs(new Date(date)).format(format);
+};
+
+export const findLabelFromOptions = (value: string | number, options: OptionItemT[], labelKey: string = 'label', valueKey: string = 'value') => {
+  const find = options.find((o) => o[valueKey] === value);
+  return find?.[labelKey] || value;
+};

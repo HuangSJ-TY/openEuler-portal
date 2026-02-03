@@ -7,7 +7,6 @@ import { useLocale } from '~@/composables/useLocale';
 import { useScreen } from '~@/composables/useScreen';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 
-import { getMeetingActivity } from '@/api/api-calendar';
 import { vAnalytics } from '~@/directive/analytics';
 
 import HomeBanner from './HomeBanner.vue';
@@ -26,8 +25,6 @@ const { isPhone, isPadV } = useScreen();
 
 const { isZh } = useLocale();
 
-const calendarData = ref<string[]>([]);
-
 const verticalPadding = computed(() => {
   if (isPhone.value) {
     return ['32px', '0'];
@@ -43,11 +40,6 @@ onMounted(() => {
     duration: 800,
     delay: 100,
     once: true,
-  });
-  getMeetingActivity({
-    type: 'all',
-  }).then((res) => {
-    calendarData.value = res.data;
   });
 });
 
@@ -132,8 +124,6 @@ if (typeof document !== 'undefined') {
     <HomeCalendar
       ref="calendarRef"
       data-aos="fade-up"
-      v-if="isZh && calendarData.length"
-      :table-data="calendarData"
     />
     <HomeShowCase ref="showcaseRef" data-aos="fade-up" />
     <HomeTrend ref="trendRef" data-aos="fade-up" />

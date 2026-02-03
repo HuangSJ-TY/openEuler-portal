@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import { ref, nextTick, onMounted, PropType, watch } from 'vue';
+import { ref, onMounted, watch, computed, shallowRef } from 'vue';
 
-import { isValidKey, isBrowser } from '@/shared/utils';
-import { TableDataT, DayDataT } from '@/shared/@types/type-calendar';
+import { isValidKey } from '@/shared/utils';
 import { useCommon } from '@/stores/common';
-
-import { getDaysData } from '@/api/api-calendar';
 
 import {
   OIcon,
@@ -16,15 +13,20 @@ import {
   OTabPane,
   ODivider,
   OScroller,
+  OButton,
+  useMessage,
+  OTag,
+  ODialog,
 } from '@opensig/opendesign';
 
 import summitData from '~@/data/summit';
 import activityData from '~@/data/activity';
 import { type CalendarValueT } from '~@/@type/type-home';
 
+import dayjs from 'dayjs';
+
 import IconLeft from '~icons/app-new/icon-chevron-left.svg';
 import IconRight from '~icons/app-new/icon-chevron-right.svg';
-import IconDate from '~icons/home/icon-date.svg';
 import IconAll from '~icons/home/icon-all.svg';
 import IconEvent from '~icons/home/icon-event.svg';
 import IconSummit from '~icons/home/icon-summit.svg';
@@ -43,13 +45,14 @@ import { oaReport } from '@/shared/analytics';
 import { vAnalytics } from '~@/directive/analytics';
 import useInViewDuration from '~@/composables/useInViewDuration';
 
+import { getMeetingDateListApi, getMeetingListApi, getRoles } from '~@/api/api-meeting';
+import { showGuard, getUserAuth } from '@/shared/login';
+import { useLocale } from '~@/composables/useLocale';
+import { formatDate } from '~@/utils/common';
+import { getPointStr } from '~@/utils/meeting';
+import { INTERVAL_DAY, INTERVAL_WEEK, INTERVAL_MONTH } from '~@/config/meeting';
+
 const props = defineProps({
-  tableData: {
-    type: Array as PropType<string[]>,
-    default: () => {
-      return {};
-    },
-  },
   shownIcon: {
     type: Boolean,
     default: true,
@@ -57,61 +60,55 @@ const props = defineProps({
 });
 
 const commonStore = useCommon();
+const message = useMessage();
+const { t, locale } = useLocale();
 
-const renderData = ref<TableDataT>({
-  date: '',
-  timeData: [],
-});
-const currentDay = ref({
-  raw: '',
-  resolve: '',
-});
+const TODAY = dayjs(new Date()).format('YYYY-MM-DD');
+
+const recentMeetingDates = ref([] as string[]);
+
 const activeName = ref<number[]>([]);
-const i18n = {
-  SIG_GROUP: 'SIG组:',
-  NEW_DATE: '最新日程：',
-  EMPTY_TEXT: '当日没有活动，敬请期待',
-  LEARN_MORE: '查看详情',
-};
+
 // 日历展示时间限制
 const limitTime = '2021 年 1 月';
-const detailItem = [
-  { text: '会议详情', key: 'detail' },
-  { text: '发起人', key: 'creator' },
-  { text: '会议日期', key: 'date' },
-  { text: '会议时间', key: 'duration_time' },
-  { text: '会议平台', key: 'platform' },
-  { text: '会议ID', key: 'meeting_id' },
-  { text: '会议链接', key: 'join_url' },
-  { text: 'Etherpad链接', key: 'etherpad' },
-  { text: '活动介绍', key: 'synopsis' },
-  { text: '起始日期', key: 'start_date' },
-  { text: '结束日期', key: 'end_date' },
-  { text: '线上链接', key: 'online_url' },
-  { text: '报名链接', key: 'register_url' },
-  { text: '活动地点', key: 'address' },
-  { text: '回放链接', key: 'replay_url' },
-  { text: '回放链接', key: 'video_url' },
+// 会议详情配置
+const meetingItem = [
+  { text: t('home.meetingDetail'), key: 'agenda' },
+  { text: t('home.meetingCreator'), key: 'sponsor' },
+  { text: t('home.meetingDate'), key: 'timeRange' },
+  { text: t('home.meetingPlatform'), key: 'platform' },
+  { text: t('home.meetingId'), key: 'mid' },
+  { text: t('home.meetingLink'), key: 'join_url' },
+  { text: t('home.meetingEtherpad'), key: 'etherpad' },
+  { text: t('home.meetingRecord'), key: 'replay_url' },
+  { text: t('home.meetingRecord'), key: 'video_url' },
 ];
+// 活动、峰会详情配置
+const activityItem = [
+  { text: t('home.startDate'), key: 'start_date' },
+  { text: t('home.endDate'), key: 'end_date' },
+  { text: t('home.activityAddress'), key: 'address' },
+];
+
 const activityType = ['线下', '线上', '线上 + 线下'];
 const titleList = [
   {
-    label: '全部',
+    label: t('home.meetingTypeAll'),
     value: 'all',
     icon: IconAll,
   },
   {
-    label: '会议',
+    label: t('home.meetingTypeMeet'),
     value: 'meetings',
     icon: IconMeet,
   },
   {
-    label: '活动',
+    label: t('home.meetingTypeActivity'),
     value: 'activity',
     icon: IconEvent,
   },
   {
-    label: '峰会',
+    label: t('home.meetingTypeSummit'),
     value: 'summit',
     icon: IconSummit,
   },
@@ -121,77 +118,153 @@ const calendar = ref();
 const calendarHeight = ref<string>('407px');
 const isLimit = ref(false);
 
-// 活动会议筛选
-function selectTab() {
-  nextTick(() => {
-    paramGetDaysData({
-      date: currentDay.value.raw,
-      type: tabType.value,
-    });
-  });
-}
+// 当前选择日期的会议事件
+const currentCalendarData = shallowRef<Record<string, any>[]>([]);
 
-function setMeetingDay(day: string, event: Event) {
-  if (new Date(day.replace(/-/g, '/')).getTime() / 1000 < 1610380800) {
-    event.stopPropagation();
-    return;
-  }
-  if (day === currentDay.value.raw) {
-    return false;
-  }
+const selectedDate = ref();
+// 当前选择日期字符串
+const selectedDateStr = computed(() => dayjs(selectedDate.value).format('YYYY-MM-DD'));
+
+const updateCurrentDayMeetings = async (date: string) => {
+  const currentDate = dayjs(date);
   if (
-    props.tableData?.includes(day) ||
-    getSummitHighlight(day, [...summitData, ...activityData])
+    !recentMeetingDates.value.length ||
+    dayjs(recentMeetingDates.value[0]).isAfter(currentDate) ||
+    dayjs(recentMeetingDates.value[recentMeetingDates.value.length - 1]).isBefore(currentDate)
   ) {
-    paramGetDaysData({
-      date: day,
-      type: tabType.value,
-    });
-  } else {
-    renderData.value.timeData = [];
+    await getRecentMeetingDates();
   }
-  currentDay.value.raw = day;
-  currentDay.value.resolve = resolveDate(day);
-}
+  
+  if (recentMeetingDates.value.includes(date) || getSummitHighlight(date, activityData) || getSummitHighlight(date, summitData)) {
+    queryMeetingDates(date, '');
+  } else {
+    currentCalendarData.value = [];
+  }
+};
 
-function paramGetDaysData(params: { date: string; type: string }) {
-  getDaysData(params).then((res) => {
-    renderData.value = res.data;
+// 计算最新日程
+const latestSchedule = computed(() => {
+  const now = dayjs();
+  const todayStr = now.format('YYYY-MM-DD');
+  const nowTimestamp = now.unix();
 
-    const dataMap = {
-      all: [...summitData, ...activityData],
-      summit: summitData,
-      activity: activityData,
-    };
-    const data = dataMap[params.type];
-    const highlight = data && getSummitHighlight(params.date, data);
-    if (highlight) {
-      renderData.value.timeData.push(highlight);
+  // 检查今天是否有活动
+  let latest = recentMeetingDates.value.find((v) => v === todayStr);
+
+  if (!latest) {
+    let minUpcomingDate = null;
+    let minTimestamp = Infinity;
+
+    for (const date of recentMeetingDates.value) {
+      const timestamp = dayjs(date).unix();
+      if (timestamp >= nowTimestamp && timestamp < minTimestamp) {
+        minUpcomingDate = date;
+        minTimestamp = timestamp;
+      }
     }
 
-    // 当天只有一个日程，直接展开，多个日程，全部折叠
-    if (renderData.value.timeData.length === 1) {
-      activeName.value = [0];
+    // 如果有即将发生的活动就返回，否则返回第一个日期
+    latest = minUpcomingDate || recentMeetingDates.value[0] || TODAY;
+  }
+
+  return latest;
+});
+
+// 查询指定日期的会议事件
+const queryMeetingDates = async (date: string, group_name: string) => {
+  const res = await getMeetingListApi(date, group_name);
+
+  currentCalendarData.value = [];
+
+  if (Array.isArray(res)) {
+    currentCalendarData.value = res.map((item) => ({ ...item, type: 'meeting', d: item.mid }));
+  }
+
+  if (getSummitHighlight(selectedDateStr.value, activityData)) {
+    currentCalendarData.value.push(getSummitHighlight(selectedDateStr.value, activityData));
+  }
+
+  if (getSummitHighlight(selectedDateStr.value, summitData)) {
+    currentCalendarData.value.push(getSummitHighlight(selectedDateStr.value, summitData));
+  }
+
+  activeName.value = currentCalendarData.value.length === 1 ? [currentCalendarData.value[0].id] : [];
+};
+
+const calendarData = computed(() => {
+  if (tabType.value === 'all') return currentCalendarData.value;
+  return currentCalendarData.value.filter((item) => tabType.value === item.type);
+});
+
+const displayCalendarData = computed(() => {
+  return calendarData.value.map((v) => {
+    const { is_cycle, date, start, end, cycle_start_date, cycle_end_date, cycle_start, cycle_end, cycle_type, cycle_interval, cycle_point, type } = v;
+    let dateRange = `${formatDate(date)} ${start} - ${end}`;
+    if (['activity', 'summit'].includes(type)) {
+      dateRange = `${formatDate(v.start_date, 'YYYY/MM/DD HH:mm')} - ${formatDate(v.end_date, 'YYYY/MM/DD HH:mm')}`;
+    }
+    if (is_cycle) {
+      dateRange = `${formatDate(cycle_start_date)} - ${formatDate(cycle_end_date)}`;
+    }
+
+    let timeRange = `${start} - ${end}`;
+    let replay_url = null;
+    let hasObsData = false;
+    const obsData = v.obs_data?.filter((v) => v.text_video_url) || [];
+
+    if (is_cycle) {
+      let cycleType = '';
+      if (cycle_type === INTERVAL_DAY) {
+        cycleType = t('home.cycleDay');
+      }
+      if (cycle_type === INTERVAL_WEEK) {
+        if (cycle_interval > 1) {
+          cycleType = t('home.cycleWeek.other', [getPointStr(cycle_type, cycle_point), cycle_interval]);
+        } else {
+          cycleType = t('home.cycleWeek.one', [getPointStr(cycle_type, cycle_point)]);
+        }
+      }
+      if (cycle_type === INTERVAL_MONTH) {
+        cycleType = t('home.cycleMonth', [getPointStr(cycle_type, cycle_point)]);
+      }
+      timeRange = t('home.cycleMeetingText2', {
+        startDate: cycle_start_date,
+        endDate: cycle_end_date,
+        startTime: cycle_start,
+        endTime: cycle_end,
+        cycleType,
+      });
+      hasObsData = obsData.some((t) => t.sub_id === v.cycle_sub.find((z) => z.date === date)?.sub_id);
     } else {
-      // 会议时间排序
-      activeName.value = [];
-      renderData.value.timeData.sort((a: DayDataT, b: DayDataT) => {
-        return (
-          parseInt(a.startTime?.replace(':', '')) -
-          parseInt(b.startTime?.replace(':', ''))
-        );
-      });
-      renderData.value.timeData.map((item2) => {
-        if (item2?.etherpad) {
-          item2['duration_time'] = `${item2.startTime}-${item2.endTime}`;
-        }
-        if (item2?.activity_type && !item2.dates) {
-          item2.activity_type = activityType[Number(item2.activity_type) - 1];
-        }
-      });
+      hasObsData = obsData.length > 0;
     }
+
+    if (hasObsData && v?.video_url) {
+      replay_url = `${location.origin}/${locale.value}/video/${v.group_name}/${v.mid}/${date}`;
+    }
+
+    return {
+      ...v,
+      dateRange,
+      timeRange,
+      replay_url,
+    };
   });
-}
+});
+
+watch(selectedDateStr, updateCurrentDayMeetings);
+
+watch(
+  () => displayCalendarData.value.length,
+  (length) => {
+    if (length === 1) {
+      activeName.value = [displayCalendarData.value[0].id];
+      return;
+    }
+    activeName.value = [];
+  },
+  { immediate: true, flush: 'post' }
+);
 
 const selectDate = (val: string, date: string) => {
   if (date === limitTime && val === 'prev-month') {
@@ -202,12 +275,7 @@ const selectDate = (val: string, date: string) => {
   calendar.value.selectDate(val);
 };
 
-const goDetail = (index: number) => {
-  window.open(
-    `/zh/interaction/event-list/detail/?id=${renderData.value.timeData[index].id}&isMini=1`
-  );
-};
-
+// --------------------获取会议平台名称-----------------------------
 const transformKey = (key: string) => {
   switch (key) {
     case 'welink':
@@ -225,6 +293,7 @@ const removeLeadingZero = (str: string) => {
   return str.replace(/^0+(?=\d)/, '');
 };
 
+// --------------------监听日历高度变化-----------------------------
 const watchChange = (element: HTMLElement) => {
   const observe = new MutationObserver(function () {
     calendarHeight.value = `${element.offsetHeight - 2}px`;
@@ -235,6 +304,7 @@ const watchChange = (element: HTMLElement) => {
     characterData: true,
   });
 };
+
 const resolveDate = (date: string) => {
   return date.replaceAll('-', '/');
 };
@@ -243,7 +313,32 @@ const getSummitHighlight = (date: string, data: CalendarValueT[]) => {
     return item.dates?.includes(date);
   });
 };
-onMounted(() => {
+
+// --------------------获取近期有会议的日期-----------------------------
+const getRecentMeetingDates = async () => {
+  const res = await getMeetingDateListApi(selectedDateStr.value);
+  recentMeetingDates.value = (res || []).sort((a, b) => dayjs(a).unix() - dayjs(b).unix());
+};
+
+// -------------------- 获取会议权限 --------------------
+const hasPermMeeting = ref(false);
+const hasPermLoading = ref(false);
+const getPermissionMeeting = () => {
+  getRoles('openeuler')
+    .then((res) => {
+      let data = [] as string[];
+      res.data?.forEach((item) => {
+        data.push(...item.roles);
+      });
+      hasPermMeeting.value = data.filter((val) => !val?.includes('activity')).length > 0;
+    }).finally(() => {
+      hasPermLoading.value = true;
+    });
+};
+
+onMounted(async () => {
+  selectedDate.value = new Date();
+  getPermissionMeeting();
   // 设置右侧 日程列表高度
   const tbody = document.querySelector(
     '.calendar-body .el-calendar__body'
@@ -252,24 +347,17 @@ onMounted(() => {
     watchChange(tbody);
     calendarHeight.value = `${tbody.offsetHeight - 2}px`;
   }
+  // 获取近期有会议的日期
+  await getRecentMeetingDates();
+
+  if (
+    recentMeetingDates.value.includes(selectedDateStr.value) ||
+    getSummitHighlight(selectedDateStr.value, activityData) ||
+    getSummitHighlight(selectedDateStr.value, summitData)
+  ) {
+    queryMeetingDates(selectedDateStr.value, '');
+  }
 });
-const watchData = watch(
-  () => props.tableData.length,
-  () => {
-    if (isBrowser()) {
-      nextTick(() => {
-        const activeBoxs = document.querySelector(
-          '.is-today .out-box'
-        ) as HTMLElement;
-        if (activeBoxs) {
-          activeBoxs.click();
-          watchData();
-        }
-      });
-    }
-  },
-  { immediate: true }
-);
 
 // ------------埋点------------
 const onClickDate = (e: Event, day: string) => {
@@ -285,7 +373,7 @@ const container = ref();
 useInViewDuration(container, (duration) => {
   oaReport('ElementExposure', {
     module: 'homepage',
-    level1: 'openEuler开发者日历',
+    level1: t('home.calendar'),
     duration,
   });
 });
@@ -295,22 +383,65 @@ watch(
   (val) => {
     oaReport('click', {
       module: 'homepage',
-      level1: 'openEuler开发者日历',
+      level1: t('home.calendar'),
       level2: titleList.find((item) => item.value === val)?.label || '',
       type: 'tab',
     });
   }
 );
+
+const toCreateMeeting = () => {
+  const { token } = getUserAuth();
+  if (!token) {
+    showGuard();
+  } else if (!hasPermMeeting.value) {
+    return message.warning({
+      content: t('home.meetingDesc'),
+    });
+  } else {
+    window.open(`/${locale.value}/my/create-meeting`)
+  }
+};
+
+const jumpDetail = (url: string) => {
+  window.open(url, '_blank');
+};
+
+const bindVisible = ref(false);
+const toBind = () => {
+  window.open(`/${locale.value}/my/settings`, '_blank');
+  bindVisible.value = false;
+};
+const cancel = () => {
+  bindVisible.value = false;
+  sessionStorage.setItem('close_permission', '1');
+};
+
+watch(
+  () => hasPermLoading.value,
+  (val) => {
+    const { token } = getUserAuth();
+    if (token && !hasPermMeeting.value && !sessionStorage.getItem('close_permission') ) {
+      bindVisible.value = true;
+    }
+  }
+);
 </script>
 <template>
   <AppSection
-    title="openEuler开发者日历"
+    :title="t('home.calendar')"
     class="home-calendar"
     ref="container"
-    v-analytics.bubble.noTrigger="{ level1: 'openEuler开发者日历' }"
+    v-analytics.bubble.noTrigger="{ level1: t('home.calendar') }"
   >
+    <div class="calendar-header">
+      <span>{{ t('home.meetingDesc') }}</span>
+      <OButton color="primary" variant="solid" size="large" @click="toCreateMeeting">
+        {{ t('home.meetingBook') }}
+      </OButton>
+    </div>
     <div class="calendar-body">
-      <el-calendar ref="calendar" class="calender">
+      <el-calendar v-if="selectedDate" ref="calendar" class="calender" v-model="selectedDate">
         <template #header="{ date }">
           <div class="left-title">
             <OIcon @click="selectDate('prev-month', date)" v-analytics.bubble="{ target: date, type: 'prev-month' }">
@@ -322,22 +453,18 @@ watch(
             </OIcon>
           </div>
           <div class="right-title">
-            {{ i18n.NEW_DATE }}
-            <span>{{ currentDay.resolve }}</span>
+            {{ t('home.latestMeeting') }}
+            <span>{{ latestSchedule }}</span>
           </div>
         </template>
         <template #date-cell="{ data }">
           <div
             class="out-box"
-            :class="{ 'has-calender': tableData.includes(data.day) }"
-            @click="setMeetingDay(data.day, $event)"
+            :class="{ 'has-calender': recentMeetingDates.includes(data.day) }"
             v-analytics.bubble="(ev) => onClickDate(ev, data.day)"
           >
             <div class="day-box">
-              <p
-                :class="data.isSelected ? 'is-selected' : ''"
-                class="date-calender"
-              >
+              <p class="date-calender">
                 {{ removeLeadingZero(data.day.split('-').at(-1) || '') }}
               </p>
               <div class="icon-box">
@@ -345,7 +472,7 @@ watch(
                   class="meeting"
                   v-if="
                     (tabType === 'all' || tabType === 'meetings') &&
-                    tableData.includes(data.day)
+                    recentMeetingDates.includes(data.day)
                   "
                 >
                   <IconMeet></IconMeet>
@@ -375,12 +502,12 @@ watch(
       </el-calendar>
       <div class="detail-list">
         <div class="current-day">
-          {{ i18n.NEW_DATE }}
-          <span>{{ currentDay.resolve }}</span>
+          {{ t('home.latestMeeting') }}
+          <span>{{ latestSchedule }}</span>
         </div>
         <div class="right-title">
           <div class="title-list">
-            <OTab v-model="tabType" @change="selectTab" :line="false">
+            <OTab v-model="tabType" :line="false">
               <OTabPane
                 v-for="item in titleList"
                 :key="item.value"
@@ -400,18 +527,18 @@ watch(
         <div>
           <OScroller class="meeting-list" show-type="hover" size="small">
             <OCollapse
-              v-if="renderData.timeData.length"
+              v-if="displayCalendarData.length"
               v-model="activeName"
               accordion
               :style="{ '--collapse-padding': '0' }"
             >
               <OCollapseItem
-                v-for="(item, index) in renderData.timeData"
+                v-for="(item, index) in displayCalendarData"
                 :key="index"
-                :value="index"
+                :value="item.id"
               >
                 <template #title>
-                  <div class="meet-title" :title="item.name || item.title">
+                  <div class="meet-title" :title="item.name || item.title || item.topic">
                     <OIcon :class="item.type || 'meeting'">
                       <IconSummit v-if="item.type === 'summit'"></IconSummit>
                       <IconEvent
@@ -420,37 +547,38 @@ watch(
                       <IconMeet v-else></IconMeet>
                     </OIcon>
                     <div class="text">
-                      {{ item.name || item.title }}
+                      {{ item.name || item.title || item.topic }}
+                    </div>
+                    <div class="tag-wrapper" v-if="item.is_cycle">
+                      <OTag color="primary" variant="outline">{{ t('home.cycle') }}</OTag>
                     </div>
                   </div>
                   <div class="meet-info">
-                    <span class="start-time"
-                      ><span v-if="!item.start_date"
-                        >{{ item.startTime }} - {{ item.endTime }}</span
-                      >
-                      <span v-else
-                        >{{ resolveDate(item.start_date) }}-{{
-                          resolveDate(item.end_date || '')
-                        }}</span
-                      ></span
-                    >
+                    <span class="start-time">
+                      <span>{{ item.dateRange }}</span>
+                    </span>
                     <ODivider direction="v" />
                     <div v-if="item.group_name">
-                      {{ i18n.SIG_GROUP }} {{ item.group_name }}
+                      {{ t('home.sigs') }} {{ item.group_name }}
                     </div>
                     <div v-if="item.activity_type">
                       {{ item.activity_type }}
                     </div>
                   </div>
-                  <OLink v-if="item.type" :href="item.url" target="_blank">
-                    {{ i18n.LEARN_MORE }}
+                  <OLink
+                    v-if="item.type !== 'meetings' && (item.url || item.content_url)"
+                    color="normal"
+                    class="jump-detail-link"
+                    @click.stop="jumpDetail(item.url || item.content_url)"
+                  >
+                    {{ t('home.viewDetail') }}
                     <template #suffix>
                       <OIcon><IconChevronRight /> </OIcon>
                     </template>
                   </OLink>
                 </template>
                 <div class="calendar-info">
-                  <template v-for="keys in detailItem" :key="keys.key">
+                  <template v-for="keys in item.type === 'meeting' ? meetingItem : activityItem" :key="keys.key">
                     <div
                       v-if="isValidKey(keys.key, item) && item[keys.key]"
                       class="info-item"
@@ -465,7 +593,7 @@ watch(
                         target="_blank"
                         v-analytics.bubble="{
                           level2: tabType,
-                          level3: item.name || item.title,
+                          level3: item.name || item.title || item.topic,
                           level4: item.group_name,
                           target: item[keys.key],
                         }"
@@ -474,7 +602,7 @@ watch(
                       <p v-else>
                         {{
                           keys.key === 'platform'
-                            ? transformKey(item[keys.key])
+                            ? transformKey(item[keys.key]?.toLowerCase())
                             : item[keys.key]
                         }}
                       </p>
@@ -490,7 +618,7 @@ watch(
                 alt=""
               />
               <img v-else :src="notFoundImg_dark" alt="" />
-              <p>{{ i18n.EMPTY_TEXT }}</p>
+              <p>{{ t('home.meetingEmptyText') }}</p>
             </div>
           </OScroller>
         </div>
@@ -507,6 +635,22 @@ watch(
       class="cube-2"
       :src="commonStore.theme === 'light' ? cubeTow : cubeTowDark"
     />
+    <ODialog
+      v-model:visible="bindVisible"
+      :style="{
+        '--dlg-width': '450px',
+        '--dlg-radius': 'var(--o-radius-xs)',
+      }"
+    >
+      <template #header>{{ t('home.permTitle') }}</template>
+      <div class="dialog-content">{{ t('home.permDesc') }}</div>
+      <template #footer>
+        <div class="dialog-footer blue-theme">
+          <OButton color="primary" variant="solid" size="large" @click="toBind">{{ t('home.toBind') }}</OButton>
+          <OButton color="primary" variant="outline" size="large" @click="cancel">{{ t('home.cancel') }}</OButton>
+        </div>
+      </template>
+    </ODialog>
   </AppSection>
 </template>
 <style lang="scss" scoped>
@@ -526,6 +670,18 @@ watch(
   --link-icon-size: 16px;
 }
 
+.calendar-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--o-color-info2);
+  column-gap: var(--o-gap-5);
+  margin-top: var(--o-gap-t2c);
+  @include respond-to('<=pad_v') {
+    margin-top: 12px;
+  }
+}
+
 .home-calendar {
   :deep(.section-body) {
     position: relative;
@@ -534,7 +690,7 @@ watch(
   }
   .calendar-body {
     display: flex;
-    margin-top: var(--o-gap-t2c);
+    margin-top: 24px;
     border-radius: var(--o-radius-xs);
     background-color: var(--o-color-fill2);
     overflow: hidden;
@@ -865,6 +1021,13 @@ watch(
         align-items: center;
         color: var(--o-color-info1);
         @include text2;
+        .tag-wrapper {
+          margin-left: var(--o-gap-2);
+          .o-tag {
+            background-color: rgba(235, 241, 250);;
+            border: none;
+          }
+        }
         .o-icon {
           flex-shrink: 0;
           padding: 2px;
@@ -884,32 +1047,40 @@ watch(
         .text {
           @include text-truncate(1);
           display: block;
-          width: 100%;
         }
       }
       .meet-info {
-        margin-left: calc($icon-size + 12px);
+        margin-left: 36px;
         margin-top: 8px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        @include tip1;
         color: var(--o-color-info3);
         text-decoration: none;
+        @include tip1;
         @include respond-to('<=pad_v') {
           margin-left: 32px;
         }
+
         .o-divider {
           @include tip1;
         }
+
+        &.hidden-divider {
+          .start-time {
+            padding-right: 24px;
+          }
+          .o-divider {
+            display: none;
+          }
+        }
       }
-      .o-link {
-        font-weight: 400;
-        font-size: var(--o-font_size-tip1);
-        line-height: var(--o-line_height-tip1);
-        margin-left: calc($icon-size + 12px);
-        @include respond-to('<=pad_v') {
-          margin-left: 32px;
-          padding: 0;
+      .jump-detail-link {
+        padding-left: 36px;
+        color: var(--o-color-info1);
+        @include tip1;
+        @include hover {
+          color: var(--o-color-primary1);
         }
       }
     }
@@ -1063,6 +1234,18 @@ watch(
     width: 71px;
     bottom: -40px;
     right: -8px;
+  }
+}
+
+.dialog-content {
+  color: var(--o-color-info1);
+  @include text1;
+}
+.dialog-footer {
+  display: flex;
+  justify-content: center;
+  .o-btn + .o-btn {
+    margin-left: 16px;
   }
 }
 </style>
