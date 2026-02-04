@@ -27,7 +27,11 @@ import SigContribute from './SigContribute.vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import ResultEmpty from '~@/components/ResultEmpty.vue';
 
-import { getSigMeeting, getSigDetail } from '~@/api/api-sig';
+import { getPointStr } from '~@/utils/meeting';
+import { INTERVAL_DAY, INTERVAL_WEEK, INTERVAL_MONTH } from '~@/config/meeting';
+
+import { getSigDetail } from '~@/api/api-sig';
+import { getSigmeetings } from '~@/api/api-meeting';
 
 import type { SigCompleteItemT } from '~@/@types/type-sig';
 
@@ -59,19 +63,99 @@ const maintainerInfo: any = ref([]);
 const committerInfo: any = ref([]);
 const isLoading = ref(true);
 
+function convertNewToOld(newApiResponse) {
+  // 1. 按日期分组
+  const groupedByDate = {};
+
+  newApiResponse.forEach(item => {
+    const date = item.date;
+
+    if (!groupedByDate[date]) {
+      groupedByDate[date] = [];
+    }
+
+    // 2. 字段映射转换
+    let timeRange = `${item.start}-${item.end}`;
+    let replay_url = null;
+    let hasObsData = false;
+    const obsData = item.obs_data?.filter((v) => v.text_video_url) || [];
+    if (item.is_cycle) {
+      let cycleType = '';
+      if (item.cycle_type === INTERVAL_DAY) {
+        cycleType = t('home.cycleDay');
+      }
+      if (item.cycle_type === INTERVAL_WEEK) {
+        if (item.cycle_interval > 1) {
+          cycleType = t('home.cycleWeek.other', [getPointStr(item.cycle_type, item.cycle_point), item.cycle_interval]);
+        } else {
+          cycleType = t('home.cycleWeek.one', [getPointStr(item.cycle_type, item.cycle_point)]);
+        }
+      }
+      if (item.cycle_type === INTERVAL_MONTH) {
+        cycleType = t('home.cycleMonth', [getPointStr(item.cycle_type, item.cycle_point)]);
+      }
+      timeRange = t('home.cycleMeetingText2', {
+        startDate: item.cycle_start_date,
+        endDate: item.cycle_end_date,
+        startTime: item.cycle_start,
+        endTime: item.cycle_end,
+        cycleType,
+      });
+      hasObsData = obsData.some((t) => t.sub_id === item.cycle_sub.find((z) => z.date === date)?.sub_id);
+    } else {
+      hasObsData = obsData.length > 0;
+    }
+
+    if (hasObsData && item?.video_url) {
+      replay_url = `${location.origin}/${locale.value}/video/${item.group_name}/${item.mid}/${date}`;
+    }
+
+    const timeDataItem = {
+      id: item.id,
+      group_name: item.group_name,
+      startTime: item.start,
+      endTime: item.end,
+      duration_time: timeRange,
+      name: item.topic,
+      creator: item.sponsor,
+      detail: item.agenda,
+      join_url: item.join_url,
+      meeting_id: item.id,
+      etherpad: item.etherpad,
+      platform: item.platform,
+      bil_url: item.bil_url,
+      video_url: replay_url,
+    };
+
+    groupedByDate[date].push(timeDataItem);
+  });
+
+  // 3. 转换为老接口格式的数组
+  const oldFormat = Object.keys(groupedByDate).map(date => {
+    return {
+      date: date,
+      timeData: groupedByDate[date]
+    };
+  });
+
+  // 4. 按日期排序（可选）
+  oldFormat.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  return oldFormat;
+}
+
 // 获取sig会议数据
 const queryGetSigMeeting = () => {
   isLoading.value = true;
-  getSigMeeting(sigName.value, pageParams)
-    .then((res: any) => {
-      sigMeetingData.value = res.data.reverse();
-    })
-    .catch(() => {
-      router.go(`${lang.value}/sig/sig-list/`);
-    })
-    .finally(() => {
-      isLoading.value = false;
-    });
+  getSigmeetings(sigName.value).then((res: any) => {
+    sigMeetingData.value = convertNewToOld(res || []);
+  })
+  .catch(() => {
+    router.go(`${lang.value}/sig/sig-list/`);
+  })
+  .finally(() => {
+    isLoading.value = false;
+  });
 };
 
 const queryGetSigDetail = () => {

@@ -32,11 +32,21 @@ export const getMeetingListApi = async (date: string, group_name: string) => {
  * @param {string} community 请求参数
  * @return { Promise<ResponseT> }
  */
-export const getRoles = (community: string) => {
+export const getRoles = async (community: string) => {
   const { token } = getUserAuth();
+  if (!token) return {};
   const url = `/api-workspace/oneid-workbench/profile/getRoles?community=${community}`;
+  const res = await request.get(url, { global: true, showError: false, headers: { token } });
+  return res.data;
+};
 
-  return request.get(url, { global: true, showError: false, headers: { token } }).then((res) => {
-    return res.data;
-  });
+/**
+ * 获取某天的会议列表
+ * @param {string} date 该天的日期
+ * @returns {Promise<ResponseT>} 会议列表
+ */
+export const getSigmeetings = async (group_name: string) => {
+  const { token } = getUserAuth();
+  const res = await request.get(`/api-meeting-v2/meeting/sigmeetings/${group_name}/`, { headers: { token } });
+  return res.data.data;
 };
