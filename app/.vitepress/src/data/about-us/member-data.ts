@@ -160,6 +160,11 @@ export default [
         noIcon: true,
       },
       {
+        img_light: AMD_light,
+        img_dark: AMD_dark,
+        noIcon: true,
+      },
+      {
         img_light: arm_light,
         img_dark: arm_dark,
         noIcon: true,
@@ -208,11 +213,6 @@ export default [
         img_light: dianziyun_light,
         img_dark: dianziyun_dark,
         noIcon: true,
-      },
-      {
-        img_light: AMD_light,
-        img_dark: AMD_dark,
-        noIcon: false,
       },
     ],
   },
