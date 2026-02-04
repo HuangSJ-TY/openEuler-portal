@@ -106,8 +106,10 @@ function convertNewToOld(newApiResponse) {
       hasObsData = obsData.length > 0;
     }
 
-    if (hasObsData && item?.video_url) {
+    if (hasObsData) {
       replay_url = `${location.origin}/${locale.value}/video/${item.group_name}/${item.mid}/${date}`;
+    } else if (item?.video_url) {
+      replay_url = item?.video_url;
     }
 
     const timeDataItem = {
