@@ -253,7 +253,7 @@ export default {
             {
               NAME: 'CLA签署',
               LABEL: '',
-              PATH: 'https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9',
+              PATH: 'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0',
               OUTLINK: true,
             },
           ],

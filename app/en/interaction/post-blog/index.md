@@ -11,7 +11,7 @@ category: blog
 
 2. Set your primary mail box in AtomGit settings <https://atomgit.com/setting/email>.
 
-3. Sign your CLA in <https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9?lang=en>.
+3. Sign your CLA in <https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=en>.
 
 4. Prepare your git environment refering to <http://git.mydoc.io/?t=180692>.
 

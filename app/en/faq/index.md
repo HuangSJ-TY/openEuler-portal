@@ -53,7 +53,7 @@ You can find the full list of openEuler SIGs and their descriptions [here](https
 
 Whether you're a coding whiz or an enthusiastic non-coder, there's a place for you in our community. Here's how to get started:
 
-1. Sign the [CLA](https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9) as an individual, employee or corporation.
+1. Sign the [CLA](https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0) as an individual, employee or corporation.
 2. Head over to our [SIG List](https://www.openeuler.org/en/sig/sig-list/) to see ongoing projects and discussions. Join an existing SIG or [start a new one](https://www.openeuler.org/en/sig/sig-guidance/).
 3. Submit/address issues, contribute code/packages/ projects, and participate in non-code contributions.
     - Submit/Address issues on the [QuickIssue](https://quickissue.openeuler.org/en/issues/) page where you can sign in with your Gitee, GitHub, email, or other account.
