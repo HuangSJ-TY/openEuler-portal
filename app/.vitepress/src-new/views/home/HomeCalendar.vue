@@ -424,7 +424,7 @@ watch(
   (val) => {
     const { token } = getUserAuth();
     if (token && !hasPermMeeting.value && !sessionStorage.getItem('close_permission') ) {
-      bindVisible.value = false;
+      bindVisible.value = true;
     }
   }
 );
@@ -436,12 +436,12 @@ watch(
     ref="container"
     v-analytics.bubble.noTrigger="{ level1: t('home.calendar') }"
   >
-    <!-- <div class="calendar-header">
+    <div class="calendar-header">
       <span>{{ t('home.meetingDesc') }}</span>
       <OButton color="primary" variant="solid" size="large" @click="toCreateMeeting">
         {{ t('home.meetingBook') }}
       </OButton>
-    </div> -->
+    </div>
     <div class="calendar-body">
       <el-calendar v-if="selectedDate" ref="calendar" class="calender" v-model="selectedDate">
         <template #header="{ date }">
