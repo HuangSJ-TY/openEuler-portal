@@ -1,5 +1,5 @@
 export default {
-  yearplan: '2025 Event Plan',
+  yearplan: '2026 Event Plan',
   applyTitle: '活动申请',
   appltDesc:
     '无论是企业、SIG 组、用户组、科研院所或其他组织，我们都欢迎与 openEuler 一起组织开发者活动，共同探讨前沿技术和开源发展趋势，分享创新成果和实践经验，与 openEuler 社区共同成长！',

@@ -39,29 +39,32 @@ export const yearPlanData = {
       events: [
         { month: '1' },
         {
-          month: '2',
+          month: '2' },
+        { 
+          month: '3',
           actives: [
             {
-              location: '比利时 布鲁塞尔',
-              activeName: 'FOSDEM 2025',
-              href: 'https://fosdem.org/2025/',
+              location: '泰国 曼谷',
+              activeName: 'FOSSASIA Summit 2026',
+              href: '',
             },
           ],
         },
-        { month: '3' },
-        { month: '4' },
+        { 
+          month: '4',
+          actives: [
+            {
+              location: '沙特 利雅得',
+              activeName: '2026中国沙特AI科技及信息技术展',
+            },
+          ],
+        },
         {
           month: '5',
           actives: [
             {
-              location: '法国 巴黎',
-              activeName: 'RISC-V Summit Europe',
-              href: 'https://riscv-europe.org/summit/2025/',
-            },
-            {
-              location: '葡萄牙 里斯本',
+              location: 'TBD',
               activeName: 'Linaro Connect 2025',
-              href: 'https://www.linaro.org/connect/',
             },
           ],
         },
@@ -69,9 +72,8 @@ export const yearPlanData = {
           month: '6',
           actives: [
             {
-              location: '中国 香港',
-              activeName: 'KubeCon + CloudNativeCon China',
-              href: 'https://events.linuxfoundation.org/kubecon-cloudnativecon-china/',
+              location: 'TBD',
+              activeName: '开放原子开源生态大会2026',
             },
           ],
         },
@@ -79,34 +81,40 @@ export const yearPlanData = {
           month: '7',
           actives: [
             {
-              location: '中国 北京',
-              activeName: '开放原子开源生态大会2025',
+              location: '中国 香港',
+              activeName: '2026亚洲香港科技及信息技术展',
             },
           ],
         },
-        {
-          month: '8',
+        { month: '8' },
+        { 
+          month: '9',
           actives: [
             {
-              location: '荷兰 阿姆斯特丹',
-              activeName: 'Open Source Summit Europe',
-              href: 'https://events.linuxfoundation.org/open-source-summit-europe/',
+              location: 'TBD',
+              activeName: 'KubeCON + CloudNativeCon China',
             },
             {
-              location: '荷兰 阿姆斯特丹',
-              activeName: 'AI_dev: Open Source GenAI & ML Summit Europe',
-              href: 'https://events.linuxfoundation.org/ai-dev-europe/',
+              location: '新加坡',
+              activeName: 'Data Centre World Asia',
             },
           ],
         },
-        { month: '9' },
-        { month: '10' },
+        { 
+          month: '10',
+          actives: [
+            {
+              location: 'TBD',
+              activeName: 'Open Source Summit Europe 2026',
+            },
+          ],
+        },
         {
           month: '11',
           actives: [
             {
-              location: '中国 北京',
-              activeName: '操作系统大会&openEuler Summit 2025',
+              location: 'TBD',
+              activeName: '操作系统大会 & openEuler Summit 2026',
             },
           ],
         },
@@ -114,9 +122,12 @@ export const yearPlanData = {
           month: '12',
           actives: [
             {
-              location: '日本 东京',
-              activeName: 'OSS & AI_Dev Japan',
-              href: 'https://events.linuxfoundation.org/ai-dev-japan-2025/',
+              location: 'TBD',
+              activeName: 'GITEX Global',
+            },
+            {
+              location: 'TBD',
+              activeName: '开放原子开源开发者大会 2026',
             },
           ],
         },
@@ -134,43 +145,30 @@ export const yearPlanData = {
           actives: [
             {
               location: '中国 北京',
-              activeName: 'KCD Beijing 2025',
-              href: 'https://community.cncf.io/events/details/cncf-kcd-beijing-presents-kcd-beijing-2025/',
+              activeName: 'KCD Beijing 2026',
             },
           ],
         },
-        {
-          month: '4',
+        { month: '4' },
+        { month: '5' },
+        { 
+          month: '6',
           actives: [
             {
-              location: '中国 杭州',
-              activeName: 'openEuler Developer Day 2025',
+              location: 'TBD',
+              activeName: 'openEuler Developer Day 2026',
             },
           ],
         },
-        { month: '5' },
-        { month: '6' },
         { month: '7' },
         { month: '8' },
-        {
-          month: '9',
-          actives: [
-            {
-              location: '中国 杭州',
-              activeName: 'GOSIM 2025',
-            },
-            {
-              location: '中国 上海',
-              activeName: 'HUAWEI Connect 2025',
-            },
-          ],
-        },
+        { month: '9' },
         {
           month: '10',
           actives: [
             {
-              location: '中国 长沙',
-              activeName: '1024程序员节',
+              location: '中国 深圳',
+              activeName: 'GOSIM China 2026',
             }
           ],
         },
@@ -178,8 +176,8 @@ export const yearPlanData = {
           month: '11',
           actives: [
             {
-              location: '中国 深圳',
-              activeName: 'CLK 2025',
+              location: 'TBD',
+              activeName: 'CLK 2026',
             },
           ],
         },
@@ -190,127 +188,35 @@ export const yearPlanData = {
       title: 'Call for X 开发者活动',
       id: 'developer',
       icon: IconDeveloper,
+      desc: '如果您想组织社区活动，参与议题分享，请联系：',
+      email: 'events@openeuler.sh',
       events: [
-        { month: '1' },
+        { 
+          month: '1',
+          actives: [
+            {
+              location: 'Online',
+              activeName: '灵衢互联工作会议Online',
+            },
+          ],
+        },
         { month: '2' },
-        {
-          month: '3',
-          actives: [
-            {
-              location: '中国 北京',
-              activeName: 'openEuler on RISC-V & deepin Meetup',
-            },
-          ],
-        },
+        { month: '3' },
         { month: '4' },
-        {
-          month: '5',
-          actives: [
-            {
-              location: '中国 成都',
-              activeName: 'openEuler & deepin Meetup成都站',
-            },
-            {
-              location: '中国 天津',
-              activeName: 'openEuler云原生开源中间件Meetup天津站',
-            },
-          ],
-        },
-        { month: '6',
-          actives: [
-            {
-              location: '中国 香港',
-              activeName: 'openEuler Meetup 香港站',
-            },
-            {
-              location: 'Online',
-              activeName: 'openEuler Bigdata SIG Meetup',
-            },
-          ]
-        },
-        { month: '7',
-          actives: [
-            {
-              location: '中国 深圳',
-              activeName: 'openEuler SIG-ARM Meetup 深圳站',
-            },
-          ]
-        },
-        { month: '8',
-          actives: [
-            {
-              location: '中国 北京',
-              activeName: 'openEuler SIG-Long 异构融合技术Meetup北京站',
-            },
-          ]
-        },
-        { month: '9',
-          actives: [
-            {
-              location: '中国 北京',
-              activeName: 'openEuler 多样性算力Meetup北京站',
-            },
-            {
-              location: '中国 武汉',
-              activeName: 'openEuler云原生开源中间件Meetup 武汉站',
-            },
-            {
-              location: '中国 西安',
-              activeName: 'openEuler Meetup X openGauss Meetup 西安站',
-            },
-          ]
-        },
-        { 
-          month: '10',
-          actives: [
-            {
-              location: '中国 北京',
-              activeName: 'openEuler Compiler SIG Meetup 北京站',
-            },
-            {
-              location: '中国 西安',
-              activeName: 'openEuler Embedded & AGIROS具身智能技术 Meetup西安站',
-            },
-          ]
-        },
-        { 
-          month: '11',
-          actives: [
-            {
-              location: '中国 北京',
-              activeName: 'openEuler 云原生开源中间件Meetup',
-            },
-            {
-              location: 'Online',
-              activeName: 'openEuler SDS Meetup Online',
-            },
-            {
-              location: 'Online',
-              activeName: 'openEuler Intelligence Meetup Online',
-            },
-          ]
-        },
-        {
-          month: '12',
-          actives: [
-            {
-              location: '中国 香港',
-              activeName: 'openEuler Intelligence Meetup 香港站',
-            },
-            {
-              location: '中国 苏州',
-              activeName: 'openEuler AI 创新应用技术Meetup 苏州站',
-            },
-          ]
-        },
+        { month: '5' },
+        { month: '6' },
+        { month: '7' },
+        { month: '8' },
+        { month: '9' },
+        { month: '10' },
+        { month: '11' },
+        { month: '12' },
       ],
     },
     college: {
       title: '赛事 & 高校',
       id: 'college',
       icon: IconCollege,
-      desc: '如果您想组织社区活动，参与议题分享，请联系：',
-      email: 'events@openeuler.sh',
       actives: [
         {
           activeName: '全年 开源实习',
@@ -325,37 +231,15 @@ export const yearPlanData = {
           activelink: 'https://xiaoyuanxing.openatom.cn/#/dashboard',
         },
         {
-          activeName: '1月 - 2月 第二届开放原子大赛',
-          startTime: 1,
-          duration: 2,
-          activelink: 'https://competition.atomgit.com/competition',
-        },
-        {
-          activeName: '4月 - 11月 第五届开源之夏',
+          activeName: '4月 - 11月 第六届开源之夏',
           activelink: 'https://summer-ospp.ac.cn/',
           startTime: 4,
           duration: 8,
         },
         {
-          activeName: '3月 - 9月 中国研究生操作系统开源大会',
-          startTime: 3,
-          duration: 7,
-        },
-        {
-          activeName: '6月 - 9月 第八届CCF开源创新大赛',
-          activelink: 'https://gitlink.org.cn/competitions',
-          startTime: 6,
-          duration: 4,
-        },
-        {
-          activeName: '8月 - 10月 2025年度Hackthon软件难题挑战赛',
+          activeName: '8月 - 10月 2026年度Hackthon软件难题挑战赛',
           startTime: 8,
           duration: 3,
-        },
-        {
-          activeName: '5月 - 10月 中国国际大学生创新大赛（2025）',
-          startTime: 5,
-          duration: 6,
         },
       ],
     },
@@ -371,21 +255,13 @@ export const yearPlanData = {
           actives: [
             {
               location: '3.30',
-              activeName: '25.03',
+              activeName: '26.03',
             },
           ],
         },
         { month: '4' },
         { month: '5' },
-        {
-          month: '6',
-          actives: [
-            {
-              location: '6.30',
-              activeName: '24.03 LTS SP2',
-            },
-          ],
-        },
+        { month: '6' },
         { month: '7' },
         { month: '8' },
         {
@@ -393,21 +269,13 @@ export const yearPlanData = {
           actives: [
             {
               location: '9.30',
-              activeName: '25.09',
+              activeName: '26.09',
             },
           ],
         },
         { month: '10' },
         { month: '11' },
-        {
-          month: '12',
-          actives: [
-            {
-              location: '12.31',
-              activeName: '24.03 LTS SP3',
-            },
-          ],
-        },
+        { month: '12' },
       ],
     },
   },
@@ -418,30 +286,31 @@ export const yearPlanData = {
       icon: IconOpensource,
       events: [
         { month: '1' },
-        {
-          month: '2',
+        { month: '2' },
+        { 
+          month: '3',
           actives: [
             {
-              location: 'Brussels,Belgium',
-              activeName: 'FOSDEM',
-              href: 'https://fosdem.org/2025/',
+              location: 'Bangkok, Thailand',
+              activeName: 'FOSSASIA Summit 2026',
             },
           ],
         },
-        { month: '3' },
-        { month: '4' },
+        { 
+          month: '4',
+          actives: [
+            {
+              location: 'Riyadh Exhibition & Convention Center, Malham',
+              activeName: 'LEAP 2026',
+            },
+          ],
+        },
         {
           month: '5',
           actives: [
             {
-              location: 'Paris, France',
-              activeName: 'RISC-V Summit Europe',
-              href: 'https://riscv-europe.org/summit/2025/',
-            },
-            {
-              location: 'Lisbon, Portugal',
+              location: 'TBD',
               activeName: 'Linaro Connect 2025',
-              href: 'https://www.linaro.org/connect/',
             },
           ],
         },
@@ -449,49 +318,49 @@ export const yearPlanData = {
           month: '6',
           actives: [
             {
-              location: 'Hong Kong, China',
-              activeName: 'KubeCon + CloudNativeCon China',
-              href: 'https://events.linuxfoundation.org/kubecon-cloudnativecon-china/',
+              location: 'TBD',
+              activeName: '2026 OpenAtom open source ECO-Conference',
             },
           ],
         },
-        { month: '7' },
-        {
-          month: '8',
+        { 
+          month: '7',
           actives: [
             {
-              location: 'Amsterdam, Netherlands',
-              activeName: 'Open Source Summit Europe',
-              href: 'https://events.linuxfoundation.org/open-source-summit-europe/',
-            },
-            {
-              location: 'Amsterdam, Netherlands',
-              activeName: 'AI_dev: Open Source GenAI & ML Summit Europe',
-              href: 'https://events.linuxfoundation.org/ai-dev-europe/',
+              location: 'Hong Kong, China',
+              activeName: 'LEAP EAST 2026',
             },
           ],
         },
+        { month: '8' },
         {
           month: '9',
           actives: [
             {
-              location: 'China',
-              activeName: 'OpenAtom Open Source Eco-Conference 2025',
+              location: 'TBD',
+              activeName: 'KubeCON + CloudNativeCon China',
             },
             {
-              location: 'Milan,Italy',
-              activeName: 'KVM Forum',
-              href: 'https://kvm-forum.qemu.org/2025/',
+              location: 'Singapore',
+              activeName: 'Data Centre World Asia',
             },
           ],
         },
-        { month: '10' },
+        { 
+          month: '10',
+          actives: [
+            {
+              location: 'TBD',
+              activeName: 'Open Source Summit Europe 2026',
+            },
+          ],
+        },
         {
           month: '11',
           actives: [
             {
-              location: 'China',
-              activeName: 'Operating System Conference &openEuler Summit 2025',
+              location: 'TBD',
+              activeName: 'Operating System Conference &openEuler Summit 2026',
             },
           ],
         },
@@ -499,9 +368,12 @@ export const yearPlanData = {
           month: '12',
           actives: [
             {
-              location: 'Tokyo, Japan',
-              activeName: 'OSS & AI_Dev Japan',
-              href: 'https://events.linuxfoundation.org/ai-dev-japan-2025/',
+              location: 'TBD',
+              activeName: 'GITEX Global',
+            },
+            {
+              location: 'TBD',
+              activeName: 'The 2026 OpenAtom Developer Conference',
             },
           ],
         },
@@ -519,47 +391,42 @@ export const yearPlanData = {
           actives: [
             {
               location: 'Beijing, China',
-              activeName: 'KCD Beijing 2025',
-              href: 'https://community.cncf.io/events/details/cncf-kcd-beijing-presents-kcd-beijing-2025/',
+              activeName: 'KCD Beijing 2026',
             },
           ],
         },
-        {
-          month: '4',
+        { month: '4' },
+        { month: '5' },
+        { 
+          month: '6',
           actives: [
             {
-              location: 'Hangzhou, China',
-              activeName: 'openEuler Developer Day 2025',
+              location: 'TBD',
+              activeName: 'openEuler Developer Day 2026',
             },
           ],
         },
-        { month: '5' },
-        { month: '6' },
         { month: '7' },
         { month: '8' },
-        {
-          month: '9',
-          actives: [
-            {
-              location: 'China',
-              activeName: 'CID 2025',
-            },
-          ],
-        },
+        { month: '9' },
         {
           month: '10',
           actives: [
             {
-              location: 'Changsha, China',
-              activeName: "1024 Programmers' Day",
-            },
+              location: 'Shenzhen,China',
+              activeName: 'GOSIM China 2026',
+            }
+          ],
+        },
+        { 
+          month: '11',
+          actives: [
             {
-              location: 'China',
-              activeName: 'CLK 2025',
+              location: 'TBD',
+              activeName: 'CLK 2026',
             },
           ],
         },
-        { month: '11' },
         { month: '12' },
       ],
     },
