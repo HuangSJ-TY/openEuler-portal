@@ -11,7 +11,7 @@ category: blog
 
 2. 在 AtomGit 个人设置中设置主邮箱地址，在此<https://atomgit.com/setting/email>。
 
-3. 签署贡献者协议，<https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9?lang=zh>。
+3. 签署贡献者协议，<https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=zh>。
 
 4. 参考http://git.mydoc.io/?t=180692准备你的git环境。
 

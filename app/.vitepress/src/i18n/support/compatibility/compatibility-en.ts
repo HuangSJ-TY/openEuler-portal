@@ -162,7 +162,7 @@ export default {
           '). The email subject must contain "Apply for a Hardware Compatibility Test". After receiving the email, the SIG will contact you and sign an agreement with you.',
         DESCRIPTION_3: 'Before submit an application, sign the CLA first:',
         A_TEXT2:
-          'https://clasign.osinfra.cn/sign/6946817fe1b3f3e542b4e2d9',
+          'https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0',
       },
       {
         ID: '03',
