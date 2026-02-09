@@ -1,6 +1,5 @@
 export default {
-  title: 'Blog',
-  desc: 'Post Your Blog ',
+  title: 'News',
   time: 'Time',
   author: 'Author',
   tag: 'Tags',
