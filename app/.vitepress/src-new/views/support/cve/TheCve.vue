@@ -28,6 +28,7 @@ import { useThrottleFn } from '@vueuse/core';
 
 import AppSection from '~@/components/AppSection.vue';
 import CveFilter from '~@/components/cve/CveFilter.vue';
+import ResultEmpty from '~@/components/ResultEmpty.vue';
 
 import { useDebounceSearch } from '~@/composables/useDebounceSearch';
 
@@ -125,13 +126,15 @@ levelOptions.value.push({
   },
 });
 typeMap.forEach((item) => {
-  levelOptions.value.unshift({
-    value: item.score,
-    label: {
-      zh: item.label.zh,
-      en: item.label.en,
-    },
-  });
+  if (item.value !== 'Moderate') {
+    levelOptions.value.unshift({
+      value: item.score,
+      label: {
+        zh: item.label.zh,
+        en: item.label.en,
+      },
+    });
+  }
 });
 levelOptions.value.unshift({
   value: '',
@@ -287,7 +290,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <AppSection v-if="!lePadV" :title="t('safetyBulletin.cve')">
+  <AppSection v-if="!lePadV">
     <div class="filter-card">
       <CveFilter
         v-model="queryData.status"
@@ -434,7 +437,7 @@ onUnmounted(() => {
         </template>
       </OButton>
     </div>
-    <ORow gap="0 16px" wrap="wrap">
+    <ORow v-if="tableDataMb?.length" gap="0 16px" wrap="wrap">
       <OCol flex="0 0 100%" v-for="(item, i) in tableDataMb" :key="i">
         <OCard
           :href="`${route.path}detail/?cveId=${item.cveId}&packageName=${item.packageName}`"
@@ -483,6 +486,14 @@ onUnmounted(() => {
         </OCard>
       </OCol>
     </ORow>
+    <ResultEmpty
+      v-else
+      :style="{
+        'margin-top': '40px',
+        '--result-image-width': '140px',
+        '--result-image-height': '170px',
+      }"
+    />
     <p v-if="tableDataMb.length && tableDataMb.length < total" class="loading">
       {{ t('safetyBulletin.loading') }}...
     </p>
@@ -766,6 +777,9 @@ ul {
   }
   .o-row {
     margin-top: 24px;
+  }
+  .o-col {
+    min-width: 0;
   }
   .o-card {
     --card-content-gap: 12px;

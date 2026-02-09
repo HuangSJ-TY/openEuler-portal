@@ -18,6 +18,7 @@ export default {
   release: '发布',
   update: '更新',
   selectAll: '选择全部',
+  time: '时间',
   search: '搜索',
   all: '全部',
   reset: '重置',

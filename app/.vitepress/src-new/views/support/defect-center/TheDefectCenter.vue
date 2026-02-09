@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import {
   ref,
   reactive,
@@ -8,40 +8,25 @@ import {
   onUnmounted,
   nextTick,
 } from 'vue';
-import {
-  OInput,
-  OIcon,
-  OTable,
-  OPagination,
-  OLink,
-  ODropdown,
-  ODropdownItem,
-  ORow,
-  OCol,
-  OCard,
-  OTag,
-} from '@opensig/opendesign';
+import { OButton, OInput, OIcon, OTable, OPagination, OLink, OTag, ODropdown, ODropdownItem, ORow, OCol, OCard } from '@opensig/opendesign';
 
 import { useThrottleFn } from '@vueuse/core';
 
+import BannerLevel2 from '~@/components/BannerLevel2.vue';
 import AppSection from '~@/components/AppSection.vue';
+import ResultEmpty from '~@/components/ResultEmpty.vue';
+
 import FilterableTableHeader from '~@/components/FilterableTableHeader.vue';
 import FilterableMb from '~@/components/security/FilterableMb.vue';
-import ResultEmpty from '~@/components/ResultEmpty.vue';
+
+import banner from '~@/assets/category/security/defect-center-banner.jpg'
 
 import IconSearch from '~icons/app-new/icon-header-search.svg';
 import IconFilter from '~icons/app-new/icon-filter.svg';
 import IconSecurityLevel from '~icons/security/icon-security-level.svg';
 
-import {
-  getSecurityList,
-  getProductList,
-  getComponentList,
-} from '~@/api/api-security';
-import {
-  SecurityListsT,
-  SafetyBulletinQueryT,
-} from '@/shared/@types/type-support';
+import { getSecurityList, getProductList, getComponentList } from '~@/api/api-security';
+import { SecurityListsT, SafetyBulletinQueryT } from '~@/@types/type-security';
 
 import { typeMap } from '~@/data/safety-bulletin';
 
@@ -54,7 +39,7 @@ import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 
 const route = useRoute();
-const { t, locale, isZh } = useLocale();
+const { locale, t, isZh } = useLocale();
 const { lePadV } = useScreen();
 
 const commonStore = useCommon();
@@ -75,27 +60,31 @@ const queryData: any = reactive({
   date: [],
   affectedProduct: [],
   affectedComponent: '',
-  noticeType: 'cve',
+  noticeType: 'bug',
 });
+
+const searchValue = ref();
+const onInputName = useDebounceSearch((value: string) => {
+  queryData.keyword = value;
+}, 300);
 
 const COUNT_PER_PAGE = [10, 20, 30, 40];
 const total = ref(0);
 
 const columns = [
-  { label: t('safetyBulletin.notice'), key: 'securityNoticeNo' },
-  { label: t('safetyBulletin.summary'), key: 'summary' },
-  { label: t('safetyBulletin.severityLevel'), key: 'type' },
-  { label: t('safetyBulletin.affectedProduct'), key: 'affectedProduct' },
-  { label: t('safetyBulletin.affectedComponent'), key: 'affectedComponent' },
-  { label: t('safetyBulletin.releaseTime'), key: 'announcementTime' },
-  { label: t('safetyBulletin.updateTime'), key: 'updateTime' },
+  { label: t('defectCenter.notice'), key: 'securityNoticeNo', style: 'width: 22%'  },
+  { label: t('defectCenter.summary'), key: 'summary', style: 'width: 20%' },
+  { label: t('defectCenter.severityLevel'), key: 'type', style: 'width: 12%' },
+  { label: t('defectCenter.affectedProduct'), key: 'affectedProduct', style: 'width: 22%' },
+  { label: t('defectCenter.affectedComponent'), key: 'affectedComponent', style: 'width: 12%' },
+  { label: t('defectCenter.releaseTime'), key: 'announcementTime', style: 'width: 12%' },
 ];
 
 // -------------------- 表格数据 --------------------
 const isLoadingMore = ref(false);
 const tableData = ref<SecurityListsT[]>([]);
 const tableDataMb = ref<SecurityListsT[]>([]);
-const getSecurityLists = (data: SafetyBulletinQueryT) => {
+const getDefectLists = (data: SafetyBulletinQueryT) => {
   if (isLoadingMore.value) {
     return;
   }
@@ -124,29 +113,15 @@ const onPaginationChange = (val: { page: number; pageSize: number }) => {
     queryData.pages.page = val.page;
   }
   queryData.pages.size = val.pageSize;
-  getSecurityLists(queryData);
+  getDefectLists(queryData);
   getAffectedComponentList();
 };
-
-// -------------------- 搜索 input字段做防抖处理 -------------------
-const updataName = (val: string) => {
-  queryData.keyword = val;
-};
-const debounceTextFn = useDebounceSearch(updataName, 300);
-const debounceSearch = computed({
-  get() {
-    return queryData.keyword;
-  },
-  set(val) {
-    debounceTextFn(val as string);
-  },
-});
 
 // -------------------- 严重级别 --------------------
 const typeList = ref<TypeOptionT[]>([]);
 
 typeMap.forEach((item) => {
-  if (item.value !== 'Moderate') {
+  if (item.value !== 'Medium') {
     typeList.value.unshift({
       value: item.value,
       label: isZh.value ? item.label.zh : item.label.en,
@@ -155,16 +130,20 @@ typeMap.forEach((item) => {
 });
 typeList.value.unshift({
   value: '',
-  label: t('safetyBulletin.all'),
+  label: t('defectCenter.all'),
 });
 
-const filterType = (val: string) => {
+const filterType = (val?: string) => {
   queryData.type = val ? [val] : [];
 };
 
 const typeValue = ref();
 const filterTypeMb = () => {
   queryData.type = typeValue.value ? [typeValue.value] : [];
+};
+
+const line = (val: string) => {
+  return val.split(';');
 };
 
 // -------------------- 影响产品 --------------------
@@ -183,7 +162,7 @@ const filterProductList = () => {
 // -------------------- 影响组件 --------------------
 const componentValue = ref();
 const componentList = ref<string[]>([]);
-const getAffectedComponentList = () => {
+  const getAffectedComponentList = () => {
   getComponentList({
     securityLevel: queryData.type.join(','),
     affectedProduct: queryData.affectedProduct.join(','),
@@ -199,7 +178,7 @@ const filterComponentList = () => {
 
 // -------------------- 初始化 --------------------
 onMounted(() => {
-  getSecurityLists(queryData);
+  getDefectLists(queryData);
   getProducts();
   getAffectedComponentList();
 });
@@ -217,15 +196,11 @@ watch(
     queryData.pages.page = 1;
     queryData.pages.size = 10;
     tableDataMb.value = [];
-    getSecurityLists(queryData);
+    getDefectLists(queryData);
     getAffectedComponentList();
   },
   { deep: true }
 );
-
-const line = (val: string) => {
-  return val.split(';');
-};
 
 // -------------------- 移动端 --------------------
 const footer = ref();
@@ -245,7 +220,7 @@ const listenScroll = () => {
     const scroll = scrollTop + clientHeight + footer.value.clientHeight;
 
     if (scroll >= scrollHeight && tableDataMb.value.length < total.value) {
-      getSecurityLists(queryData);
+      getDefectLists(queryData);
     }
   });
 };
@@ -271,17 +246,38 @@ const blur = () => {
 </script>
 
 <template>
+  <BannerLevel2 v-if="!lePadV" class="defect-center-banner" :title="t('defectCenter.defectCenter')" :background-image="banner">
+    <OButton
+      animation
+      variant="solid"
+      color="primary"
+      size="large"
+      :href="`/${locale}/security/management/`"
+      target="_blank"
+    >{{ t('defectCenter.defectBtn') }}</OButton>
+  </BannerLevel2>
+  <div v-else class="mo-banner">
+    <p class="mo-title">{{ t('defectCenter.defectCenter') }}</p>
+    <OButton
+      animation
+      variant="solid"
+      color="primary"
+      size="small"
+      :href="`/${locale}/security/management/`"
+      target="_blank"
+    >{{ t('defectCenter.defectBtn') }}</OButton>
+  </div>
   <AppSection v-if="!lePadV">
-    <div class="safety-bulletin">
+    <div class="defect-center">
       <div class="search-box">
         <div class="data-picker">
-          <span class="time">时间</span>
+          <span class="time">{{ t('defectCenter.time') }}</span>
           <ClientOnly>
             <el-date-picker
               v-model="queryData.date"
               type="daterange"
-              :start-placeholder="t('safetyBulletin.startDate')"
-              :end-placeholder="t('safetyBulletin.endDate')"
+              :start-placeholder="t('defectCenter.startDate')"
+              :end-placeholder="t('defectCenter.endDate')"
               format="YYYY/MM/DD"
               value-format="YYYY-MM-DD"
               :default-time="[new Date(), new Date()]"
@@ -293,10 +289,12 @@ const blur = () => {
           </ClientOnly>
         </div>
         <OInput
-          v-model="debounceSearch"
-          :placeholder="t('safetyBulletin.searchPlaceholder')"
+          v-model="searchValue"
+          :placeholder="t('defectCenter.searchPlaceholder')"
+          @input="(e) => onInputName(e.target?.value)"
           size="large"
           clearable
+          @clear="onInputName('')"
           class="input-search"
         >
           <template #prefix>
@@ -304,20 +302,18 @@ const blur = () => {
           </template>
         </OInput>
       </div>
-      <OTable
-        :columns="columns"
-        :data="tableData"
-        class="safety-bulletin-table"
-      >
-        <template #header="{ columns }">
+    </div>
+    <OTable :columns="columns" :data="tableData">
+      <template #header="{ columns }">
+        <tr>
           <th v-for="item in columns" :key="item.key">
-            <div v-if="item.key === 'type'" class="filter">
+            <div v-if="item.key === 'type'" class="filter-type">
               {{ item.label }}
               <ODropdown
                 trigger="click"
                 option-position="bottom"
                 :option-wrap-class="
-                  isDark ? 'type-dropdown-dark' : 'type-dropdown'
+                  isDark ? 'type-dropdown-dark' : ''
                 "
               >
                 <div class="filter-title" :class="{'filter-title-active': queryData.type?.length}">
@@ -362,186 +358,225 @@ const blur = () => {
             </FilterableTableHeader>
             <div v-else>{{ item.label }}</div>
           </th>
-        </template>
-        <template #td_securityNoticeNo="{ row }">
-          <OLink
-            color="primary"
-            variant="text"
-            :href="`${route.path}detail/?id=${row.securityNoticeNo}`"
-            >{{ row.securityNoticeNo }}</OLink
-          >
-        </template>
-        <template #td_type="{ row }">
-          <OTag
-            class="type-tag"
-            :class="[row?.type?.toLocaleLowerCase()]"
-            :style="{ '--tag-radius': '4px' }"
-          >
-            <OIcon> <IconSecurityLevel /></OIcon>
-            {{ typeMap.get(row.type)?.label[locale] }}
-          </OTag>
-        </template>
-        <template #td_affectedProduct="{ row }">
-          <div>
-            <p v-for="(item, i) in line(row.affectedProduct)" :key="i">
-              {{ item }}
-            </p>
-          </div>
-        </template>
-        <template #td_announcementTime="{ row }">
-          <p>{{ changeTimeStamp(new Date(row.announcementTime).getTime()) }}</p>
-        </template>
-        <template #td_updateTime="{ row }">
-          <p>{{ changeTimeStamp(new Date(row.updateTime).getTime()) }}</p>
-        </template>
-      </OTable>
-      <!-- 分页 -->
-      <div v-if="total > COUNT_PER_PAGE[0]" class="pagination">
-        <OPagination
-          :total="total"
-          :page="queryData.pages.page"
-          :page-size="queryData.pages.size"
-          :page-sizes="COUNT_PER_PAGE"
-          :layout="['total', 'jumper', 'pager', 'pagesize']"
-          :show-more="false"
-          @change="onPaginationChange"
-        ></OPagination>
-      </div>
+        </tr>
+      </template>
+      <template #td_securityNoticeNo="{ row }">
+        <OLink
+          color="primary"
+          variant="text"
+          :href="`${route.path}detail/?id=${row.securityNoticeNo}`"
+          >{{ row.securityNoticeNo }}</OLink
+        >
+      </template>
+      <template #td_type="{ row }">
+        <OTag
+          class="type-tag"
+          :class="[row?.type?.toLocaleLowerCase()]"
+          :style="{ '--tag-radius': '4px' }"
+        >
+          <OIcon> <IconSecurityLevel /></OIcon>
+          {{ typeMap.get(row.type)?.label[locale] }}
+        </OTag>
+      </template>
+      <template #td_affectedProduct="{ row }">
+        <div>
+          <p v-for="(item, i) in line(row.affectedProduct)" :key="i">
+            {{ item }}
+          </p>
+        </div>
+      </template>
+      <template #td_announcementTime="{ row }">
+        <p>{{ changeTimeStamp(new Date(row.announcementTime).getTime()) }}</p>
+      </template>
+    </OTable>
+    <!-- 分页 -->
+    <div v-if="total > COUNT_PER_PAGE[0]" class="pagination">
+      <OPagination
+        :total="total"
+        :page="queryData.pages.page"
+        :page-size="queryData.pages.size"
+        :page-sizes="COUNT_PER_PAGE"
+        :layout="['total', 'jumper', 'pager', 'pagesize']"
+        :show-more="false"
+        @change="onPaginationChange"
+      ></OPagination>
     </div>
   </AppSection>
   <AppSection v-else>
-    <div class="safety-bulletin-mb">
-      <div class="search-box-mb">
-        <p class="time">{{ t('safetyBulletin.search') }}</p>
-        <OInput
-          v-model="debounceSearch"
-          :placeholder="t('safetyBulletin.searchPlaceholder')"
-          size="large"
-          clearable
-          class="input-search-mb"
-        >
-          <template #prefix>
-            <OIcon><IconSearch /></OIcon>
-          </template>
-        </OInput>
-        <div class="data-picker-mb">
-          <p class="time">{{ t('safetyBulletin.time') }}</p>
-          <ClientOnly>
-            <el-date-picker
-              v-model="queryData.date"
-              type="daterange"
-              :start-placeholder="t('safetyBulletin.startDate')"
-              :end-placeholder="t('safetyBulletin.endDate')"
-              format="YYYY/MM/DD"
-              value-format="YYYY-MM-DD"
-              :default-time="[new Date(), new Date()]"
-              size="small"
-              @focus="focus"
-              @blur="blur"
-              :class="{'date-picker-active-mb': queryData.date?.length && dateFocus}"
-            />
-          </ClientOnly>
-        </div>
-      </div>
-      <div class="filter-mb">
+    <p class="time">{{ t('defectCenter.search') }}</p>
+    <OInput
+      v-model="searchValue"
+      :placeholder="t('safetyBulletin.searchPlaceholder')"
+      size="large"
+      @input="(e) => onInputName(e.target?.value)"
+      clearable
+      @clear="onInputName('')"
+      class="input-search-mb"
+    >
+      <template #prefix>
+        <OIcon><IconSearch /></OIcon>
+      </template>
+    </OInput>
+    <div class="data-picker-mb">
+      <p class="time">{{ t('defectCenter.time') }}</p>
+      <ClientOnly>
+        <el-date-picker
+          v-model="queryData.date"
+          type="daterange"
+          :start-placeholder="t('safetyBulletin.startDate')"
+          :end-placeholder="t('safetyBulletin.endDate')"
+          format="YYYY/MM/DD"
+          value-format="YYYY-MM-DD"
+          :default-time="[new Date(), new Date()]"
+          size="small"
+          @focus="focus"
+          @blur="blur"
+          :class="{'date-picker-active-mb': queryData.date?.length && dateFocus}"
+        />
+      </ClientOnly>
+    </div>
+    <div class="filter-mb">
+      <FilterableMb
+        v-model="typeValue"
+        @change="filterTypeMb"
+        :options="typeList"
+        :searchable="false"
+        :operation="false"
+        :check-all="false"
+        :title="t('defectCenter.severityLevel')"
+      ></FilterableMb>
+      <div class="filter-mb-item">
         <FilterableMb
-          v-model="typeValue"
-          @change="filterTypeMb"
-          :options="typeList"
+          v-model="productValue"
+          @change="filterProductList"
+          :options="productList"
+          :multi="true"
           :searchable="false"
           :operation="false"
-          :check-all="false"
-          :title="t('defectCenter.severityLevel')"
+          :title="t('defectCenter.affectedProduct')"
         ></FilterableMb>
-        <div class="filter-mb-item">
-          <FilterableMb
-            v-model="productValue"
-            @change="filterProductList"
-            :options="productList"
-            :multi="true"
-            :searchable="false"
-            :operation="false"
-            :title="t('defectCenter.affectedProduct')"
-          ></FilterableMb>
-        </div>
-        <div class="filter-mb-item">
-          <FilterableMb
-            v-model="componentValue"
-            @change="filterComponentList"
-            :options="componentList"
-            :operation="false"
-            :title="t('defectCenter.affectedComponent')"
-          ></FilterableMb>
-        </div>
       </div>
-      <ORow v-if="tableDataMb?.length" gap="0 16px" wrap="wrap">
-        <OCol flex="0 0 100%" v-for="(item, i) in tableDataMb" :key="i">
-          <OCard
-            :href="`${route.path}detail/?id=${item.securityNoticeNo}`"
-            :title="item.securityNoticeNo"
-            class="safety-bulletin-item"
-          >
-            <div class="info-item">
-              <p class="item-label">{{ t('safetyBulletin.summary') }}</p>
-              <p class="summary">{{ item.summary }}</p>
-            </div>
-            <div class="info-item">
-              <p class="item-label">{{ t('safetyBulletin.severityLevel') }}</p>
-              <OTag
-                class="type-tag"
-                :class="[item?.type?.toLocaleLowerCase()]"
-                :style="{ '--tag-radius': '4px' }"
-              >
-                <OIcon> <IconSecurityLevel /></OIcon>
-                {{ typeMap.get(item.type)?.label[locale] }}
-              </OTag>
-            </div>
-            <div class="info-item">
-              <p class="item-label">
-                {{ t('safetyBulletin.affectedProduct') }}
-              </p>
-              <p class="summary">{{ item.affectedProduct }}</p>
-            </div>
-            <div class="info-item">
-              <p class="item-label">
-                {{ t('safetyBulletin.affectedComponent') }}
-              </p>
-              <p class="summary">{{ item.affectedComponent }}</p>
-            </div>
-            <div class="info-item">
-              <p class="item-label">{{ t('safetyBulletin.releaseTime') }}</p>
-              <p class="summary">
-                {{ changeTimeStamp(new Date(item.announcementTime).getTime()) }}
-              </p>
-            </div>
-            <div class="info-item">
-              <p class="item-label">{{ t('safetyBulletin.updateTime') }}</p>
-              <p class="summary">
-                {{ changeTimeStamp(new Date(item.updateTime).getTime()) }}
-              </p>
-            </div>
-          </OCard>
-        </OCol>
-      </ORow>
-      <ResultEmpty
-        v-else
-        :style="{
-          'margin-top': '40px',
-          '--result-image-width': '140px',
-          '--result-image-height': '170px',
-        }"
-      />
-      <p
-        v-if="tableDataMb.length && tableDataMb.length < total"
-        class="loading"
-      >
-        {{ t('safetyBulletin.loading') }}...
-      </p>
+      <div class="filter-mb-item">
+        <FilterableMb
+          v-model="componentValue"
+          @change="filterComponentList"
+          :options="componentList"
+          :operation="false"
+          :title="t('defectCenter.affectedComponent')"
+        ></FilterableMb>
+      </div>
     </div>
+    <ORow v-if="tableDataMb?.length" gap="0 16px" wrap="wrap">
+      <OCol flex="0 0 100%" v-for="(item, i) in tableDataMb" :key="i">
+        <OCard :href="`${route.path}detail/?id=${item.securityNoticeNo}`" :title="item.securityNoticeNo">
+          <div class="info-item">
+            <p class="item-label">{{ t('defectCenter.summary') }}</p>
+            <p class="summary">{{ item.summary }}</p>
+          </div>
+          <div class="info-item">
+            <p class="item-label">{{ t('defectCenter.severityLevel') }}</p>
+            <OTag
+              class="type-tag"
+              :class="[item?.type?.toLocaleLowerCase()]"
+              :style="{ '--tag-radius': '4px' }"
+            >
+              <OIcon> <IconSecurityLevel /></OIcon>
+              {{ typeMap.get(item.type)?.label[locale] }}
+            </OTag>
+          </div>
+          <div class="info-item">
+            <p class="item-label">
+              {{ t('defectCenter.affectedProduct') }}
+            </p>
+            <p class="summary">{{ item.affectedProduct }}</p>
+          </div>
+          <div class="info-item">
+            <p class="item-label">
+              {{ t('defectCenter.affectedComponent') }}
+            </p>
+            <p class="summary">{{ item.affectedComponent }}</p>
+          </div>
+          <div class="info-item">
+            <p class="item-label">{{ t('defectCenter.releaseTime') }}</p>
+            <p class="summary">
+              {{ changeTimeStamp(new Date(item.announcementTime).getTime()) }}
+            </p>
+          </div>
+        </OCard>
+      </OCol>
+    </ORow>
+    <ResultEmpty
+      v-else
+      :style="{
+        'margin-top': '40px',
+        '--result-image-width': '140px',
+        '--result-image-height': '170px',
+      }"
+    />
+    <p
+      v-if="tableDataMb.length && tableDataMb.length < total"
+      class="loading"
+    >
+      {{ t('safetyBulletin.loading') }}...
+    </p>
   </AppSection>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
+.defect-center-banner {
+  background-color: var(--o-color-fill2);
+  :deep(.wrap) {
+    .banner-text {
+      max-width: 60%;
+      .banner-title {
+        color: var(--o-color-black);
+        @include display2;
+      }
+    }
+
+    height: 280px;
+
+    @media screen and (max-width: 1680px) {
+      height: 220px;
+
+      .banner-text {
+        .banner-title {
+          font-size: 40px;
+          line-height: 56px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      height: 180px;
+
+      .banner-text {
+        .banner-title {
+          @include display2;
+        }
+      }
+    }
+  }
+}
+
+.mo-banner {
+  @include respond-to('<=pad_v') {
+    padding: 16px 24px;
+    .mo-title {
+      font-weight: 500;
+      @include display3;
+    }
+    .o-btn {
+      margin-top: 12px;
+    }
+  }
+  @include respond-to('phone') {
+    .mo-title {
+      @include display1;
+    }
+  }
+}
+
 .app-section {
   --o-gap-section: 40px;
 
@@ -549,7 +584,8 @@ const blur = () => {
     --o-gap-section: 32px;
   }
   @include respond-to('phone') {
-    --o-gap-section: 16px;
+    --o-gap-section: 0;
+    --o-gap-t2c: 0;
   }
 }
 
@@ -676,25 +712,7 @@ const blur = () => {
     table-layout: fixed;
     width: 100%;
   }
-
-  th {
-    width: 10%;
-
-    &:nth-of-type(1) {
-      width: 19%;
-    }
-    &:nth-of-type(2) {
-      width: 18%;
-    }
-    &:nth-of-type(4) {
-      width: 22%;
-    }
-    &:nth-of-type(7) {
-      width: 11%;
-    }
-  }
 }
-
 .type-tag {
   --tag-bg-color: transparent;
   --tag-padding: 2px 4px;
@@ -721,6 +739,13 @@ const blur = () => {
     }
   }
 }
+.moderate {
+  :deep(.o-tag-label) {
+    .o-icon {
+      color: var(--o-color-warning2);
+    }
+  }
+}
 .critical {
   :deep(.o-tag-label) {
     .o-icon {
@@ -735,7 +760,7 @@ const blur = () => {
   justify-content: flex-end;
 }
 
-.filter {
+.filter-type {
   display: flex;
   align-items: center;
   .o-icon {
@@ -779,6 +804,7 @@ const blur = () => {
 .data-picker-mb {
   margin-top: 16px;
 }
+
 @include respond-to('<=laptop') {
   :deep(.el-date-editor) {
     .el-range-input {
@@ -843,10 +869,11 @@ const blur = () => {
   }
   .item-label {
     font-weight: 500;
-    min-width: 48px;
+    min-width: 56px;
     margin-right: 16px;
   }
   .type-tag {
+    margin-top: 3px;
     :deep(.o-tag-label) {
       .o-icon {
         @include text2;

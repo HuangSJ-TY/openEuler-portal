@@ -184,7 +184,7 @@ export const entranceList = {
       icon: IconDocument,
       title: '查看文档',
       desc: '了解如何使用 openYuanrong 开发分布式应用',
-      href: 'https://pages.openeuler.openatom.cn/openyuanrong/docs/zh-cn/latest/index.html',
+      href: 'http://docs.openyuanrong.org/zh-cn/latest/index.html',
       isOutlink: true,
     },
   ],
@@ -199,7 +199,7 @@ export const entranceList = {
       icon: IconDocument,
       title: 'Documentation',
       desc: 'Quickly build and effortlessly deploy scalable distributed applications with openYuanrong.',
-      href: 'https://pages.openeuler.openatom.cn/openyuanrong/docs/zh-cn/latest/index.html',
+      href: 'http://docs.openyuanrong.org/zh-cn/latest/index.html',
       isOutlink: true,
     },
   ]

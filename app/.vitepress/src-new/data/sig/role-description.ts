@@ -1,18 +1,12 @@
-import roleDescCommitter from '~@/assets/category/sig/role-desc-committer.jpg';
-import roledescContributor from '~@/assets/category/sig/role-desc-contributor.jpg';
-import roleDescMaintainer from '~@/assets/category/sig/role-desc-maintainer.jpg';
+import roleDescCommitter from '~@/assets/category/sig/role-desc-committer.png';
+import roledescContributor from '~@/assets/category/sig/role-desc-contributor.png';
+import roleDescMaintainer from '~@/assets/category/sig/role-desc-maintainer.png';
 import iconContributor from '~icons/sig/icon-contributor.svg';
 import iconHadContributor from '~icons/sig/icon-had-contributor.svg';
 
-import roleDescCommitterMb from '~@/assets/category/sig/role-desc-committer-mb.jpg';
-import roledescContributorMb from '~@/assets/category/sig/role-desc-contributor-mb.jpg';
-import roleDescMaintainerMb from '~@/assets/category/sig/role-desc-maintainer-mb.jpg';
-import contributorTitle from '~@/assets/category/sig/contributor-title.png';
-import committerTitle from '~@/assets/category/sig/committer-title.png';
-import maintainerTitle from '~@/assets/category/sig/maintainer-title.png';
-import contributorTitleMb from '~@/assets/category/sig/contributor-title-mb.png';
-import committerTitleMb from '~@/assets/category/sig/committer-title-mb.png';
-import maintainerTitleMb from '~@/assets/category/sig/maintainer-title-mb.png';
+import roleDescCommitterMb from '~@/assets/category/sig/role-desc-committer.png';
+import roledescContributorMb from '~@/assets/category/sig/role-desc-contributor.png';
+import roleDescMaintainerMb from '~@/assets/category/sig/role-desc-maintainer.png';
 
 import contributorPoint from '~@/assets/category/sig/contributor-point.png';
 import contributorLight from '~@/assets/category/sig/contributor-light.png';
@@ -55,8 +49,6 @@ export const communityMember = {
     {
       bg: roledescContributor,
       bgMb: roledescContributorMb,
-      imgTitle: contributorTitle,
-      imgTitleMb: contributorTitleMb,
       name: {
         zh: '贡献者',
         en: 'Contributor',
@@ -70,8 +62,6 @@ export const communityMember = {
     {
       bg: roleDescCommitter,
       bgMb: roleDescCommitterMb,
-      imgTitle: committerTitle,
-      imgTitleMb: committerTitleMb,
       name: {
         zh: '审核者',
         en: 'Committer',
@@ -89,8 +79,6 @@ export const communityMember = {
     {
       bg: roleDescMaintainer,
       bgMb: roleDescMaintainerMb,
-      imgTitle: maintainerTitle,
-      imgTitleMb: maintainerTitleMb,
       name: {
         zh: '维护者',
         en: 'Maintainer',

@@ -7,10 +7,10 @@ import {
   OIconFilter,
   OInput,
   OPopover,
-  OPopup,
   ORadio,
   ORadioGroup,
   OScroller,
+  ODialog,
 } from '@opensig/opendesign';
 import { computed, ref, watch, type PropType } from 'vue';
 import { onClickOutside, useDebounceFn, useVModel } from '@vueuse/core';
@@ -25,6 +25,10 @@ import { useCommon } from '@/stores/common';
 type ValueT = string | { label: string; value: string };
 
 const props = defineProps({
+  title: {
+    type: String,
+    default: '',
+  },
   /** 多选值 */
   options: {
     type: Array as PropType<ValueT[]>,
@@ -81,7 +85,6 @@ const emit = defineEmits<{
 }>();
 
 const filterIconRef = ref();
-const headerCellRef = ref();
 const popupRef = ref();
 
 const popupVisible = ref(false);
@@ -242,13 +245,11 @@ watch(
 </script>
 
 <template>
-  <div class="header-cell" ref="headerCellRef">
-    <slot></slot>
+  <div class="header-cell" :class="{'header-cell-active': isFiltering}" @click="onClickFilterIcon">
+    <span>{{ title }}</span>
     <OIcon
       ref="filterIconRef"
       class="filter-icon"
-      :style="isFiltering ? { color: 'var(--o-color-primary1)' } : {}"
-      @click="onClickFilterIcon"
       ><OIconFilter
     /></OIcon>
     <OPopover v-if="isFiltering" :target="filterIconRef" trigger="hover">
@@ -257,91 +258,87 @@ watch(
         {{ displayFilterValues }}
       </p>
     </OPopover>
-    <!-- 下拉选项 -->
-    <OPopup
-      trigger="none"
-      @change="$emit('optionsVisibilityChange', $event)"
-      style="--popup-radius: 4px"
-      :visible="popupVisible"
-      :unmount-on-hide="false"
-      position="bl"
-      :target="headerCellRef"
-    >
-      <div
-        ref="popupRef"
-        class="filterable-checkboxes-wrap"
-        :class="{'filterable-checkboxes-wrap-dark': isDark}"
-      >
-        <div v-if="searchable" class="input-wrap">
-          <OInput
-            v-model="searchInput"
-            clearable
-            @clear="onFilterInput('')"
-            @input="(e) => onFilterInput(e?.target?.value || '')"
-            class="filter-input"
-            :placeholder="$t('common.search')"
-          >
-            <template #prefix>
-              <OIcon class="search-icon">
-                <IconSearch />
-              </OIcon>
-            </template>
-          </OInput>
-        </div>
-        <OScroller
-          class="content"
-          size="small"
-          showType="always"
-          ref="scrollerRef"
-        >
-          <div class="mask" v-if="loading">
-            <OIcon><IconLoading class="o-rotating" /></OIcon>
-          </div>
-          <div class="mask" v-else-if="empty">
-            <p class="info">{{ $t('common.empty') }}</p>
-          </div>
-          <template v-if="multi">
-            <div v-if="checkAll" class="check-all-wrap">
-              <OCheckbox
-                v-model="parentCheckbox"
-                :indeterminate="indeterminate"
-                :value="1"
-                >{{ $t('common.all') }}</OCheckbox
-              >
-            </div>
-            <OCheckboxGroup v-model="checkboxes" direction="v">
-              <OCheckbox
-                v-for="item in displayOptions"
-                :key="item.value"
-                :value="item.value"
-                >{{ item.label }}</OCheckbox
-              >
-            </OCheckboxGroup>
-          </template>
-          <template v-else>
-            <div v-if="checkAll" class="check-all-wrap">
-              <ORadio v-model="radioVal" :value="''">{{ $t('common.all') }}</ORadio>
-            </div>
-            <ORadioGroup v-model="radioVal" direction="v" :class="{'radio-group-dark': isDark}">
-              <ORadio
-                v-for="item in displayOptions"
-                :key="item.value"
-                :value="item.value"
-                >{{ item.label }}</ORadio
-              >
-            </ORadioGroup>
-          </template>
-        </OScroller>
-        <ODivider v-if="operation" direction="h"></ODivider>
-        <div v-if="operation" class="btn-wrap">
-          <div color="primary" @click="reset">{{ $t('common.reset') }}</div>
-          <div class="confirm-link" color="primary" @click="filterConfirm">
-            {{ $t('common.confirm') }}
-          </div>
-        </div>
-      </div>
-    </OPopup>
   </div>
+  <!-- 下拉选项 -->
+  <ODialog
+    v-model:visible="popupVisible"
+    size="medium"
+    :scrollbar="false"
+    :style="{ '--dlg-radius': '4px' }"
+  >
+    <template #header>
+      <span>{{ title }}</span>
+    </template>
+    <div v-if="searchable" class="input-wrap">
+      <OInput
+        v-model="searchInput"
+        clearable
+        @clear="onFilterInput('')"
+        @input="(e) => onFilterInput(e?.target?.value || '')"
+        class="filter-input"
+        size="large"
+        :placeholder="$t('common.search')"
+      >
+        <template #prefix>
+          <OIcon class="search-icon">
+            <IconSearch />
+          </OIcon>
+        </template>
+      </OInput>
+    </div>
+    <OScroller
+      class="content"
+      :class="{'content-search': !searchable}"
+      size="small"
+      showType="always"
+      ref="scrollerRef"
+    >
+      <div class="mask" v-if="loading">
+        <OIcon><IconLoading class="o-rotating" /></OIcon>
+      </div>
+      <div class="mask" v-else-if="empty">
+        <p class="info">{{ $t('common.empty') }}</p>
+      </div>
+      <template v-if="multi">
+        <div v-if="checkAll" class="check-all-wrap">
+          <OCheckbox
+            v-model="parentCheckbox"
+            :indeterminate="indeterminate"
+            :value="1"
+            >{{ $t('common.all') }}</OCheckbox
+          >
+        </div>
+        <OCheckboxGroup v-model="checkboxes" direction="v">
+          <OCheckbox
+            v-for="item in displayOptions"
+            :key="item.value"
+            :value="item.value"
+            >{{ item.label }}</OCheckbox
+          >
+        </OCheckboxGroup>
+      </template>
+      <template v-else>
+        <div v-if="checkAll" class="check-all-wrap">
+          <ORadio v-model="radioVal" :value="''">{{ $t('common.all') }}</ORadio>
+        </div>
+        <ORadioGroup v-model="radioVal" direction="v" :class="{'radio-group-dark': isDark}">
+          <ORadio
+            v-for="item in displayOptions"
+            :key="item.value"
+            :value="item.value"
+            >{{ item.label }}</ORadio
+          >
+        </ORadioGroup>
+      </template>
+    </OScroller>
+    <ODivider v-if="operation" direction="h"></ODivider>
+    <div v-if="operation" class="btn-wrap">
+      <div color="primary" @click="reset">{{ $t('common.reset') }}</div>
+      <div class="confirm-link" color="primary" @click="filterConfirm">
+        {{ $t('common.confirm') }}
+      </div>
+    </div>
+  </ODialog>
 </template>
 
 <style lang="scss" scoped>
@@ -363,12 +360,17 @@ watch(
   position: relative;
   display: flex;
   align-items: center;
+  color: var(--o-color-info2);
+  @include text2;
 
   .filter-icon {
     width: 16px;
     cursor: pointer;
     margin-left: 8px;
   }
+}
+.header-cell-active {
+  color: var(--o-color-primary1);
 }
 
 :deep(.o-divider-line) {
@@ -378,7 +380,7 @@ watch(
 
 .input-wrap {
   width: 100%;
-  padding: 0 8px 8px;
+  padding: 0 0 12px;
 }
 
 .btn-wrap {
@@ -420,56 +422,55 @@ watch(
   color: var(--o-color-info1);
 }
 
-.filterable-checkboxes-wrap {
-  background-color: var(--o-color-fill2);
-  box-shadow: var(--o-shadow-2);
-  padding: 12px 0;
-  border-radius: 4px;
-
-  .filter-input {
-    --input-radius: 4px;
+.filter-input {
+  --input-radius: 4px;
+  width: 100%;
+  :deep(.o_box) {
     width: 100%;
-    :deep(.o_box) {
+    --box-bg-color: transparent;
+    .o_input {
       width: 100%;
-      --box-bg-color: transparent;
-      .o-icon {
-        --icon-size: 16px;
-      }
+    }
+    .o-icon {
+      --icon-size: 16px;
     }
   }
+}
+.content {
+  max-height: calc(100% - 44px);
+}
+.content-search {
+  max-height: 100%;
+}
+.o-radio-group {
+  align-items: flex-start;
+}
+:deep(.o-radio) {
+  --radio-input-bg-color: transparent;
+  padding: 13px 16px;
+  width: 100%;
+  border-radius: var(--o-radius-xs);
 
-  .content {
-    padding: 0 12px;
-    max-height: 200px;
+  &.o-radio-checked {
+    background-color: var(--o-color-control3-light);
+    --e-color-text1: var(--o-color-link1);
   }
-  .o-radio-group {
-    align-items: flex-start;
+
+  .o-radio-input-wrap {
+    display: none;
   }
-  .o-radio {
-    --radio-input-bg-color: transparent;
+  .o-radio-label {
     margin-left: 0;
-    padding: 8px 0;
-    width: 100%;
-    max-width: 300px;
-    border-radius: var(--o-radius-xs);
-
-    @include hover {
-      background-color: var(--o-color-control2-light);
-    }
-
-    .o-radio-input-wrap {
-      flex-shrink: 0;
-    }
-
-    .o-radio-wrap {
-      word-break: break-word;
-    }
   }
-  .radio-group-dark {
-    .o-radio {
-      @include hover {
-        background-color: #2b2b2f;
-      }
+
+  .o-radio-wrap {
+    word-break: break-word;
+  }
+}
+.radio-group-dark {
+  .o-radio {
+    @include hover {
+      background-color: #2b2b2f;
     }
   }
 }
@@ -491,8 +492,6 @@ watch(
 }
 .o-radio + .o-radio {
   margin-top: 0;
-}
-.filterable-checkboxes-wrap-dark {
-  background-color: #3f3f43;
+  margin-left: 0;
 }
 </style>
