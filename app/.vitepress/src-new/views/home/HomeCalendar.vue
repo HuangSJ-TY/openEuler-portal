@@ -99,7 +99,7 @@ const titleList = [
   },
   {
     label: t('home.meetingTypeMeet'),
-    value: 'meetings',
+    value: 'meeting',
     icon: IconMeet,
   },
   {
@@ -177,7 +177,7 @@ const queryMeetingDates = async (date: string, group_name: string) => {
   currentCalendarData.value = [];
 
   if (Array.isArray(res)) {
-    currentCalendarData.value = res.map((item) => ({ ...item, type: 'meetings', d: item.mid }));
+    currentCalendarData.value = res.map((item) => ({ ...item, type: 'meeting', d: item.mid }));
   }
 
   if (getSummitHighlight(selectedDateStr.value, activityData)) {
@@ -473,7 +473,7 @@ watch(
                 <OIcon
                   class="meeting"
                   v-if="
-                    (tabType === 'all' || tabType === 'meetings') &&
+                    (tabType === 'all' || tabType === 'meeting') &&
                     recentMeetingDates.includes(data.day)
                   "
                 >
@@ -568,7 +568,7 @@ watch(
                     </div>
                   </div>
                   <OLink
-                    v-if="item.type !== 'meetings' && (item.url || item.content_url)"
+                    v-if="item.type !== 'meeting' && (item.url || item.content_url)"
                     color="normal"
                     class="jump-detail-link"
                     @click.stop="jumpDetail(item.url || item.content_url)"
