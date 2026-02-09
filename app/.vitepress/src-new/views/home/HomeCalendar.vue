@@ -177,7 +177,7 @@ const queryMeetingDates = async (date: string, group_name: string) => {
   currentCalendarData.value = [];
 
   if (Array.isArray(res)) {
-    currentCalendarData.value = res.map((item) => ({ ...item, type: 'meeting', d: item.mid }));
+    currentCalendarData.value = res.map((item) => ({ ...item, type: 'meetings', d: item.mid }));
   }
 
   if (getSummitHighlight(selectedDateStr.value, activityData)) {
