@@ -33506,9 +33506,9 @@
   {
     "hardwareFactory": "XFUSION",
     "hardwareModel": "2258 V7",
-    "osVersion": "openEuler 24.03 LTS SP1",
+    "osVersion": "openEuler 22.03 LTS SP3",
     "architecture": "x86_64",
-    "date": "2026/01/14",
+    "date": "2026/01/16",
     "friendlyLink": "https://www.xfusion.com/en/product/rack-server/fusionserver-2258-v7",
     "boardCards": [
       {
@@ -33517,13 +33517,13 @@
         "svID": "1f24",
         "ssID": "200b",
         "architecture": "x86_64",
-        "os": "openEuler 24.03 LTS SP1",
+        "os": "openEuler 22.03 LTS SP3",
         "driverName": "igb",
-        "version": "6.6.0-72.0.0.76.oe2403sp1.x86_64",
+        "version": "5.10.0-182.0.0.95.oe2203sp3.x86_64",
         "type": "NIC",
-        "date": "2026/01/14",
-        "sha256": "82033973e5d9b00e85a49f7073dc91f6da165c0cb8cda6b654b341418550ad6d",
-        "driverSize": "118916",
+        "date": "2026/01/16",
+        "sha256": "396304697cb2844e3dbd0573576ecb02521c6ebc71c6eef3af8ed50198ca6c7a",
+        "driverSize": "108032",
         "chipVendor": "intel",
         "boardModel": "xc310",
         "chipModel": "i350",
@@ -33533,7 +33533,7 @@
     ],
     "compatibilityConfiguration": {
       "productInformation": "https://www.xfusion.com/en/product/rack-server/fusionserver-2258-v7",
-      "certificationTime": "2026/01/15",
+      "certificationTime": "2026/01/16",
       "commitID": "NA",
       "mainboardModel": "BC15MASA",
       "biosUefi": "2.12.11 (U14)",
@@ -33545,6 +33545,7 @@
       "hardDiskDrive": "BROADCOM SAS3808-iMR 5.22"
     }
   },
+
   {
     "hardwareFactory": "XFUSION",
     "hardwareModel": "2258 V7",
@@ -33884,7 +33885,7 @@
       "commitID": "5220-8500",
       "mainboardModel": "WR5220 G5",
       "biosUefi": "spe226j-1.52",
-      "cpu": "Intel� Xeon� 6 processors 6780E",
+      "cpu": "Intel(R) Xeon(R) 6 processors 6780E",
       "ram": "32*32G DIMMs",
       "portsBusTypes": "x16x8",
       "videoAdapter": "ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)",
