@@ -52,6 +52,8 @@ import { formatDate } from '~@/utils/common';
 import { getPointStr } from '~@/utils/meeting';
 import { INTERVAL_DAY, INTERVAL_WEEK, INTERVAL_MONTH } from '~@/config/meeting';
 
+import { useIdentities } from '~@/stores/common';
+
 const props = defineProps({
   shownIcon: {
     type: Boolean,
@@ -62,6 +64,7 @@ const props = defineProps({
 const commonStore = useCommon();
 const message = useMessage();
 const { t, locale } = useLocale();
+const identitiesStore = useIdentities();
 
 const TODAY = dayjs(new Date()).format('YYYY-MM-DD');
 
@@ -392,10 +395,15 @@ watch(
   }
 );
 
+const bindVisible = ref(false);
 const toCreateMeeting = () => {
+  const identitiesVisible = identitiesStore.identities?.some(item => item.identity === 'gitee' || item.identity === 'gitcode');
+
   const { token } = getUserAuth();
   if (!token) {
     showGuard();
+  } else if (!identitiesVisible) {
+    bindVisible.value = true;
   } else if (!hasPermMeeting.value) {
     return message.warning({
       content: t('home.meetingDesc'),
@@ -409,25 +417,13 @@ const jumpDetail = (url: string) => {
   window.open(url, '_blank');
 };
 
-const bindVisible = ref(false);
 const toBind = () => {
   window.open(`/${locale.value}/my/settings`, '_blank');
   bindVisible.value = false;
 };
 const cancel = () => {
   bindVisible.value = false;
-  sessionStorage.setItem('close_permission', '1');
 };
-
-watch(
-  () => hasPermLoading.value,
-  (val) => {
-    const { token } = getUserAuth();
-    if (token && !hasPermMeeting.value && !sessionStorage.getItem('close_permission') ) {
-      bindVisible.value = true;
-    }
-  }
-);
 </script>
 <template>
   <AppSection

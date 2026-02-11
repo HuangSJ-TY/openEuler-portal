@@ -10,10 +10,14 @@ import { getUnreadMsgCount } from '@/api/api-messageCenter';
 import { queryPersonalInfo } from '@/api/api-login';
 import IconLogin from '~icons/app-new/icon-header-person.svg';
 
+import { useIdentities } from '~@/stores/common';
+
 const { lang } = useData();
 const { token } = getUserAuth();
 const { guardAuthClient } = useStoreData();
 const { lePadV } = useScreen();
+
+const identitiesStore = useIdentities();
 
 const jumpToUserZone = () => {
   const language = lang.value === 'zh' ? 'zh' : 'en';
@@ -30,6 +34,9 @@ const unreadMsgCount = ref(0);
 onMounted(async () => {
   if (token) {
     const { data: userInfo } = await queryPersonalInfo();
+    identitiesStore.$patch({
+      identities: userInfo.identities,
+    });
     const giteeLoginName: string | undefined = (
       userInfo.identities as any[]
     )?.find((item) => item.identity === 'gitee')?.login_name;
