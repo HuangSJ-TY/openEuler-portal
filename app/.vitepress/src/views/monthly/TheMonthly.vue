@@ -118,7 +118,17 @@ const getListData = (params: ParamsTypeT) => {
           }];
           newsCardData.value.unshift(...yearData);
         } else {
-          const yearData = {
+          const yearData = [{
+            banner: '/img/banners/annual-report-2025-en.jpg',
+            archives: '2026-02',
+            author: ['openEuler'],
+            date: '2026-02-11',
+            lang: 'en',
+            title: 'openEuler 2025 Annual Report',
+            summary: 'openEuler 2025  Annual Report',
+            tags: ['openEuler'],
+            path: 'en/annual-report/openEuler-annual-report-2025/',
+          }, {
             banner: '/img/banners/annual-report-2024-en.jpg',
             archives: '2025-01',
             author: ['openEuler'],
@@ -128,8 +138,8 @@ const getListData = (params: ParamsTypeT) => {
             summary: 'openEuler 2024 Annual Report',
             tags: ['openEuler'],
             path: 'en/annual-report/openEuler-annual-report-2024/',
-          };
-          newsCardData.value.unshift(yearData);
+          }];
+          newsCardData.value.unshift(...yearData);
         }
       }
     })

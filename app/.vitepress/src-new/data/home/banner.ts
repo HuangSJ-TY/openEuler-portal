@@ -10,6 +10,7 @@ import release_mb_zh from '~@/assets/category/home/banner/release/mb.jpg';
 import annual_report_pc from '~@/assets/category/home/banner/annual-report/pc.jpg';
 import annual_report_pad from '~@/assets/category/home/banner/annual-report/pad.jpg';
 import annual_report_mb_zh from '~@/assets/category/home/banner/annual-report/mb.jpg';
+import annual_report_mb_en from '~@/assets/category/home/banner/annual-report/mb_en.jpg';
 
 export default {
   zh: [
@@ -54,6 +55,18 @@ export default {
     },
   ],
   en: [
+    {
+      bg_pc: annual_report_pc,
+      bg_pad: annual_report_pad,
+      bg_mb: annual_report_mb_en,
+      bg_text: '',
+      bg_theme: 'light',
+      title: ['OpenAtom openEuler', 'Annual Report 2025'],
+      btn: 'View More',
+      text_theme: 'dark',
+      href: '/en/annual-report/openEuler-annual-report-2025/',
+      isBlank: true,
+    },
     {
       bg_pc: download_pc,
       bg_pad: download_pad,
