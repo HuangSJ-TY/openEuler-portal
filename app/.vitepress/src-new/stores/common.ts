@@ -56,3 +56,12 @@ export const useHeaderTitle = defineStore('headerTitle', {
     }
   },
 });
+
+/**
+ * 三方绑定信息
+ */
+export const useIdentities = defineStore('identities', {
+  state: () => ({
+    identities: [],
+  }),
+});
