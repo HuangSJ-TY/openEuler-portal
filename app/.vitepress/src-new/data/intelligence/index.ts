@@ -12,61 +12,53 @@ export const deployList = [
   {
     id: 'quick-start',
     title: {
-      zh: '快速入门',
-      en: 'Quick start',
+      zh: 'Witty Assistant',
+      en: 'Witty Assistant',
     },
     img: quickStartBg,
     imgDark: quickStartBgDark,
     list: [
       {
-        text: '玩转AI - 一键部署openEuler智能化解决方案',
-        href: 'https://docs.openeuler.openatom.cn/zh/docs/25.09/tools/ai/euler-copilot-framework/openeuler_intelligence/intelligent_assistant/quick_start/smart_web/deploy_guide/online.html',
+        text: '智能助手 CLI 用户手册',
+        href: 'https://docs.openeuler.openatom.cn/zh/docs/24.03_LTS_SP3/tools/ai/euler-copilot-framework/witty_assistant/witty_shell/user_guide/introduce.html',
       },
       {
-        text: '构建知识库 - 构建本地问答助手',
-        href: 'https://docs.openeuler.openatom.cn/zh/docs/25.09/tools/ai/euler-copilot-framework/openeuler_intelligence/intelligent_assistant/advance/knowledge_base/user_guide/knowledge_base_guidance.html',
-      },
-      {
-        text: '智能调优 - ​自主调优助力主力场景性能提升',
-        href: 'https://atomgit.com/openeuler/A-Tune/blob/euler-copilot-tune/README.md',
-      },
-      {
-        text: '智能运维 - ​全栈协同观测支撑运维效率提升',
-        href: 'https://atomgit.com/openeuler/sysTrace/blob/master/docs/0.quickstart.md',
+        text: '智能助手 Web 用户手册',
+        href: 'https://docs.openeuler.openatom.cn/zh/docs/24.03_LTS_SP3/tools/ai/euler-copilot-framework/witty_assistant/witty_web/user_guide/introduction.html',
       },
     ],
   },
   {
     id: 'advanced-master',
     title: {
-      zh: '高手进阶',
-      en: 'Advanced techniques',
+      zh: 'XPU Turbo',
+      en: 'XPU Turbo',
     },
     img: advancedMasterBg,
     imgDark: advancedMasterBgDark,
     list: [
       {
-        text: '工作流编排 - 个人/企业接入本地服务并构建工作流应用',
-        href: 'https://docs.openeuler.openatom.cn/zh/docs/25.09/tools/ai/euler-copilot-framework/openeuler_intelligence/intelligent_assistant/advance/work_flow/user_guide/workflow_guidance.html',
-      },
-      {
-        text: 'MCP精通 - openEuler智能化解决方案注册MCP服务，编排agent应用',
-        href: 'https://docs.openeuler.openatom.cn/zh/docs/25.09/tools/ai/euler-copilot-framework/openeuler_intelligence/mcp_agent/mcp_guide.html',
+        text: 'XPU Turbo',
+        href: 'https://docs.openeuler.openatom.cn/zh/docs/24.03_LTS_SP3/tools/ai/euler-copilot-framework/xpu_turbo/deploy_guide/deployment.html',
       },
     ],
   },
   {
     id: 'ai-master',
     title: {
-      zh: 'AI 大师',
-      en: 'AI mastery path',
+      zh: 'AI全栈',
+      en: 'AI Full Stack',
     },
     img: aiMasterBg,
     imgDark: aiMasterBgDark,
     list: [
       {
-        text: 'openEuler智能化解决方案+syshax+openEuler本地轻量化部署openEuler智能化解决方案',
-        href: 'https://docs.openeuler.openatom.cn/zh/docs/25.09/tools/ai/euler-copilot-framework/intelligent_foundation/syshax/deploy_guide/syshax_deployment_guide.html',
+        text: 'AI容器镜像用户指南',
+        href: 'https://docs.openeuler.openatom.cn/zh/docs/24.03_LTS_SP3/tools/ai/euler-copilot-framework/ai_full_stack/ai_container_image_userguide/ai_container_image_user_guide.html',
+      },
+      {
+        text: 'AI大模型服务镜像使用指南',
+        href: 'https://docs.openeuler.openatom.cn/zh/docs/24.03_LTS_SP3/tools/ai/euler-copilot-framework/ai_full_stack/ai_large_model_service_images_userguide/llm_service_image_user_guide.html',
       },
     ],
   },
