@@ -83,7 +83,7 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
       effect="toggle"
       active-class="current-slide"
       indicator-click
-      :auto-play="false"
+      :auto-play="true"
       :data-o-theme="theme"
       @before-change="onBeforeChange"
     >
@@ -278,9 +278,14 @@ const onClick = (href: string, hasBtn: boolean | undefined) => {
   background-size: contain;
   background-repeat: no-repeat;
 
-  @include respond-to('pad') {
+  @include respond-to('pad_h') {
     height: var(--pad-height, 60px);
     width: var(--pad-width, 282px);
+  }
+
+  @include respond-to('pad_v') {
+    height: var(--padv-height, 100px);
+    width: var(--padv-width, 320px);
   }
 }
 
