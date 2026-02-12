@@ -149,6 +149,13 @@ import qinbinjuan from '@/assets/category/organization/ai/qinbinjuan.png';
 import wubin from '@/assets/category/organization/ai/wubin.png';
 import huangjun from '@/assets/category/organization/ai/huangjun.png';
 
+// 全球化工作组
+import caijuanyang from '@/assets/category/organization/globalization/caijuanyang.png';
+import lichengpeng_globalization from '@/assets/category/organization/globalization/lichengpeng.png';
+import liumingjie_globalization from '@/assets/category/organization/globalization/liumingjie.png';
+import renzidong from '@/assets/category/organization/globalization/renzidong.png';
+import zhounan from '@/assets/category/organization/globalization/zhounan.png';
+
 export default {
   zh: {
     memberList: [
@@ -746,6 +753,16 @@ export default {
           { img: zhannianke, name: '詹年科', position: ['组员'] },
         ],
       },
+      {
+        title: 'openEuler 全球化工作组',
+        list: [
+          { img: zhounan, name: '周楠', position: ['组长'] },
+          { img: caijuanyang, name: '蔡镌洋', position: ['组员'] },
+          { img: lichengpeng_globalization, name: '李成鹏', position: ['组员'] },
+          { img: liumingjie_globalization, name: '刘明杰', position: ['组员'] },
+          { img: renzidong, name: '任紫东', position: ['组员'] },
+        ],
+      },
     ],
     idList: [
       '顾问专家委员会',
@@ -758,6 +775,7 @@ export default {
       '教育工作组',
       '法务工作组',
       'AI联合工作组',
+      '全球化工作组',
     ],
     notice: '注：按照姓名汉语拼音排序',
   },
